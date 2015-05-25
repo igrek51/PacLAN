@@ -1,0 +1,34 @@
+188 3
+15.22
+28 31
+xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x............xx............x
+x.xxxx.xxxxx.xx.xxxxx.xxxx.x
+xoxxxx.xxxxx.xx.xxxxx.xxxxox
+x.xxxx.xxxxx.xx.xxxxx.xxxx.x
+x..........................x
+x.xxxx.xx.xxxxxxxx.xx.xxxx.x
+x.xxxx.xx.xxxxxxxx.xx.xxxx.x
+x......xx....xx....xx......x
+xxxxxx.xxxxx xx xxxxx.xxxxxx
+xxxxxx.xxxxx xx xxxxx.xxxxxx
+xxxxxx.xx          xx.xxxxxx
+xxxxxx.xx xxx--xxx xx.xxxxxx
+xxxxxx.xx xxx--xxx xx.xxxxxx
+      .   xx----xx   .      
+xxxxxx.xx xxxxxxxx xx.xxxxxx
+xxxxxx.xx xxxxxxxx xx.xxxxxx
+xxxxxx.xx          xx.xxxxxx
+xxxxxx.xx xxxxxxxx xx.xxxxxx
+xxxxxx.xx xxxxxxxx xx.xxxxxx
+x............xx............x
+x.xxxx.xxxxx.xx.xxxxx.xxxx.x
+x.xxxx.xxxxx.xx.xxxxx.xxxx.x
+xo..xx.......  .......xx..ox
+xxx.xx.xx.xxxxxxxx.xx.xx.xxx
+xxx.xx.xx.xxxxxxxx.xx.xx.xxx
+x......xx....xx....xx......x
+x.xxxxxxxxxx.xx.xxxxxxxxxx.x
+x.xxxxxxxxxx.xx.xxxxxxxxxx.x
+x..........................x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxx
