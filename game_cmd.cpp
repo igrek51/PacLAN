@@ -144,7 +144,8 @@ void GameEngine::exec_cmd(string cmd){
     }else if(cmds[0]=="map"){
         if(cmds.size()==2){
             if(cmds[1]=="restart"){
-                restart_map();
+                round_next = Config::next_round_time-1;
+                mode_init();
                 ss<<"Zrestartowano mapę";
                 cmd_output(ss.str());
             }
