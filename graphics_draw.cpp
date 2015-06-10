@@ -79,6 +79,7 @@ void Graphics::draw2(){
         draw_text("Enter - pauza", font1, rgba(120,120,120), screen_w/2, 410, TEXT_CENTER);
         draw_text("` - wiersz poleceń", font1, rgba(120,120,120), screen_w/2, 425, TEXT_CENTER);
         draw_text("F11 - pełny ekran", font1, rgba(120,120,120), screen_w/2, 440, TEXT_CENTER);
+        draw_text("1,2,3,4,5 - szybkie dodanie duszków AI", font1, rgba(120,120,120), screen_w/2, 455, TEXT_CENTER);
     }else{  //  MAPKA
         //tło - mapka
         draw_texture_center(App::game_engine->map->background,screen_w/2,screen_h/2);

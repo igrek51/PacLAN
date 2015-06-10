@@ -27,9 +27,18 @@ void GameEngine::exec_cmd(string cmd){
     ss_clear(ss);
     if(cmd=="exit"){
         App::exit = true;
-    }else if(cmds[0]=="add"){ //dodawanie nowego gracza: add [pacman,ghost] (ai) [0-5]
+    }else if(cmds[0]=="add"){ //dodawanie nowego gracza: add [pacman,ghost] (ai [0-5])
         if(cmds.size()<2){
             cmd_output("[!] Blad: brak klasy gracza (pacman lub ghost)");
+            cmd_output("Wpisz \"add --help\" w celu uzyskania pomocy do polecenia.");
+            return;
+        }
+        if(cmds[1]=="--help"){
+            cmd_output("Przykłady poprawnego użycia polecenia \"add\":");
+            cmd_output("Dodanie pacmana sterowanego klawiaturą: add pacman");
+            cmd_output("Dodanie pacmana AI o poziomie inteligencji 3: add pacman ai 3");
+            cmd_output("Dodanie duszka sterowanego klawiaturą: add ghost");
+            cmd_output("Dodanie duszka AI o poziomie inteligencji 5: add ghost ai 5");
             return;
         }
         int subclass;
@@ -39,6 +48,7 @@ void GameEngine::exec_cmd(string cmd){
             subclass = P_PACMAN;
         }else{
             cmd_output("[!] Blad: niepoprawna klasa gracza (pacman lub ghost)");
+            cmd_output("Wpisz \"add --help\" w celu uzyskania pomocy do polecenia.");
             return;
         }
         int controlby = P_KEYBOARD;
@@ -51,7 +61,8 @@ void GameEngine::exec_cmd(string cmd){
                 if(!(ai_level>=0&&ai_level<=5))
                     ai_level = rand()%6;
             }else{
-                cmd_output("[!] Blad: poprawna skladnia: add [pacman,ghost] (ai) [0-5]");
+                cmd_output("[!] Blad: niepoprawna składnia.");
+                cmd_output("Wpisz \"add --help\" w celu uzyskania pomocy do polecenia.");
                 return;
             }
         }
@@ -261,19 +272,20 @@ void GameEngine::exec_cmd(string cmd){
         App::graphics->fullscreen_toggle();
     }else if(cmds[0]=="help"){
         cmd_output("Dostępne polecenia:");
-        cmd_output("players - lista graczy");
-        cmd_output("add [pacman,ghost] (ai [0-5]) - nowy gracz");
-        cmd_output("kick [playerID], kick [pacmans,ghosts,all] - usuniecie gracza (graczy)");
-        cmd_output("change [playerID] - zmiana klasy gracza");
+        cmd_output("players - lista graczy (wyświetla ID graczy, nazwy, statystyki)");
+        cmd_output("add [pacman,ghost] (ai [0-5]) - nowy gracz (wpisz \"add --help\" w celu uzyskania pomocy)");
+        cmd_output("kick [playerID], kick [pacmans,ghosts,all] - usuniecie gracza (grupy graczy)");
+        cmd_output("change [playerID] - zmiana klasy gracza o podanym ID");
         cmd_output("name [playerID] [nowa_nazwa] - zmiana nazwy gracza");
-        cmd_output("color [playerID] ([r] [g] [b]) - zmiana koloru gracza");
+        cmd_output("color [playerID] ([r] [g] [b]) - zmiana koloru gracza (na losowy lub wybrany)");
         cmd_output("mode [classic,zombie] - zmiana trybu gry");
         cmd_output("map restart - restart mapki");
         cmd_output("myip - mój adres IP i nazwa komputera");
-        cmd_output("clients - połączeni klienci");
-        cmd_output("control [playerID] [clientID] - ustaw sterowanie graczem przez klienta");
-        cmd_output("remote [0,clientID] [polecenie] - wykonaj zdalne polecenie na serwerze (0) lub u klienta");
-        cmd_output("Inne polecenia: pause, fullscreen, neww, names, paths, grid, fps");
+        cmd_output("clients - połączeni klienci (wyświetla numery ID klientów oraz adresy IP)");
+        cmd_output("control [playerID] [clientID] - przydziel wybranemu klientowi sterowanie wybranym graczem");
+        cmd_output("remote [0,clientID] [polecenie] - wykonaj zdalne polecenie na serwerze (ID=0) lub u klienta");
+        cmd_output("neww - uruchamia nową instancję aplikacji");
+        cmd_output("Inne polecenia: pause, fullscreen, names, paths, grid, fps");
     }else{
         cmd_output("[!] Błąd: Brak polecenia: "+cmd);
     }
