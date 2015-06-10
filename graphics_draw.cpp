@@ -32,7 +32,9 @@ void Graphics::draw2(){
         draw_text(ss.str(), font1, rgba(0,255,0), screen_w, screen_h-15, TEXT_RIGHT);
     }
     if(App::game_engine->menu>0){ //    MENU
-        draw_text("P a c L A N", font2, rgba(255,255,0), screen_w/2, 50, TEXT_CENTER);
+        ss_clear(ss);
+        ss<<"P a c L A N  v"<<Config::version;
+        draw_text(ss.str(), font2, rgba(255,255,0), screen_w/2, 50, TEXT_CENTER);
         //obrazek gracza
         //App::game_engine->menu_pacman->color = App::game_engine->menu_color;
         //App::game_engine->menu_pacman->reload_texture();
