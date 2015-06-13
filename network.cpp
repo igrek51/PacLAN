@@ -8,7 +8,6 @@ Network::Network(){
     error = false;
     server = false;
     client = false;
-    events_table = NULL;
     recv_msg = new char [Config::buffer_size];
     wsa_start();
     log("Wątek interfejsu sieci zainicjalizowany.");
@@ -20,8 +19,6 @@ Network::~Network(){
         disconnect_socket(0);
     }
     sockets.clear();
-    //delete[] events_table;
-    events_table = NULL;
     delete[] recv_msg;
     recv_buffer.clear();
     recv_string.clear();
@@ -32,7 +29,7 @@ Network::~Network(){
 
 void Network::run(){
     while(true){
-        //wykonanie zadań
+        //wykonanie zakolejkowanych zadań
         if(tasks.size()>0){
             task_exec(tasks.at(0));
             delete tasks.at(0);
@@ -40,30 +37,28 @@ void Network::run(){
         }
         //odbieranie i obsługa eventów
         if(sockets.size()>0){
-            unsigned int event = WSAWaitForMultipleEvents(events.size(), events_table, FALSE, Config::network_refresh, FALSE);
+            unsigned int event = WSAWaitForMultipleEvents(events.size(), &events[0], false, Config::network_refresh, false);
             if(event==WSA_WAIT_FAILED){
                 network_error("WSA_WAIT_FAILED");
             }else if(event!=WSA_WAIT_TIMEOUT){
-                stringstream ss;
                 WSANETWORKEVENTS NetworkEvents;
                 if(WSAEnumNetworkEvents(sockets.at(event-WSA_WAIT_EVENT_0), events.at(event-WSA_WAIT_EVENT_0), &NetworkEvents)==SOCKET_ERROR){
                     network_error("WSAEnumNetworkEvents: SOCKET_ERROR");
                 }else{
-                    if(NetworkEvents.lNetworkEvents & FD_ACCEPT){
+                    if(NetworkEvents.lNetworkEvents & FD_ACCEPT){ //żądanie nawiązania połączenia
                         fd_accept();
-                    }else if(NetworkEvents.lNetworkEvents & FD_CLOSE){
+                    }else if(NetworkEvents.lNetworkEvents & FD_CLOSE){ //rozłączono
                         fd_close(event-WSA_WAIT_EVENT_0);
-                    }else if(NetworkEvents.lNetworkEvents & FD_READ){
+                    }else if(NetworkEvents.lNetworkEvents & FD_READ){ //odebranie bajtów
                         int sindex = event-WSA_WAIT_EVENT_0;
                         read_packet(sindex);
-                    }else if(NetworkEvents.lNetworkEvents & FD_CONNECT){
+                    }else if(NetworkEvents.lNetworkEvents & FD_CONNECT){ //pomyślnie połączono
                         recv_string.at(event-WSA_WAIT_EVENT_0)->push_back("004");
                     }
                 }
-
             }
         }
-        Sleep(2);
+        Sleep(2); //zmniejszenie zużycia procesora
     }
 }
 
@@ -156,7 +151,6 @@ bool Network::open_server_socket(){
     recv_buffer.push_back(new vector<char>);
     recv_string.push_back(new vector<string>);
     server = true;
-    update_sockets();
     console_out("Połączenie serwera otwarte.");
     return true;
 }
@@ -212,7 +206,6 @@ bool Network::connect_socket(string ip){
     recv_buffer.push_back(new vector<char>);
     recv_string.push_back(new vector<string>);
     client = true;
-    update_sockets();
     stringstream ss2;
     ss2<<"Połączono z: "<<inet_ntoa(clientInfo.sin_addr);
     console_out(ss2.str());
@@ -264,7 +257,6 @@ void Network::disconnect_socket(int sindex){
             remove_socket(sindex);
         }
     }
-    update_sockets();
 }
 
 void Network::fd_accept(){
@@ -291,7 +283,6 @@ void Network::fd_accept(){
         ss<<"Nawiązano połączenie z klientem: "<<inet_ntoa(clientInfo.sin_addr);
         console_out(ss.str());
     }
-    update_sockets();
 }
 
 void Network::fd_close(int sindex){
@@ -386,18 +377,4 @@ bool Network::read_packet(int sindex){
         }
     }
     return true;
-}
-
-void Network::update_sockets(){
-    if(events_table!=NULL){
-        delete[] events_table;
-    }
-    if(events.size()==0){
-        events_table = NULL;
-        return;
-    }
-    events_table = new WSAEVENT [events.size()];
-    for(unsigned int i=0; i<events.size(); i++){
-        events_table[i] = events.at(i);
-    }
 }

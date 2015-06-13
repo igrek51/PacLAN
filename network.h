@@ -62,12 +62,8 @@ public:
 
     //  EVENTY
 private:
-    /// wektor do obsługi zdarzeń socketów, liczba eventów = liczba socketów
+    /// wektor do obsługi zdarzeń socketów, liczba eventów = liczba socketów, 0 - event servera lub clienta, większe od 0 - klienci serwera
     vector<WSAEVENT> events;
-    /// tablica eventów sieciowych, 0 - event servera lub clienta, większe 0 - klienci serwera
-    WSAEVENT *events_table;
-    /// llicz aktywne sockety, aktualizuj tablice eventów, aktualizuj wektor buforów danych
-    void update_sockets();
 
     //  BUFORY DANYCH
 public:
