@@ -49,7 +49,7 @@ int Config::eating_time_critical = 25;
 int Config::respawn_time = 120;
 int Config::next_round_time = 75;
 
-int Config::points_kill_pacman = 50;
+int Config::points_kill_pacman = 80;
 int Config::points_kill_ghost = 15;
 
 int Config::zombie_death_time = 20;
