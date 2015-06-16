@@ -19,6 +19,9 @@ public:
     ~Thread();
     /// główna funkcja wątku
     virtual void run() = 0;
+protected:
+    /// zmienna określająca stan wykonywania pętli wątku: true - wątek aktywny, false - zakończenie pętli
+    bool running;
 private:
     /// uchwyt do wątku
     HANDLE thread_handle;

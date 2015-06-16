@@ -28,7 +28,7 @@ Network::~Network(){
 }
 
 void Network::run(){
-    while(true){
+    while(running){
         //wykonanie zakolejkowanych zadań
         if(tasks.size()>0){
             task_exec(tasks.at(0));

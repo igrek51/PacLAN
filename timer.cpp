@@ -17,7 +17,7 @@ Timer::~Timer(){
 }
 
 void Timer::run(){
-    while(true){
+    while(running){
         if(clock() >= last_time + interval_ticks){
             last_time += interval_ticks;
             (*cycles)++;
