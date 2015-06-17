@@ -5,25 +5,16 @@ CFLAGS = -c -Wall
 LFLAGS = -s -mwindows -Wall
 LIBS = -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image -lws2_32
 PROJECT_NAME = PacLAN
-STATIC_PROJECT_NAME = PacLAN-static
-STATIC_LIB_NAME = paclan
-SOURCES = app.cpp config.cpp game_map.cpp item.cpp log.cpp network_task.cpp pathfind.cpp thread.cpp timer.cpp animation.cpp game_cmd.cpp game_engine.cpp game_logic.cpp game_network.cpp ghost.cpp graphics.cpp graphics_draw.cpp main.cpp map.cpp network.cpp pacman.cpp player.cpp
-STATIC_OBJ = obj/graphics.cpp.o obj/graphics_draw.cpp.o obj/animation.cpp.o obj/player.cpp.o obj/pacman.cpp.o obj/ghost.cpp.o obj/item.cpp.o obj/map.cpp.o obj/pathfind.cpp.o obj/thread.cpp.o obj/timer.cpp.o obj/app.cpp.o obj/config.cpp.o obj/log.cpp.o
-PROJECT_OBJ = obj/main.cpp.o obj/game_engine.cpp.o obj/game_logic.cpp.o obj/game_cmd.cpp.o obj/game_map.cpp.o obj/game_network.cpp.o obj/network.cpp.o obj/network_task.cpp.o obj/resource.rc.o
+SOURCES = app.cpp config.cpp game_map.cpp item.cpp log.cpp network_task.cpp pathfind.cpp thread.cpp timer.cpp animation.cpp game_cmd.cpp game_engine.cpp game_logic.cpp game_network.cpp ghost.cpp graphics.cpp graphics_draw.cpp main.cpp map.cpp network.cpp pacman.cpp player.cpp language.cpp
+OBJS = obj/graphics.cpp.o obj/graphics_draw.cpp.o obj/animation.cpp.o obj/player.cpp.o obj/pacman.cpp.o obj/ghost.cpp.o obj/item.cpp.o obj/map.cpp.o obj/pathfind.cpp.o obj/thread.cpp.o obj/timer.cpp.o obj/app.cpp.o obj/config.cpp.o obj/log.cpp.o obj/main.cpp.o obj/game_engine.cpp.o obj/game_logic.cpp.o obj/game_cmd.cpp.o obj/game_map.cpp.o obj/game_network.cpp.o obj/network.cpp.o obj/network_task.cpp.o obj/language.cpp.o obj/resource.rc.o
 
 
-all: $(STATIC_OBJ) $(PROJECT_OBJ)
-	$(CC) $(STATIC_OBJ) $(PROJECT_OBJ) $(LIBS) $(LFLAGS) -o $(BIN)/$(PROJECT_NAME)
-	
-static: $(STATIC_OBJ) $(PROJECT_OBJ)
-	ar rcsv $(BIN)/$(STATIC_LIB_NAME).lib $(STATIC_OBJ) 
-	$(CC) $(PROJECT_OBJ) $(LIBS) $(LFLAGS) -o $(BIN)/$(STATIC_PROJECT_NAME) -L$(BIN) -l$(STATIC_LIB_NAME)
+all: $(OBJS)
+	$(CC) $(OBJS) $(LIBS) $(LFLAGS) -o $(BIN)/$(PROJECT_NAME)
 
 clean:
 	del /Q obj\*.o
 	del /Q $(BIN)\$(PROJECT_NAME).exe
-	del /Q $(BIN)\$(STATIC_PROJECT_NAME).exe
-	del /Q $(BIN)\$(STATIC_LIB_NAME).lib
 
 
 obj/app.cpp.o: app.cpp
@@ -91,6 +82,9 @@ obj/pacman.cpp.o: pacman.cpp
 
 obj/player.cpp.o: player.cpp
 	$(CC) $(CFLAGS) player.cpp -o obj/player.cpp.o
+	
+obj/language.cpp.o: language.cpp
+	$(CC) $(CFLAGS) language.cpp -o obj/language.cpp.o
 
 
 obj/resource.rc.o: resource.rc
