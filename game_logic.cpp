@@ -431,6 +431,9 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
                     menu_color.b = (menu_color.b-5)%256;
                 }
                 menu_refresh_color();
+            }else if(menu==MENU_HOST){
+                mode--;
+                if(mode<0) mode=MODE_MAX;
             }
         }else if(key==SDLK_RIGHT){
             if(menu==MENU_SUBCLASS){
@@ -446,6 +449,9 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
                     menu_color.b = (menu_color.b+5)%256;
                 }
                 menu_refresh_color();
+            }else if(menu==MENU_HOST){
+                mode++;
+                if(mode>MODE_MAX) mode=0;
             }
         }
     }else{ //GRA

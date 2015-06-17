@@ -29,22 +29,22 @@ void Graphics::draw2(){
     stringstream ss;
     if(Config::show_fps){
         ss<<fps<<" FPS";
-        draw_text(ss.str(), font1, rgba(0,255,0), screen_w, screen_h-15, TEXT_RIGHT);
+        draw_text(ss.str(), font1, rgba(0,255,0), 0, screen_h-15, TEXT_LEFT);
     }
     if(App::game_engine->menu>0){ //    MENU
+        //podpis
+        draw_text("Created by Igrek", font2, rgba(30,30,30), screen_w, screen_h-15, TEXT_RIGHT);
         ss_clear(ss);
         ss<<"P a c L A N  v"<<Config::version;
-        draw_text(ss.str(), font2, rgba(255,255,0), screen_w/2, 50, TEXT_CENTER);
+        draw_text(ss.str(), font2, rgba(255,255,0), screen_w/2, 45, TEXT_CENTER);
         //obrazek gracza
-        //App::game_engine->menu_pacman->color = App::game_engine->menu_color;
-        //App::game_engine->menu_pacman->reload_texture();
         Player *menu_player;
         if(App::game_engine->menu_subclass==P_PACMAN){
             menu_player = App::game_engine->menu_pacman;
         }else{
             menu_player = App::game_engine->menu_ghost;
         }
-        menu_player->draw_sprite_at(menu_player->texture, screen_w/2, 130);
+        menu_player->draw_sprite_at(menu_player->texture, screen_w/2, 100);
         ss_clear(ss);
         ss<<"Nazwa gracza: "<<App::game_engine->menu_name;
         if(App::game_engine->menu==MENU_NAME && App::game_engine->cycles/10%2==0){
@@ -52,14 +52,18 @@ void Graphics::draw2(){
         }else{
             ss<<"  ";
         }
-        draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 170, TEXT_CENTER);
+        draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 140, TEXT_CENTER);
         ss_clear(ss);
         ss<<"Klasa gracza: "<<(App::game_engine->menu_subclass==P_PACMAN?"Pacman":"Ghost");
-        draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 200, TEXT_CENTER);
+        draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 170, TEXT_CENTER);
         ss_clear(ss);
         ss<<"Kolor gracza: ("<<(int)App::game_engine->menu_color.r<<", "<<(int)App::game_engine->menu_color.g<<", "<<(int)App::game_engine->menu_color.b<<")";
-        draw_text(ss.str(), font1, App::game_engine->menu_color, screen_w/2, 230, TEXT_CENTER);
-        draw_text("Załóż nową grę", font1, rgba(255,255,255), screen_w/2, 260, TEXT_CENTER);
+        draw_text(ss.str(), font1, App::game_engine->menu_color, screen_w/2, 200, TEXT_CENTER);
+        ss_clear(ss);
+        ss<<"Załóż nową grę: Tryb ";
+        if(App::game_engine->mode==MODE_CLASSIC) ss<<"Classic";
+        if(App::game_engine->mode==MODE_ZOMBIE) ss<<"Zombie";
+        draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 230, TEXT_CENTER);
         ss_clear(ss);
         ss<<"Dołącz do: "<<App::game_engine->menu_ip;
         if(App::game_engine->menu==MENU_JOIN && App::game_engine->cycles/10%2==0){
@@ -67,19 +71,19 @@ void Graphics::draw2(){
         }else{
             ss<<"  ";
         }
-        draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 290, TEXT_CENTER);
-        draw_text("Wyjście", font1, rgba(255,255,255), screen_w/2, 320, TEXT_CENTER);
+        draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 260, TEXT_CENTER);
+        draw_text("Wyjście", font1, rgba(255,255,255), screen_w/2, 290, TEXT_CENTER);
         //kursor
-        draw_fill_rect(260, 165+(App::game_engine->menu-1)*30, 280, 26, rgba(120,120,120,35));
-        App::game_engine->menu_pacman->draw_sprite_at(App::game_engine->menu_pacman->texture, 260, 178+(App::game_engine->menu-1)*30);
-        App::game_engine->menu_ghost->draw_sprite_at(App::game_engine->menu_ghost->texture, 540, 178+(App::game_engine->menu-1)*30);
-        draw_text("Sterowanie:", font1, rgba(120,120,120), screen_w/2, 360, TEXT_CENTER);
-        draw_text("Strzałki - ruch gracza", font1, rgba(120,120,120), screen_w/2, 380, TEXT_CENTER);
-        draw_text("Spacja - zatrzymanie gracza", font1, rgba(120,120,120), screen_w/2, 395, TEXT_CENTER);
-        draw_text("Enter - pauza", font1, rgba(120,120,120), screen_w/2, 410, TEXT_CENTER);
-        draw_text("` - wiersz poleceń", font1, rgba(120,120,120), screen_w/2, 425, TEXT_CENTER);
-        draw_text("F11 - pełny ekran", font1, rgba(120,120,120), screen_w/2, 440, TEXT_CENTER);
-        draw_text("1,2,3,4,5 - szybkie dodanie duszków AI", font1, rgba(120,120,120), screen_w/2, 455, TEXT_CENTER);
+        draw_fill_rect(260, 135+(App::game_engine->menu-1)*30, 280, 26, rgba(150,150,150,40));
+        App::game_engine->menu_pacman->draw_sprite_at(App::game_engine->menu_pacman->texture, 260, 148+(App::game_engine->menu-1)*30);
+        App::game_engine->menu_ghost->draw_sprite_at(App::game_engine->menu_ghost->texture, 540, 148+(App::game_engine->menu-1)*30);
+        draw_text("Sterowanie:", font1, rgba(120,120,120), screen_w/2, 340, TEXT_CENTER);
+        draw_text("Strzałki - ruch gracza", font1, rgba(120,120,120), screen_w/2, 360, TEXT_CENTER);
+        draw_text("Spacja - zatrzymanie gracza", font1, rgba(120,120,120), screen_w/2, 375, TEXT_CENTER);
+        draw_text("Enter - pauza", font1, rgba(120,120,120), screen_w/2, 390, TEXT_CENTER);
+        draw_text("` - wiersz poleceń", font1, rgba(120,120,120), screen_w/2, 405, TEXT_CENTER);
+        draw_text("F11 - pełny ekran", font1, rgba(120,120,120), screen_w/2, 420, TEXT_CENTER);
+        draw_text("1,2,3,4,5 - szybkie dodanie duszków AI", font1, rgba(120,120,120), screen_w/2, 435, TEXT_CENTER);
     }else{  //  MAPKA
         //tło - mapka
         draw_texture_center(App::game_engine->map->background,screen_w/2,screen_h/2);

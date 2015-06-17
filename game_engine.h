@@ -22,6 +22,7 @@
 //tryby gry
 #define MODE_CLASSIC 0
 #define MODE_ZOMBIE 1
+#define MODE_MAX 1 //ostatnia wartość trybu gry
 
 #include <vector>
 #include <sstream>

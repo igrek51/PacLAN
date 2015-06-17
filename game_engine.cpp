@@ -231,7 +231,7 @@ void GameEngine::menu_refresh_color(){
 void GameEngine::menu_host(){
     menu = 0;
     clear_all();
-    restart_map();
+    mode_init();
     pause = false;
     App::network->addtask_open_server();
     add_player(menu_subclass, menu_name, menu_color, P_KEYBOARD);
