@@ -36,6 +36,12 @@ bool Config::show_paths = false;
 bool Config::show_names = true;
 int Config::cmd_outputs = 20;
 
+string Config::languages[] = {
+    "Polski", "English"
+};
+int Config::languages_n = 2;
+int Config::language_selected = 0;
+
 int Config::pacman_speed = 4;
 int Config::ghost_speed = 4;
 int Config::ghost_eatme_speed = 6;

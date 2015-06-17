@@ -155,7 +155,6 @@ void GameEngine::exec_cmd(string cmd){
     }else if(cmds[0]=="map"){
         if(cmds.size()==2){
             if(cmds[1]=="restart"){
-                round_next = Config::next_round_time-1;
                 mode_init();
                 ss<<"Zrestartowano mapę";
                 cmd_output(ss.str());
@@ -187,7 +186,6 @@ void GameEngine::exec_cmd(string cmd){
             }else if(cmds[1]=="zombie"){
                 mode = MODE_ZOMBIE;
             }
-            round_next = Config::next_round_time-1;
             mode_init();
         }
     }else if(cmds[0]=="myip"){
@@ -249,6 +247,8 @@ void GameEngine::exec_cmd(string cmd){
         }
     }else if(cmds[0]=="neww"){ //nowe okno aplikacji
         system("start PacLAN.exe");
+    }else if(cmds[0]=="log"){ //otwórz dziennik
+        system("start log.txt");
     }else if(cmds[0]=="pause"){
         pause = !pause;
         if(App::network->server){
@@ -285,7 +285,7 @@ void GameEngine::exec_cmd(string cmd){
         cmd_output("control [playerID] [clientID] - przydziel wybranemu klientowi sterowanie wybranym graczem");
         cmd_output("remote [0,clientID] [polecenie] - wykonaj zdalne polecenie na serwerze (ID=0) lub u klienta");
         cmd_output("neww - uruchamia nową instancję aplikacji");
-        cmd_output("Inne polecenia: pause, fullscreen, names, paths, grid, fps");
+        cmd_output("Inne polecenia: pause, fullscreen, names, paths, grid, fps, log");
     }else{
         cmd_output("[!] Błąd: Brak polecenia: "+cmd);
     }

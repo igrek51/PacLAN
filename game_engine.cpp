@@ -24,6 +24,8 @@ GameEngine::GameEngine(){
     for(int i=0; i<Config::cmd_outputs; i++){
         cmd_out[i] = "";
     }
+    //inicjalizacja ustawień językowych
+    language_refresh();
     //inicjalizacja menu
     menu = 1;
     stringstream ss;
@@ -365,13 +367,11 @@ void GameEngine::kill_player(int index){
 }
 
 
-void GameEngine::clear_map(int only_round){
+void GameEngine::clear_map(){
     stringstream synchro2;
     eating = 0;
     synchro2<<"015 "<<eating<<"\r";
-    if(only_round!=1){
-        round_next = Config::next_round_time-1;
-    }
+    round_next = Config::next_round_time-1;
     synchro2<<"013 "<<round_next<<"\r";
     game_c1 = 0;
     game_c2 = 0;
@@ -405,8 +405,8 @@ void GameEngine::clear_all(){
     }
 }
 
-void GameEngine::restart_map(int only_round){
-    clear_map(only_round);
+void GameEngine::restart_map(){
+    clear_map();
     insert_items();
     //gracze
     stringstream synchro2;
@@ -456,7 +456,7 @@ void GameEngine::mode_init(){
             network_send_to_clients(synchro.str());
         }
     }
-    restart_map(1);
+    restart_map();
 }
 
 void GameEngine::update_map(int client_id){
@@ -484,4 +484,10 @@ void GameEngine::update_map(int client_id){
         synchro2<<"024 "<<i<<" "<<players[i]->respawn<<"\r";
     }
     network_send_to_clients(synchro2.str(),client_id);
+}
+
+void GameEngine::language_refresh(){
+    if(App::lang!=NULL)
+        delete App::lang;
+    App::lang = new Language(Config::languages[Config::language_selected]);
 }

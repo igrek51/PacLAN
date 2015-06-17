@@ -67,6 +67,14 @@ public:
     /// maksymalna liczba wierszy wyjścia w konsoli wiersza poleceń
     static int cmd_outputs;
 
+    //  JĘZYK
+    ///tablica dostępnych języków
+    static string languages[];
+    ///liczba dostępnych języków
+    static int languages_n;
+    ///indeks domyślnego i aktualnego języka
+    static int language_selected;
+
     //  POSTACIE
     /// domyślna szybkość pacmana (im mniesza wartość, tym większa szybkość)
     static int pacman_speed;

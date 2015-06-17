@@ -39,7 +39,7 @@ void Graphics::draw_menu(){
     }
     menu_player->draw_sprite_at(menu_player->texture, screen_w/2, 100);
     ss_clear(ss);
-    ss<<"Nazwa gracza: "<<App::game_engine->menu_name;
+    ss<<App::lang->player_name<<App::game_engine->menu_name;
     if(App::game_engine->menu==MENU_NAME && App::game_engine->cycles/10%2==0){
         ss<<"_";
     }else{
@@ -47,36 +47,39 @@ void Graphics::draw_menu(){
     }
     draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 140, TEXT_CENTER);
     ss_clear(ss);
-    ss<<"Klasa gracza: "<<(App::game_engine->menu_subclass==P_PACMAN?"Pacman":"Ghost");
+    ss<<App::lang->player_class<<(App::game_engine->menu_subclass==P_PACMAN ? App::lang->player_class_pacman : App::lang->player_class_ghost);
     draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 170, TEXT_CENTER);
     ss_clear(ss);
-    ss<<"Kolor gracza: ("<<(int)App::game_engine->menu_color.r<<", "<<(int)App::game_engine->menu_color.g<<", "<<(int)App::game_engine->menu_color.b<<")";
+    ss<<App::lang->player_color<<"("<<(int)App::game_engine->menu_color.r<<", "<<(int)App::game_engine->menu_color.g<<", "<<(int)App::game_engine->menu_color.b<<")";
     draw_text(ss.str(), font1, App::game_engine->menu_color, screen_w/2, 200, TEXT_CENTER);
     ss_clear(ss);
-    ss<<"Załóż nową grę: Tryb ";
-    if(App::game_engine->mode==MODE_CLASSIC) ss<<"Classic";
-    if(App::game_engine->mode==MODE_ZOMBIE) ss<<"Zombie";
+    ss<<App::lang->host_game;
+    if(App::game_engine->mode==MODE_CLASSIC) ss<<App::lang->mode_classic;
+    if(App::game_engine->mode==MODE_ZOMBIE) ss<<App::lang->mode_zombie;
     draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 230, TEXT_CENTER);
     ss_clear(ss);
-    ss<<"Dołącz do: "<<App::game_engine->menu_ip;
+    ss<<App::lang->connect_to<<App::game_engine->menu_ip;
     if(App::game_engine->menu==MENU_JOIN && App::game_engine->cycles/10%2==0){
         ss<<"_";
     }else{
         ss<<"  ";
     }
     draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 260, TEXT_CENTER);
-    draw_text("Wyjście", font1, rgba(255,255,255), screen_w/2, 290, TEXT_CENTER);
+    ss_clear(ss);
+    ss<<App::lang->language<<Config::languages[Config::language_selected];
+    draw_text(ss.str(), font1, rgba(255,255,255), screen_w/2, 290, TEXT_CENTER);
+    draw_text(App::lang->exit, font1, rgba(255,255,255), screen_w/2, 320, TEXT_CENTER);
     //kursor
     draw_fill_rect(260, 135+(App::game_engine->menu-1)*30, 280, 26, rgba(150,150,150,40));
     App::game_engine->menu_pacman->draw_sprite_at(App::game_engine->menu_pacman->texture, 260, 148+(App::game_engine->menu-1)*30);
     App::game_engine->menu_ghost->draw_sprite_at(App::game_engine->menu_ghost->texture, 540, 148+(App::game_engine->menu-1)*30);
-    draw_text("Sterowanie:", font1, rgba(120,120,120), screen_w/2, 340, TEXT_CENTER);
-    draw_text("Strzałki - ruch gracza", font1, rgba(120,120,120), screen_w/2, 360, TEXT_CENTER);
-    draw_text("Spacja - zatrzymanie gracza", font1, rgba(120,120,120), screen_w/2, 375, TEXT_CENTER);
-    draw_text("Enter - pauza", font1, rgba(120,120,120), screen_w/2, 390, TEXT_CENTER);
-    draw_text("` - wiersz poleceń", font1, rgba(120,120,120), screen_w/2, 405, TEXT_CENTER);
-    draw_text("F11 - pełny ekran", font1, rgba(120,120,120), screen_w/2, 420, TEXT_CENTER);
-    draw_text("1,2,3,4,5 - szybkie dodanie duszków AI", font1, rgba(120,120,120), screen_w/2, 435, TEXT_CENTER);
+    draw_text(App::lang->controls, font1, rgba(120,120,120), screen_w/2, 350, TEXT_CENTER);
+    draw_text(App::lang->controls_1, font1, rgba(120,120,120), screen_w/2, 370, TEXT_CENTER);
+    draw_text(App::lang->controls_2, font1, rgba(120,120,120), screen_w/2, 385, TEXT_CENTER);
+    draw_text(App::lang->controls_3, font1, rgba(120,120,120), screen_w/2, 400, TEXT_CENTER);
+    draw_text(App::lang->controls_4, font1, rgba(120,120,120), screen_w/2, 415, TEXT_CENTER);
+    draw_text(App::lang->controls_5, font1, rgba(120,120,120), screen_w/2, 430, TEXT_CENTER);
+    draw_text(App::lang->controls_6, font1, rgba(120,120,120), screen_w/2, 445, TEXT_CENTER);
 }
 
 void Graphics::draw_round(){
@@ -136,33 +139,32 @@ void Graphics::draw_round(){
     }
     //pauza
     if(App::game_engine->pause){
-        draw_text("PAUZA", font2, rgba(255,255,255), screen_w/2, screen_h/2-22, TEXT_CENTER);
+        draw_text(App::lang->pause, font2, rgba(255,255,255), screen_w/2, screen_h/2-22, TEXT_CENTER);
     }
     //  INFO, TRYBY GRY
     draw_fill_rect(0, screen_h-100, 184, 100, rgba(20,20,50,100));
     stringstream ss;
-    ss<<"Tryb gry: ";
-    if(App::game_engine->mode==MODE_CLASSIC) ss<<"Classic";
-    if(App::game_engine->mode==MODE_ZOMBIE) ss<<"Zombie";
+    if(App::game_engine->mode==MODE_CLASSIC) ss<<App::lang->mode_classic;
+    if(App::game_engine->mode==MODE_ZOMBIE) ss<<App::lang->mode_zombie;
     draw_text(ss.str(), font1, rgba(200,200,255), 92, screen_h-95, TEXT_CENTER);
     if(App::game_engine->eating>0){
         ss_clear(ss);
-        ss<<"Zjadanie duszków: "<<Timer::cycles_to_s(App::game_engine->eating)<<" s";
+        ss<<App::lang->eating_ghosts<<Timer::cycles_to_s(App::game_engine->eating)<<" s";
         draw_text(ss.str(), font1, rgba(100,100,255), 92, screen_h-75, TEXT_CENTER);
     }
     if(App::game_engine->round_next>0){
         ss_clear(ss);
         if(App::game_engine->round_next > Config::next_round_time){
-            ss<<"Koniec rundy: "<<Timer::cycles_to_s(App::game_engine->round_next - Config::next_round_time);
+            ss<<App::lang->round_finished<<Timer::cycles_to_s(App::game_engine->round_next - Config::next_round_time);
         }else{
-            ss<<"Następna runda za: "<<Timer::cycles_to_s(App::game_engine->round_next);
+            ss<<App::lang->next_round<<Timer::cycles_to_s(App::game_engine->round_next);
         }
         ss<<" s";
         draw_text(ss.str(), font1, rgba(255,255,100), 92, screen_h-55, TEXT_CENTER);
     }
     if(App::game_engine->mode==MODE_ZOMBIE){
         ss_clear(ss);
-        ss<<"Kolejna śmierć za: "<<Timer::cycles_to_s(App::game_engine->game_c1)<<" s";
+        ss<<App::lang->next_death<<Timer::cycles_to_s(App::game_engine->game_c1)<<" s";
         draw_text(ss.str(), font1, rgba(255,100,100), 92, screen_h-35, TEXT_CENTER);
     }
     //listy pacmanów
@@ -180,7 +182,7 @@ void Graphics::draw_round(){
         App::game_engine->pacmans[i]->draw_sprite_at(App::game_engine->pacmans[i]->texture, 14, 38 + i*list_spacing);
     }
     ss_clear(ss);
-    ss<<"Pacmany ("<<App::game_engine->count_players(P_PACMAN)<<"): "<<suma;
+    ss<<App::lang->pacmans<<" ("<<App::game_engine->count_players(P_PACMAN)<<"): "<<suma;
     draw_text(ss.str(), font1, rgba(255,255,0), 90, 5, TEXT_CENTER);
     //lista duszków
     list_spacing = 30;
@@ -203,7 +205,7 @@ void Graphics::draw_round(){
         App::game_engine->ghosts[i]->draw_sprite_at(texture2, screen_w-14, 38 + i*list_spacing);
     }
     ss_clear(ss);
-    ss<<"Duszki ("<<App::game_engine->count_players(P_GHOST)<<"): "<<suma;
+    ss<<App::lang->ghosts<<" ("<<App::game_engine->count_players(P_GHOST)<<"): "<<suma;
     draw_text(ss.str(), font1, rgba(255,0,0), screen_w-80, 5, TEXT_CENTER);
 }
 

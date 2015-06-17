@@ -416,6 +416,10 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
             }else if(menu==MENU_COLOR){
                 menu_color = Graphics::rand_bcolor();
                 menu_refresh_color();
+            }else if(menu==MENU_LANGUAGE){
+                Config::language_selected++;
+                if(Config::language_selected>=Config::languages_n) Config::language_selected = 0;
+                language_refresh();
             }
         }else if(key==SDLK_LEFT){
             if(menu==MENU_SUBCLASS){
@@ -434,6 +438,10 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
             }else if(menu==MENU_HOST){
                 mode--;
                 if(mode<0) mode=MODE_MAX;
+            }else if(menu==MENU_LANGUAGE){
+                Config::language_selected--;
+                if(Config::language_selected<0) Config::language_selected = Config::languages_n-1;
+                language_refresh();
             }
         }else if(key==SDLK_RIGHT){
             if(menu==MENU_SUBCLASS){
@@ -452,6 +460,10 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
             }else if(menu==MENU_HOST){
                 mode++;
                 if(mode>MODE_MAX) mode=0;
+            }else if(menu==MENU_LANGUAGE){
+                Config::language_selected++;
+                if(Config::language_selected>=Config::languages_n) Config::language_selected = 0;
+                language_refresh();
             }
         }
     }else{ //GRA
@@ -478,7 +490,7 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
             Config::show_fps = !Config::show_fps;
         }
         if(key==SDLK_r){
-            restart_map();
+            mode_init();
         }
         if(key==SDLK_1){
             add_player(P_GHOST, "", Graphics::rand_bcolor(), P_AI, 1);

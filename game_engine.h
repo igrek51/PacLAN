@@ -16,8 +16,9 @@
 #define MENU_COLOR 3
 #define MENU_HOST 4
 #define MENU_JOIN 5
-#define MENU_EXIT 6
-#define MENU_MAX 6 //wartość ostatniego
+#define MENU_LANGUAGE 6
+#define MENU_EXIT 7
+#define MENU_MAX 7 //wartość ostatniego
 
 //tryby gry
 #define MODE_CLASSIC 0
@@ -285,16 +286,14 @@ public:
 private:
     /**
      * usunięcie obiektów, reinicjalizacja rundy, bez usuwania graczy
-     * @param only_round jeśli jest równe 1, nie zmienia czasu do następnej rundy
      */
-    void clear_map(int only_round=0);
+    void clear_map();
     ///usunięcie wszystkiego na mapie
     void clear_all();
     /**
      * restart nowej rundy
-     * @param only_round jeśli jest równe 1, resetuje tylko rundę, nie zmienia czasu do następnej rundy
      */
-    void restart_map(int only_round=0);
+    void restart_map();
     ///początkowe ustawienia rundy dla wybranego trybu
     void mode_init();
     /**
@@ -359,6 +358,10 @@ private:
     void menu_host();
     ///wybranie z menu dołączenia do hosta
     void menu_join();
+
+    //  JĘZYK
+public:
+    void language_refresh();
 };
 
 #endif

@@ -10,6 +10,7 @@
 #include "graphics.h"
 #include "network.h"
 #include "timer.h"
+#include "language.h"
 
 /**
  * \brief Klasa głównej aplikacji zawierająca jej najważniejsze moduły
@@ -28,6 +29,8 @@ public:
     static Network *network;
     /// wskaźnik na wątek czasomierza
     static Timer *timer;
+    /// aktualne dane językowe
+    static Language *lang;
     /// zmienna określająca, czy zakończyć aplikację (true - sygnał zakończenia)
     static bool exit;
     /// aktualna liczba cykli do wykonania (zwiększana przez timer, zmniejszana przez pętle logiczne silnika gry)
