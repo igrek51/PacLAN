@@ -71,8 +71,12 @@ private:
     int screen_h;
     /// czy pełny ekran jest włączony
     bool fullscreen;
-    ///podprogram funkcji draw()
-    void draw2();
+    ///narysowanie ekranu menu
+    void draw_menu();
+    ///narysowanie ekranu rundy
+    void draw_round();
+    ///narysowanie konsoli i wiersza poleceń na ekranie
+    void draw_console();
     ///wyznacz nowe parametry animacji
     void animate();
     /**

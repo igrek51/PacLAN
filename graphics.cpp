@@ -101,9 +101,25 @@ bool Graphics::sdl_init(){
 void Graphics::draw(){
     calculate_fps();
     animate();
+    //wyczyszczenie ekranu
     SDL_SetRenderDrawColor(sdl_ren, 0, 0, 0, 255);
     SDL_RenderClear(sdl_ren);
-    draw2();
+    if(App::game_engine->menu>0){ //MENU
+        draw_menu();
+    }else{  //GRA - RUNDA
+        draw_round();
+    }
+    //FPSy
+    if(Config::show_fps){
+        stringstream ss;
+        ss<<fps<<" FPS";
+        draw_text(ss.str(), font1, rgba(0,255,0), 0, screen_h-15, TEXT_LEFT);
+    }
+    //wiersz poleceń i konsola
+    if(App::game_engine->cmd_on){
+        draw_console();
+    }
+    //wyświetlenie na ekranie (double buffering)
     SDL_RenderPresent(sdl_ren);
 }
 

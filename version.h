@@ -1,8 +1,8 @@
-//v 1 20 70
-// -- 09:24:42, 17.06.2015 --
+//v 1 20 75
+// -- 09:33:44, 17.06.2015 --
 #ifndef VERSION_H
 #define VERSION_H
 
-#define VERSION "1.20.70"
+#define VERSION "1.20.75"
 
 #endif
