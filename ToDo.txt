@@ -2,3 +2,5 @@ pakiet synchronizuj¹co - weryfikuj¹cy
 tryb survival - pojawiania siê coraz wiêkszej liczby duszków - zjedzenie usuniêcie
 tryb time-trial - czyszczenie mapki z kropek na czas - rywalizacja pacmanów
 dŸwiêki, muzyka z Pacmana
+dodanie t³umaczeñ do wiersza poleceñ
+dodanie wyboru mapek i automatycznej zmiany (losowania)
