@@ -1,0 +1,33 @@
+//ymake v1.4.2
+COMPILER=
+g++
+
+COMPILER_PATH=
+C:\MinGW\bin
+
+SRC_PATH=
+
+
+SRC=
+*.cpp
+
+HEADERS=
+*.h -version.h
+
+OUTPUT=
+PacLAN.exe
+
+LIBS=
+-lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image -lws2_32
+
+COMPILER_FLAGS=
+-Wall
+
+LINKER_FLAGS=
+-Wall -s -mwindows
+
+RESOURCE=
+resource.rc
+
+VERSION_FILE=
+version.h

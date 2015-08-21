@@ -2,3 +2,6 @@ bin2
 dist
 obj
 prv
+bin/log.txt
+make_clean.bat
+open2.bat
