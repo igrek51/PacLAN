@@ -1,33 +1,22 @@
-//ymake v1.4.2
-COMPILER=
-g++
+//ymake v1.5.80
+COMPILER = g++
 
-COMPILER_PATH=
-C:\MinGW\bin
+COMPILER_PATH = C:\MinGW\bin
 
-SRC_PATH=
+SRC_PATH =
 
+SRC = *.cpp
 
-SRC=
-*.cpp
+HEADERS = *.h -version.h
 
-HEADERS=
-*.h -version.h
+OUTPUT = PacLAN.exe
 
-OUTPUT=
-PacLAN.exe
+LIBS = -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image -lws2_32
 
-LIBS=
--lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image -lws2_32
+COMPILER_FLAGS = -Wall
 
-COMPILER_FLAGS=
--Wall
+LINKER_FLAGS = -Wall -s -mwindows
 
-LINKER_FLAGS=
--Wall -s -mwindows
+RESOURCE = resource.rc
 
-RESOURCE=
-resource.rc
-
-VERSION_FILE=
-version.h
+VERSION_FILE = version.h
