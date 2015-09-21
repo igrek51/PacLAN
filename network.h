@@ -17,7 +17,7 @@ using namespace std;
 /**
  * \brief Silnik obsługi komunikacji między wieloma komputerami
  */
-class Network : public Thread {
+class Network : public ContinuousThread {
 public:
     /// uruchomienie wątku sieci
     Network();

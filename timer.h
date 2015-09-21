@@ -12,7 +12,7 @@
 /**
  * \brief Wątek odmierzania stałych odstępów czasu
  */
-class Timer : public Thread {
+class Timer : public ContinuousThread {
 public:
     /**
      * Utworzenie wątku timera

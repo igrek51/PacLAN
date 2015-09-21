@@ -4,6 +4,7 @@
 #include "app.h"
 
 Network::Network(){
+    wait_for_close = 150;
     App::network = this;
     error = false;
     server = false;
@@ -11,6 +12,7 @@ Network::Network(){
     recv_msg = new char [Config::buffer_size];
     wsa_start();
     log("Wątek interfejsu sieci zainicjalizowany.");
+    init = true;
 }
 
 Network::~Network(){
@@ -24,42 +26,40 @@ Network::~Network(){
     recv_string.clear();
     tasks.clear();
     WSACleanup();
-    log("Wątek interfejsu sieci zakończony.");
+    log("Zamykanie wątku interfejsu sieci...");
 }
 
 void Network::run(){
-    while(running){
-        //wykonanie zakolejkowanych zadań
-        if(tasks.size()>0){
-            task_exec(tasks.at(0));
-            delete tasks.at(0);
-            tasks.erase(tasks.begin());
-        }
-        //odbieranie i obsługa eventów
-        if(sockets.size()>0){
-            unsigned int event = WSAWaitForMultipleEvents(events.size(), &events[0], false, Config::network_refresh, false);
-            if(event==WSA_WAIT_FAILED){
-                network_error("WSA_WAIT_FAILED");
-            }else if(event!=WSA_WAIT_TIMEOUT){
-                WSANETWORKEVENTS NetworkEvents;
-                if(WSAEnumNetworkEvents(sockets.at(event-WSA_WAIT_EVENT_0), events.at(event-WSA_WAIT_EVENT_0), &NetworkEvents)==SOCKET_ERROR){
-                    network_error("WSAEnumNetworkEvents: SOCKET_ERROR");
-                }else{
-                    if(NetworkEvents.lNetworkEvents & FD_ACCEPT){ //żądanie nawiązania połączenia
-                        fd_accept();
-                    }else if(NetworkEvents.lNetworkEvents & FD_CLOSE){ //rozłączono
-                        fd_close(event-WSA_WAIT_EVENT_0);
-                    }else if(NetworkEvents.lNetworkEvents & FD_READ){ //odebranie bajtów
-                        int sindex = event-WSA_WAIT_EVENT_0;
-                        read_packet(sindex);
-                    }else if(NetworkEvents.lNetworkEvents & FD_CONNECT){ //pomyślnie połączono
-                        recv_string.at(event-WSA_WAIT_EVENT_0)->push_back("004");
-                    }
+    //wykonanie zakolejkowanych zadań
+    if(tasks.size()>0){
+        task_exec(tasks.at(0));
+        delete tasks.at(0);
+        tasks.erase(tasks.begin());
+    }
+    //odbieranie i obsługa eventów
+    if(sockets.size()>0){
+        unsigned int event = WSAWaitForMultipleEvents(events.size(), &events[0], false, Config::network_refresh, false);
+        if(event==WSA_WAIT_FAILED){
+            network_error("WSA_WAIT_FAILED");
+        }else if(event!=WSA_WAIT_TIMEOUT){
+            WSANETWORKEVENTS NetworkEvents;
+            if(WSAEnumNetworkEvents(sockets.at(event-WSA_WAIT_EVENT_0), events.at(event-WSA_WAIT_EVENT_0), &NetworkEvents)==SOCKET_ERROR){
+                network_error("WSAEnumNetworkEvents: SOCKET_ERROR");
+            }else{
+                if(NetworkEvents.lNetworkEvents & FD_ACCEPT){ //żądanie nawiązania połączenia
+                    fd_accept();
+                }else if(NetworkEvents.lNetworkEvents & FD_CLOSE){ //rozłączono
+                    fd_close(event-WSA_WAIT_EVENT_0);
+                }else if(NetworkEvents.lNetworkEvents & FD_READ){ //odebranie bajtów
+                    int sindex = event-WSA_WAIT_EVENT_0;
+                    read_packet(sindex);
+                }else if(NetworkEvents.lNetworkEvents & FD_CONNECT){ //pomyślnie połączono
+                    recv_string.at(event-WSA_WAIT_EVENT_0)->push_back("004");
                 }
             }
         }
-        Sleep(2); //zmniejszenie zużycia procesora
     }
+    Sleep(2); //zmniejszenie zużycia procesora
 }
 
 void Network::network_error(string e){

@@ -4,26 +4,26 @@
 #include "config.h"
 
 Timer::Timer(int interval_ms, volatile int *cycles){
+    wait_for_close = 150;
     this->interval_ticks = interval_ms*CLOCKS_PER_SEC/1000; //konwersja ms na cykle
     this->cycles = cycles;
     last_time = clock();
     stringstream ss;
     ss<<"Timer cykli logicznych zainicjalizowany ("<<interval_ms<<" ms)";
     log(ss.str());
+    init = true;
 }
 
 Timer::~Timer(){
-    log("Wątek timera zakończony.");
+    log("Zamykanie wątku timera...");
 }
 
 void Timer::run(){
-    while(running){
-        if(clock() >= last_time + interval_ticks){
-            last_time += interval_ticks;
-            (*cycles)++;
-        }
-        Sleep(2);
+    if(clock() >= last_time + interval_ticks){
+        last_time += interval_ticks;
+        (*cycles)++;
     }
+    Sleep(2);
 }
 
 int Timer::cycles_to_s(int c){
