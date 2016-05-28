@@ -5,6 +5,8 @@
 #include "log.h"
 #include "config.h"
 
+//TODO wiele log levels
+
 string get_time(){
     time_t rawtime;
     struct tm *timeinfo;

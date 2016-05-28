@@ -3,8 +3,7 @@
 #include "log.h"
 #include "app.h"
 
-Network::Network(){
-    wait_for_close = 150;
+Network::Network() : ContinuousThread(150){
     App::network = this;
     error = false;
     server = false;
@@ -29,7 +28,7 @@ Network::~Network(){
     log("Zamykanie wątku interfejsu sieci...");
 }
 
-void Network::run(){
+void Network::runLoop(){
     //wykonanie zakolejkowanych zadań
     if(tasks.size()>0){
         task_exec(tasks.at(0));

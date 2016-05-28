@@ -2,6 +2,8 @@
 #include "log.h"
 #include <cstdlib>
 
+//TODO template na typ współrzędnej
+
 Pathfind::Pathfind(){
     start_x = 0;
     start_y = 0;

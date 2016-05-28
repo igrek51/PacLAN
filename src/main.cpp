@@ -3,9 +3,15 @@
 * PacLAN - gra PacMan umożliwiająca rozgrywkę przez sieć dla wielu graczy
 * \author Ireneusz Szulc
 */
-#include <unistd.h>
 #include "app.h"
 #include "config.h"
+#include "system.h"
+
+//TODO przeniesienie plików źródłowych do folderów: threads, network, graphics, players, ...
+
+//TODO pakiet synchronizująco - weryfikujący
+//TODO dźwięki, muzyka z Pacmana
+//TODO dodanie tłumaczeń do wiersza poleceń
 
 int main(int argc, char **argv){
     App *app = new App();
@@ -24,7 +30,7 @@ int main(int argc, char **argv){
             app->game_engine->logic(app->logic_cycles); //wykonuj obliczenia gry
         }
         app->graphics->draw(); //jeśli zostanie czasu - repaint grafiki
-        usleep(1000); //zmniejszenie zużycia procesora
+        sleep_ms(1); //zmniejszenie zużycia procesora
     }
     delete app;
     return 0;

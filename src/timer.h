@@ -7,12 +7,12 @@
 #define TIMER_H
 
 #include <ctime>
-#include "thread.h"
+#include "continuous_thread.h"
 
 /**
  * \brief Wątek odmierzania stałych odstępów czasu
  */
-class Timer : public ContinuousThread {
+class Timer : private ContinuousThread {
 public:
     /**
      * Utworzenie wątku timera
@@ -38,7 +38,7 @@ private:
     /// interwał timera wyrażony jako różnica między cyklami procesora
     int interval_ticks;
     /// pętla timera zwiększająca licznik cykli co określony czas
-    void run();
+    void runLoop();
     /// zapamiętany czas ostatniego wywołania pętli
     clock_t last_time;
     /// wskaźnik na zmienną zwiększaną w każdym cyklu timera

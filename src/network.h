@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include <vector>
-#include "thread.h"
+#include "continuous_thread.h"
 #include "network_task.h"
 
 using namespace std;
@@ -24,8 +24,8 @@ public:
     /// zakończenie wątku sieci
     ~Network();
 private:
-    /// główna funkcja wątku
-    void run();
+    /// główna funkcja powtarzana w pętli
+    void runLoop();
 
     //  SIEĆ
 public:
