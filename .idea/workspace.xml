@@ -16,18 +16,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe3d1a50-f0a6-4644-a8b9-ce95b84a2dbf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PacLAN.iml" afterPath="$PROJECT_DIR$/.idea/PacLAN.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/log.cpp" afterPath="$PROJECT_DIR$/src/log.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/network.cpp" afterPath="$PROJECT_DIR$/src/network.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/continuous_thread.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/continuous_thread.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/system.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/system.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/network.h" afterPath="$PROJECT_DIR$/src/network.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pathfind.cpp" afterPath="$PROJECT_DIR$/src/pathfind.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thread.cpp" afterPath="$PROJECT_DIR$/src/thread.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/thread.h" afterPath="$PROJECT_DIR$/src/thread.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/timer.cpp" afterPath="$PROJECT_DIR$/src/timer.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/timer.h" afterPath="$PROJECT_DIR$/src/timer.h" />
     </list>
     <ignored path="PacLAN.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +55,8 @@
       <file leaf-file-name="network.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/network.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="555">
+              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -92,8 +86,8 @@
         <option value="$PROJECT_DIR$/src/continuous_thread.cpp" />
         <option value="$PROJECT_DIR$/src/thread.h" />
         <option value="$PROJECT_DIR$/src/continuous_thread.h" />
-        <option value="$PROJECT_DIR$/src/network.h" />
         <option value="$PROJECT_DIR$/src/timer.h" />
+        <option value="$PROJECT_DIR$/src/network.h" />
       </list>
     </option>
   </component>
@@ -372,6 +366,14 @@
       <option name="presentableId" value="Default" />
       <updated>1464436981184</updated>
     </task>
+    <task id="LOCAL-00001" summary="porządki w wątkach,&#10;fix wątków w wersji linux - wykorzystanie boost,&#10;osobna klasa ContinuousThread,&#10;wyrzucenie single thread,&#10;wykorzystanie sleep z boosta,&#10;fix wątku timera">
+      <created>1464445583326</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1464445583326</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -400,6 +402,12 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="porządki w wątkach,&#10;fix wątków w wersji linux - wykorzystanie boost,&#10;osobna klasa ContinuousThread,&#10;wyrzucenie single thread,&#10;wykorzystanie sleep z boosta,&#10;fix wątku timera" />
+    <option name="LAST_COMMIT_MESSAGE" value="porządki w wątkach,&#10;fix wątków w wersji linux - wykorzystanie boost,&#10;osobna klasa ContinuousThread,&#10;wyrzucenie single thread,&#10;wykorzystanie sleep z boosta,&#10;fix wątku timera" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -808,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/network.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="555">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
           <folding />
         </state>
       </provider>

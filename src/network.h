@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <vector>
+#include <sys/socket.h>
 #include "continuous_thread.h"
 #include "network_task.h"
 
