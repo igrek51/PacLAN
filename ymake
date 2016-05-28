@@ -3,7 +3,7 @@ COMPILER = g++
 
 COMPILER_PATH = C:\MinGW\bin
 
-SRC_PATH =
+SRC_PATH = src/
 
 SRC = *.cpp
 
@@ -17,6 +17,6 @@ COMPILER_FLAGS = -Wall
 
 LINKER_FLAGS = -Wall -s -mwindows
 
-RESOURCE = resource.rc
+RESOURCE = res/resource.rc
 
 VERSION_FILE = version.h
