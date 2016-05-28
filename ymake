@@ -11,12 +11,12 @@ HEADERS = *.h -version.h
 
 OUTPUT = PacLAN.exe
 
-LIBS = -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image -lws2_32
+LIBS = -lSDL2 -lSDL2_ttf -lSDL2_image -lSDL2main
 
-COMPILER_FLAGS = -Wall
+COMPILER_FLAGS = -Wall -std=c++11
 
-LINKER_FLAGS = -Wall -s -mwindows
+LINKER_FLAGS = -Wall -s
 
-RESOURCE = res/resource.rc
+RESOURCE = 
 
 VERSION_FILE = version.h

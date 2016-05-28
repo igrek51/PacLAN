@@ -16,6 +16,8 @@
 #define TASK_SEND_TO_CLIENT 7 //wyślij pakiet do jednego z klientów
 #define TASK_RECEIVE 8
 
+//TODO numery zadań w enumach
+
 #include <iostream>
 #include <vector>
 

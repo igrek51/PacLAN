@@ -3,7 +3,7 @@
 * PacLAN - gra PacMan umożliwiająca rozgrywkę przez sieć dla wielu graczy
 * \author Ireneusz Szulc
 */
-#include <windows.h>
+#include <unistd.h>
 #include "app.h"
 #include "config.h"
 
@@ -24,7 +24,7 @@ int main(int argc, char **argv){
             app->game_engine->logic(app->logic_cycles); //wykonuj obliczenia gry
         }
         app->graphics->draw(); //jeśli zostanie czasu - repaint grafiki
-        Sleep(1); //zmniejszenie zużycia procesora
+        usleep(1000); //zmniejszenie zużycia procesora
     }
     delete app;
     return 0;

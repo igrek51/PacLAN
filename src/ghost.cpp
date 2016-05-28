@@ -1,6 +1,5 @@
 #include "ghost.h"
 #include "config.h"
-#include "log.h"
 #include "app.h"
 
 Ghost::Ghost(int xmap, int ymap, SDL_Color color, string name, int controlby) :

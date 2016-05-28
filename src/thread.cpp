@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "thread.h"
 #include "log.h"
 
@@ -50,7 +51,7 @@ ContinuousThread::~ContinuousThread(){
     close = true;
     log("Oczekiwanie na zakończenie wątku...");
     for(int i=0; i<wait_for_close && !closed; i++){
-        Sleep(1);
+        usleep(1000);
     }
     if(!closed){
         log("Przekroczono czas oczekiwania - siłowe zamykanie wątku.");

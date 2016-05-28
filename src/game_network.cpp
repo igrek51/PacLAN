@@ -1,5 +1,4 @@
 #include "game_engine.h"
-#include "config.h"
 #include "log.h"
 #include "app.h"
 

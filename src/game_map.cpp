@@ -1,6 +1,4 @@
 #include "game_engine.h"
-#include "config.h"
-#include "log.h"
 #include "app.h"
 
 char GameEngine::next_grid(Player *player, int direction){

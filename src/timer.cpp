@@ -1,4 +1,5 @@
 #include <sstream>
+#include <unistd.h>
 #include "timer.h"
 #include "log.h"
 #include "config.h"
@@ -23,7 +24,7 @@ void Timer::run(){
         last_time += interval_ticks;
         (*cycles)++;
     }
-    Sleep(2);
+    usleep(2000);
 }
 
 int Timer::cycles_to_s(int c){

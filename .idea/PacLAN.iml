@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/thread.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/app.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/animation.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/pathfind.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/pacman.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/player.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/language.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/pathfind.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/log.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/map.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/graphics.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/graphics.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/app.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/language.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/log.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/network_task.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/graphics_draw.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/game_engine.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/animation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/game_engine.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/timer.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ghost.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/map.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/game_logic.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/game_cmd.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/network_task.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/config.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/item.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/timer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/network.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/ghost.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/item.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/game_network.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/player.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/thread.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/network.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/pacman.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/game_map.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/config.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES>
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+          <root url="file:///usr/include" />
+          <root url="file:///usr/local/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+          <root url="file:///usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+          <root url="file:///usr/include" />
+          <root url="file:///usr/local/include" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

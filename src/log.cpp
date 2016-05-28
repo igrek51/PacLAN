@@ -1,7 +1,7 @@
 #include <fstream>
 #include <ctime>
 #include <sstream>
-#include <windows.h>
+#include <SDL2/SDL.h>
 #include "log.h"
 #include "config.h"
 
@@ -45,9 +45,10 @@ void log(int l){
 
 void error(string e){
     log(e);
-    MessageBox(NULL,e.c_str(),"Błąd",MB_OK|MB_ICONERROR);
+    SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Błąd", e.c_str(), NULL);
 }
 
+//TODO przekazywanie błędów wyjątkami
 
 void ss_clear(stringstream &sstream){
     sstream.str("");
