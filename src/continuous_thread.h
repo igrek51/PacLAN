@@ -14,7 +14,7 @@ public:
     virtual ~ContinuousThread();
 protected:
     /// główna funkcja wątku
-    virtual void run() = 0;
+    virtual void run();
     /// powtarzana procedura wątku
     virtual void runLoop() = 0;
 private:

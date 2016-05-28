@@ -6,6 +6,8 @@
 #ifndef THREAD_H
 #define THREAD_H
 
+#include <boost/thread.hpp>
+
 /**
  * \brief Klasa wątku
  */

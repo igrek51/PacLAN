@@ -103,7 +103,7 @@ private:
     void task_exec(NetworkTask *task);
 
     //  KONTROLA BŁĘDÓW
-    /// zmienna, która określa, czy wystąpił błąd
+    /// czy wystąpił błąd
     bool error;
     /**
      * wyświetlenie szczegółowej informacji o błędzie
@@ -163,6 +163,8 @@ private:
     bool read_packet(int sindex);
 
     bool closeSocket(int socket);
+
+    fd_set readfds;
 };
 
 #endif

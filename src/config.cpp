@@ -14,20 +14,20 @@ int Config::logic_cycles_critical = 60;
 int Config::fps_avg_frames = 10;
 
 string Config::bitmap_names[] = {
-    "gfx\\pacman.png", "pacman",
-    "gfx\\ghost.png", "ghost",
-    "gfx\\ghost_eatme.png", "ghost_eatme",
-    "gfx\\dot1.png", "dot1",
-    "gfx\\dot2.png", "dot2",
-    "maps\\1\\background.png", "map1",
+    "gfx/pacman.png", "pacman",
+    "gfx/ghost.png", "ghost",
+    "gfx/ghost_eatme.png", "ghost_eatme",
+    "gfx/dot1.png", "dot1",
+    "gfx/dot2.png", "dot2",
+    "maps/1/background.png", "map1",
     ""
 };
 
-string Config::icon_name = "gfx\\icon.png";
+string Config::icon_name = "gfx/icon.png";
 
-string Config::fontfile1 = "fonts\\arialbd.ttf";
+string Config::fontfile1 = "fonts/arialbd.ttf";
 int Config::fontsize1 = 14;
-string Config::fontfile2 = "fonts\\prstartk.ttf";
+string Config::fontfile2 = "fonts/prstartk.ttf";
 int Config::fontsize2 = 12;
 
 bool Config::show_fps = false;
@@ -40,7 +40,7 @@ string Config::languages[] = {
     "Polski", "English"
 };
 int Config::languages_n = 2;
-int Config::language_selected = 1;
+int Config::language_selected = 0;
 
 int Config::pacman_speed = 4;
 int Config::ghost_speed = 4;

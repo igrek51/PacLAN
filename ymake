@@ -9,9 +9,9 @@ SRC = *.cpp
 
 HEADERS = *.h -version.h
 
-OUTPUT = PacLAN.exe
+OUTPUT = PacLAN
 
-LIBS = -lSDL2 -lSDL2_ttf -lSDL2_image -lSDL2main
+LIBS = -lSDL2 -lSDL2_ttf -lSDL2_image -lboost_system -lboost_thread
 
 COMPILER_FLAGS = -Wall -std=c++11
 

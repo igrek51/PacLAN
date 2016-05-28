@@ -37,7 +37,7 @@ public:
      */
     Player(int xmap, int ymap, SDL_Color color, string name, int controlby);
     /// usunięcie gracza
-    ~Player();
+    virtual ~Player();
     /// nazwa gracza - podpis nad graczem
     string name;
     /// podklasa gracza: P_PACMAN - pacman, P_GHOST - duszek

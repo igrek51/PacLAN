@@ -1,4 +1,3 @@
-#include <boost/thread.hpp>
 #include "thread.h"
 #include "log.h"
 #include "system.h"

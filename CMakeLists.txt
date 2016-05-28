@@ -17,7 +17,8 @@ add_custom_target(clean-all
         COMMAND ${YCMD_DIR} -w ${WORKDIR} --clean)
 add_custom_target(really-clean
         COMMAND ${YCMD_DIR} -w ${WORKDIR} --clean)
-add_custom_target(build
+add_custom_target(rebuild
+		COMMAND ${YCMD_DIR} -w ${WORKDIR} --clean
         COMMAND ${YCMD_DIR} -w ${WORKDIR} --ymake)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})

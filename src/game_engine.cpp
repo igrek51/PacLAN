@@ -14,7 +14,8 @@ GameEngine::GameEngine(){
     if(Config::fullscreen_start)
         App::graphics->fullscreen_toggle();
     //mapka
-    map = new Map(App::graphics->tex("map1"),"maps\\1\\grid.txt");
+    //TODO przeniesc do config
+    map = new Map(App::graphics->tex("map1"),"maps/1/grid.txt");
     if(App::exit)
         return;
     pathfind_init();

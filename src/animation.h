@@ -19,7 +19,7 @@ public:
      * \param y położenie wzdłuż osi y na ekranie wyrażone w pikselach
      */
     Animation(int x, int y);
-    ~Animation();
+    virtual ~Animation();
     /// Podstawowa tekstura wyświetlana jako animacja
     SDL_Texture *texture;
     /// tablica 4 liczb całkowitych określająca parametry wycięcia fragmentu obrazka z tekstury
@@ -40,6 +40,7 @@ public:
     virtual void draw() = 0;
 };
 
+//TODO utworzyć nowy plik dla klasy DeathAnimation
 /**
  * \brief Animacja śmierci gracza (Pacmana lub Duszka)
  */
