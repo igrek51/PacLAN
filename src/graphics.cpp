@@ -4,6 +4,7 @@
 #include "config.h"
 #include "log.h"
 #include "app.h"
+#include "system.h"
 
 Graphics::Graphics(){
     App::graphics = this;
@@ -21,7 +22,7 @@ Graphics::Graphics(){
     set_icon(Config::icon_name);
     fps = 0;
     fps_frames = 0;
-    last_frame = clock();
+    last_frame = currentMillis();
 }
 
 Graphics::~Graphics(){
@@ -54,9 +55,9 @@ void Graphics::sdl_error(string e){
 void Graphics::calculate_fps(){
     fps_frames++;
     if(fps_frames>=Config::fps_avg_frames){
-        clock_t time0 = clock();
+        long long time0 = currentMillis();
         if(time0>last_frame)
-            fps = ((double)CLOCKS_PER_SEC*Config::fps_avg_frames)/(time0-last_frame);
+            fps = ((double)Config::fps_avg_frames*1000)/(time0-last_frame);
         last_frame = time0;
         fps_frames = 0;
     }

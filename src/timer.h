@@ -35,12 +35,12 @@ public:
      */
     static int cycles_to_s(int c);
 private:
-    /// interwał timera wyrażony jako różnica między cyklami procesora
-    int interval_ticks;
+    /// interwał timera w milisekunach
+    long long interval_ms;
     /// pętla timera zwiększająca licznik cykli co określony czas
     void runLoop();
-    /// zapamiętany czas ostatniego wywołania pętli
-    clock_t last_time;
+    /// zapamiętany czas następnego wywołania pętli
+    long long next_time;
     /// wskaźnik na zmienną zwiększaną w każdym cyklu timera
     volatile int *cycles;
 };

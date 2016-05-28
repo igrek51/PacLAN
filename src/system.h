@@ -7,5 +7,6 @@
 #define SYSTEM_H
 
 void sleep_ms(int ms);
+long long currentMillis();
 
 #endif

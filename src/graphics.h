@@ -52,7 +52,7 @@ private:
     /// liczba przeliczonych klatek
     int fps_frames;
     /// czas wystąpienia ostatniej klatki
-    clock_t last_frame;
+    long long last_frame;
     /// wyznaczenie wartości FPS
     void calculate_fps();
 
