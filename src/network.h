@@ -46,25 +46,14 @@ public:
      * @return adres ip klienta w postaci tekstu
      */
     string get_client_ip(int sindex);
-private:
-    /// klasa do inicjalizacji sieci
-    WSADATA wsaData;
-    /// inicjalizacja sieci
-    void wsa_start();
-
     //  SOCKETY
 public:
     /// lista Socketów - otwartych połączeń z innymi komputerami, 0 - socket klienta lub socket serwera, większe od 0 - sockety klientów serwera
-    vector<SOCKET> sockets;
+    vector<int> sockets;
     /// zmienna określająca, czy serwer jest otwarty (true - otwarty)
     bool server;
     /// zmienna określająca, czy połączenie klienta jest aktywne (true - aktywne)
     bool client;
-
-    //  EVENTY
-private:
-    /// wektor do obsługi zdarzeń socketów, liczba eventów = liczba socketów, 0 - event servera lub clienta, większe od 0 - klienci serwera
-    vector<WSAEVENT> events;
 
     //  BUFORY DANYCH
 public:
@@ -172,6 +161,8 @@ private:
      * @return true - jeśli wszystko przebiegło pomyślnie
      */
     bool read_packet(int sindex);
+
+    bool closeSocket(int socket);
 };
 
 #endif
