@@ -4,6 +4,7 @@
 #include "../utils.h"
 
 //TODO utworzyć osobną klasę (z nagłówkiem .h)
+//TODO obserwator lub event dispatcher
 
 void GameEngine::network_packet_process(int from, string packet){
     //cmd_output("Przetwarzam pakiet: "+packet);
