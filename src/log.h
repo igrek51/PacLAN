@@ -1,8 +1,3 @@
-/**
- * \file log.h
- * Moduł obsługi dziennika zdarzeń oraz przydatnych funkcji
- * \see log.cpp
- */
 #ifndef LOG_H
 #define LOG_H
 

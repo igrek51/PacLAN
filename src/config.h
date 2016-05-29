@@ -1,8 +1,3 @@
-/**
- * \file config.h
- * Moduł ustawień konfiguracyjnych
- * \see config.cpp
- */
 #ifndef CONFIG_H
 #define CONFIG_H
 

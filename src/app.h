@@ -1,15 +1,10 @@
-/**
- * \file app.h
- * Moduł głównej aplikacji
- * \see app.cpp
- */
 #ifndef APP_H
 #define APP_H
 
-#include "game_engine.h"
-#include "graphics.h"
-#include "network.h"
-#include "timer.h"
+#include "logic/game_engine.h"
+#include "graphics/graphics.h"
+#include "network/network.h"
+#include "threads/timer.h"
 #include "language.h"
 
 /**

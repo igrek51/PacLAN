@@ -1,8 +1,3 @@
-/**
-* \mainpage
-* PacLAN - gra PacMan umożliwiająca rozgrywkę przez sieć dla wielu graczy
-* \author Ireneusz Szulc
-*/
 #include "app.h"
 #include "config.h"
 #include "system.h"

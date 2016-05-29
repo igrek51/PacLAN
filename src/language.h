@@ -1,8 +1,3 @@
-/**
- * \file language.h
- * Moduł ustawień językowych
- * \see language.cpp
- */
 #ifndef LANGUAGE_H
 #define LANGUAGE_H
 
