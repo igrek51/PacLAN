@@ -1,7 +1,6 @@
 #include "pacman.h"
 #include "../config.h"
 #include "../app.h"
-#include "../log.h"
 
 Pacman::Pacman(int xmap, int ymap, SDL_Color color, string name, int controlby) :
     Player(xmap,ymap,color,name,controlby){
@@ -51,17 +50,17 @@ void Pacman::reload_texture(){
 
 void Pacman::ai_control(){
     //AI = 0 - DUMB - tylko losowe ruchy
-    //AI = 1 - INTELIGENTY PACMAN
+    //AI >= 1 - INTELIGENTY PACMAN
     next_moving = 1;
-    int target_x = -1;
-    int target_y = -1;
+    int target_x;
+    int target_y;
     bool escape = false; //tryb uciekania
     if(ai_level==0){
         move_random();
         return;
     }
     //usunięcie starej ścieżki
-    if(sciezka!=nullptr){
+    if(sciezka!=NULL){
         delete sciezka;
         sciezka = nullptr;
     }

@@ -8,7 +8,8 @@
 //TODO dźwięki, muzyka z Pacmana
 //TODO dodanie tłumaczeń do wiersza poleceń
 
-//TODO C++ 11 : NULL -> nullptr, pętle foreach, ...
+//TODO C++ 11: pętle foreach, auto, enum class, smart_ptr (unique, shared) ...
+//TODO STL: iteratory, set, deque, list, ...
 
 //TODO komentarze doxygena - porządek: wyjebać lub uzupełnić
 

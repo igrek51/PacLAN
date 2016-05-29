@@ -4,6 +4,7 @@
 /**
  * \brief Węzeł w labiryncie w algorytmie znajdowania drogi
  */
+template<typename T>
 class Node {
 public:
     /**
@@ -11,18 +12,20 @@ public:
      * @param x położenie na mapie wzdłuż osi x
      * @param y położenie na mapie wzdłuż osi y
      */
-    Node(int x, int y);
+    Node(T x, T y);
+
+    ~Node();
 
     /// położenie na mapie wzdłuż osi x
-    int x;
+    T x;
     /// położenie na mapie wzdłuż osi y
-    int y;
+    T y;
     /// odległość od startu po wyznaczonej drodze
-    int g;
+    T g;
     /// suma g+h (heurystyki) - całkowita oszacowana droga od startu do mety
-    int f;
+    T f;
     /// wskaźnik na węzeł będący rodzicem (lub NULL)
-    Node* parent;
+    Node<T>* parent;
 };
 
 #endif

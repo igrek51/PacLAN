@@ -136,7 +136,7 @@ public:
      * @param direction kierunek gracza
      * @param sciezka wskaźnik na ścieżkę, którą ma podążać gracz
      */
-    void follow_path(int xmap, int ymap, int &direction, Path *sciezka);
+    void follow_path(int xmap, int ymap, int &direction, Path<int> *sciezka);
     /**
      * przybliżona odległość 2 graczy
      * @param player1 wskaźnik na gracza 1
@@ -205,7 +205,7 @@ public:
      */
     void random_field(int &x, int &y, string pattern);
     ///silnik szukania drogi
-    Pathfind *pathfind;
+    Pathfind<int> *pathfind;
 private:
     /**
      * sprawdza czy pole mapy spełnia określone warunki pól

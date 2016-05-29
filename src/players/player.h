@@ -138,7 +138,7 @@ public:
     /// następny planowany kierunek gracza
     int next_direction;
     /// wyznaczona scieżka podążania graczy sterowanych przez sztuczną inteligencję do określonych punktów
-    Path *sciezka;
+    Path<int> *sciezka;
     /// wykonanie ruchu gracza przez sztuczną inteligencję
     virtual void ai_control() = 0; //sterowanie przez sztuczną inteligencję komputera
 };

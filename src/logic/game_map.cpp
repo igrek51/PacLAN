@@ -68,7 +68,7 @@ bool GameEngine::is_collision(Player *player1, Item *item2){
 }
 
 void GameEngine::pathfind_init(){
-    pathfind = new Pathfind();
+    pathfind = new Pathfind<int>();
     pathfind->map_w = map->grid_w;
     pathfind->map_h = map->grid_h;
     pathfind->map = new char* [pathfind->map_h];
@@ -127,7 +127,7 @@ void GameEngine::random_field(int &x, int &y, string pattern){
     }while(!is_field_correct(x,y,pattern));
 }
 
-void GameEngine::follow_path(int xmap, int ymap, int &direction, Path *sciezka){
+void GameEngine::follow_path(int xmap, int ymap, int &direction, Path<int> *sciezka){
     if(sciezka==nullptr)
         return;
     if(sciezka->points.size()<=1)
