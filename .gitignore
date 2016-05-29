@@ -5,4 +5,4 @@ prv
 bin/log.txt
 make_clean.bat
 open2.bat
-./idea
+.idea
