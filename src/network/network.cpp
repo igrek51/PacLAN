@@ -104,7 +104,8 @@ void Network::runLoop() {
 void Network::network_error(string e) {
     error = true;
     stringstream ss;
-    ss << "[!] Błąd sieci: " << e;
+    ss << "Błąd sieci: " << e;
+    Log::error(ss.str());
     console_out(ss.str());
 }
 

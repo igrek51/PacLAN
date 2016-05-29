@@ -57,7 +57,7 @@ Language::Language(string lang){
         pacmans = "Pacmans";
         ghosts = "Ghosts";
     }
-    Log::info("Wczytano nowe ustawienia językowe.");
+    Log::debug("Wczytano ustawienia językowe.");
 }
 
 Language::~Language(){

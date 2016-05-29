@@ -7,7 +7,7 @@
 
 GameEngine::GameEngine(){
     App::game_engine = this;
-    Log::info("Inicjalizacja silnika gry...");
+    Log::info("Inicjalizacja logiki gry...");
     keystate = SDL_GetKeyboardState(NULL);
     cycles = 0;
     menu_pacman = nullptr;
@@ -54,7 +54,7 @@ GameEngine::GameEngine(){
 }
 
 GameEngine::~GameEngine(){
-    Log::info("Usuwanie graczy...");
+    Log::debug("Usuwanie graczy...");
     for(unsigned int i=0; i<players.size(); i++)
         delete players[i];
     players.clear();
@@ -62,11 +62,11 @@ GameEngine::~GameEngine(){
     ghosts.clear();
     delete menu_pacman;
     delete menu_ghost;
-    Log::info("Usuwanie obiektów...");
+    Log::debug("Usuwanie obiektów...");
     for(unsigned int i=0; i<items.size(); i++)
         delete items[i];
     items.clear();
-    Log::info("Usuwanie mapy...");
+    Log::debug("Usuwanie mapy...");
     if(map!=nullptr)
         delete map;
     delete pathfind;
@@ -91,11 +91,11 @@ void GameEngine::logic(volatile int &logic_cycles){
         }
         if(event.type==SDL_WINDOWEVENT){
             if(event.window.event==SDL_WINDOWEVENT_MOVED){
-                Log::info("Zmiana położenia okna (zatrzymana aplikacja) - reset licznika logicznego");
+                Log::debug("Zmiana położenia okna (zatrzymana aplikacja) - reset licznika logicznego");
                 logic_cycles = 1;
             }
             if(event.window.event==SDL_WINDOWEVENT_RESTORED){
-                Log::info("Okno przywrócone.");
+                Log::debug("Okno przywrócone.");
                 App::graphics->reload_textures();
             }
         }

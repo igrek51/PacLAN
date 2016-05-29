@@ -7,8 +7,12 @@
 //TODO network error, sdl error, critical error
 //TODO przekazywanie błędów wyjątkami
 
+//TODO błędy wyrzucać jako ERROR
+//TODO wyświetlać komunikaty z info użytkownikowi na CMD
+//TODO komunikaty inicjalizujące i o zamknięciu na poziomie DEBUG
+
 int Log::log_level = DEBUG;
-int Log::echo_level = WARN;
+int Log::echo_level = INFO;
 
 int Log::errors_count = 0;
 

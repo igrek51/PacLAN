@@ -367,5 +367,5 @@ void GameEngine::cmd_output(string out){
         cmd_out[i] = cmd_out[i+1];
     }
     cmd_out[Config::cmd_outputs-1] = out; //nowy output
-    Log::info(out);
+    Log::info("CMD-OUT: " + out);
 }

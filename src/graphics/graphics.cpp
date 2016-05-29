@@ -18,7 +18,7 @@ Graphics::Graphics(){
         return;
     font1 = load_ttf_font(Config::fontfile1,Config::fontsize1);
     font2 = load_ttf_font(Config::fontfile2,Config::fontsize2);
-    Log::info("Ładowanie tekstur...");
+    Log::debug("Ładowanie tekstur...");
     for(unsigned int i=0; Config::bitmap_names[2*i].length()>0; i++){
         add_texture(load_texture(Config::bitmap_names[2*i]),Config::bitmap_names[2*i+1]);
     }
@@ -30,7 +30,7 @@ Graphics::Graphics(){
 
 Graphics::~Graphics(){
     Log::info("Zamykanie silnika grafiki...");
-    Log::info("Usuwanie wszystkich tekstur");
+    Log::debug("Usuwanie wszystkich tekstur");
     for(unsigned int i=0; i<textures.size(); i++){
         destroy_texture(textures[i]);
     }
@@ -88,12 +88,12 @@ bool Graphics::sdl_init(){
         return false;
     }
     SDL_SetRenderDrawBlendMode(sdl_ren,SDL_BLENDMODE_BLEND);
-    Log::info("Start SDL_TTF...");
+    Log::debug("Start SDL_TTF...");
     if(TTF_Init()!=0){
         sdl_error("TTF_Init");
         return false;
     }
-    Log::info("Start SDL_Image...");
+    Log::debug("Start SDL_Image...");
     int imgFlags = IMG_INIT_PNG;
     if(!(IMG_Init(imgFlags)&imgFlags)){
         sdl_error("SDL_image Init");
@@ -128,7 +128,7 @@ void Graphics::draw(){
 }
 
 void Graphics::fullscreen_toggle(){
-    Log::info("Zmiana fullscreen...");
+    Log::debug("Przełączanie fullscreen...");
     fullscreen = !fullscreen;
     if(fullscreen){
         SDL_SetWindowFullscreen(sdl_win,SDL_WINDOW_FULLSCREEN_DESKTOP);
@@ -205,7 +205,7 @@ void Graphics::add_texture(SDL_Texture *texture, string name){
     }
     textures.push_back(texture);
     textures_names.push_back(name);
-    Log::info("Dodano teksturę: "+name);
+    Log::debug("Dodano teksturę: "+name);
 }
 
 void Graphics::destroy_texture(SDL_Texture *&texture){
@@ -218,7 +218,7 @@ void Graphics::destroy_texture(SDL_Texture *&texture){
 }
 
 void Graphics::reload_textures(){
-    Log::info("Ponowne wczytywanie tekstur...");
+    Log::debug("Przeładowanie tekstur...");
     for(unsigned int i=0; i<App::game_engine->players.size(); i++){
         App::game_engine->players[i]->reload_texture();
     }

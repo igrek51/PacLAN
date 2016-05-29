@@ -21,7 +21,7 @@ App::App(){
     logic_cycles = 1;
     srand((unsigned int) time(0));
     Log::logClear();
-    Log::info("Hello World!");
+    Log::info("Inicjalizacja aplikacji...");
 }
 
 App::~App(){
