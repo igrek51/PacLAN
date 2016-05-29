@@ -4,7 +4,7 @@ set(PROJECT_NAME paclan)
 set(WORKDIR /mnt/d/Igrek/C++/PacLAN/)
 
 set(YCMD_DIR /mnt/d/Igrek/C++/ycmd/bin/ycmd)
-set(SOURCE_FILES src/main.cpp src/animation.cpp src/app.cpp src/config.cpp src/game_cmd.cpp src/game_engine.cpp src/game_logic.cpp src/game_map.cpp src/game_network.cpp src/ghost.cpp src/graphics.cpp src/graphics_draw.cpp src/item.cpp src/language.cpp src/log.cpp src/map.cpp src/network.cpp src/network_task.cpp src/pacman.cpp src/pathfind.cpp src/player.cpp src/thread.cpp src/timer.cpp src/system.cpp src/continuous_thread.cpp)
+set(SOURCE_FILES src/main.cpp src/animation.cpp src/app.cpp src/config.cpp src/game_cmd.cpp src/game_engine.cpp src/game_logic.cpp src/game_map.cpp src/game_network.cpp src/ghost.cpp src/graphics.cpp src/graphics_draw.cpp src/item.cpp src/language.cpp src/log.cpp src/map.cpp src/network.cpp src/network_task.cpp src/pacman.cpp src/pathfind.cpp src/player.cpp src/thread.cpp src/timer.cpp src/system.cpp src/continuous_thread.cpp src/death_animation.cpp)
 set(SHIT_FILE /mnt/d/Igrek/C++/cmake/shit.cpp)
 
 project(${PROJECT_NAME})

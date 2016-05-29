@@ -9,6 +9,8 @@ Language* App::lang = NULL;
 bool App::exit = false;
 volatile int App::logic_cycles = 1;
 
+//TODO coś innego niż singleton: listenery, dependency injection
+
 App::App(){
     graphics = NULL;
     game_engine = NULL;

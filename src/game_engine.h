@@ -1,3 +1,4 @@
+//TODO wyjebać wszystkie komentarze plików
 /**
  * \file game_engine.h
  * Moduł silnika gry

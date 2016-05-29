@@ -4,12 +4,7 @@
 #include "app.h"
 #include "system.h"
 
-#include <unistd.h>
 #include <arpa/inet.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <sys/time.h>
 #include <netdb.h>
 
 Network::Network() : ContinuousThread(150) {
@@ -164,12 +159,12 @@ bool Network::open_server_socket() {
         return false;
     }
 
-    char opt = 1;
-    //allow multiple connections
-    if (setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0) {
-        network_error("failed setting server socket options");
-        return false;
-    }
+//    char opt = 1;
+//    //allow multiple connections
+//    if (setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0) {
+//        network_error("failed setting server socket options");
+//        return false;
+//    }
 
     sockaddr_in serverInfo;
     memset(&serverInfo, 0, sizeof(serverInfo));

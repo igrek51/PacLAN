@@ -6,9 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/app.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/pathfind.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/system.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/continuous_thread.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/animation.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/pacman.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/death_animation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/death_animation.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/system.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/player.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/language.h" isTestSource="false" />
@@ -32,6 +33,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/map.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/game_logic.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/game_cmd.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/continuous_thread.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/network_task.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/config.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/item.cpp" isTestSource="false" />

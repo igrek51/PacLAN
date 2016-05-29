@@ -30,6 +30,8 @@ int Config::fontsize1 = 14;
 string Config::fontfile2 = "fonts/prstartk.ttf";
 int Config::fontsize2 = 12;
 
+string Config::mapDefault = "maps/1/grid.txt";
+
 bool Config::show_fps = false;
 bool Config::show_grid = false;
 bool Config::show_paths = false;
@@ -70,7 +72,6 @@ int Config::zombie_pacman_speed = 3;
 int Config::zombie_ghost_speed = 4;
 int Config::zombie_ghost_eatme_speed = 5;
 
-int Config::network_refresh = 5;
 int Config::max_clients = 32;
 int Config::port = 4000;
 int Config::max_attempts = 5;

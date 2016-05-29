@@ -7,7 +7,7 @@
 #include "config.h"
 #include "system.h"
 
-//TODO przeniesienie plików źródłowych do folderów: threads, network, graphics, players, ...
+//TODO przeniesienie plików źródłowych do folderów: threads, network, graphics, players, animations, ...
 
 //TODO pakiet synchronizująco - weryfikujący
 //TODO dźwięki, muzyka z Pacmana
@@ -18,7 +18,7 @@ int main(int argc, char **argv){
     app->graphics = new Graphics(); //inicjalizacja grafiki
     if(app->exit)
         return 0;
-    app->game_engine = new GameEngine(); //silnik gry
+    app->game_engine = new GameEngine(); //logika gry
     if(app->exit)
         return 0;
     app->network = new Network(); //interfejs sieciowy

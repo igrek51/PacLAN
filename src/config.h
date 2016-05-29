@@ -10,6 +10,8 @@
 
 using namespace std;
 
+//TODO zrobić z tego singleton
+
 /**
  * \brief Ustawienia konfiguracyjne (stałe lub modyfikowalne)
  */
@@ -54,6 +56,10 @@ public:
     static string fontfile2;
     /// rozmiar czcionki nr 2
     static int fontsize2;
+
+    //  MAPA
+    /// nazwa pliku definicji mapy
+    static string mapDefault;
 
     //  INFO
     /// wyświetlanie liczby klatek na sekundę (true - włączone)
@@ -132,8 +138,6 @@ public:
     static int zombie_ghost_eatme_speed;
 
     //  SIEĆ
-    /// czas oczekiwania na nadchodzące zadania z sieci (w ms)
-    static int network_refresh;
     /// maksymalna liczba klientów
     static int max_clients;
     /// numer portu przy połączeniu

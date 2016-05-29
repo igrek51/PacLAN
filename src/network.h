@@ -57,6 +57,7 @@ public:
 
     //  BUFORY DANYCH
 public:
+    //TODO może inny kontener: deque, list ??
     /// bufor danych dla każdego połączenia - zawiera całe, kompletne pakiety
     vector< vector<string>* > recv_string;
 private:

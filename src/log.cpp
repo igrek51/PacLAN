@@ -6,6 +6,8 @@
 #include "config.h"
 
 //TODO wiele log levels
+//TODO statyczna klasa Log
+//TODO error i warn nie tylko do loga, ale też na cout lub cerr
 
 string get_time(){
     time_t rawtime;

@@ -2,6 +2,7 @@
 #include "config.h"
 #include "log.h"
 #include "app.h"
+#include "death_animation.h"
 
 GameEngine::GameEngine(){
     App::game_engine = this;
@@ -14,8 +15,7 @@ GameEngine::GameEngine(){
     if(Config::fullscreen_start)
         App::graphics->fullscreen_toggle();
     //mapka
-    //TODO przeniesc do config
-    map = new Map(App::graphics->tex("map1"),"maps/1/grid.txt");
+    map = new Map(App::graphics->tex("map1"),Config::mapDefault);
     if(App::exit)
         return;
     pathfind_init();
@@ -338,7 +338,7 @@ void GameEngine::kill_player(int index){
     }else{
         to_copy = players[index]->texture;
     }
-    App::graphics->animations.push_back(new AnimationDeath(round_to_int(players[index]->a_x),round_to_int(players[index]->a_y),to_copy,players[index]->color,clip));
+    App::graphics->animations.push_back(new DeathAnimation(round_to_int(players[index]->a_x),round_to_int(players[index]->a_y),to_copy,players[index]->color,clip));
     synchro<<"050 "<<index<<" "<<round_to_int(players[index]->a_x)<<" "<<round_to_int(players[index]->a_y)<<"\r";
     //zabicie gracza
     players[index]->respawn = Config::respawn_time;
