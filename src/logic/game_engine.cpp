@@ -3,14 +3,15 @@
 #include "../log.h"
 #include "../app.h"
 #include "../graphics/animations/death_animation.h"
+#include "../utils.h"
 
 GameEngine::GameEngine(){
     App::game_engine = this;
-    log("Inicjalizacja silnika gry...");
+    Log::info("Inicjalizacja silnika gry...");
     keystate = SDL_GetKeyboardState(NULL);
     cycles = 0;
-    menu_pacman = NULL;
-    menu_ghost = NULL;
+    menu_pacman = nullptr;
+    menu_ghost = nullptr;
     //fullscreen
     if(Config::fullscreen_start)
         App::graphics->fullscreen_toggle();
@@ -53,7 +54,7 @@ GameEngine::GameEngine(){
 }
 
 GameEngine::~GameEngine(){
-    log("Usuwanie graczy...");
+    Log::info("Usuwanie graczy...");
     for(unsigned int i=0; i<players.size(); i++)
         delete players[i];
     players.clear();
@@ -61,12 +62,12 @@ GameEngine::~GameEngine(){
     ghosts.clear();
     delete menu_pacman;
     delete menu_ghost;
-    log("Usuwanie obiektów...");
+    Log::info("Usuwanie obiektów...");
     for(unsigned int i=0; i<items.size(); i++)
         delete items[i];
     items.clear();
-    log("Usuwanie mapy...");
-    if(map!=NULL)
+    Log::info("Usuwanie mapy...");
+    if(map!=nullptr)
         delete map;
     delete pathfind;
     delete[] cmd_out;
@@ -74,7 +75,8 @@ GameEngine::~GameEngine(){
 
 void GameEngine::logic(volatile int &logic_cycles){
     if(logic_cycles>Config::logic_cycles_critical){
-        error("Przekroczono liczbę niewykonanych cykli logicznych. Komputer nie nadąża z obliczeniami.");
+        Log::criticalError(
+                "Przekroczono liczbę niewykonanych cykli logicznych. Komputer nie nadąża z obliczeniami.");
         App::exit = true;
         logic_cycles = -1;
         return;
@@ -89,11 +91,11 @@ void GameEngine::logic(volatile int &logic_cycles){
         }
         if(event.type==SDL_WINDOWEVENT){
             if(event.window.event==SDL_WINDOWEVENT_MOVED){
-                log("Zmiana położenia okna (zatrzymana aplikacja) - reset licznika logicznego");
+                Log::info("Zmiana położenia okna (zatrzymana aplikacja) - reset licznika logicznego");
                 logic_cycles = 1;
             }
             if(event.window.event==SDL_WINDOWEVENT_RESTORED){
-                log("Okno przywrócone.");
+                Log::info("Okno przywrócone.");
                 App::graphics->reload_textures();
             }
         }
@@ -191,7 +193,7 @@ void GameEngine::sort_players(vector<Player *> *lista){
 }
 
 Player* GameEngine::change_subclass(int index, int subclass){
-    if(index<0 || index>=(int)players.size()) return NULL;
+    if(index<0 || index>=(int)players.size()) return nullptr;
     if(subclass==-1)
         subclass = 1-players[index]->subclass;
     Player *nowy;
@@ -358,9 +360,9 @@ void GameEngine::kill_player(int index){
     xymap_to_xy(players[index]);
     players[index]->move_abs(players[index]->x,players[index]->y);
     //usunięcie ścieżki
-    if(players[index]->sciezka!=NULL){
+    if(players[index]->sciezka!=nullptr){
         delete players[index]->sciezka;
-        players[index]->sciezka = NULL;
+        players[index]->sciezka = nullptr;
     }
     synchro<<"022 "<<index<<" "<<players[index]->moving<<" "<<players[index]->direction<<"\r";
     synchro<<"021 "<<index<<" "<<players[index]->xmap<<" "<<players[index]->ymap<<"\r";
@@ -428,9 +430,9 @@ void GameEngine::restart_map(){
         players[i]->ymap = y;
         xymap_to_xy(players[i]);
         players[i]->move_abs(players[i]->x,players[i]->y);
-        if(players[i]->sciezka!=NULL){
+        if(players[i]->sciezka!=nullptr){
             delete players[i]->sciezka;
-            players[i]->sciezka = NULL;
+            players[i]->sciezka = nullptr;
         }
         synchro2<<"021 "<<i<<" "<<players[i]->xmap<<" "<<players[i]->ymap<<"\r";
         synchro2<<"022 "<<i<<" "<<players[i]->moving<<" "<<players[i]->direction<<"\r";
@@ -488,7 +490,7 @@ void GameEngine::update_map(int client_id){
 }
 
 void GameEngine::language_refresh(){
-    if(App::lang!=NULL)
+    if(App::lang!=nullptr)
         delete App::lang;
     App::lang = new Language(Config::languages[Config::language_selected]);
 }

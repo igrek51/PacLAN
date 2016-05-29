@@ -1,7 +1,7 @@
 #include "../logic/game_engine.h"
-#include "../log.h"
 #include "../app.h"
 #include "../graphics/animations/death_animation.h"
+#include "../utils.h"
 
 //TODO utworzyć osobną klasę (z nagłówkiem .h)
 

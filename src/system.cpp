@@ -1,6 +1,5 @@
 #include "system.h"
 #include <boost/thread.hpp>
-#include <sys/time.h>
 
 void sleep_ms(int ms) {
     boost::this_thread::sleep(boost::posix_time::milliseconds(ms));

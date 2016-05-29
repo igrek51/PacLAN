@@ -5,6 +5,7 @@
 #include "../log.h"
 #include "../app.h"
 #include "../system.h"
+#include "../utils.h"
 
 //FIXME zjebany toggle trybu fullscreen, zależny od ekranu
 
@@ -17,7 +18,7 @@ Graphics::Graphics(){
         return;
     font1 = load_ttf_font(Config::fontfile1,Config::fontsize1);
     font2 = load_ttf_font(Config::fontfile2,Config::fontsize2);
-    log("Ładowanie tekstur...");
+    Log::info("Ładowanie tekstur...");
     for(unsigned int i=0; Config::bitmap_names[2*i].length()>0; i++){
         add_texture(load_texture(Config::bitmap_names[2*i]),Config::bitmap_names[2*i+1]);
     }
@@ -28,8 +29,8 @@ Graphics::Graphics(){
 }
 
 Graphics::~Graphics(){
-    log("Zamykanie silnika grafiki...");
-    log("Usuwanie wszystkich tekstur");
+    Log::info("Zamykanie silnika grafiki...");
+    Log::info("Usuwanie wszystkich tekstur");
     for(unsigned int i=0; i<textures.size(); i++){
         destroy_texture(textures[i]);
     }
@@ -37,10 +38,10 @@ Graphics::~Graphics(){
     for(unsigned int i=0; i<animations.size(); i++){
         delete animations[i];
     }
-    if(font1!=NULL) TTF_CloseFont(font1);
-    if(font2!=NULL) TTF_CloseFont(font2);
-    if(sdl_ren!=NULL) SDL_DestroyRenderer(sdl_ren);
-    if(sdl_win!=NULL) SDL_DestroyWindow(sdl_win);
+    if(font1!=nullptr) TTF_CloseFont(font1);
+    if(font2!=nullptr) TTF_CloseFont(font2);
+    if(sdl_ren!=nullptr) SDL_DestroyRenderer(sdl_ren);
+    if(sdl_win!=nullptr) SDL_DestroyWindow(sdl_win);
     TTF_Quit();
     IMG_Quit();
     SDL_Quit();
@@ -49,7 +50,7 @@ Graphics::~Graphics(){
 void Graphics::sdl_error(string e){
     stringstream ss;
     ss<<"Błąd SDL (SDL_Error: "<<SDL_GetError()<<"): "<<e;
-    error(ss.str());
+    Log::criticalError(ss.str());
     App::exit = true;
     delete this;
 }
@@ -66,10 +67,10 @@ void Graphics::calculate_fps(){
 }
 
 bool Graphics::sdl_init(){
-    sdl_win = NULL;
-    sdl_ren = NULL;
-    font1 = NULL;
-    log("Start grafiki SDL...");
+    sdl_win = nullptr;
+    sdl_ren = nullptr;
+    font1 = nullptr;
+    Log::info("Start grafiki SDL...");
     if(SDL_Init(SDL_INIT_VIDEO)!=0){
         sdl_error("SDL_Init");
         return false;
@@ -77,22 +78,22 @@ bool Graphics::sdl_init(){
     stringstream ss;
     ss<<Config::app_name<<" v"<<Config::version;
     sdl_win = SDL_CreateWindow(ss.str().c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, Config::screen_w, Config::screen_h, SDL_WINDOW_SHOWN);
-    if(sdl_win==NULL){
+    if(sdl_win==nullptr){
         sdl_error("SDL_CreateWindow");
         return false;
     }
     sdl_ren = SDL_CreateRenderer(sdl_win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-    if(sdl_ren==NULL){
+    if(sdl_ren==nullptr){
         sdl_error("SDL_CreateWindow");
         return false;
     }
     SDL_SetRenderDrawBlendMode(sdl_ren,SDL_BLENDMODE_BLEND);
-    log("Start SDL_TTF...");
+    Log::info("Start SDL_TTF...");
     if(TTF_Init()!=0){
         sdl_error("TTF_Init");
         return false;
     }
-    log("Start SDL_Image...");
+    Log::info("Start SDL_Image...");
     int imgFlags = IMG_INIT_PNG;
     if(!(IMG_Init(imgFlags)&imgFlags)){
         sdl_error("SDL_image Init");
@@ -127,7 +128,7 @@ void Graphics::draw(){
 }
 
 void Graphics::fullscreen_toggle(){
-    log("Zmiana fullscreen...");
+    Log::info("Zmiana fullscreen...");
     fullscreen = !fullscreen;
     if(fullscreen){
         SDL_SetWindowFullscreen(sdl_win,SDL_WINDOW_FULLSCREEN_DESKTOP);
@@ -161,22 +162,22 @@ SDL_Texture* Graphics::tex(string name){
         }
     }
     sdl_error("Nie znaleziono tekstury o nazwie: "+name);
-    return NULL;
+    return nullptr;
 }
 
 SDL_Surface* Graphics::load_surface(string filename){
     SDL_Surface *nowy_surface;
     if(has_extension(filename,".bmp")){
         nowy_surface = SDL_LoadBMP(filename.c_str());
-        if(nowy_surface==NULL){
+        if(nowy_surface==nullptr){
             sdl_error("SDL_LoadBMP: "+filename);
-            return NULL;
+            return nullptr;
         }
     }else{
         nowy_surface = IMG_Load(filename.c_str());
-        if(nowy_surface==NULL){
+        if(nowy_surface==nullptr){
             sdl_error("IMG_Load: "+filename);
-            return NULL;
+            return nullptr;
         }
     }
     return nowy_surface;
@@ -184,61 +185,61 @@ SDL_Surface* Graphics::load_surface(string filename){
 
 SDL_Texture* Graphics::load_texture(string filename){
     SDL_Surface *nowy_surface = load_surface(filename);
-    if(nowy_surface==NULL){
+    if(nowy_surface==nullptr){
         sdl_error("load_texture: zerowy wskaźnik SDL_Surface");
-        return NULL;
+        return nullptr;
     }
     SDL_Texture *nowy_tex = SDL_CreateTextureFromSurface(sdl_ren,nowy_surface);
     SDL_FreeSurface(nowy_surface);
     if(nowy_tex==0){
         sdl_error("load_texture: SDL_CreateTextureFromSurface");
-        return NULL;
+        return nullptr;
     }
     return nowy_tex;
 }
 
 void Graphics::add_texture(SDL_Texture *texture, string name){
-    if(texture==NULL){
+    if(texture==nullptr){
         sdl_error("add_texture: zerowy wskaźnik tekstury");
         return;
     }
     textures.push_back(texture);
     textures_names.push_back(name);
-    log("Dodano teksturę: "+name);
+    Log::info("Dodano teksturę: "+name);
 }
 
 void Graphics::destroy_texture(SDL_Texture *&texture){
-    if(texture==NULL){
-        log("[!] Usuwanie tekstury o zerowym wskaźniku.");
+    if(texture==nullptr){
+        Log::error("Usuwanie tekstury o zerowym wskaźniku.");
         return;
     }
     SDL_DestroyTexture(texture);
-    texture = NULL;
+    texture = nullptr;
 }
 
 void Graphics::reload_textures(){
-    log("Ponowne wczytywanie tekstur...");
+    Log::info("Ponowne wczytywanie tekstur...");
     for(unsigned int i=0; i<App::game_engine->players.size(); i++){
         App::game_engine->players[i]->reload_texture();
     }
-    if(App::game_engine->menu_pacman!=NULL)
+    if(App::game_engine->menu_pacman!=nullptr)
         App::game_engine->menu_pacman->reload_texture();
-    if(App::game_engine->menu_ghost!=NULL)
+    if(App::game_engine->menu_ghost!=nullptr)
         App::game_engine->menu_ghost->reload_texture();
 }
 
 
 void Graphics::get_wh(SDL_Texture *image, int &w, int &h){
-    if(image==NULL){
+    if(image==nullptr){
         w=0;
         h=0;
         return;
     }
-    SDL_QueryTexture(image, NULL, NULL, &w, &h);
+    SDL_QueryTexture(image, nullptr, nullptr, &w, &h);
 }
 
 int Graphics::get_w(SDL_Texture *image){
-    if(image==NULL)
+    if(image==nullptr)
         return 0;
     int w, h;
     get_wh(image,w,h);
@@ -246,7 +247,7 @@ int Graphics::get_w(SDL_Texture *image){
 }
 
 int Graphics::get_h(SDL_Texture *image){
-    if(image==NULL)
+    if(image==nullptr)
         return 0;
     int w, h;
     get_wh(image,w,h);
@@ -255,7 +256,7 @@ int Graphics::get_h(SDL_Texture *image){
 
 void Graphics::set_icon(string filename){
     SDL_Surface *nowy_surface = load_surface(filename);
-    if(nowy_surface==NULL){
+    if(nowy_surface==nullptr){
         sdl_error("set_icon: zerowy wskaźnik SDL_Surface");
         return;
     }
@@ -265,16 +266,16 @@ void Graphics::set_icon(string filename){
 
 
 SDL_Texture* Graphics::blend_texture(SDL_Texture* texture, SDL_Color color_blend){
-    if(texture==NULL){
+    if(texture==nullptr){
         sdl_error("blend_texture: zerowy wskaźnik tekstury");
-        return NULL;
+        return nullptr;
     }
     int w,h;
     get_wh(texture,w,h);
     SDL_Texture* new_texture = SDL_CreateTexture(sdl_ren, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, w, h);
-    if(new_texture==NULL){
+    if(new_texture==nullptr){
         sdl_error("blend_texture: blad tworzenia nowej tekstury");
-        return NULL;
+        return nullptr;
     }
     SDL_SetRenderTarget(sdl_ren, new_texture);
     //przezroczysta tekstura
@@ -285,13 +286,13 @@ SDL_Texture* Graphics::blend_texture(SDL_Texture* texture, SDL_Color color_blend
     SDL_BlendMode blend_mode;
     if(SDL_GetRenderDrawBlendMode(sdl_ren,&blend_mode)!=0){
         sdl_error("blend_texture: SDL_GetRenderDrawBlendMode");
-        return NULL;
+        return nullptr;
     }
     SDL_SetRenderDrawBlendMode(sdl_ren,SDL_BLENDMODE_MOD);
     //obrazek pierwotny
-    if(SDL_RenderCopy(sdl_ren, texture, NULL, NULL)!=0){
+    if(SDL_RenderCopy(sdl_ren, texture, nullptr, nullptr)!=0){
         sdl_error("blend_texture: SDL_RenderCopy");
-        return NULL;
+        return nullptr;
     }
     //nałożenie półprzezroczystej maski
     SDL_Rect dest;
@@ -303,12 +304,12 @@ SDL_Texture* Graphics::blend_texture(SDL_Texture* texture, SDL_Color color_blend
     SDL_RenderFillRect(sdl_ren, &dest);
     //przywrócenie rysowania na ekranie i trybu przenikania
     SDL_SetRenderDrawBlendMode(sdl_ren,blend_mode);
-    SDL_SetRenderTarget(sdl_ren, NULL);
+    SDL_SetRenderTarget(sdl_ren, nullptr);
     return new_texture;
 }
 
 void Graphics::draw_texture(SDL_Texture *image, int x, int y){
-    if(image==NULL){
+    if(image==nullptr){
         sdl_error("draw_texture: image null pointer");
         return;
     }
@@ -327,7 +328,7 @@ void Graphics::draw_texture(SDL_Texture *image, int x, int y){
 }
 
 void Graphics::draw_texture_center(SDL_Texture *image, int x, int y){
-    if(image==NULL){
+    if(image==nullptr){
         sdl_error("draw_texture_center: image null pointer");
         return;
     }
@@ -337,7 +338,7 @@ void Graphics::draw_texture_center(SDL_Texture *image, int x, int y){
 }
 
 void Graphics::draw_texture_clip(SDL_Texture *image, int x, int y, int clipx_i, int clipx_n, int clipy_i, int clipy_n){
-    if(image==NULL){
+    if(image==nullptr){
         sdl_error("draw_texture_clip: image null pointer");
         return;
     }
@@ -363,7 +364,7 @@ void Graphics::draw_texture_clip(SDL_Texture *image, int x, int y, int clipx_i, 
 }
 
 void Graphics::draw_texture_clip_center(SDL_Texture *image, int x, int y, int clipx_i, int clipx_n, int clipy_i, int clipy_n){
-    if(image==NULL){
+    if(image==nullptr){
         sdl_error("draw_texture_clip_center: image null pointer");
         return;
     }
@@ -390,15 +391,15 @@ void Graphics::draw_texture_clip_center(SDL_Texture *image, int x, int y, int cl
 
 TTF_Font* Graphics::load_ttf_font(string filename, int fontsize){
     TTF_Font *font = TTF_OpenFont(filename.c_str(), fontsize);
-    if(font==NULL){
+    if(font==nullptr){
         sdl_error("load_ttf_font: TTF_OpenFont");
-        return NULL;
+        return nullptr;
     }
     return font;
 }
 
 void Graphics::draw_text(string txt, TTF_Font *font, SDL_Color color, int x, int y, int align){
-    if(font==NULL){
+    if(font==nullptr){
         sdl_error("draw_text: font null pointer");
         return;
     }
@@ -406,14 +407,14 @@ void Graphics::draw_text(string txt, TTF_Font *font, SDL_Color color, int x, int
         return;
     //SDL_Surface *surf = TTF_RenderText_Blended(font, txt.c_str(), color);
     SDL_Surface *surf = TTF_RenderUTF8_Blended(font, txt.c_str(), color);
-    if(surf==NULL){
+    if(surf==nullptr){
         sdl_error("draw_text: TTF_RenderText_Blended");
         return;
     }
     SDL_Texture *texture = SDL_CreateTextureFromSurface(sdl_ren, surf);
     SDL_SetTextureAlphaMod(texture,color.a); //kanał alpha
     SDL_FreeSurface(surf);
-    if(texture==NULL){
+    if(texture==nullptr){
         sdl_error("draw_text: SDL_CreateTextureFromSurface");
         return;
     }

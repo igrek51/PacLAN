@@ -15,7 +15,7 @@
 #define P_LAN 2
 
 #include "../graphics/graphics.h"
-#include "../map/pathfind.h"
+#include "../map/pathfind/pathfind.h"
 
 /**
  * \brief Klasa gracza (pacmana lub duszka)

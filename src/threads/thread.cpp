@@ -6,7 +6,7 @@ Thread::Thread() {
     init = false;
     close_signal = false;
     boost_thread = new boost::thread(boost::bind(&Thread::start, this));
-    log("Wątek utworzony.");
+    Log::info("Wątek utworzony.");
 }
 
 Thread::~Thread() {
@@ -15,17 +15,17 @@ Thread::~Thread() {
         boost_thread->interrupt();
         delete boost_thread;
         boost_thread = nullptr;
-        log("Wątek zniszczony.");
+        Log::info("Wątek zniszczony.");
     }
 }
 
 void Thread::start(){
     while (!init) sleep_ms(1);
-    log("Wykonywanie głównej procedury wątku...");
+    Log::info("Wykonywanie głównej procedury wątku...");
     run();
     if (close_signal) {
-        log("Zakończono zdalnie główną procedurę wątku.");
+        Log::info("Zakończono zdalnie główną procedurę wątku.");
     } else {
-        log("Samoistnie zakończono główną procedurę wątku.");
+        Log::info("Samoistnie zakończono główną procedurę wątku.");
     }
 }

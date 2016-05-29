@@ -8,6 +8,12 @@
 //TODO dźwięki, muzyka z Pacmana
 //TODO dodanie tłumaczeń do wiersza poleceń
 
+//TODO C++ 11 : NULL -> nullptr, pętle foreach, ...
+
+//TODO komentarze doxygena - porządek: wyjebać lub uzupełnić
+
+//TODO optimize imports w każdym pliku - skrócenie czasu kompilacji: ograniczenie boosta i sdla
+
 int main(int argc, char **argv){
     App *app = new App();
     app->graphics = new Graphics(); //inicjalizacja grafiki

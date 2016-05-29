@@ -26,13 +26,18 @@
       <sourceFolder url="file://$MODULE_DIR$/src/graphics/graphics_draw.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/graphics/graphics.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/config.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/language.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/map/pathfind.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/system.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/map/map.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/map/item.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/map/pathfind/node.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/map/pathfind/pathfind.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/map/pathfind/node.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/map/pathfind/path.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/map/pathfind/pathfind.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/map/pathfind/path.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/map/item.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/map/map.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/map/item.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/map/map.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/map/pathfind.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/language.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/thread.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/timer.h" isTestSource="false" />
@@ -47,7 +52,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/network/network_task.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/network/network.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/app.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/system.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/utils.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/utils.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />

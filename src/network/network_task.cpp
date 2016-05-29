@@ -6,11 +6,11 @@ NetworkTask::NetworkTask(int task){
     param_i = 0;
     param_i2 = 0;
     param_s = "";
-    param_c = NULL;
+    param_c = nullptr;
 }
 
 NetworkTask::~NetworkTask(){
-    if(param_c!=NULL){
+    if(param_c!=nullptr){
         delete[] param_c;
     }
 }

@@ -2,6 +2,7 @@
 #include "../config.h"
 #include "../log.h"
 #include "../app.h"
+#include "../utils.h"
 
 void GameEngine::logic_game(){
     //wiadomości z sieci

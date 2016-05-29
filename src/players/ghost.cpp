@@ -4,7 +4,7 @@
 
 Ghost::Ghost(int xmap, int ymap, SDL_Color color, string name, int controlby) :
     Player(xmap,ymap,color,name,controlby){
-    texture = NULL;
+    texture = nullptr;
     reload_texture();
     can_move_n = Config::ghost_speed;
     subclass = P_GHOST;
@@ -54,7 +54,7 @@ void Ghost::clip_table(){
 }
 
 void Ghost::reload_texture(){
-    if(texture!=NULL)
+    if(texture!=nullptr)
         App::graphics->destroy_texture(texture);
     texture =  App::graphics->blend_texture(App::graphics->tex("ghost"),color);
 }
@@ -82,14 +82,14 @@ void Ghost::ai_control(){
     }
     if(ai_level==1 || ai_level==3){
         //jeśli dotarł do celu
-        if(sciezka!=NULL){
+        if(sciezka!=nullptr){
             if(sciezka->points.size()<=1){
                 delete sciezka;
-                sciezka = NULL;
+                sciezka = nullptr;
             }
         }
         //jeśli nie ma celu (lub dotarł do celu)
-        if(sciezka==NULL){
+        if(sciezka==nullptr){
             if(ai_level==1){
                 //wyznacz nowy cel - losowy punkt na mapie
                 App::game_engine->random_field(target_x,target_y," .o");
@@ -124,9 +124,9 @@ void Ghost::ai_control(){
     }
     if(ai_level==2 || ai_level==4 || ai_level==5){
         //usunięcie starej ścieżki
-        if(sciezka!=NULL){
+        if(sciezka!=nullptr){
             delete sciezka;
-            sciezka = NULL;
+            sciezka = nullptr;
         }
         //odległość do najbliższego pacmana
         int min_d = -1, min_i = -1;
@@ -168,7 +168,7 @@ void Ghost::ai_control(){
         App::game_engine->pathfind->set_xy(xmap, ymap, target_x, target_y);
         sciezka = App::game_engine->pathfind->find_path();
     }
-    if(sciezka!=NULL){
+    if(sciezka!=nullptr){
         if(sciezka->points.size()>1){
             //podążaj ścieżką
             App::game_engine->follow_path(xmap, ymap, next_direction, sciezka);
@@ -188,7 +188,7 @@ void Ghost::ai_control(){
                     }
                     if(ai_level==3){
                         delete sciezka; //wygeneruj nową ścieżkę następnym razem, gdyż jest nieaktualna
-                        sciezka = NULL;
+                        sciezka = nullptr;
                         return;
                     }
                 }

@@ -21,7 +21,7 @@
 #include <sstream>
 #include "../graphics/graphics.h"
 #include "../map/map.h"
-#include "../map/pathfind.h"
+#include "../map/pathfind/pathfind.h"
 #include "../map/item.h"
 #include "../players/pacman.h"
 #include "../players/ghost.h"

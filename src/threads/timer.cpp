@@ -10,12 +10,12 @@ Timer::Timer(int interval_ms, volatile int* cycles) : ContinuousThread(150) {
     next_time = currentMillis() + interval_ms;
     stringstream ss;
     ss << "Timer cykli logicznych zainicjalizowany (" << interval_ms << " ms)";
-    log(ss.str());
+    Log::info(ss.str());
     init = true;
 }
 
 Timer::~Timer() {
-    log("Zamykanie wątku timera...");
+    Log::info("Zamykanie wątku timera...");
 }
 
 void Timer::runLoop() {

@@ -1,41 +1,41 @@
 #include "app.h"
 #include "log.h"
 
-Graphics* App::graphics = NULL;
-GameEngine* App::game_engine = NULL;
-Network* App::network = NULL;
-Timer* App::timer = NULL;
-Language* App::lang = NULL;
+Graphics* App::graphics = nullptr;
+GameEngine* App::game_engine = nullptr;
+Network* App::network = nullptr;
+Timer* App::timer = nullptr;
+Language* App::lang = nullptr;
 bool App::exit = false;
 volatile int App::logic_cycles = 1;
 
 //TODO coś innego niż singleton: listenery, dependency injection
 
 App::App(){
-    graphics = NULL;
-    game_engine = NULL;
-    network = NULL;
-    timer = NULL;
-    lang = NULL;
+    graphics = nullptr;
+    game_engine = nullptr;
+    network = nullptr;
+    timer = nullptr;
+    lang = nullptr;
     exit = false;
     logic_cycles = 1;
-    srand(time(0));
-    log_clear();
-    log("Hello World!");
+    srand((unsigned int) time(0));
+    Log::logClear();
+    Log::info("Hello World!");
 }
 
 App::~App(){
-    log("Zamykanie aplikacji...");
+    Log::info("Zamykanie aplikacji...");
     exit = true;
-    if(timer!=NULL)
+    if(timer!=nullptr)
         delete timer;
-    if(graphics!=NULL)
+    if(graphics!=nullptr)
         delete graphics;
-    if(game_engine!=NULL)
+    if(game_engine!=nullptr)
         delete game_engine;
-    if(network!=NULL)
+    if(network!=nullptr)
         delete network;
-    if(lang!=NULL)
+    if(lang!=nullptr)
         delete lang;
-    log("Goodbye World...");
+    Log::info("Aplikacja zamknięta.");
 }

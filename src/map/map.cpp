@@ -5,7 +5,7 @@
 
 Map::Map(SDL_Texture *background, string gridfile){
     this->background = background;
-    this->grid = NULL;
+    this->grid = nullptr;
     if(!load_grid(gridfile)){
         App::exit = true;
         delete this;
@@ -13,7 +13,7 @@ Map::Map(SDL_Texture *background, string gridfile){
 }
 
 Map::~Map(){
-    if(grid!=NULL){
+    if(grid!=nullptr){
         for(int i=0; i<grid_w; i++){
             delete[] grid[i];
         }
@@ -25,7 +25,7 @@ bool Map::load_grid(string gridfile){
     fstream plik;
     plik.open(gridfile.c_str(),fstream::in|fstream::binary);
     if(!plik.good()){
-        error("Blad odczytu pliku: "+gridfile);
+        Log::criticalError("Blad odczytu pliku: " + gridfile);
         return false;
     }
     plik>>grid_x_pos>>grid_y_pos;
@@ -41,7 +41,7 @@ bool Map::load_grid(string gridfile){
         if(linia.length()>0)
             if(linia[linia.length()-1]=='\r') linia.erase(linia.length()-1,1);
         if((int)linia.length()<grid_w){
-            error("Nieprawidlowy format pliku mapy: "+gridfile);
+            Log::criticalError("Nieprawidlowy format pliku mapy: " + gridfile);
             delete[] grid;
             plik.close();
             return false;

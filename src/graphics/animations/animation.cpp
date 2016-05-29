@@ -4,8 +4,8 @@
 Animation::Animation(int x, int y){
     this->x = x;
     this->y = y;
-    texture = NULL;
-    clip = NULL;
+    texture = nullptr;
+    clip = nullptr;
     ends = 1;
 }
 

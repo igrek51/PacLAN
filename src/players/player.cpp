@@ -2,6 +2,7 @@
 #include "../config.h"
 #include "../log.h"
 #include "../app.h"
+#include "../utils.h"
 
 Player::Player(int xmap, int ymap, SDL_Color color, string name, int controlby){
     this->xmap = xmap;
@@ -9,7 +10,7 @@ Player::Player(int xmap, int ymap, SDL_Color color, string name, int controlby){
     this->color = color;
     this->name = name;
     this->controlby = controlby;
-    texture = NULL;
+    texture = nullptr;
     App::game_engine->xymap_to_xy(this);
     move_abs(x,y);
     can_move = 0;
@@ -22,7 +23,7 @@ Player::Player(int xmap, int ymap, SDL_Color color, string name, int controlby){
     prev_direction = -1;
     prev_moving = -1;
     clip = new int [4];
-    sciezka = NULL;
+    sciezka = nullptr;
     score = 0;
     ai_level = 0;
     respawn = 0;
@@ -30,10 +31,10 @@ Player::Player(int xmap, int ymap, SDL_Color color, string name, int controlby){
 }
 
 Player::~Player(){
-    if(texture!=NULL)
+    if(texture!=nullptr)
         App::graphics->destroy_texture(texture);
     delete[] clip;
-    if(sciezka!=NULL)
+    if(sciezka!=nullptr)
         delete sciezka;
 }
 
@@ -42,7 +43,7 @@ void Player::move(){
         a_dx = ((double)((x - a_x)*1000))/(App::graphics->fps*Config::logic_timer_ms*can_move_n);
         a_dy = ((double)((y - a_y)*1000))/(App::graphics->fps*Config::logic_timer_ms*can_move_n);
     }else{
-        log("Player::move: fps = 0");
+        Log::warn("Player::move: fps = 0");
         a_x = x;
         a_y = y;
     }

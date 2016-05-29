@@ -1,5 +1,5 @@
 #include "pathfind.h"
-#include "../log.h"
+#include "../../log.h"
 #include <cstdlib>
 
 //TODO template na typ współrzędnej
@@ -11,11 +11,11 @@ Pathfind::Pathfind(){
     end_y = 0;
     map_w = 0;
     map_h = 0;
-    map = NULL;
+    map = nullptr;
 }
 
 Pathfind::~Pathfind(){
-    if(map!=NULL){
+    if(map!=nullptr){
         for(int w=0; w<map_h; w++)
             delete[] map[w];
         delete[] map;
@@ -49,11 +49,11 @@ Path* Pathfind::find_path(){
             Path *sciezka;
             //jeśli punkt docelowy jest punktem startowym - brak ścieżki
             if(start_x==end_x && start_y==end_y){
-                sciezka = NULL;
+                sciezka = nullptr;
             }else{
                 //Zapisujemy ścieżkę. Krocząc w kierunku od pola docelowego do startowego, przeskakujemy z kolejnych pól na im przypisane pola rodziców, aż do osiągnięcia pola startowego.
                 sciezka = new Path();
-                while(Q!=NULL){
+                while(Q!=nullptr){
                     int *point = new int [2];
                     point[0] = Q->x;
                     point[1] = Q->y;
@@ -103,11 +103,11 @@ Path* Pathfind::find_path(){
             if(map[s_y][s_x]!=1)
                 continue;
             //jeśli pole sąsiada jest już na Liście Zamkniętych
-            if(find_in_list(c_list,s_x,s_y)!=NULL)
+            if(find_in_list(c_list,s_x,s_y)!=nullptr)
                 continue;
             //Jeśli pole sąsiada nie jest jeszcze na Liście Otwartych.
             sasiad = find_in_list(o_list,s_x,s_y);
-            if(sasiad==NULL){
+            if(sasiad==nullptr){
                 //dodajemy je do niej
                 sasiad = new Node(s_x, s_y);
                 o_list.push_back(sasiad);
@@ -133,7 +133,7 @@ Path* Pathfind::find_path(){
     for(unsigned int i=0; i<c_list.size(); i++)
         delete c_list.at(i);
     //Lista Otwartych jest pusta. nie znaleziono pola docelowego, a ścieżka nie istnieje.
-    return NULL;
+    return nullptr;
 }
 
 Node *Pathfind::find_in_list(vector<Node *> list, int x, int y){
@@ -141,7 +141,7 @@ Node *Pathfind::find_in_list(vector<Node *> list, int x, int y){
         if(list.at(i)->x==x && list.at(i)->y==y)
             return list.at(i);
     }
-    return NULL;
+    return nullptr;
 }
 
 int Pathfind::policz_g(Node *item){
@@ -149,8 +149,7 @@ int Pathfind::policz_g(Node *item){
 }
 
 int Pathfind::policz_h(Node *item){
-    //metoda Manhattan - odległość w metryce miejskiej
-    //return abs(item->x - end_x) + abs(item->y - end_y);
+    //metoda Manhattan - odległość w metryce miejskiej: abs(item->x - end_x) + abs(item->y - end_y)
     //metryka miejska zmodyfikowana o zawiajanie mapy
     return (abs(item->x - end_x) + abs(item->y - end_y))/2;
 }
@@ -163,27 +162,6 @@ void Pathfind::set_xy(int start_x, int start_y, int end_x, int end_y){
 }
 
 
-Node::Node(int x, int y){
-    this->x = x;
-    this->y = y;
-    g = 0;
-    f = 0;
-    parent = NULL;
-}
 
 
-Path::Path(){
 
-}
-
-Path::~Path(){
-    for(unsigned int i=0; i<points.size(); i++){
-        delete[] points.at(i);
-    }
-}
-
-int Path::length(){
-    if(points.size()<=1)
-        return 0;
-    return points.size()-1;
-}

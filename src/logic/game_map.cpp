@@ -128,7 +128,7 @@ void GameEngine::random_field(int &x, int &y, string pattern){
 }
 
 void GameEngine::follow_path(int xmap, int ymap, int &direction, Path *sciezka){
-    if(sciezka==NULL)
+    if(sciezka==nullptr)
         return;
     if(sciezka->points.size()<=1)
         return;

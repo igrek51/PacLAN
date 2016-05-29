@@ -2,6 +2,7 @@
 #include "../config.h"
 #include "../log.h"
 #include "../app.h"
+#include "../utils.h"
 
 void GameEngine::exec_cmd(string cmd){
     if(cmd.length()==0){
@@ -366,5 +367,5 @@ void GameEngine::cmd_output(string out){
         cmd_out[i] = cmd_out[i+1];
     }
     cmd_out[Config::cmd_outputs-1] = out; //nowy output
-    log(out);
+    Log::info(out);
 }

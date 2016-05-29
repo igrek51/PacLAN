@@ -5,7 +5,7 @@
 
 Pacman::Pacman(int xmap, int ymap, SDL_Color color, string name, int controlby) :
     Player(xmap,ymap,color,name,controlby){
-    texture = NULL;
+    texture = nullptr;
     reload_texture();
     can_move_n = Config::pacman_speed;
     subclass = P_PACMAN;
@@ -44,7 +44,7 @@ void Pacman::clip_table(){
 }
 
 void Pacman::reload_texture(){
-    if(texture!=NULL)
+    if(texture!=nullptr)
         App::graphics->destroy_texture(texture);
     texture =  App::graphics->blend_texture(App::graphics->tex("pacman"),color);
 }
@@ -61,9 +61,9 @@ void Pacman::ai_control(){
         return;
     }
     //usunięcie starej ścieżki
-    if(sciezka!=NULL){
+    if(sciezka!=nullptr){
         delete sciezka;
-        sciezka = NULL;
+        sciezka = nullptr;
     }
     //odległość do najbliższego duszka
     int min_d = -1, min_i = -1;
@@ -113,7 +113,7 @@ void Pacman::ai_control(){
     //szukanie drogi
     App::game_engine->pathfind->set_xy(xmap, ymap, target_x, target_y);
     sciezka = App::game_engine->pathfind->find_path();
-    if(sciezka!=NULL){
+    if(sciezka!=nullptr){
         if(sciezka->points.size()>1){
             //podążaj ścieżką
             App::game_engine->follow_path(xmap, ymap, next_direction, sciezka);

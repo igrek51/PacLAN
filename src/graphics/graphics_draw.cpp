@@ -2,6 +2,7 @@
 #include "../config.h"
 #include "../log.h"
 #include "../app.h"
+#include "../utils.h"
 
 void Graphics::animate(){
     if(App::game_engine->menu>0){ //MENU
@@ -107,7 +108,7 @@ void Graphics::draw_round(){
     if(Config::show_paths){
         for(unsigned int i=0; i<App::game_engine->players.size(); i++){
             if(App::game_engine->players[i]->controlby==P_AI){ //dla AI
-                if(App::game_engine->players[i]->sciezka!=NULL){
+                if(App::game_engine->players[i]->sciezka!=nullptr){
                     for(unsigned int j=0; j<App::game_engine->players[i]->sciezka->points.size()-1; j++){
                         int x1 = App::game_engine->players[i]->sciezka->points.at(j)[0];
                         int y1 = App::game_engine->players[i]->sciezka->points.at(j)[1];

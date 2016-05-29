@@ -3,6 +3,7 @@
 #include "../log.h"
 #include "../app.h"
 #include "../system.h"
+#include "../utils.h"
 
 #include <arpa/inet.h>
 #include <netdb.h>
@@ -13,7 +14,7 @@ Network::Network() : ContinuousThread(150) {
     server = false;
     client = false;
     recv_msg = new char[Config::buffer_size];
-    log("Wątek interfejsu sieci zainicjalizowany.");
+    Log::info("Wątek interfejsu sieci zainicjalizowany.");
     init = true;
 }
 
@@ -27,7 +28,7 @@ Network::~Network() {
     recv_buffer.clear();
     recv_string.clear();
     tasks.clear();
-    log("Zamykanie wątku interfejsu sieci...");
+    Log::info("Zamykanie wątku interfejsu sieci...");
 }
 
 void Network::runLoop() {
@@ -72,7 +73,7 @@ void Network::runLoop() {
         int activity = select(max_sd + 1, &readfds, NULL, NULL, NULL);
 
         if (activity < 0) {
-            network_error("select error");
+            network_error("select criticalError");
         }
 
         //If something happened on the master socket , then its an incoming connection
@@ -212,7 +213,7 @@ bool Network::connect_socket(string ip) {
     } else {
         if (inet_addr(ip.c_str()) == INADDR_NONE) {
             hostent* hostEntry = gethostbyname(ip.c_str());
-            if (hostEntry == NULL) {
+            if (hostEntry == nullptr) {
                 network_error("Nie znaleziono hosta.");
                 return false;
             }

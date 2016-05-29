@@ -1,85 +1,76 @@
 #include <fstream>
-#include <ctime>
-#include <sstream>
 #include <SDL2/SDL.h>
 #include "log.h"
 #include "config.h"
+#include "utils.h"
 
-//TODO wiele log levels
-//TODO statyczna klasa Log
-//TODO error i warn nie tylko do loga, ale też na cout lub cerr
-
-string get_time(){
-    time_t rawtime;
-    struct tm *timeinfo;
-    time(&rawtime);
-    timeinfo = localtime(&rawtime);
-    stringstream ss2;
-    if(timeinfo->tm_hour<10) ss2<<"0";
-    ss2<<timeinfo->tm_hour<<":";
-    if(timeinfo->tm_min<10) ss2<<"0";
-    ss2<<timeinfo->tm_min<<":";
-    if(timeinfo->tm_sec<10) ss2<<"0";
-    ss2<<timeinfo->tm_sec;
-    return ss2.str();
-}
-
-void log_clear(){
-	fstream plik;
-    plik.open(Config::log_filename.c_str(),fstream::out|fstream::trunc);
-	plik.close();
-}
-
-void log(string l){
-	fstream plik;
-    plik.open(Config::log_filename.c_str(),fstream::out|fstream::app);
-    if(!plik.good()){
-				plik.close();
-        return;
-    }
-    plik<<get_time()<<" - "<<l<<endl;
-	plik.close();
-}
-
-void log(int l){
-    stringstream ss;
-    ss<<l;
-    log(ss.str());
-}
-
-void error(string e){
-    log(e);
-    SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Błąd", e.c_str(), NULL);
-}
-
+//TODO network error, sdl error, critical error
 //TODO przekazywanie błędów wyjątkami
 
-void ss_clear(stringstream &sstream){
-    sstream.str("");
-    sstream.clear();
+int Log::log_level = DEBUG;
+int Log::echo_level = WARN;
+
+int Log::errors_count = 0;
+
+void Log::error(string s) {
+    errors_count++;
+    string s2 ="[ERROR] " + s;
+    echo(s2, ERROR);
+    log(s2, ERROR);
 }
 
-int round_to_int(double d){
-    int c = (int)d;
-    if(d-c >= 0.5)
-        return c+1;
-    return c;
+void Log::warn(string s) {
+    string s2 ="[warn] " + s;
+    echo(s2, WARN);
+    log(s2, WARN);
 }
 
-bool has_extension(string filename, string ext){
-    if(ext.length()>filename.length())
-        return false;
-    filename = filename.substr(filename.length()-ext.length(),ext.length());
-    if(filename==ext)
-        return true;
-    return false;
+void Log::info(string s) {
+    echo(s, INFO);
+    log(s, INFO);
 }
 
-char* string_to_char(string s){
-    char *result = new char [s.length()+1];
-    for(unsigned int i=0; i<s.length(); i++){
-        result[i] = s[i];
+void Log::debug(string s) {
+    string s2 ="[debug] " + s;
+    echo(s2, DEBUG);
+    log(s2, DEBUG);
+}
+
+
+bool Log::isError() {
+    return errors_count > 0;
+}
+
+
+void Log::log(string s, int level) {
+    if (level > log_level) return;
+    fstream plik;
+    plik.open(Config::log_filename.c_str(), fstream::out | fstream::app);
+    if (!plik.good()) {
+        plik.close();
+        return;
     }
-    result[s.length()] = 0;
-    return result;
+    plik << get_time() << " - " << s << endl;
+    plik.close();
+}
+
+void Log::echo(string s, int level) {
+    if (level > echo_level) return;
+    if (level == ERROR) {
+        cerr << s << endl;
+    } else {
+        cout << s << endl;
+    }
+}
+
+
+void Log::logClear() {
+    fstream plik;
+    plik.open(Config::log_filename.c_str(), fstream::out | fstream::trunc);
+    plik.close();
+}
+
+void Log::criticalError(string s) {
+    error(s);
+    SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Błąd", s.c_str(), NULL);
 }

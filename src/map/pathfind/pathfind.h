@@ -2,51 +2,10 @@
 #define PATHFIND_H
 
 #include <vector>
+#include "path.h"
+#include "node.h"
 
 using namespace std;
-
-
-//TODO rozbić na wiele plików
-/**
- * \brief Węzeł w labiryncie w algorytmie znajdowania drogi
- */
-class Node {
-public:
-    /**
-     * utworzenie nowego węzła
-     * @param x położenie na mapie wzdłuż osi x
-     * @param y położenie na mapie wzdłuż osi y
-     */
-    Node(int x, int y);
-    /// położenie na mapie wzdłuż osi x
-    int x;
-    /// położenie na mapie wzdłuż osi y
-    int y;
-    /// odległość od startu po wyznaczonej drodze
-    int g;
-    /// suma g+h (heurystyki) - całkowita oszacowana droga od startu do mety
-    int f;
-    /// wskaźnik na węzeł będący rodzicem (lub NULL)
-    Node *parent;
-};
-
-/**
- * \brief Ścieżka - zbiór kolejnych punktów prowadzących z jednego do drugiego miejsca na mapie
- */
-class Path {
-public:
-    ///utworzenie nowej ścieżki
-    Path();
-    ///usunięcie ścieżki
-    ~Path();
-    /// lista kolejnych punktów od startu do mety (włącznie) jako tablica int[2]: 0 - x, 1 - y
-    vector<int*> points;
-    /**
-     * obliczenie długości ścieżki
-     * @return długość ścieżki w jednostkach mapy
-     */
-    int length();
-};
 
 /**
  * \brief Klasa przechowująca obecne parametry mapy i znajdująca drogę pomiędzy dwoma punktami
