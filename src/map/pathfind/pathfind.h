@@ -1,7 +1,7 @@
 #ifndef PATHFIND_H
 #define PATHFIND_H
 
-#include <vector>
+#include <deque>
 #include "path.h"
 #include "node.h"
 
@@ -57,7 +57,7 @@ private:
      * @param y współrzędna y punktu
      * @return wskaźnik na węzeł (jeśli znajdował się na liście) lub NULL (jeśli nie znaleziono takiego punktu)
      */
-    Node<T>* find_in_list(vector<Node<T>*> list, T x, T y);
+    Node<T>* find_in_list(deque<Node<T>*> list, T x, T y);
 
     /**
      * liczy drogę do punktu startowego (dokładnie)

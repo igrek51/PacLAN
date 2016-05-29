@@ -1,8 +1,6 @@
 #include "pathfind.h"
 #include "../../log.h"
 
-//TODO template na typ współrzędnej
-
 template<typename T>
 Pathfind<T>::Pathfind() {
     start_x = 0;
@@ -27,9 +25,9 @@ template<typename T>
 Path<T>* Pathfind<T>::find_path() {
     //  ALGORYTM A-STAR
     //zmienne pomocnicze
-    //TODO zamiana na listę, przechodzenie iteratorami
-    vector<Node<T>*> o_list; //lista otwartych
-    vector<Node<T>*> c_list; //lista zamkniętych
+    //TODO przechodzenie iteratorami
+    deque<Node<T>*> o_list; //lista otwartych
+    deque<Node<T>*> c_list; //lista zamkniętych
     Node<T>* Q; //aktualne pole (o minimalnym F)
     Node<T>* sasiad;
     int min_f_i; //indeks minium f na liście otwartych
@@ -57,11 +55,8 @@ Path<T>* Pathfind<T>::find_path() {
                 //Zapisujemy ścieżkę. Krocząc w kierunku od pola docelowego do startowego, przeskakujemy z kolejnych pól na im przypisane pola rodziców, aż do osiągnięcia pola startowego.
                 sciezka = new Path<T>();
                 while (Q != nullptr) {
-                    T* point = new T[2];
-                    point[0] = Q->x;
-                    point[1] = Q->y;
-                    sciezka->points.insert(sciezka->points.begin(),
-                                           point); //dopisanie na początek (odwrócenie listy)
+                    //dopisanie na początek (odwrócenie listy)
+                    sciezka->points.push_front(new pair<T,T>(Q->x, Q->y));
                     Q = Q->parent;
                 }
             }
@@ -141,7 +136,7 @@ Path<T>* Pathfind<T>::find_path() {
 }
 
 template<typename T>
-Node<T>* Pathfind<T>::find_in_list(vector<Node<T>*> list, T x, T y) {
+Node<T>* Pathfind<T>::find_in_list(deque<Node<T>*> list, T x, T y) {
     for (unsigned int i = 0; i < list.size(); i++) {
         if (list.at(i)->x == x && list.at(i)->y == y)
             return list.at(i);

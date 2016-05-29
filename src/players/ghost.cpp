@@ -195,7 +195,7 @@ void Ghost::ai_control(){
             }
             if(ai_level==1 || ai_level==3){
                 //usuń pierwszy element ze ścieżki
-                delete[] sciezka->points.at(0);
+                delete sciezka->points.at(0);
                 sciezka->points.erase(sciezka->points.begin());
             }
         }

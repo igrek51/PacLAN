@@ -1,7 +1,7 @@
 #ifndef PATH_H
 #define PATH_H
 
-#include <vector>
+#include <deque>
 
 using namespace std;
 
@@ -17,18 +17,14 @@ public:
     ///usunięcie ścieżki
     ~Path();
 
-    //TODO wykorzystanie pair<int, int>
-
-    /// lista kolejnych punktów od startu do mety (włącznie) jako tablica int[2]: 0 - x, 1 - y
-    vector<T*> points;
+    /// lista kolejnych punktów od startu do mety (włącznie) - zestaw: x, y
+    deque<pair<T, T>*> points;
 
     /**
      * obliczenie długości ścieżki
      * @return długość ścieżki w jednostkach mapy
      */
     T length();
-
-    //TODO length i size
 };
 
 #endif

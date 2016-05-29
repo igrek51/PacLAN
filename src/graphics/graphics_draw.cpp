@@ -110,10 +110,10 @@ void Graphics::draw_round(){
             if(App::game_engine->players[i]->controlby==P_AI){ //dla AI
                 if(App::game_engine->players[i]->sciezka!=nullptr){
                     for(unsigned int j=0; j<App::game_engine->players[i]->sciezka->points.size()-1; j++){
-                        int x1 = App::game_engine->players[i]->sciezka->points.at(j)[0];
-                        int y1 = App::game_engine->players[i]->sciezka->points.at(j)[1];
-                        int x2 = App::game_engine->players[i]->sciezka->points.at(j+1)[0];
-                        int y2 = App::game_engine->players[i]->sciezka->points.at(j+1)[1];
+                        int x1 = App::game_engine->players[i]->sciezka->points.at(j)->first;
+                        int y1 = App::game_engine->players[i]->sciezka->points.at(j)->second;
+                        int x2 = App::game_engine->players[i]->sciezka->points.at(j+1)->first;
+                        int y2 = App::game_engine->players[i]->sciezka->points.at(j+1)->second;
                         //jeśli linia przebiega przez krańce mapy
                         if(abs(x1-x2)==App::game_engine->map->grid_w-1)
                             continue;

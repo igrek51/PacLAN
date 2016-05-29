@@ -132,13 +132,13 @@ void GameEngine::follow_path(int xmap, int ymap, int &direction, Path<int> *scie
         return;
     if(sciezka->points.size()<=1)
         return;
-    if(sciezka->points.at(1)[0] == xmap+1){
+    if(sciezka->points.at(1)->first == xmap+1){
         direction = P_RIGHT;
-    }else if(sciezka->points.at(1)[0]+1 == xmap){
+    }else if(sciezka->points.at(1)->first+1 == xmap){
         direction = P_LEFT;
-    }else if(sciezka->points.at(1)[1] == ymap+1){
+    }else if(sciezka->points.at(1)->second == ymap+1){
         direction = P_DOWN;
-    }else if(sciezka->points.at(1)[1]+1 == ymap){
+    }else if(sciezka->points.at(1)->second+1 == ymap){
         direction = P_UP;
     }
     //jeśli ma ruszyć się poza mapę, zachowa swój kierunek (różnica będzie większa od 1), więc nie trzeba nic zmieniać

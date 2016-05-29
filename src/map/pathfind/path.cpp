@@ -6,8 +6,8 @@ Path<T>::Path() {
 
 template<typename T>
 Path<T>::~Path() {
-    for (unsigned int i = 0; i < points.size(); i++) {
-        delete[] points.at(i);
+    for (auto it = points.begin(); it != points.end(); it++) {
+        delete *it;
     }
 }
 
