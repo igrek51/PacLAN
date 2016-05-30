@@ -28,18 +28,18 @@ public:
      * zwraca adres ip komputera jako tekst
      * @return adres ip
      */
-    string get_myip();
+    string myIP();
     /**
      * zwraca nazwę komputera w sieci
      * @return nazwa komputera
      */
-    string get_myname();
+    string myName();
     /**
      * zwraca adres ip wybranego klienta podłączonego do hosta
      * @param sindex indeks klienta na liście socketów
      * @return adres ip klienta w postaci tekstu
      */
-    string get_client_ip(int sindex);
+    string clientIP(int sindex);
     //  SOCKETY
 public:
     /// lista Socketów - otwartych połączeń z innymi komputerami, indeks 0 - socket klienta lub socket serwera, większe od 0 - sockety klientów serwera
@@ -103,48 +103,46 @@ private:
     void task_exec(NetworkTask *task);
 
     //  KONTROLA BŁĘDÓW
-    /// czy wystąpił błąd
-    bool error;
     /**
      * wyświetlenie szczegółowej informacji o błędzie
      * @param e wiadomość do wyświetlenia
      */
-    void network_error(string e);
+    void error(string e);
     /**
      * wyświetlenie informacji w konsoli
      * @param e treść informacji
      */
-    void console_out(string e);
+    void consoleOut(string e);
 
     //  POŁĄCZENIE
     /**
      * otworzenie połączenia serwera
      * @return true - jeśli udało się połączyć
      */
-    bool open_server_socket();
+    bool openServerSocket();
     /**
      * połączenie do serwera o danym ip
      * @param ip adres ip serwera
      * @return true - jeśli udało się połączyć
      */
-    bool connect_socket(string ip);
+    bool connectSocket(string ip);
     /**
      * usunięcie wskazanego socketu, eventu i bufora danych
      * @param sindex numer połączenia
      */
-    void remove_socket(int sindex);
+    void destroyConnection(int sindex);
     /**
      * rozłączenie połączenia
      * @param sindex numer połączenia
      */
-    void disconnect_socket(int sindex);
+    void disconnect(int sindex);
     /**
      * zamknięcie połączenia - wiadomość od serwera lub klienta
      * @param sindex numer połączenia
      */
-    void fd_close(int sindex);
+    void onClose(int sindex);
     /// żądanie nawiązania połączenia - wiadomość od klienta
-    void fd_accept();
+    void onAccept();
 
     void onConnectedToServer(int sindex);
 
@@ -162,7 +160,7 @@ private:
      * @param sindex numer połączenia nadawcy
      * @return true - jeśli wszystko przebiegło pomyślnie
      */
-    bool read_packet(int sindex);
+    bool onReceive(int sindex);
 
     bool closeSocket(int socket);
 

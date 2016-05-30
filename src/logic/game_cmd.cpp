@@ -190,10 +190,10 @@ void GameEngine::exec_cmd(string cmd){
             mode_init();
         }
     }else if(cmds[0]=="myip"){
-        ss<<"Mój adres IP: "<<App::network->get_myip();
+        ss<<"Mój adres IP: "<< App::network->myIP();
         cmd_output(ss.str());
         ss_clear(ss);
-        ss<<"Moja nazwa: "<<App::network->get_myname();
+        ss<<"Moja nazwa: "<< App::network->myName();
         cmd_output(ss.str());
     }else if(cmds[0]=="clients"){
         if(App::network->server){
@@ -201,7 +201,7 @@ void GameEngine::exec_cmd(string cmd){
             cmd_output(ss.str());
             for(unsigned int i=1; i<App::network->sockets.size(); i++){
                 ss_clear(ss);
-                ss<<"Klient "<<i<<".: "<<App::network->get_client_ip(i);
+                ss<<"Klient "<<i<<".: "<< App::network->clientIP(i);
                 cmd_output(ss.str());
             }
         }else{

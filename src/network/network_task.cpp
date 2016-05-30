@@ -18,32 +18,32 @@ NetworkTask::~NetworkTask(){
 
 void Network::task_exec(NetworkTask *task){
     if(task->task == TASK_OPEN_SERVER){
-        open_server_socket();
+        openServerSocket();
     }else if(task->task == TASK_CLOSE_SERVER){
-        disconnect_socket(0);
+        disconnect(0);
     }else if(task->task == TASK_CONNECT){
-        connect_socket(task->param_s);
+        connectSocket(task->param_s);
     }else if(task->task == TASK_CLOSE){
-        disconnect_socket(0);
+        disconnect(0);
     }else if(task->task == TASK_SEND_TO_SERVER){
         if(!client){
-            network_error("Niepodłączony do serwera");
+            error("Niepodłączony do serwera");
             return;
         }
         send_packet(0, task->param_c, task->param_i);
     }else if(task->task == TASK_SEND_TO_CLIENT){
         if(!server){
-            network_error("Brak utworzonego serwera");
+            error("Brak utworzonego serwera");
             return;
         }
         int receiver_i = task->param_i;
         if(receiver_i<1 || receiver_i>=(int)sockets.size()){
-            network_error("Numer odbiorcy spoza listy klientów");
+            error("Numer odbiorcy spoza listy klientów");
             return;
         }
         send_packet(receiver_i, task->param_c, task->param_i2);
     }else{
-        network_error("Nieprawidłowy numer zadania");
+        error("Nieprawidłowy numer zadania");
     }
 }
 

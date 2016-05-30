@@ -10,7 +10,6 @@
 
 Network::Network() : ContinuousThread(150) {
     App::network = this;
-    error = false;
     server = false;
     client = false;
     recv_buffer = new char[Config::buffer_size];
@@ -24,7 +23,7 @@ Network::Network() : ContinuousThread(150) {
 Network::~Network() {
     //zamykanie socketów
     if (server || client) {
-        disconnect_socket(0);
+        disconnect(0);
     }
     sockets.clear();
     delete[] recv_buffer;
@@ -44,86 +43,49 @@ void Network::runLoop() {
 
     //odbieranie i obsługa eventów
     if (sockets.size() > 0) {
-
-        //clear the socket set
-        FD_ZERO(&read_sockets);
-
-        //add master socket to set
-        int max_sd = 0;
-        if (server) {
-            int server_socket = sockets.at(0);
-            FD_SET(server_socket, &read_sockets);
-            max_sd = server_socket;
-            //add child sockets to set
-            for (unsigned int i = 0; i < sockets.size(); i++) {
-                //socket descriptor
-                int sd = sockets[i];
-
-                //if valid socket descriptor then add to read list
-                if (sd > 0)
-                    FD_SET(sd, &read_sockets);
-
-                //highest file descriptor number, need it for the select function
-                if (sd > max_sd)
-                    max_sd = sd;
-            }
-        } else if (client) {
-            int client_socket = sockets.at(0);
-            FD_SET(client_socket, &read_sockets);
-            max_sd = client_socket;
-        }
-
-        //wait for an activity on one of the sockets , timeout is NULL , so wait indefinitely
-        int activity = select(max_sd + 1, &read_sockets, NULL, NULL, &select_timeout);
-
+        updateSockets();
+        //czekaj na aktywność jednego z socketów
+        int activity = select(max_socket + 1, &read_sockets, NULL, NULL, &select_timeout);
         if (activity < 0) {
-            network_error("select criticalError");
+            error("select criticalError");
         }
 
-        //If something happened on the master socket , then its an incoming connection
+        //przychodzące połączenie na serwerze
         if (server) {
             int server_socket = sockets.at(0);
             if (FD_ISSET(server_socket, &read_sockets)) {
-
-                Log::info("FD_accpet: 0");
-
-                fd_accept();
+                onAccept();
             }
         }
 
-        //else its some IO operation on some other socket :)
+        //operacja IO na pozostałych socketach
         for (unsigned i = 0; i < sockets.size(); i++) {
             if (server && i == 0) {
                 continue; //socket serwera tylko do nawiązywania nowych połączeń
             }
-
             int sd = sockets.at(i);
-
             if (FD_ISSET(sd, &read_sockets)) {
-
-                Log::info("FD_READ (| FD_close): " + itos(i));
-
-                read_packet(i);
+                onReceive(i); //odebranie danych lub rozłączenie
             }
         }
-
     }
+
     sleep_ms(2); //zmniejszenie zużycia procesora
 }
 
-void Network::network_error(string e) {
-    error = true;
+void Network::error(string e) {
     stringstream ss;
     ss << "Błąd sieci: " << e;
     Log::error(ss.str());
-    console_out(ss.str());
+    consoleOut(ss.str());
 }
 
-void Network::console_out(string e) {
+void Network::consoleOut(string e) {
+    //TODO przekierowanie do LOg::info, wyświetlanie poziomu info i wzwyż w cmd
     App::game_engine->cmd_output(e);
 }
 
-string Network::get_myip() {
+string Network::myIP() {
     char* hostname = new char[128];
     gethostname(hostname, 128);
     hostent* hp = gethostbyname(hostname);
@@ -136,7 +98,7 @@ string Network::get_myip() {
     return "";
 }
 
-string Network::get_myname() {
+string Network::myName() {
     char* hostname = new char[128];
     gethostname(hostname, 128);
     string hname = hostname;
@@ -144,7 +106,7 @@ string Network::get_myname() {
     return hname;
 }
 
-string Network::get_client_ip(int sindex) {
+string Network::clientIP(int sindex) {
     if (sindex < 0 || sindex >= (int) sockets.size())
         return "";
     sockaddr_in client_info;
@@ -154,27 +116,27 @@ string Network::get_client_ip(int sindex) {
     return inet_ntoa(client_info.sin_addr);
 }
 
-bool Network::open_server_socket() {
+bool Network::openServerSocket() {
     if (client) {
-        network_error("Otwarte jest już połączenie z hostem, zamknij je.");
+        error("Otwarte jest już połączenie z hostem, zamknij je.");
         return false;
     }
     if (server) {
-        console_out("Restartuje serwer...");
-        disconnect_socket(0);
+        consoleOut("Restart serwera...");
+        disconnect(0);
     } else {
-        console_out("Otwieram serwer...");
+        consoleOut("Otwieram serwer...");
     }
     int server_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (server_socket == 0) {
-        network_error("openning server socket failed");
+        error("openning server socket failed");
         return false;
     }
 
     int opt = 1;
-    //allow multiple connections
+    //wiele połączeń, wielokrotne użycie
     if (setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0) {
-        network_error("failed setting server socket options");
+        error("failed setting server socket options");
         return false;
     }
 
@@ -185,11 +147,11 @@ bool Network::open_server_socket() {
     serverInfo.sin_port = htons(Config::port);
 
     if (bind(server_socket, (struct sockaddr*) &serverInfo, sizeof(serverInfo)) < 0) {
-        network_error("open_server_socket: błąd utworzenia serwera");
+        error("błąd utworzenia serwera: bind");
         return false;
     }
     if (listen(server_socket, Config::max_clients) < 0) {
-        network_error("open_server_socket: błąd nasłuchiwania");
+        error("błąd utworzenia serwera: błąd nasłuchiwania");
         return false;
     }
     sockets.push_back(server_socket);
@@ -197,24 +159,24 @@ bool Network::open_server_socket() {
     recv_packets.push_back(new vector<string>);
     server = true;
     updateSockets();
-    console_out("Połączenie serwera otwarte.");
+    consoleOut("Połączenie serwera otwarte.");
     return true;
 }
 
-bool Network::connect_socket(string ip) {
+bool Network::connectSocket(string ip) {
     if (server) {
-        network_error("Otwarty jest już serwer, zamknij połączenie serwera.");
+        error("Otwarty jest już serwer, zamknij połączenie serwera.");
         return false;
     }
     if (client) {
-        console_out("Restart połączenia z serwerem...");
-        disconnect_socket(0);
+        consoleOut("Restart połączenia z serwerem...");
+        disconnect(0);
     } else {
-        console_out("Szukanie hosta: " + ip + " ...");
+        consoleOut("Szukanie hosta: " + ip + " ...");
     }
     int client_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (client_socket == 0) {
-        network_error("creating client socket failed");
+        error("creating client socket failed");
         return false;
     }
     sockaddr_in clientInfo;
@@ -226,7 +188,7 @@ bool Network::connect_socket(string ip) {
         if (inet_addr(ip.c_str()) == INADDR_NONE) {
             hostent* hostEntry = gethostbyname(ip.c_str());
             if (hostEntry == nullptr) {
-                network_error("Nie znaleziono hosta.");
+                error("Nie znaleziono hosta.");
                 return false;
             }
             memcpy(&clientInfo.sin_addr, hostEntry->h_addr_list[0], hostEntry->h_length);
@@ -236,9 +198,9 @@ bool Network::connect_socket(string ip) {
     }
     ip = inet_ntoa(clientInfo.sin_addr);
     clientInfo.sin_port = htons(Config::port);
-    console_out("Łączenie do: " + ip + " ...");
+    consoleOut("Łączenie do: " + ip + " ...");
     if (connect(client_socket, (struct sockaddr*) &clientInfo, sizeof(struct sockaddr)) < 0) {
-        network_error("Błąd połączenia do hosta");
+        error("Błąd połączenia do hosta");
         return false;
     }
     sockets.push_back(client_socket);
@@ -248,21 +210,59 @@ bool Network::connect_socket(string ip) {
     client = true;
     stringstream ss2;
     ss2 << "Połączono z: " << inet_ntoa(clientInfo.sin_addr);
-    console_out(ss2.str());
+    consoleOut(ss2.str());
     updateSockets();
     onConnectedToServer(sindex);
     return true;
 }
 
-void Network::remove_socket(int sindex) {
+
+void Network::onClose(int sindex) {
+    stringstream ss;
+    ss << "Zamknięcie połączenia: socket index = " << sindex;
+    consoleOut(ss.str());
+    if (client && sindex == 0) { //zamknięto serwer
+        App::game_engine->cmd_on = true;
+    }
+    disconnect(sindex);
+    if (server) { //zamknięto klienta
+        ss_clear(ss);
+        ss << "201 " << sindex;
+        recv_packets.at(0)->push_back(ss.str());
+    }
+}
+
+void Network::disconnect(int sindex) {
+    if (sindex < 0 || sindex >= (int) sockets.size()) return;
+    if (client) { //zamknięcie klienta
+        if (sindex == 0) {
+            destroyConnection(sindex);
+            client = false;
+            consoleOut("Zamknięto połączenie z serwerem.");
+        }
+    } else if (server) {
+        if (sindex == 0) { //zamknięcie całego serwera
+            //odłączenie klientów podłączonych do serwera
+            while (sockets.size() > 1) {
+                destroyConnection(1);
+            }
+            destroyConnection(sindex);
+            server = false;
+            consoleOut("Zamknięto serwer.");
+        } else { //rozłączenie klienta od serwera
+            destroyConnection(sindex);
+        }
+    }
+}
+
+void Network::destroyConnection(int sindex) {
     string ip;
     if (sindex >= 1) {
-        ip = get_client_ip(sindex);
+        ip = clientIP(sindex);
     }
     //zamykanie socketu
     if (!closeSocket(sockets.at(sindex))) {
-        network_error("closesocket: błąd zamykania socketu");
-        return;
+        error("błąd zamykania socketu");
     }
     sockets.erase(sockets.begin() + sindex);
     //usunięcie bufora odbioru danych
@@ -272,30 +272,7 @@ void Network::remove_socket(int sindex) {
     recv_packets.erase(recv_packets.begin() + sindex);
     updateSockets();
     if (sindex >= 1) {
-        console_out("Klient rozłączony: " + ip);
-    }
-}
-
-void Network::disconnect_socket(int sindex) {
-    if (sindex < 0 || sindex >= (int) sockets.size()) return;
-    if (client) { //zamknięcie klienta
-        if (sindex == 0) {
-            remove_socket(sindex);
-            client = false;
-            console_out("Zamknięto połączenie z serwerem.");
-        }
-    } else if (server) {
-        if (sindex == 0) { //zamknięcie całego serwera
-            //odłączenie klientów podłączonych do serwera
-            while (sockets.size() > 1) {
-                remove_socket(1);
-            }
-            remove_socket(sindex);
-            server = false;
-            console_out("Zamknięto serwer.");
-        } else { //rozłączenie klienta od serwera
-            remove_socket(sindex);
-        }
+        consoleOut("Klient rozłączony: " + ip);
     }
 }
 
@@ -309,19 +286,19 @@ bool Network::closeSocket(int socket) {
         if (shutdown(socket, SHUT_RDWR) < 0) // secondly, terminate the 'reliable' delivery
         if (close(socket) < 0) // finally call close()
             return false;
-        Log::info("Zamknięto socket.");
+        Log::debug("Zamknięto socket.");
     }
     return true;
 }
 
-void Network::fd_accept() {
-    console_out("Serwer: Żądanie nawiązania połączenia");
+void Network::onAccept() {
+    consoleOut("Serwer: Żądanie nawiązania połączenia");
     if (server) {
         sockaddr_in clientInfo;
         socklen_t iAddrLen = sizeof(clientInfo);
         int new_client = accept(sockets.at(0), (struct sockaddr*) &clientInfo, &iAddrLen);
         if (new_client < 0) {
-            network_error("Błąd przy nawiązywaniu połączenia");
+            error("Błąd przy nawiązywaniu połączenia");
             return;
         }
         sockets.push_back(new_client);
@@ -330,34 +307,19 @@ void Network::fd_accept() {
         updateSockets();
         stringstream ss;
         ss << "Nawiązano połączenie z klientem: " << inet_ntoa(clientInfo.sin_addr);
-        console_out(ss.str());
-    }
-}
-
-void Network::fd_close(int sindex) {
-    stringstream ss;
-    ss << "Zamknięcie połączenia: socket " << sindex;
-    console_out(ss.str());
-    if (client && sindex == 0) { //zamknięto serwer
-        App::game_engine->cmd_on = true;
-    }
-    disconnect_socket(sindex);
-    if (server) { //zamknięto klienta
-        ss_clear(ss);
-        ss << "201 " << sindex;
-        recv_packets.at(0)->push_back(ss.str());
+        consoleOut(ss.str());
     }
 }
 
 bool Network::send_packet(int sindex, char* msg, int len) {
     if (sindex < 0 || sindex >= (int) sockets.size()) {
-        network_error("Numer socketu spoza zakresu");
+        error("Numer socketu spoza zakresu");
         return false;
     }
     if (len == 0)
         return true;
     if (!client && !server) {
-        network_error("Niepołączony");
+        error("Niepołączony");
         return false;
     }
     char* msg2 = new char[len];
@@ -381,17 +343,17 @@ bool Network::send_packet(int sindex, char* msg, int len) {
             Config::max_attempts) { //ponowne wysyłanie dopóki nie przekroczy liczby prób
             stringstream ss;
             ss << "Ponowne wysyłanie (próba " << attempts << ".)...";
-            console_out(ss.str());
+            consoleOut(ss.str());
             sleep_ms(attempts * Config::wait_if_failed);
             retval = send(sockets.at(sindex), msg2, len, 0);
         } else {
-            network_error("Nie udało się wysłać pakietu");
+            error("Nie udało się wysłać pakietu");
             delete[] msg2;
             return false;
         }
     }
     if (retval < len) {
-        console_out("Pakiet niewysłany w całości, wysyłam resztę...");
+        consoleOut("Pakiet niewysłany w całości, wysyłam resztę...");
         send_packet(sockets.at(sindex), msg2 + retval, len - retval);
         delete[] msg2;
         return true;
@@ -401,17 +363,17 @@ bool Network::send_packet(int sindex, char* msg, int len) {
     return true;
 }
 
-bool Network::read_packet(int sindex) {
+bool Network::onReceive(int sindex) {
     if (sindex < 0 || sindex >= (int) sockets.size()) return false;
     memset(recv_buffer, 0, Config::buffer_size);
     int retval = recv(sockets.at(sindex), recv_buffer, Config::buffer_size, 0);
     if (retval < 0) {
-        network_error("Błąd odbierania pakietu");
+        error("Błąd odbierania pakietu");
         return false;
     }
     if (retval == 0) {
-        fd_close(sindex);
-        network_error("zamknięte połączenie");
+        onClose(sindex);
+        error("zamknięte połączenie");
         return false;
     }
     //dopisanie do odpowiedniego bufora odebranych danych
@@ -447,7 +409,7 @@ void Network::updateSockets() {
         for (unsigned int i = 1; i < sockets.size(); i++) {
             int client_socket = sockets[i];
             if (client_socket <= 0) {
-                network_error("client_socket <= 0");
+                error("client_socket <= 0");
                 return;
             }
             FD_SET(client_socket, &read_sockets);
