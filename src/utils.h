@@ -26,6 +26,8 @@ bool has_extension(string filename, string ext);
  */
 char* string_to_char(string s);
 
+string itos(int number);
+
 /**
  * zwraca obecną godzinę jako tekst
  * @return obecna godzina w formacie HH:mm:ss

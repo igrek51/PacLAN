@@ -21,6 +21,12 @@ char* string_to_char(string s) {
     return result;
 }
 
+string itos(int number){
+    stringstream ss;
+    ss << number;
+    return ss.str();
+}
+
 string get_time() {
     time_t rawtime;
     struct tm* timeinfo;

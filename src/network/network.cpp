@@ -13,7 +13,10 @@ Network::Network() : ContinuousThread(150) {
     error = false;
     server = false;
     client = false;
-    recv_msg = new char[Config::buffer_size];
+    recv_buffer = new char[Config::buffer_size];
+    select_timeout.tv_sec = 0;
+    select_timeout.tv_usec = 500;
+    max_socket = 0;
     Log::info("Wątek interfejsu sieci zainicjalizowany.");
     init = true;
 }
@@ -24,9 +27,9 @@ Network::~Network() {
         disconnect_socket(0);
     }
     sockets.clear();
-    delete[] recv_msg;
-    recv_buffer.clear();
-    recv_string.clear();
+    delete[] recv_buffer;
+    recv_buffers.clear();
+    recv_packets.clear();
     tasks.clear();
     Log::info("Zamykanie wątku interfejsu sieci...");
 }
@@ -38,17 +41,18 @@ void Network::runLoop() {
         delete tasks.at(0);
         tasks.erase(tasks.begin());
     }
+
     //odbieranie i obsługa eventów
     if (sockets.size() > 0) {
 
         //clear the socket set
-        FD_ZERO(&readfds);
+        FD_ZERO(&read_sockets);
 
         //add master socket to set
         int max_sd = 0;
         if (server) {
             int server_socket = sockets.at(0);
-            FD_SET(server_socket, &readfds);
+            FD_SET(server_socket, &read_sockets);
             max_sd = server_socket;
             //add child sockets to set
             for (unsigned int i = 0; i < sockets.size(); i++) {
@@ -57,7 +61,7 @@ void Network::runLoop() {
 
                 //if valid socket descriptor then add to read list
                 if (sd > 0)
-                    FD_SET(sd, &readfds);
+                    FD_SET(sd, &read_sockets);
 
                 //highest file descriptor number, need it for the select function
                 if (sd > max_sd)
@@ -65,12 +69,12 @@ void Network::runLoop() {
             }
         } else if (client) {
             int client_socket = sockets.at(0);
-            FD_SET(client_socket, &readfds);
+            FD_SET(client_socket, &read_sockets);
             max_sd = client_socket;
         }
 
         //wait for an activity on one of the sockets , timeout is NULL , so wait indefinitely
-        int activity = select(max_sd + 1, &readfds, NULL, NULL, NULL);
+        int activity = select(max_sd + 1, &read_sockets, NULL, NULL, &select_timeout);
 
         if (activity < 0) {
             network_error("select criticalError");
@@ -79,24 +83,30 @@ void Network::runLoop() {
         //If something happened on the master socket , then its an incoming connection
         if (server) {
             int server_socket = sockets.at(0);
-            if (FD_ISSET(server_socket, &readfds)) {
+            if (FD_ISSET(server_socket, &read_sockets)) {
+
+                Log::info("FD_accpet: 0");
+
                 fd_accept();
             }
         }
 
         //else its some IO operation on some other socket :)
         for (unsigned i = 0; i < sockets.size(); i++) {
+            if (server && i == 0) {
+                continue; //socket serwera tylko do nawiązywania nowych połączeń
+            }
+
             int sd = sockets.at(i);
 
-            if (FD_ISSET(sd, &readfds)) {
+            if (FD_ISSET(sd, &read_sockets)) {
+
+                Log::info("FD_READ (| FD_close): " + itos(i));
+
                 read_packet(i);
             }
         }
 
-        //TODO obsługa FD_CONNECT - pomyślnie połączono
-//        if (NetworkEvents.lNetworkEvents & FD_CONNECT) { //pomyślnie połączono
-//            recv_string.at(event - WSA_WAIT_EVENT_0)->push_back("004");
-//        }
     }
     sleep_ms(2); //zmniejszenie zużycia procesora
 }
@@ -161,12 +171,12 @@ bool Network::open_server_socket() {
         return false;
     }
 
-//    char opt = 1;
-//    //allow multiple connections
-//    if (setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0) {
-//        network_error("failed setting server socket options");
-//        return false;
-//    }
+    int opt = 1;
+    //allow multiple connections
+    if (setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0) {
+        network_error("failed setting server socket options");
+        return false;
+    }
 
     sockaddr_in serverInfo;
     memset(&serverInfo, 0, sizeof(serverInfo));
@@ -183,9 +193,10 @@ bool Network::open_server_socket() {
         return false;
     }
     sockets.push_back(server_socket);
-    recv_buffer.push_back(new vector<char>);
-    recv_string.push_back(new vector<string>);
+    recv_buffers.push_back(new vector<char>);
+    recv_packets.push_back(new vector<string>);
     server = true;
+    updateSockets();
     console_out("Połączenie serwera otwarte.");
     return true;
 }
@@ -231,12 +242,15 @@ bool Network::connect_socket(string ip) {
         return false;
     }
     sockets.push_back(client_socket);
-    recv_buffer.push_back(new vector<char>);
-    recv_string.push_back(new vector<string>);
+    recv_buffers.push_back(new vector<char>);
+    recv_packets.push_back(new vector<string>);
+    int sindex = sockets.size() - 1;
     client = true;
     stringstream ss2;
     ss2 << "Połączono z: " << inet_ntoa(clientInfo.sin_addr);
     console_out(ss2.str());
+    updateSockets();
+    onConnectedToServer(sindex);
     return true;
 }
 
@@ -252,10 +266,11 @@ void Network::remove_socket(int sindex) {
     }
     sockets.erase(sockets.begin() + sindex);
     //usunięcie bufora odbioru danych
-    recv_buffer.at(sindex)->clear();
-    recv_buffer.erase(recv_buffer.begin() + sindex);
-    recv_string.at(sindex)->clear();
-    recv_string.erase(recv_string.begin() + sindex);
+    recv_buffers.at(sindex)->clear();
+    recv_buffers.erase(recv_buffers.begin() + sindex);
+    recv_packets.at(sindex)->clear();
+    recv_packets.erase(recv_packets.begin() + sindex);
+    updateSockets();
     if (sindex >= 1) {
         console_out("Klient rozłączony: " + ip);
     }
@@ -284,6 +299,21 @@ void Network::disconnect_socket(int sindex) {
     }
 }
 
+bool Network::closeSocket(int socket) {
+    if (socket >= 0) {
+        // first clear any errors, which can cause close to fail
+        int err = 1;
+        socklen_t len = sizeof err;
+        if (-1 == getsockopt(socket, SOL_SOCKET, SO_ERROR, (char*) &err, &len))
+            return false;
+        if (shutdown(socket, SHUT_RDWR) < 0) // secondly, terminate the 'reliable' delivery
+        if (close(socket) < 0) // finally call close()
+            return false;
+        Log::info("Zamknięto socket.");
+    }
+    return true;
+}
+
 void Network::fd_accept() {
     console_out("Serwer: Żądanie nawiązania połączenia");
     if (server) {
@@ -295,8 +325,9 @@ void Network::fd_accept() {
             return;
         }
         sockets.push_back(new_client);
-        recv_buffer.push_back(new vector<char>);
-        recv_string.push_back(new vector<string>);
+        recv_buffers.push_back(new vector<char>);
+        recv_packets.push_back(new vector<string>);
+        updateSockets();
         stringstream ss;
         ss << "Nawiązano połączenie z klientem: " << inet_ntoa(clientInfo.sin_addr);
         console_out(ss.str());
@@ -314,7 +345,7 @@ void Network::fd_close(int sindex) {
     if (server) { //zamknięto klienta
         ss_clear(ss);
         ss << "201 " << sindex;
-        recv_string.at(0)->push_back(ss.str());
+        recv_packets.at(0)->push_back(ss.str());
     }
 }
 
@@ -325,7 +356,7 @@ bool Network::send_packet(int sindex, char* msg, int len) {
     }
     if (len == 0)
         return true;
-    if (client == false && server == false) {
+    if (!client && !server) {
         network_error("Niepołączony");
         return false;
     }
@@ -372,8 +403,8 @@ bool Network::send_packet(int sindex, char* msg, int len) {
 
 bool Network::read_packet(int sindex) {
     if (sindex < 0 || sindex >= (int) sockets.size()) return false;
-    memset(recv_msg, 0, Config::buffer_size);
-    int retval = recv(sockets.at(sindex), recv_msg, Config::buffer_size, 0);
+    memset(recv_buffer, 0, Config::buffer_size);
+    int retval = recv(sockets.at(sindex), recv_buffer, Config::buffer_size, 0);
     if (retval < 0) {
         network_error("Błąd odbierania pakietu");
         return false;
@@ -385,31 +416,48 @@ bool Network::read_packet(int sindex) {
     }
     //dopisanie do odpowiedniego bufora odebranych danych
     for (int i = 0; i < retval; i++) {
-        //jeśli wystąpił \n - przepisz zawartość do recv_string i wyczyść bufor
-        if (recv_msg[i] == '\n' && recv_buffer.at(sindex)->size() > 0) {
+        //jeśli wystąpił \n - przepisz zawartość do recv_packets i wyczyść bufor
+        if (recv_buffer[i] == '\n' && recv_buffers.at(sindex)->size() > 0) {
             string s = "";
-            for (unsigned int j = 0; j < recv_buffer.at(sindex)->size(); j++) {
-                s += recv_buffer.at(sindex)->at(j);
+            for (unsigned int j = 0; j < recv_buffers.at(sindex)->size(); j++) {
+                s += recv_buffers.at(sindex)->at(j);
             }
-            recv_string.at(sindex)->push_back(s);
-            recv_buffer.at(sindex)->clear();
+            recv_packets.at(sindex)->push_back(s);
+            recv_buffers.at(sindex)->clear();
         } else {
-            recv_buffer.at(sindex)->push_back(recv_msg[i]);
+            recv_buffers.at(sindex)->push_back(recv_buffer[i]);
         }
     }
     return true;
 }
 
-bool Network::closeSocket(int socket) {
-    if (socket >= 0) {
-        // first clear any errors, which can cause close to fail
-        int err = 1;
-        socklen_t len = sizeof err;
-        if (-1 == getsockopt(socket, SOL_SOCKET, SO_ERROR, (char*) &err, &len))
-            return false;
-        if (shutdown(socket, SHUT_RDWR) < 0) // secondly, terminate the 'reliable' delivery
-        if (close(socket) < 0) // finally call close()
-            return false;
+void Network::onConnectedToServer(int sindex) {
+    recv_packets.at(sindex)->push_back("004");
+}
+
+void Network::updateSockets() {
+    max_socket = 0;
+    //wyczyszczenie zbioru monitorowanych socketów
+    FD_ZERO(&read_sockets);
+    if (server) {
+        int server_socket = sockets.at(0);
+        FD_SET(server_socket, &read_sockets); //monitorowanie socketu serwera
+        max_socket = server_socket;
+        //monitorowanie socketów podłączonych klientów
+        for (unsigned int i = 1; i < sockets.size(); i++) {
+            int client_socket = sockets[i];
+            if (client_socket <= 0) {
+                network_error("client_socket <= 0");
+                return;
+            }
+            FD_SET(client_socket, &read_sockets);
+            //maksymalny numer socketu
+            if (client_socket > max_socket)
+                max_socket = client_socket;
+        }
+    } else if (client) {
+        int client_socket = sockets.at(0);
+        FD_SET(client_socket, &read_sockets); //monitorowanie socketu połączenia z serwerem
+        max_socket = client_socket;
     }
-    return true;
 }

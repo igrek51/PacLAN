@@ -1,5 +1,6 @@
 #include "network_task.h"
 #include "network.h"
+#include "../log.h"
 
 NetworkTask::NetworkTask(int task){
     this->task = task;

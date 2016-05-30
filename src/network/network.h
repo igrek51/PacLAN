@@ -42,24 +42,29 @@ public:
     string get_client_ip(int sindex);
     //  SOCKETY
 public:
-    /// lista Socketów - otwartych połączeń z innymi komputerami, 0 - socket klienta lub socket serwera, większe od 0 - sockety klientów serwera
+    /// lista Socketów - otwartych połączeń z innymi komputerami, indeks 0 - socket klienta lub socket serwera, większe od 0 - sockety klientów serwera
     vector<int> sockets;
     /// zmienna określająca, czy serwer jest otwarty (true - otwarty)
     bool server;
     /// zmienna określająca, czy połączenie klienta jest aktywne (true - aktywne)
     bool client;
 
+    timeval select_timeout;
+    fd_set read_sockets;
+    int max_socket;
     //  BUFORY DANYCH
 public:
     //TODO może inny kontener: deque, list ??
+    //TODO kolejka komunikatów, eventów
+    //TODO przechowywanie zbiorczej informacji o kliencie w osobnej strukturze NetworkConnection
     /// bufor danych dla każdego połączenia - zawiera całe, kompletne pakiety
-    vector< vector<string>* > recv_string;
+    vector< vector<string>* > recv_packets;
 private:
     /// bufor danych dla każdego połączenia - zawiera ciągi wszystkich odebranych znaków, bufory odebranych danych od serwera (indeks 0) lub od klientów serwera (indeksy większe 0)
-    vector< vector<char>* > recv_buffer;
+    vector< vector<char>* > recv_buffers;
     ///tymczasowy bufor aktualnej wiadomości
-    char *recv_msg;
-    ///podziel bufory recv_buffer na recv_string
+    char *recv_buffer;
+    ///podziel bufory recv_buffers na recv_packets
     void split_recv();
 
     //  ZADANIA
@@ -141,6 +146,8 @@ private:
     /// żądanie nawiązania połączenia - wiadomość od klienta
     void fd_accept();
 
+    void onConnectedToServer(int sindex);
+
     //  TRANSMISJA DANYCH
     /**
      * wyślij pakiet do odbiorcy
@@ -159,7 +166,7 @@ private:
 
     bool closeSocket(int socket);
 
-    fd_set readfds;
+    void updateSockets();
 };
 
 #endif

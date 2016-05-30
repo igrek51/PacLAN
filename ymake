@@ -9,7 +9,7 @@ SRC = *.cpp
 
 HEADERS = *.h -version.h
 
-OUTPUT = PacLAN
+OUTPUT = paclan
 
 LIBS = -lSDL2 -lSDL2_ttf -lSDL2_image -lboost_system -lboost_thread
 
