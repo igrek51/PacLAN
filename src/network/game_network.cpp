@@ -238,7 +238,7 @@ void GameEngine::network_packet_process(int from, string packet){
                     if(i>5) name<<' ';
                     name<<p[i];
                 }
-                if(from<=0 || from>=(int)App::network->sockets.size()) return;
+                if(from<=0 || from>=(int)App::network->connections.size()) return;
                 //dodaj gracza u wszystkich
                 Player *nowy = add_player(subclass, name.str(), Graphics::rgba(color_r,color_g,color_b), P_LAN);
                 nowy->lan_id = from;
@@ -252,7 +252,7 @@ void GameEngine::network_packet_process(int from, string packet){
     }else if(p[0]=="101"){ // sygnał zmiany ruchu od klienta: 101 [next_moving]
         if(p.size()>=2){
             if(App::network->server){ //odpowiedź serwera
-                if(from<=0 || from>=(int)App::network->sockets.size()) return;
+                if(from<=0 || from>=(int)App::network->connections.size()) return;
                 int next_moving = atoi(p[1].c_str());
                 stringstream synchro2;
                 //szukaj gracza, który jest sterowany - możliwość wielu
@@ -265,7 +265,7 @@ void GameEngine::network_packet_process(int from, string packet){
                 //wysłanie informacji zamiaru ruchu pozostałym klientom
                 if(synchro2.str().length()==0) return;
                 packet += '\n';
-                for(unsigned int i=1; i<App::network->sockets.size(); i++){
+                for(unsigned int i=1; i<App::network->connections.size(); i++){
                     //if((int)i==from) continue;
                     App::network->addtask_send_to_client(i, string_to_char(synchro2.str()), synchro2.str().length());
                 }
@@ -274,7 +274,7 @@ void GameEngine::network_packet_process(int from, string packet){
     }else if(p[0]=="102"){ // sygnał zmiany kierunku od klienta (moving=1): 102 [next_direction]
         if(p.size()>=2){
             if(App::network->server){ //odpowiedź serwera
-                if(from<=0 || from>=(int)App::network->sockets.size()) return;
+                if(from<=0 || from>=(int)App::network->connections.size()) return;
                 int next_direction = atoi(p[1].c_str());
                 stringstream synchro2;
                 //szukaj gracza, który jest sterowany - możliwość wielu
@@ -288,7 +288,7 @@ void GameEngine::network_packet_process(int from, string packet){
                 //wysłanie informacji zamiaru ruchu pozostałym klientom
                 if(synchro2.str().length()==0) return;
                 packet += '\n';
-                for(unsigned int i=1; i<App::network->sockets.size(); i++){
+                for(unsigned int i=1; i<App::network->connections.size(); i++){
                     //if((int)i==from) continue;
                     App::network->addtask_send_to_client(i, string_to_char(synchro2.str()), synchro2.str().length());
                 }
@@ -343,11 +343,11 @@ void GameEngine::network_send_to_clients(string packet, int to){
     if(App::network->server){
         packet += '\n';
         if(to==-1){
-            for(unsigned int i=1; i<App::network->sockets.size(); i++){
+            for(unsigned int i=1; i<App::network->connections.size(); i++){
                 App::network->addtask_send_to_client(i, string_to_char(packet), packet.length());
             }
         }else{
-            if(to<=0 || to>=(int)App::network->sockets.size()) return;
+            if(to<=0 || to>=(int)App::network->connections.size()) return;
             App::network->addtask_send_to_client(to, string_to_char(packet), packet.length());
         }
     }

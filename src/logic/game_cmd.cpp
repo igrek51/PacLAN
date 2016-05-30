@@ -197,9 +197,9 @@ void GameEngine::exec_cmd(string cmd){
         cmd_output(ss.str());
     }else if(cmds[0]=="clients"){
         if(App::network->server){
-            ss<<"Połączeni klienci ("<<App::network->sockets.size()-1<<"):";
+            ss<<"Połączeni klienci ("<<App::network->connections.size()-1<<"):";
             cmd_output(ss.str());
-            for(unsigned int i=1; i<App::network->sockets.size(); i++){
+            for(unsigned int i=1; i<App::network->connections.size(); i++){
                 ss_clear(ss);
                 ss<<"Klient "<<i<<".: "<< App::network->clientIP(i);
                 cmd_output(ss.str());
@@ -231,7 +231,7 @@ void GameEngine::exec_cmd(string cmd){
                 return;
             }
             int client_id = atoi(cmds[2].c_str());
-            if(client_id<0 || client_id>=(int)App::network->sockets.size()){
+            if(client_id<0 || client_id>=(int)App::network->connections.size()){
                 ss<<"[!] Błąd: Nie znaleziono klienta nr: "<<client_id;
                 cmd_output(ss.str());
                 return;

@@ -6,6 +6,7 @@
 #include <sys/socket.h>
 #include "../threads/continuous_thread.h"
 #include "network_task.h"
+#include "network_connection.h"
 
 using namespace std;
 
@@ -18,11 +19,10 @@ public:
     Network();
     /// zakończenie wątku sieci
     ~Network();
-private:
+protected:
     /// główna funkcja powtarzana w pętli
     void runLoop();
 
-    //  SIEĆ
 public:
     /**
      * zwraca adres ip komputera jako tekst
@@ -41,34 +41,15 @@ public:
      */
     string clientIP(int sindex);
     //  SOCKETY
-public:
-    /// lista Socketów - otwartych połączeń z innymi komputerami, indeks 0 - socket klienta lub socket serwera, większe od 0 - sockety klientów serwera
-    vector<int> sockets;
+
     /// zmienna określająca, czy serwer jest otwarty (true - otwarty)
     bool server;
     /// zmienna określająca, czy połączenie klienta jest aktywne (true - aktywne)
     bool client;
-
-    timeval select_timeout;
-    fd_set read_sockets;
-    int max_socket;
-    //  BUFORY DANYCH
-public:
-    //TODO może inny kontener: deque, list ??
-    //TODO kolejka komunikatów, eventów
-    //TODO przechowywanie zbiorczej informacji o kliencie w osobnej strukturze NetworkConnection
-    /// bufor danych dla każdego połączenia - zawiera całe, kompletne pakiety
-    vector< vector<string>* > recv_packets;
-private:
-    /// bufor danych dla każdego połączenia - zawiera ciągi wszystkich odebranych znaków, bufory odebranych danych od serwera (indeks 0) lub od klientów serwera (indeksy większe 0)
-    vector< vector<char>* > recv_buffers;
-    ///tymczasowy bufor aktualnej wiadomości
-    char *recv_buffer;
-    ///podziel bufory recv_buffers na recv_packets
-    void split_recv();
+    /// lista otwartych połączeń z innymi komputerami, indeks 0 - klient lub socket serwera, większe od 0 - sockety klientów serwera
+    vector<NetworkConnection*> connections;
 
     //  ZADANIA
-public:
     /**
      * dodaje zadanie wysłania wiadomości do serwera
      * @param msg tablica znaków do wysłania
@@ -93,7 +74,16 @@ public:
     void addtask_close_server();
     ///dodaje zadanie zamknięcia połączenia z serwerem
     void addtask_close_client();
+
 private:
+
+    ///tymczasowy bufor aktualnej wiadomości
+    char *temp_buffer;
+
+    timeval select_timeout;
+    fd_set read_sockets;
+    int max_socket;
+
     ///// kolejka zadań do wykonania
     vector<NetworkTask*> tasks;
     /**
@@ -125,7 +115,7 @@ private:
      * @param ip adres ip serwera
      * @return true - jeśli udało się połączyć
      */
-    bool connectSocket(string ip);
+    bool connectTo(string ip);
     /**
      * usunięcie wskazanego socketu, eventu i bufora danych
      * @param sindex numer połączenia
@@ -154,7 +144,7 @@ private:
      * @param len ilość przesyłanych znaków z tablicy
      * @return true - jeśli wszystko przebiegło pomyślnie
      */
-    bool send_packet(int sindex, char *msg, int len);
+    bool sendData(int sindex, char* msg, int len);
     /**
      * odbierz pakiet od nadawcy
      * @param sindex numer połączenia nadawcy
@@ -164,7 +154,7 @@ private:
 
     bool closeSocket(int socket);
 
-    void updateSockets();
+    void updateSocketsSet();
 };
 
 #endif

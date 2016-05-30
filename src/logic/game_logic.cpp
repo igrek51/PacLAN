@@ -7,15 +7,15 @@
 void GameEngine::logic_game(){
     //wiadomości z sieci
     if(App::network->client){ //wiadomości z serwera
-        while(App::network->recv_packets.at(0)->size() > 0){
-            network_packets_split(0, App::network->recv_packets.at(0)->at(0));
-            App::network->recv_packets.at(0)->erase(App::network->recv_packets.at(0)->begin());
+        while(App::network->connections.at(0)->isReady()){
+            string packet = App::network->connections.at(0)->popPacket();
+            network_packets_split(0, packet);
         }
     }else if(App::network->server){ //wiadomości od klientów (i wiadomości do samego serwera)
-        for(unsigned int client=0; client<App::network->sockets.size(); client++){ //dla każdego klienta
-            while(App::network->recv_packets.at(client)->size() > 0){
-                network_packets_split(client, App::network->recv_packets.at(client)->at(0));
-                App::network->recv_packets.at(client)->erase(App::network->recv_packets.at(client)->begin());
+        for(unsigned int client=0; client<App::network->connections.size(); client++){ //dla każdego klienta
+            while(App::network->connections.at(client)->isReady()){
+                string packet = App::network->connections.at(client)->popPacket();
+                network_packets_split(client, packet);
             }
         }
     }
@@ -346,9 +346,9 @@ void GameEngine::logic_game(){
 void GameEngine::logic_menu(){
     if(App::network->client){ //jeśli udało się połączyć
         //odczytaj komunikat o pomyślnym połączeniu
-        while(App::network->recv_packets.at(0)->size() > 0){
-            network_packets_split(0, App::network->recv_packets.at(0)->at(0));
-            App::network->recv_packets.at(0)->erase(App::network->recv_packets.at(0)->begin());
+        while(App::network->connections.at(0)->isReady()){
+            string packet = App::network->connections.at(0)->popPacket();
+            network_packets_split(0, packet);
         }
     }
 }

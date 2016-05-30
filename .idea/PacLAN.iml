@@ -2,14 +2,13 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/language.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/system.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/system.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/logic/game_logic.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/logic/game_cmd.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/logic/game_map.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/logic/game_engine.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/logic/game_map.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/logic/game_logic.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/logic/game_engine.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/app.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/log.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/config.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/players/ghost.h" isTestSource="false" />
@@ -25,8 +24,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/graphics/graphics.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/graphics/graphics_draw.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/graphics/graphics.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/app.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/language.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/config.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/system.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/map/map.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/map/item.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/map/pathfind/node.cpp" isTestSource="false" />
@@ -37,7 +37,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/map/pathfind/path.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/map/item.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/map/map.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/language.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/language.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/thread.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/timer.h" isTestSource="false" />
@@ -46,11 +46,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/threads/timer.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/continuous_thread.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/log.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/network/network.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/network/game_network.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/network/network_task.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/network/network_task.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/network/network.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/network/network_task.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/network/network.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/network/network_connection.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/network/network_connection.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/network/game_network.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/app.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/utils.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/utils.cpp" isTestSource="false" />

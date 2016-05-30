@@ -1,6 +1,5 @@
 #include "network_task.h"
 #include "network.h"
-#include "../log.h"
 
 NetworkTask::NetworkTask(int task){
     this->task = task;
@@ -22,7 +21,7 @@ void Network::task_exec(NetworkTask *task){
     }else if(task->task == TASK_CLOSE_SERVER){
         disconnect(0);
     }else if(task->task == TASK_CONNECT){
-        connectSocket(task->param_s);
+        connectTo(task->param_s);
     }else if(task->task == TASK_CLOSE){
         disconnect(0);
     }else if(task->task == TASK_SEND_TO_SERVER){
@@ -30,18 +29,18 @@ void Network::task_exec(NetworkTask *task){
             error("Niepodłączony do serwera");
             return;
         }
-        send_packet(0, task->param_c, task->param_i);
+        sendData(0, task->param_c, task->param_i);
     }else if(task->task == TASK_SEND_TO_CLIENT){
         if(!server){
             error("Brak utworzonego serwera");
             return;
         }
         int receiver_i = task->param_i;
-        if(receiver_i<1 || receiver_i>=(int)sockets.size()){
+        if(receiver_i<1 || receiver_i>=(int)connections.size()){
             error("Numer odbiorcy spoza listy klientów");
             return;
         }
-        send_packet(receiver_i, task->param_c, task->param_i2);
+        sendData(receiver_i, task->param_c, task->param_i2);
     }else{
         error("Nieprawidłowy numer zadania");
     }
