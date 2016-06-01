@@ -13,6 +13,7 @@
 //TODO numery zadań w enumach
 
 //TODO kolejka komunikatów, eventów
+//TODO enum class
 
 #include <iostream>
 #include <vector>

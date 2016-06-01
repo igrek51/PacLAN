@@ -3,6 +3,8 @@
 
 #include <boost/thread.hpp>
 
+//TODO ograniczyć includy z boosta, rozdzielić zależności, dostęp do App inny niż przez singleton
+
 /**
  * \brief Klasa wątku
  */
