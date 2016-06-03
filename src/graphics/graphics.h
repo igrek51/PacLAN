@@ -2,6 +2,7 @@
 #define GRAPHICS_H
 
 //wyrównanie tekstu
+//TODO enum class
 #define TEXT_LEFT -1
 #define TEXT_CENTER 0
 #define TEXT_RIGHT 1
@@ -17,6 +18,7 @@ class Graphics;
 
 #include "animations/animation.h"
 #include "../logic/game_engine.h"
+#include "../language.h"
 
 using namespace std;
 
@@ -38,6 +40,8 @@ private:
     SDL_Renderer *sdl_ren;
 
     GameEngine* game_engine;
+
+    Language* lang;
     /**
      * inicjalizacja SDL
      * @return true - jeśli wszystko przebiegło pomyślnie

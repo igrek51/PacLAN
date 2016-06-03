@@ -28,6 +28,7 @@ class GameEngine;
 #include "../players/pacman.h"
 #include "../players/ghost.h"
 #include "../network/network.h"
+#include "../language.h"
 
 /**
  * \brief logika gry
@@ -40,6 +41,8 @@ public:
     ~GameEngine();
 
     void setNetwork(Network* network);
+
+    Language* getLanguage();
     /**
      * wykonanie logicznego cyklu i zmniejszenie licznika cykli
      * @param logic_cycles zmienna zwiększana przez timer
@@ -57,6 +60,8 @@ private:
     Graphics* graphics;
 
     Network* network;
+
+    Language* lang;
     /// stan wciśnięcia każdego z klawiszy
     const Uint8 *keystate;
     /// zdarzenie SDL

@@ -2,6 +2,7 @@
 #include "log/log.h"
 
 Language::Language(string lang){
+    this->lang = lang;
     if(lang=="Polski"){
         player_name = "Nazwa gracza: ";
         player_class = "Klasa gracza: ";

@@ -9,6 +9,8 @@ using namespace std;
  * \brief Ustawienia językowe - teksty interfejsu w różnych językach
  */
 class Language{
+private:
+    string lang;
 public:
     Language(string lang);
     ~Language();

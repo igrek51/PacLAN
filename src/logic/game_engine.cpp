@@ -489,7 +489,11 @@ void GameEngine::update_map(int client_id){
 }
 
 void GameEngine::language_refresh(){
-    if(App::lang!=nullptr)
-        delete App::lang;
-    App::lang = new Language(Config::languages[Config::language_selected]);
+    if(lang!=nullptr)
+        delete lang;
+    lang = new Language(Config::languages[Config::language_selected]);
+}
+
+Language* GameEngine::getLanguage(){
+    return lang;
 }

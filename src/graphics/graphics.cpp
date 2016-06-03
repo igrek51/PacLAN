@@ -25,6 +25,8 @@ Graphics::Graphics() {
     fps = 0;
     fps_frames = 0;
     last_frame = currentMillis();
+    game_engine = nullptr;
+    lang = nullptr;
 }
 
 Graphics::~Graphics() {
@@ -48,6 +50,7 @@ Graphics::~Graphics() {
 
 void Graphics::setGameEngine(GameEngine* engine){
     this->game_engine = engine;
+    this->lang = engine->getLanguage();
 }
 
 void Graphics::sdl_error(string e) {
