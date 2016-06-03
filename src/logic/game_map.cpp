@@ -1,5 +1,6 @@
 #include "game_engine.h"
 #include "../app.h"
+#include "../players/player.h"
 
 char GameEngine::next_grid(Player *player, int direction){
     int xmap_next = player->xmap;

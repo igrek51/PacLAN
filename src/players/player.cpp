@@ -3,13 +3,15 @@
 #include "../log/log.h"
 #include "../app.h"
 #include "../utils.h"
+#include "../logic/game_engine.h"
 
-Player::Player(int xmap, int ymap, SDL_Color color, string name, int controlby){
+Player::Player(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine){
     this->xmap = xmap;
     this->ymap = ymap;
     this->color = color;
     this->name = name;
     this->controlby = controlby;
+    this->game_engine = game_engine;
     texture = nullptr;
     App::game_engine->xymap_to_xy(this);
     move_abs(x,y);

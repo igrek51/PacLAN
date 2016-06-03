@@ -33,9 +33,9 @@ GameEngine::GameEngine(Graphics* graphics){
     menu_color = Graphics::rand_bcolor();
     menu_subclass = P_PACMAN;
     menu_ip = "localhost";
-    menu_pacman = new Pacman(0,0,menu_color,"menu_pacman",P_KEYBOARD);
+    menu_pacman = new Pacman(0,0,menu_color,"menu_pacman",P_KEYBOARD, this);
     menu_pacman->moving = 1;
-    menu_ghost = new Ghost(0,0,menu_color,"menu_ghost",P_KEYBOARD);
+    menu_ghost = new Ghost(0,0,menu_color,"menu_ghost",P_KEYBOARD, this);
     menu_pacman->moving = 1;
     //inicjalizacja zmiennych gry
     mode = MODE_CLASSIC;
@@ -120,10 +120,10 @@ void GameEngine::insert_items(){
     for(int w=0; w<map->grid_h; w++){
         for(int k=0; k<map->grid_w; k++){
             if(map->grid[w][k]=='.'){ //mała kropka
-                items.push_back(new Item(k,w,I_SMALLDOT));
+                items.push_back(new Item(k,w,I_SMALLDOT, this, App::graphics));
                 synchro2<<"040 "<<I_SMALLDOT<<" "<<k<<" "<<w<<"\r";
             }else if(map->grid[w][k]=='o'){ //duża kropka
-                items.push_back(new Item(k,w,I_LARGEDOT));
+                items.push_back(new Item(k,w,I_LARGEDOT, this, App::graphics));
                 synchro2<<"040 "<<I_LARGEDOT<<" "<<k<<" "<<w<<"\r";
             }
         }
@@ -149,7 +149,7 @@ void GameEngine::item_add(int subclass, string pattern){
         x = rand()%map->grid_w;
         y = rand()%map->grid_h;
     }while(!is_field_correct(x,y,pattern) || !is_field_empty(x,y));
-    items.push_back(new Item(x,y,subclass));
+    items.push_back(new Item(x,y,subclass, this, App::graphics));
     synchro<<"040 "<<subclass<<" "<<x<<" "<<y<<"\r";
 }
 
@@ -194,9 +194,9 @@ Player* GameEngine::change_subclass(int index, int subclass){
         subclass = 1-players[index]->subclass;
     Player *nowy;
     if(subclass==P_GHOST){
-        nowy = new Ghost(players[index]->xmap,players[index]->ymap,players[index]->color,players[index]->name,players[index]->controlby);
+        nowy = new Ghost(players[index]->xmap,players[index]->ymap,players[index]->color,players[index]->name,players[index]->controlby, this);
     }else if(subclass==P_PACMAN){
-        nowy = new Pacman(players[index]->xmap,players[index]->ymap,players[index]->color,players[index]->name,players[index]->controlby);
+        nowy = new Pacman(players[index]->xmap,players[index]->ymap,players[index]->color,players[index]->name,players[index]->controlby, this);
     }
     nowy->ai_level = players[index]->ai_level;
     nowy->lan_id = players[index]->lan_id;
@@ -269,9 +269,9 @@ Player* GameEngine::add_player(int subclass, string name, SDL_Color color, int c
     }
     Player *nowy;
     if(subclass==P_GHOST){
-        nowy = new Ghost(xmap,ymap,color,name,controlby);
+        nowy = new Ghost(xmap,ymap,color,name,controlby, this);
     }else if(subclass==P_PACMAN){
-        nowy = new Pacman(xmap,ymap,color,name,controlby);
+        nowy = new Pacman(xmap,ymap,color,name,controlby, this);
     }
     if(controlby==P_AI){
         nowy->ai_level = ai_level;

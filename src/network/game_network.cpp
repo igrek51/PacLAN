@@ -191,7 +191,7 @@ void GameEngine::network_packet_process(int from, string packet){
             int item_i = atoi(p[1].c_str());
             int x = atoi(p[2].c_str());
             int y = atoi(p[3].c_str());
-            items.push_back(new Item(x,y,item_i));
+            items.push_back(new Item(x,y,item_i, App::game_engine, App::graphics));
         }
     }else if(p[0]=="041"){ // usunięcie itemu: 041 [item_type] [x] [y]
         if(p.size()>=4){

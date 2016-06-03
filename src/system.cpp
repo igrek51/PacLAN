@@ -1,8 +1,11 @@
 #include "system.h"
-#include <boost/thread.hpp>
+//#include <boost/thread.hpp>
+#include <unistd.h>
+#include <sys/time.h>
 
 void sleep_ms(int ms) {
-    boost::this_thread::sleep(boost::posix_time::milliseconds(ms));
+    //boost::this_thread::sleep(boost::posix_time::milliseconds(ms));
+    usleep(1000 * ms);
 }
 
 long long currentMillis(){

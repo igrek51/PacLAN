@@ -11,6 +11,8 @@
 //TODO komentarze doxygena - porządek: wyjebać lub uzupełnić
 
 //TODO optimize imports w każdym pliku - skrócenie czasu kompilacji: ograniczenie boosta i sdla
+//TODO usunięcie niepotrzebnych includów bibliotek (sdl2_ttf, sdl2_image)
+//TODO usunięcie zbędnych deklaracji klas
 
 int main(int argc, char **argv){
     App *app = new App();

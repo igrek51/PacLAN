@@ -19,6 +19,9 @@
 #include <SDL2/SDL_image.h>
 #include <string>
 
+class GameEngine;
+class Player;
+
 #include "../map/pathfind/pathfind.h"
 
 using namespace std;
@@ -26,7 +29,7 @@ using namespace std;
 /**
  * \brief Klasa gracza (pacmana lub duszka)
  */
-class Player{
+class Player {
 public:
     /**
      * Utworzenie nowego gracza na mapie
@@ -36,9 +39,11 @@ public:
      * \param name nazwa gracza
      * \param controlby określa, co steruje graczem: P_KEYBOARD - klawiatura, P_AI - sztuczna inteligencja, P_LAN - komunikaty sieciowe z serwera
      */
-    Player(int xmap, int ymap, SDL_Color color, string name, int controlby);
+    Player(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine);
+
     /// usunięcie gracza
     virtual ~Player();
+
     /// nazwa gracza - podpis nad graczem
     string name;
     /// podklasa gracza: P_PACMAN - pacman, P_GHOST - duszek
@@ -77,18 +82,23 @@ public:
     int prev_direction;
     /// poprzedni stan ruchu gracza
     int prev_moving;
+
     /// wykonywanie ruchu względnego do punktu - oszacowanie przyrostów współrzędnychw każdej klatce
     void move();
+
     /**
      * bezwzględny skok do punktu
      * @param absx współrzędna x na ekranie
      * @param absy współrzędna y na ekranie
      */
     void move_abs(int absx, int absy);
+
     /// wykonanie płynnego ruchu do zadanej wartości (na podstawie wyznaczonych przyrostów)
     void move_smooth();
+
     /// wykonanie ruchu w losowym kierunku przez gracza
     void move_random();
+
 private:
     /// przyrost położenia wzdłuż osi x w ciągu 1 klatki (w celu wykonywania płynnych ruchów)
     double a_dx;
@@ -100,33 +110,40 @@ public:
     /// kolor gracza
     SDL_Color color;
     /// tekstura gracza
-    SDL_Texture *texture;
+    SDL_Texture* texture;
     /// numer obrazka w animacji
     int a_sprite;
     /// licznik do preskalera zmiany animacji
     int a_cycle;
     /// tablica aktualnej części obrazka wyciętej z całej tekstury: element 0 - indeks ramki wzdłuż osi x, element 1 - liczba wszystkich ramek wzdłuż osi x, element 2 - indeks ramki wzdłuż osi y, element 3 - liczba wszystkich ramek wzdłuż osi y
-    int *clip;
+    int* clip;
+
     /**
      * narysowanie gracza w określonym miejscu na ekranie
      * @param texture2 tekstura do narysowania
      * @param x położenie wzdłuż osi x
      * @param y położenie wzdłuż osi y
      */
-    void draw_sprite_at(SDL_Texture *texture2, int x, int y);
+    void draw_sprite_at(SDL_Texture* texture2, int x, int y);
+
     /**
      * narysowanie gracza w jego położeniu na ekranie
      * @param texture2
      */
-    void draw_sprite(SDL_Texture *texture2);
+    void draw_sprite(SDL_Texture* texture2);
+
     /// narysowanie nad graczem jego nazwy
     void draw_name();
+
     /// wygenerowanie kolorowej tekstury gracza
     virtual void reload_texture() = 0;
+
     /// wygenerowanie parametrów kolejnej klatki gracza
     virtual void animate() = 0;
+
     /// narysowanie gracza na ekranie
     virtual void draw() = 0;
+
 private:
     /// aktualizacja tablicy określającej parametry wycięcia fragmentu klatki z tekstury
     virtual void clip_table() = 0;
@@ -144,9 +161,13 @@ public:
     /// następny planowany kierunek gracza
     int next_direction;
     /// wyznaczona scieżka podążania graczy sterowanych przez sztuczną inteligencję do określonych punktów
-    Path<int> *sciezka;
+    Path<int>* sciezka;
+
     /// wykonanie ruchu gracza przez sztuczną inteligencję
     virtual void ai_control() = 0; //sterowanie przez sztuczną inteligencję komputera
+
+protected:
+    GameEngine* game_engine;
 };
 
 #endif

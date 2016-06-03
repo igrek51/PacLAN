@@ -1,10 +1,12 @@
 #include "item.h"
 #include "../app.h"
 
-Item::Item(int xmap, int ymap, int subclass){
+Item::Item(int xmap, int ymap, int subclass, GameEngine* game_engine, Graphics* graphics){
     this->xmap = xmap;
     this->ymap = ymap;
     this->subclass = subclass;
+    this->game_engine = game_engine;
+    this->graphics = graphics;
 }
 
 Item::~Item(){
@@ -12,11 +14,11 @@ Item::~Item(){
 }
 
 void Item::draw(){
-    x = App::game_engine->xmap_to_x(xmap);
-    y = App::game_engine->ymap_to_y(ymap);
+    x = game_engine->xmap_to_x(xmap);
+    y = game_engine->ymap_to_y(ymap);
     if(subclass == I_SMALLDOT){ //mała kropka
-        App::graphics->draw_texture_center(App::graphics->tex("dot1"), x, y);
+        graphics->draw_texture_center(graphics->tex("dot1"), x, y);
     }else if(subclass == I_LARGEDOT){ //duża kropka bonusowa
-        App::graphics->draw_texture_center(App::graphics->tex("dot2"), x, y);
+        graphics->draw_texture_center(graphics->tex("dot2"), x, y);
     }
 }

@@ -2,8 +2,8 @@
 #include "../config.h"
 #include "../app.h"
 
-Pacman::Pacman(int xmap, int ymap, SDL_Color color, string name, int controlby) :
-    Player(xmap,ymap,color,name,controlby){
+Pacman::Pacman(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine) :
+    Player(xmap,ymap,color,name,controlby, game_engine){
     texture = nullptr;
     reload_texture();
     can_move_n = Config::pacman_speed;

@@ -3,6 +3,8 @@
 #include "../log/log.h"
 #include "../app.h"
 #include "../utils.h"
+#include "../players/pacman.h"
+#include "../players/ghost.h"
 
 void GameEngine::exec_cmd(string cmd){
     if(cmd.length()==0){

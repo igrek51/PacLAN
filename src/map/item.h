@@ -22,7 +22,7 @@ public:
      * \param ymap współrzędna y w układzie mapy
      * \param subclass liczba określająca rodzaj obiektu
      */
-    Item(int xmap, int ymap, int subclass);
+    Item(int xmap, int ymap, int subclass, GameEngine* game_engine, Graphics* graphics);
     ~Item();
     /// współrzędna x w układzie mapy
     int xmap;

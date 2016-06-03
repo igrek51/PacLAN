@@ -16,12 +16,17 @@
 #define MODE_ZOMBIE 1
 #define MODE_MAX 1 //ostatnia wartość trybu gry
 
+class Player;
+class Pacman;
+class Ghost;
+
 #include <vector>
 #include <sstream>
 #include "../graphics/graphics.h"
 #include "../map/map.h"
 #include "../map/pathfind/pathfind.h"
 #include "../map/item.h"
+#include "../players/player.h"
 #include "../players/pacman.h"
 #include "../players/ghost.h"
 

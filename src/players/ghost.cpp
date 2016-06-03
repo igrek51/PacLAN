@@ -2,8 +2,8 @@
 #include "../config.h"
 #include "../app.h"
 
-Ghost::Ghost(int xmap, int ymap, SDL_Color color, string name, int controlby) :
-    Player(xmap,ymap,color,name,controlby){
+Ghost::Ghost(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine) :
+    Player(xmap,ymap,color,name,controlby, game_engine){
     texture = nullptr;
     reload_texture();
     can_move_n = Config::ghost_speed;

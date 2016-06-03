@@ -1,6 +1,9 @@
 #ifndef GHOST_H
 #define GHOST_H
 
+class Ghost;
+class Player;
+
 #include "player.h"
 
 /**
@@ -16,7 +19,7 @@ public:
      * \param name nazwa gracza
      * \param controlby określa, co steruje graczem: P_KEYBOARD - klawiatura, P_AI - sztuczna inteligencja, P_LAN - komunikaty sieciowe z serwera
      */
-    Ghost(int xmap, int ymap, SDL_Color color, string name, int controlby);
+    Ghost(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine);
     /// usunięcie duszka
     ~Ghost();
     /// wygenerowanie kolorowej tekstury gracza
