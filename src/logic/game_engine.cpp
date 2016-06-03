@@ -45,8 +45,8 @@ GameEngine::GameEngine(){
     round_next = 0;
     pause = false;
     update_players_lists();
-    cmd_output("Silnik gry zainicalizowany.");
-    cmd_output("Wpisz \"help\", aby uzyskać pomoc.");
+    Log::info("Silnik gry zainicalizowany.");
+    Log::info("Wpisz \"help\", aby uzyskać pomoc.");
 }
 
 GameEngine::~GameEngine(){
@@ -277,7 +277,7 @@ Player* GameEngine::add_player(int subclass, string name, SDL_Color color, int c
     }
     players.push_back(nowy);
     update_players_lists();
-    cmd_output("Dodano gracza: "+name);
+    Log::info("Dodano gracza: "+name);
     //wysłanie informacji o dodaniu gracza innym klientom
     if(App::network->server){
         stringstream synchro2;
@@ -303,7 +303,7 @@ void GameEngine::kick_player(int index){
     }
     stringstream ss;
     ss<<"Wyrzucono gracza nr: "<<index;
-    cmd_output(ss.str());
+    Log::info(ss.str());
 }
 
 void GameEngine::kill_player(int index){

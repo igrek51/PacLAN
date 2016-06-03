@@ -2,6 +2,7 @@
 #include "../app.h"
 #include "../graphics/animations/death_animation.h"
 #include "../utils.h"
+#include "../log/log.h"
 
 //TODO utworzyć osobną klasę (z nagłówkiem .h)
 //TODO obserwator lub event dispatcher
@@ -28,7 +29,7 @@ void GameEngine::network_packet_process(int from, string packet){
             if(i>1) cmd += ' ';
             cmd += p[i];
         }
-        cmd_output("Polecenie zdalne: "+cmd);
+        Log::info("Polecenie zdalne: "+cmd);
         exec_cmd(cmd);
     }else if(p[0]=="002"){ // wiadomość tekstowa: 002 [wiadomosc tekstowa]
         string message = "";
@@ -38,9 +39,9 @@ void GameEngine::network_packet_process(int from, string packet){
         }
         stringstream ss;
         ss<<"Wiadomość od "<<from<<": "<<message;
-        cmd_output(ss.str());
+        Log::info(ss.str());
     }else if(p[0]=="003"){ // synchronizacja zegara
-        cmd_output("Zsynchronizowano timer");
+        Log::info("Zsynchronizowano timer");
     }else if(p[0]=="004"){ // pomyślnie połączono z serwerem
         menu = 0;
         stringstream synchro2;
@@ -49,7 +50,7 @@ void GameEngine::network_packet_process(int from, string packet){
         //prośba o dopisanie do listy graczy i przyporządkowanie do klienta
         synchro2<<"100 "<<menu_subclass<<" "<<(int)menu_color.r<<" "<<(int)menu_color.g<<" "<<(int)menu_color.b<<" "<<menu_name<<"\r";
         network_send_to_server(synchro2.str());
-        cmd_output("Pomyślnie połączono z serwerem.");
+        Log::info("Pomyślnie połączono z serwerem.");
     }else if(p[0]=="010"){ //   PARAMETRY GRY: pazua - zatrzymanie
         pause = true;
         for(unsigned int i=0; i<players.size(); i++){
@@ -246,7 +247,7 @@ void GameEngine::network_packet_process(int from, string packet){
                 synchronize_players(from);
                 stringstream ss;
                 ss<<"Przypisano gracza "<<name.str()<<" do klienta "<<from;
-                cmd_output(ss.str());
+                Log::info(ss.str());
             }
         }
     }else if(p[0]=="101"){ // sygnał zmiany ruchu od klienta: 101 [next_moving]
@@ -318,11 +319,11 @@ void GameEngine::network_packet_process(int from, string packet){
                 }
                 stringstream ss;
                 ss<<"Rozłączono klienta nr "<<client_id;
-                cmd_output(ss.str());
+                Log::info(ss.str());
             }
         }
     }else{
-        cmd_output("[!] Nieprawidłowy format pakietu");
+        Log::error("Nieprawidłowy format pakietu");
     }
 }
 

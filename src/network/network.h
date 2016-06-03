@@ -98,11 +98,6 @@ private:
      * @param e wiadomość do wyświetlenia
      */
     void error(string e);
-    /**
-     * wyświetlenie informacji w konsoli
-     * @param e treść informacji
-     */
-    void consoleOut(string e);
 
     //  POŁĄCZENIE
     /**

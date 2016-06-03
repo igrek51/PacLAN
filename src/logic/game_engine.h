@@ -58,11 +58,6 @@ private:
 
     //  CMD
 public:
-    /**
-     * wyświetlenie w konsoli wiersza
-     * @param out wiersz do wyświetlenia
-     */
-    void cmd_output(string out);
     ///zmienna określająca czy wiersz poleceń/konsola jest włączony (true - włączony)
     bool cmd_on;
     ///aktualnie wpisywane polecenie wiersza poleceń

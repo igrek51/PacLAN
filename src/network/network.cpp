@@ -78,12 +78,6 @@ void Network::error(string e) {
     stringstream ss;
     ss << "Błąd sieci: " << e;
     Log::error(ss.str());
-    consoleOut(ss.str());
-}
-
-void Network::consoleOut(string e) {
-    //TODO przekierowanie do LOg::info, wyświetlanie poziomu info i wzwyż w cmd
-    App::game_engine->cmd_output(e);
 }
 
 string Network::myIP() {
@@ -123,10 +117,10 @@ bool Network::openServerSocket() {
         return false;
     }
     if (server) {
-        consoleOut("Restart serwera...");
+        Log::info("Restart serwera...");
         disconnect(0);
     } else {
-        consoleOut("Otwieram serwer...");
+        Log::info("Otwieram serwer...");
     }
     int server_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (server_socket == 0) {
@@ -158,7 +152,7 @@ bool Network::openServerSocket() {
 
     connections.push_back(new NetworkConnection(server_socket));
     server = true;
-    consoleOut("Połączenie serwera otwarte.");
+    Log::info("Połączenie serwera otwarte.");
     return true;
 }
 
@@ -168,10 +162,10 @@ bool Network::connectTo(string ip) {
         return false;
     }
     if (client) {
-        consoleOut("Restart połączenia z serwerem...");
+        Log::info("Restart połączenia z serwerem...");
         disconnect(0);
     } else {
-        consoleOut("Szukanie hosta: " + ip + " ...");
+        Log::info("Szukanie hosta: " + ip + " ...");
     }
     int client_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (client_socket == 0) {
@@ -197,7 +191,7 @@ bool Network::connectTo(string ip) {
     }
     ip = inet_ntoa(clientInfo.sin_addr);
     clientInfo.sin_port = htons(Config::port);
-    consoleOut("Łączenie do: " + ip + " ...");
+    Log::info("Łączenie do: " + ip + " ...");
     if (connect(client_socket, (struct sockaddr*) &clientInfo, sizeof(struct sockaddr)) < 0) {
         error("Błąd połączenia do hosta");
         return false;
@@ -207,7 +201,7 @@ bool Network::connectTo(string ip) {
     client = true;
     stringstream ss2;
     ss2 << "Połączono z: " << inet_ntoa(clientInfo.sin_addr);
-    consoleOut(ss2.str());
+    Log::info(ss2.str());
     onConnectedToServer(sindex);
     return true;
 }
@@ -216,7 +210,7 @@ bool Network::connectTo(string ip) {
 void Network::onClose(int sindex) {
     stringstream ss;
     ss << "Zamknięcie połączenia: socket index = " << sindex;
-    consoleOut(ss.str());
+    Log::info(ss.str());
     if (client && sindex == 0) { //zamknięto serwer
         App::game_engine->cmd_on = true;
     }
@@ -234,7 +228,7 @@ void Network::disconnect(int sindex) {
         if (sindex == 0) {
             destroyConnection(sindex);
             client = false;
-            consoleOut("Zamknięto połączenie z serwerem.");
+            Log::info("Zamknięto połączenie z serwerem.");
         }
     } else if (server) {
         if (sindex == 0) { //zamknięcie całego serwera
@@ -244,7 +238,7 @@ void Network::disconnect(int sindex) {
             }
             destroyConnection(sindex);
             server = false;
-            consoleOut("Zamknięto serwer.");
+            Log::info("Zamknięto serwer.");
         } else { //rozłączenie klienta od serwera
             destroyConnection(sindex);
         }
@@ -263,7 +257,7 @@ void Network::destroyConnection(int sindex) {
     delete connections[sindex];
     connections.erase(connections.begin() + sindex);
     if (sindex >= 1) {
-        consoleOut("Klient rozłączony: " + ip);
+        Log::info("Klient rozłączony: " + ip);
     }
 }
 
@@ -283,7 +277,7 @@ bool Network::closeSocket(int socket) {
 }
 
 void Network::onAccept() {
-    consoleOut("Serwer: Żądanie nawiązania połączenia");
+    Log::info("Serwer: Żądanie nawiązania połączenia");
     if (server) {
         sockaddr_in clientInfo;
         socklen_t iAddrLen = sizeof(clientInfo);
@@ -295,7 +289,7 @@ void Network::onAccept() {
         connections.push_back(new NetworkConnection(new_client));
         stringstream ss;
         ss << "Nawiązano połączenie z klientem: " << inet_ntoa(clientInfo.sin_addr);
-        consoleOut(ss.str());
+        Log::info(ss.str());
     }
 }
 
@@ -331,7 +325,7 @@ bool Network::sendData(int sindex, char* msg, int len) {
             Config::max_attempts) { //ponowne wysyłanie dopóki nie przekroczy liczby prób
             stringstream ss;
             ss << "Ponowne wysyłanie (próba " << attempts << ".)...";
-            consoleOut(ss.str());
+            Log::warn(ss.str());
             sleep_ms(attempts * Config::wait_if_failed);
             retval = send(connections[sindex]->socket, msg2, len, 0);
         } else {
@@ -341,7 +335,7 @@ bool Network::sendData(int sindex, char* msg, int len) {
         }
     }
     if (retval < len) {
-        consoleOut("Pakiet niewysłany w całości, wysyłam resztę...");
+        Log::warn("Pakiet niewysłany w całości, wysyłam resztę...");
         sendData(connections[sindex]->socket, msg2 + retval, len - (int) retval);
         delete[] msg2;
         return true;
