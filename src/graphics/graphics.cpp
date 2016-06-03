@@ -48,7 +48,7 @@ Graphics::~Graphics() {
 }
 
 void Graphics::setGameEngine(GameEngine* engine){
-    this->engine = engine;
+    this->game_engine = engine;
 }
 
 void Graphics::sdl_error(string e) {
@@ -113,7 +113,7 @@ void Graphics::draw() {
     //wyczyszczenie ekranu
     SDL_SetRenderDrawColor(sdl_ren, 0, 0, 0, 255);
     SDL_RenderClear(sdl_ren);
-    if (App::game_engine->menu > 0) { //MENU
+    if (game_engine->menu > 0) { //MENU
         draw_menu();
     } else {  //GRA - RUNDA
         draw_round();
@@ -125,7 +125,7 @@ void Graphics::draw() {
         draw_text(ss.str(), font1, rgba(0, 255, 0), 0, screen_h - 15, TEXT_LEFT);
     }
     //wiersz poleceń i konsola
-    if (App::game_engine->cmd_on) {
+    if (game_engine->cmd_on) {
         draw_console();
     }
     //wyświetlenie na ekranie (double buffering)
@@ -230,13 +230,13 @@ void Graphics::destroy_texture(SDL_Texture*& texture) {
 
 void Graphics::reload_textures() {
     Log::debug("Przeładowanie tekstur...");
-    for (unsigned int i = 0; i < App::game_engine->players.size(); i++) {
-        App::game_engine->players[i]->reload_texture();
+    for (unsigned int i = 0; i < game_engine->players.size(); i++) {
+        game_engine->players[i]->reload_texture();
     }
-    if (App::game_engine->menu_pacman != nullptr)
-        App::game_engine->menu_pacman->reload_texture();
-    if (App::game_engine->menu_ghost != nullptr)
-        App::game_engine->menu_ghost->reload_texture();
+    if (game_engine->menu_pacman != nullptr)
+        game_engine->menu_pacman->reload_texture();
+    if (game_engine->menu_ghost != nullptr)
+        game_engine->menu_ghost->reload_texture();
 }
 
 

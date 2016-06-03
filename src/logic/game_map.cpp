@@ -147,15 +147,15 @@ void GameEngine::follow_path(int xmap, int ymap, int &direction, Path<int> *scie
 
 int GameEngine::distance_m(Player *player1, Player *player2){
     int dxmin = abs(player1->xmap-player2->xmap);
-    if(App::game_engine->map->grid_w - dxmin < dxmin) //jeśli odległość jest większa od połowy mapki
-        dxmin = App::game_engine->map->grid_w - dxmin;
+    if(map->grid_w - dxmin < dxmin) //jeśli odległość jest większa od połowy mapki
+        dxmin = map->grid_w - dxmin;
     return dxmin + abs(player1->ymap-player2->ymap);
 }
 
 int GameEngine::distance_m(Player *player1, Item *item2){
     int dxmin = abs(player1->xmap-item2->xmap);
-    if(App::game_engine->map->grid_w - dxmin < dxmin) //jeśli odległość jest większa od połowy mapki
-        dxmin = App::game_engine->map->grid_w - dxmin;
+    if(map->grid_w - dxmin < dxmin) //jeśli odległość jest większa od połowy mapki
+        dxmin = map->grid_w - dxmin;
     return dxmin + abs(player1->ymap-item2->ymap);
     //return abs(player1->xmap-item2->xmap) + abs(player1->ymap-item2->ymap);
 }

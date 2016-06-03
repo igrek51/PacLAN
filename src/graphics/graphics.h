@@ -30,14 +30,14 @@ public:
     ///zamknięcie silnika grafiki
     ~Graphics();
 
-    void setGameEngine(GameEngine* engine);
+    void setGameEngine(GameEngine* game_engine);
 private:
     ///wskaźnik do okna SDL
     SDL_Window *sdl_win;
     ///wskaźnik do renderera grafiki
     SDL_Renderer *sdl_ren;
 
-    GameEngine* engine;
+    GameEngine* game_engine;
     /**
      * inicjalizacja SDL
      * @return true - jeśli wszystko przebiegło pomyślnie

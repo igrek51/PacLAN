@@ -1,7 +1,10 @@
 #ifndef ANIMATION_H
 #define ANIMATION_H
 
-#include "../graphics.h"
+#include <SDL2/SDL.h>
+
+class GameEngine;
+class Graphics;
 
 /**
  * \brief Klasa rysująca animacje i generująca kolejne klatki animacji
