@@ -7,6 +7,7 @@
 
 GameEngine::GameEngine(Graphics* graphics){
     this->graphics = graphics;
+    lang = nullptr;
     Log::info("Inicjalizacja logiki gry...");
     keystate = SDL_GetKeyboardState(NULL);
     cycles = 0;
