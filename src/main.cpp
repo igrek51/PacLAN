@@ -23,7 +23,7 @@ int main(int argc, char **argv){
     if(app->exit)
         return 0;
     app->graphics->setGameEngine(app->game_engine);
-    app->network = new Network(); //interfejs sieciowy
+    app->network = new Network(app->game_engine); //interfejs sieciowy
     if(app->exit)
         return 0;
     app->timer = new Timer(Config::logic_timer_ms,&app->logic_cycles); //timer utrzymujący stałą prędkość gry

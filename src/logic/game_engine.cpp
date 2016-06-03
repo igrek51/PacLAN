@@ -7,7 +7,6 @@
 
 GameEngine::GameEngine(Graphics* graphics){
     this->graphics = graphics;
-    App::game_engine = this;
     Log::info("Inicjalizacja logiki gry...");
     keystate = SDL_GetKeyboardState(NULL);
     cycles = 0;

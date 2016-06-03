@@ -8,8 +8,9 @@
 #include <arpa/inet.h>
 #include <netdb.h>
 
-Network::Network() : ContinuousThread(150) {
+Network::Network(GameEngine* game_engine) : ContinuousThread(150) {
     App::network = this;
+    this->game_engine = game_engine;
     server = false;
     client = false;
     temp_buffer = new char[Config::buffer_size];
@@ -212,7 +213,7 @@ void Network::onClose(int sindex) {
     ss << "Zamknięcie połączenia: socket index = " << sindex;
     Log::info(ss.str());
     if (client && sindex == 0) { //zamknięto serwer
-        App::game_engine->cmd_on = true;
+        game_engine->cmd_on = true;
     }
     disconnect(sindex);
     if (server) { //zamknięto klienta

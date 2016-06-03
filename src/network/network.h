@@ -7,6 +7,7 @@
 #include "../threads/continuous_thread.h"
 #include "network_task.h"
 #include "network_connection.h"
+#include "../logic/game_engine.h"
 
 using namespace std;
 
@@ -16,7 +17,7 @@ using namespace std;
 class Network : public ContinuousThread {
 public:
     /// uruchomienie wątku sieci
-    Network();
+    Network(GameEngine* game_engine);
     /// zakończenie wątku sieci
     ~Network();
 protected:
@@ -83,6 +84,8 @@ private:
     timeval select_timeout;
     fd_set read_sockets;
     int max_socket;
+
+    GameEngine* game_engine;
 
     ///// kolejka zadań do wykonania
     vector<NetworkTask*> tasks;
