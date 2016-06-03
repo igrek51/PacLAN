@@ -2,8 +2,8 @@
 #include "../config.h"
 #include "../app.h"
 
-Ghost::Ghost(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine) :
-    Player(xmap,ymap,color,name,controlby, game_engine){
+Ghost::Ghost(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine, Graphics* graphics) :
+    Player(xmap,ymap,color,name,controlby, game_engine, graphics){
     texture = nullptr;
     reload_texture();
     can_move_n = Config::ghost_speed;
@@ -16,7 +16,7 @@ Ghost::~Ghost(){
 
 void Ghost::draw(){
     if(game_engine->eating>0){
-        draw_sprite(App::graphics->tex("ghost_eatme"));
+        draw_sprite(graphics->tex("ghost_eatme"));
     }else{
         draw_sprite(texture);
     }
@@ -55,8 +55,8 @@ void Ghost::clip_table(){
 
 void Ghost::reload_texture(){
     if(texture!=nullptr)
-        App::graphics->destroy_texture(texture);
-    texture =  App::graphics->blend_texture(App::graphics->tex("ghost"),color);
+        graphics->destroy_texture(texture);
+    texture =  graphics->blend_texture(graphics->tex("ghost"),color);
 }
 
 void Ghost::ai_control(){

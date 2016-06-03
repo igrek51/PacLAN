@@ -2,7 +2,6 @@
 #define PACMAN_H
 
 class Pacman;
-class Player;
 
 #include "player.h"
 
@@ -19,7 +18,7 @@ public:
      * \param name nazwa gracza
      * \param controlby określa, co steruje graczem: P_KEYBOARD - klawiatura, P_AI - sztuczna inteligencja, P_LAN - komunikaty sieciowe z serwera
      */
-    Pacman(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine);
+    Pacman(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine, Graphics* graphics);
     /// usunięcie pacmana
     ~Pacman();
     /// wygenerowanie kolorowej tekstury gracza

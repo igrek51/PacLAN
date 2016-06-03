@@ -359,7 +359,7 @@ void GameEngine::logic_menu(){
 void GameEngine::keyboard_event(SDL_Keysym keysym){
     SDL_Keycode key = keysym.sym;
     if(key==SDLK_F4 || key==SDLK_F11){
-        App::graphics->fullscreen_toggle();
+        graphics->fullscreen_toggle();
     }
     if(key==SDLK_BACKQUOTE){
         cmd_on = !cmd_on;

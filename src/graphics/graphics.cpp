@@ -10,7 +10,6 @@
 //FIXME zjebany toggle trybu fullscreen, zależny od ekranu
 
 Graphics::Graphics() {
-    App::graphics = this;
     screen_w = Config::screen_w;
     screen_h = Config::screen_h;
     fullscreen = false;

@@ -4,6 +4,9 @@
 #include <iostream>
 #include <vector>
 #include <sys/socket.h>
+
+class Network;
+
 #include "../threads/continuous_thread.h"
 #include "network_task.h"
 #include "network_connection.h"

@@ -2,8 +2,8 @@
 #include "../config.h"
 #include "../app.h"
 
-Pacman::Pacman(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine) :
-    Player(xmap,ymap,color,name,controlby, game_engine){
+Pacman::Pacman(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine, Graphics* graphics) :
+    Player(xmap,ymap,color,name,controlby, game_engine, graphics){
     texture = nullptr;
     reload_texture();
     can_move_n = Config::pacman_speed;
@@ -44,8 +44,8 @@ void Pacman::clip_table(){
 
 void Pacman::reload_texture(){
     if(texture!=nullptr)
-        App::graphics->destroy_texture(texture);
-    texture =  App::graphics->blend_texture(App::graphics->tex("pacman"),color);
+        graphics->destroy_texture(texture);
+    texture =  graphics->blend_texture(graphics->tex("pacman"),color);
 }
 
 void Pacman::ai_control(){

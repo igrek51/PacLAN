@@ -19,8 +19,9 @@
 #include <SDL2/SDL_image.h>
 #include <string>
 
-class GameEngine;
 class Player;
+class GameEngine;
+class Graphics;
 
 #include "../map/pathfind/pathfind.h"
 
@@ -39,7 +40,7 @@ public:
      * \param name nazwa gracza
      * \param controlby określa, co steruje graczem: P_KEYBOARD - klawiatura, P_AI - sztuczna inteligencja, P_LAN - komunikaty sieciowe z serwera
      */
-    Player(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine);
+    Player(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine, Graphics* graphics);
 
     /// usunięcie gracza
     virtual ~Player();
@@ -168,6 +169,7 @@ public:
 
 protected:
     GameEngine* game_engine;
+    Graphics* graphics;
 };
 
 #endif

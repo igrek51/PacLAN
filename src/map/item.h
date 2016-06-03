@@ -1,13 +1,11 @@
 #ifndef ITEM_H
 #define ITEM_H
 
-class GameEngine;
-class Graphics;
 class Item;
 
-//rodzaj obiektu
 #include "../logic/game_engine.h"
 
+//rodzaj obiektu
 #define I_SMALLDOT 1 //mała kropka do zebrania
 #define I_LARGEDOT 2 //duża kropka (bonusowa)
 

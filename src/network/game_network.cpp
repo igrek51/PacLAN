@@ -191,7 +191,7 @@ void GameEngine::network_packet_process(int from, string packet){
             int item_i = atoi(p[1].c_str());
             int x = atoi(p[2].c_str());
             int y = atoi(p[3].c_str());
-            items.push_back(new Item(x,y,item_i, this, App::graphics));
+            items.push_back(new Item(x,y,item_i, this, graphics));
         }
     }else if(p[0]=="041"){ // usunięcie itemu: 041 [item_type] [x] [y]
         if(p.size()>=4){
@@ -221,11 +221,11 @@ void GameEngine::network_packet_process(int from, string packet){
                 clip[k] = players[player_index]->clip[k];
             SDL_Texture *to_copy;
             if(eating>0 && players[player_index]->subclass==P_GHOST){
-                to_copy = App::graphics->tex("ghost_eatme");
+                to_copy = graphics->tex("ghost_eatme");
             }else{
                 to_copy = players[player_index]->texture;
             }
-            App::graphics->animations.push_back(new DeathAnimation(x,y,to_copy,players[player_index]->color,clip, App::graphics));
+            graphics->animations.push_back(new DeathAnimation(x,y,to_copy,players[player_index]->color,clip, graphics));
         }
     }else if(p[0]=="100"){ // KOMUNIKATY OD KLIENTA: prośba dodania nowego gracza od klienta i przyporządkowania do klienta: 100 [subclass] [color.r] [color.g] [color.b] [nazwa gracza]
         if(p.size()>=6){

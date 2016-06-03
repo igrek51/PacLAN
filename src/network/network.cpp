@@ -219,7 +219,7 @@ void Network::onClose(int sindex) {
     if (server) { //zamknięto klienta
         ss_clear(ss);
         ss << "201 " << sindex;
-        App::network->connections.at(0)->addReceivedPacket(ss.str());
+        connections.at(0)->addReceivedPacket(ss.str());
     }
 }
 

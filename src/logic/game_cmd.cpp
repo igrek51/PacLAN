@@ -272,7 +272,7 @@ void GameEngine::exec_cmd(string cmd){
     }else if(cmds[0]=="fps"){
         Config::show_fps = !Config::show_fps;
     }else if(cmds[0]=="fullscreen"){
-        App::graphics->fullscreen_toggle();
+        graphics->fullscreen_toggle();
     }else if(cmds[0]=="help"){
         Log::info("Dostępne polecenia:");
         Log::info("players - lista graczy (wyświetla ID graczy, nazwy, statystyki)");

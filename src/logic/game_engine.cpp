@@ -14,9 +14,9 @@ GameEngine::GameEngine(Graphics* graphics){
     menu_ghost = nullptr;
     //fullscreen
     if(Config::fullscreen_start)
-        App::graphics->fullscreen_toggle();
+        graphics->fullscreen_toggle();
     //mapka
-    map = new Map(App::graphics->tex("map1"),Config::mapDefault);
+    map = new Map(graphics->tex("map1"),Config::mapDefault);
     if(App::exit)
         return;
     pathfind_init();
@@ -32,9 +32,9 @@ GameEngine::GameEngine(Graphics* graphics){
     menu_color = Graphics::rand_bcolor();
     menu_subclass = P_PACMAN;
     menu_ip = "localhost";
-    menu_pacman = new Pacman(0,0,menu_color,"menu_pacman",P_KEYBOARD, this);
+    menu_pacman = new Pacman(0,0,menu_color,"menu_pacman",P_KEYBOARD, this, graphics);
     menu_pacman->moving = 1;
-    menu_ghost = new Ghost(0,0,menu_color,"menu_ghost",P_KEYBOARD, this);
+    menu_ghost = new Ghost(0,0,menu_color,"menu_ghost",P_KEYBOARD, this, graphics);
     menu_pacman->moving = 1;
     //inicjalizacja zmiennych gry
     mode = MODE_CLASSIC;
@@ -68,6 +68,10 @@ GameEngine::~GameEngine(){
     delete pathfind;
 }
 
+void GameEngine::setNetwork(Network* network){
+    this->network = network;
+}
+
 void GameEngine::logic(volatile int &logic_cycles){
     if(logic_cycles>Config::logic_cycles_critical){
         Log::criticalError(
@@ -91,7 +95,7 @@ void GameEngine::logic(volatile int &logic_cycles){
             }
             if(event.window.event==SDL_WINDOWEVENT_RESTORED){
                 Log::debug("Okno przywrócone.");
-                App::graphics->reload_textures();
+                graphics->reload_textures();
             }
         }
 
@@ -119,10 +123,10 @@ void GameEngine::insert_items(){
     for(int w=0; w<map->grid_h; w++){
         for(int k=0; k<map->grid_w; k++){
             if(map->grid[w][k]=='.'){ //mała kropka
-                items.push_back(new Item(k,w,I_SMALLDOT, this, App::graphics));
+                items.push_back(new Item(k,w,I_SMALLDOT, this, graphics));
                 synchro2<<"040 "<<I_SMALLDOT<<" "<<k<<" "<<w<<"\r";
             }else if(map->grid[w][k]=='o'){ //duża kropka
-                items.push_back(new Item(k,w,I_LARGEDOT, this, App::graphics));
+                items.push_back(new Item(k,w,I_LARGEDOT, this, graphics));
                 synchro2<<"040 "<<I_LARGEDOT<<" "<<k<<" "<<w<<"\r";
             }
         }
@@ -148,7 +152,7 @@ void GameEngine::item_add(int subclass, string pattern){
         x = rand()%map->grid_w;
         y = rand()%map->grid_h;
     }while(!is_field_correct(x,y,pattern) || !is_field_empty(x,y));
-    items.push_back(new Item(x,y,subclass, this, App::graphics));
+    items.push_back(new Item(x,y,subclass, this, graphics));
     synchro<<"040 "<<subclass<<" "<<x<<" "<<y<<"\r";
 }
 
@@ -193,9 +197,9 @@ Player* GameEngine::change_subclass(int index, int subclass){
         subclass = 1-players[index]->subclass;
     Player *nowy;
     if(subclass==P_GHOST){
-        nowy = new Ghost(players[index]->xmap,players[index]->ymap,players[index]->color,players[index]->name,players[index]->controlby, this);
+        nowy = new Ghost(players[index]->xmap,players[index]->ymap,players[index]->color,players[index]->name,players[index]->controlby, this, graphics);
     }else if(subclass==P_PACMAN){
-        nowy = new Pacman(players[index]->xmap,players[index]->ymap,players[index]->color,players[index]->name,players[index]->controlby, this);
+        nowy = new Pacman(players[index]->xmap,players[index]->ymap,players[index]->color,players[index]->name,players[index]->controlby, this, graphics);
     }
     nowy->ai_level = players[index]->ai_level;
     nowy->lan_id = players[index]->lan_id;
@@ -268,9 +272,9 @@ Player* GameEngine::add_player(int subclass, string name, SDL_Color color, int c
     }
     Player *nowy;
     if(subclass==P_GHOST){
-        nowy = new Ghost(xmap,ymap,color,name,controlby, this);
+        nowy = new Ghost(xmap,ymap,color,name,controlby, this, graphics);
     }else if(subclass==P_PACMAN){
-        nowy = new Pacman(xmap,ymap,color,name,controlby, this);
+        nowy = new Pacman(xmap,ymap,color,name,controlby, this, graphics);
     }
     if(controlby==P_AI){
         nowy->ai_level = ai_level;
@@ -331,11 +335,11 @@ void GameEngine::kill_player(int index){
         clip[k] = players[index]->clip[k];
     SDL_Texture *to_copy;
     if(eating>0 && players[index]->subclass==P_GHOST){
-        to_copy = App::graphics->tex("ghost_eatme");
+        to_copy = graphics->tex("ghost_eatme");
     }else{
         to_copy = players[index]->texture;
     }
-    App::graphics->animations.push_back(new DeathAnimation(round_to_int(players[index]->a_x),round_to_int(players[index]->a_y),to_copy,players[index]->color,clip, App::graphics));
+    graphics->animations.push_back(new DeathAnimation(round_to_int(players[index]->a_x),round_to_int(players[index]->a_y),to_copy,players[index]->color,clip, graphics));
     synchro<<"050 "<<index<<" "<<round_to_int(players[index]->a_x)<<" "<<round_to_int(players[index]->a_y)<<"\r";
     //zabicie gracza
     players[index]->respawn = Config::respawn_time;

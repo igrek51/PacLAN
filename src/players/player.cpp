@@ -4,13 +4,14 @@
 #include "../app.h"
 #include "../utils.h"
 
-Player::Player(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine){
+Player::Player(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine, Graphics* graphics){
     this->xmap = xmap;
     this->ymap = ymap;
     this->color = color;
     this->name = name;
     this->controlby = controlby;
     this->game_engine = game_engine;
+    this->graphics = graphics;
     texture = nullptr;
     game_engine->xymap_to_xy(this);
     move_abs(x,y);
@@ -33,16 +34,16 @@ Player::Player(int xmap, int ymap, SDL_Color color, string name, int controlby, 
 
 Player::~Player(){
     if(texture!=nullptr)
-        App::graphics->destroy_texture(texture);
+        graphics->destroy_texture(texture);
     delete[] clip;
     if(sciezka!=nullptr)
         delete sciezka;
 }
 
 void Player::move(){
-    if(App::graphics->fps>0){
-        a_dx = ((double)((x - a_x)*1000))/(App::graphics->fps*Config::logic_timer_ms*can_move_n);
-        a_dy = ((double)((y - a_y)*1000))/(App::graphics->fps*Config::logic_timer_ms*can_move_n);
+    if(graphics->fps>0){
+        a_dx = ((double)((x - a_x)*1000))/(graphics->fps*Config::logic_timer_ms*can_move_n);
+        a_dy = ((double)((y - a_y)*1000))/(graphics->fps*Config::logic_timer_ms*can_move_n);
     }else{
         Log::warn("Player::move: fps = 0");
         a_x = x;
@@ -86,12 +87,12 @@ void Player::draw_sprite_at(SDL_Texture *texture2, int x, int y){
         //liczba do końca respawnu
         stringstream ss;
         ss<<Timer::cycles_to_s(respawn);
-        App::graphics->draw_text(ss.str(), App::graphics->font2,
-            App::graphics->rgba(color.r,color.g,color.b,255), x, y-6, 0);
+        graphics->draw_text(ss.str(), graphics->font2,
+            graphics->rgba(color.r,color.g,color.b,255), x, y-6, 0);
     }else{
         SDL_SetTextureAlphaMod(texture2,255);
     }
-    App::graphics->draw_texture_clip_center(texture2, x, y, clip[0], clip[1], clip[2], clip[3]);
+    graphics->draw_texture_clip_center(texture2, x, y, clip[0], clip[1], clip[2], clip[3]);
 }
 
 void Player::draw_sprite(SDL_Texture *texture2){
@@ -99,5 +100,5 @@ void Player::draw_sprite(SDL_Texture *texture2){
 }
 
 void Player::draw_name(){
-    App::graphics->draw_text(name, App::graphics->font1, App::graphics->rgba(color.r,color.g,color.b,150), round_to_int(a_x), round_to_int(a_y-30), 0);
+    graphics->draw_text(name, graphics->font1, graphics->rgba(color.r,color.g,color.b,150), round_to_int(a_x), round_to_int(a_y-30), 0);
 }

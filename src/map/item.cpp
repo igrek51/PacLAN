@@ -1,5 +1,4 @@
 #include "item.h"
-#include "../app.h"
 
 Item::Item(int xmap, int ymap, int subclass, GameEngine* game_engine, Graphics* graphics){
     this->xmap = xmap;

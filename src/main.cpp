@@ -26,6 +26,7 @@ int main(int argc, char **argv){
     app->network = new Network(app->game_engine); //interfejs sieciowy
     if(app->exit)
         return 0;
+    app->game_engine->setNetwork(app->network);
     app->timer = new Timer(Config::logic_timer_ms,&app->logic_cycles); //timer utrzymujący stałą prędkość gry
     while(!app->exit){
         while(app->logic_cycles>0 && !App::exit){ //jeśli są do wykonania cykle (zaległe)
