@@ -66,11 +66,11 @@ void Pacman::ai_control(){
     }
     //odległość do najbliższego duszka
     int min_d = -1, min_i = -1;
-    for(unsigned int i=0; i<App::game_engine->players.size(); i++){
-        if(App::game_engine->players[i]->subclass==P_GHOST && App::game_engine->players[i]->respawn==0){
+    for(unsigned int i=0; i<game_engine->players.size(); i++){
+        if(game_engine->players[i]->subclass==P_GHOST && game_engine->players[i]->respawn==0){
             //odległość w metryce miejskiej
-            if(min_d==-1 || App::game_engine->distance_m(this,App::game_engine->players[i])<min_d){
-                min_d = App::game_engine->distance_m(this,App::game_engine->players[i]);
+            if(min_d==-1 || game_engine->distance_m(this,game_engine->players[i])<min_d){
+                min_d = game_engine->distance_m(this,game_engine->players[i]);
                 min_i = i;
             }
         }
@@ -79,22 +79,22 @@ void Pacman::ai_control(){
         esc_histereza = 0;
     }
     //zjadanie duszków
-    if(min_i!=-1 && App::game_engine->eating>=Config::eating_time_critical){
-        target_x = App::game_engine->players[min_i]->xmap;
-        target_y = App::game_engine->players[min_i]->ymap;
+    if(min_i!=-1 && game_engine->eating>=Config::eating_time_critical){
+        target_x = game_engine->players[min_i]->xmap;
+        target_y = game_engine->players[min_i]->ymap;
     }else if(min_i!=-1 && (min_d <= Config::ai_pacman_start_escape || esc_histereza==1)){ //gdy duszki są w odległości <= LIMIT_D
         //uciekaj od duszka
         escape = true;
         esc_histereza = 1;
-        target_x = App::game_engine->players[min_i]->xmap;
-        target_y = App::game_engine->players[min_i]->ymap;
+        target_x = game_engine->players[min_i]->xmap;
+        target_y = game_engine->players[min_i]->ymap;
     }else{
         //odległość do najbliższej kropki
         int min_d_kropka = -1, min_i_kropka = -1;
-        for(unsigned int i=0; i<App::game_engine->items.size(); i++){
-            if(App::game_engine->items[i]->subclass==I_SMALLDOT || App::game_engine->items[i]->subclass==I_LARGEDOT){
+        for(unsigned int i=0; i<game_engine->items.size(); i++){
+            if(game_engine->items[i]->subclass==I_SMALLDOT || game_engine->items[i]->subclass==I_LARGEDOT){
                 //odległość w metryce miejskiej
-                int current_d = App::game_engine->distance_m(this,App::game_engine->items[i]);
+                int current_d = game_engine->distance_m(this,game_engine->items[i]);
                 if(min_i_kropka==-1 || current_d<min_d_kropka){
                     min_d_kropka = current_d;
                     min_i_kropka = i;
@@ -106,16 +106,16 @@ void Pacman::ai_control(){
             move_random();
             return;
         }
-        target_x = App::game_engine->items[min_i_kropka]->xmap;
-        target_y = App::game_engine->items[min_i_kropka]->ymap;
+        target_x = game_engine->items[min_i_kropka]->xmap;
+        target_y = game_engine->items[min_i_kropka]->ymap;
     }
     //szukanie drogi
-    App::game_engine->pathfind->set_xy(xmap, ymap, target_x, target_y);
-    sciezka = App::game_engine->pathfind->find_path();
+    game_engine->pathfind->set_xy(xmap, ymap, target_x, target_y);
+    sciezka = game_engine->pathfind->find_path();
     if(sciezka!=nullptr){
         if(sciezka->points.size()>1){
             //podążaj ścieżką
-            App::game_engine->follow_path(xmap, ymap, next_direction, sciezka);
+            game_engine->follow_path(xmap, ymap, next_direction, sciezka);
             if(escape){ //jeśli ucieka od celu
                 int wrong_d = next_direction;
                 //sprawdzenie 3 pozostałych kierunków - szukanie kierunku w ktorym odleglosc bedzie najwieksza
@@ -125,12 +125,12 @@ void Pacman::ai_control(){
                     next_direction = (wrong_d+d+1)%4; //sprawdź inny kierunek
                     //sprawdź czy można tam iść
                     int temp_moving = 1, temp_direction = next_direction;
-                    App::game_engine->check_next(this, temp_moving, temp_direction, next_direction);
+                    game_engine->check_next(this, temp_moving, temp_direction, next_direction);
                     if(temp_moving==0)
                         continue;
                     suma = 0;
-                    for(unsigned int i=0; i<App::game_engine->players.size(); i++){
-                        if(App::game_engine->players[i]->subclass==P_GHOST && App::game_engine->players[i]->respawn==0){
+                    for(unsigned int i=0; i<game_engine->players.size(); i++){
+                        if(game_engine->players[i]->subclass==P_GHOST && game_engine->players[i]->respawn==0){
                             int xmap_next = this->xmap;
                             if(next_direction==P_RIGHT)
                                 xmap_next++;
@@ -142,10 +142,10 @@ void Pacman::ai_control(){
                             if(next_direction==P_DOWN)
                                 ymap_next++;
                             //przybliżenie odległości zmodyfikowaną metryką miejską
-                            int dist = abs(xmap_next - App::game_engine->players[i]->xmap);
-                            if(App::game_engine->map->grid_w - dist < dist) //jeśli odległość jest większa od połowy mapki
-                                dist = App::game_engine->map->grid_w - dist;
-                            dist = dist + abs(ymap_next - App::game_engine->players[i]->ymap);
+                            int dist = abs(xmap_next - game_engine->players[i]->xmap);
+                            if(game_engine->map->grid_w - dist < dist) //jeśli odległość jest większa od połowy mapki
+                                dist = game_engine->map->grid_w - dist;
+                            dist = dist + abs(ymap_next - game_engine->players[i]->ymap);
                             if(dist >= Config::ai_pacman_stop_escape ){
                                 suma += dist;
                             }
@@ -166,7 +166,7 @@ void Pacman::ai_control(){
                     next_direction = (wrong_d+d+1)%4; //sprawdź inny kierunek
                     //sprawdź czy można tam iść
                     int temp_moving = 1, temp_direction = next_direction;
-                    App::game_engine->check_next(this, temp_moving, temp_direction, next_direction);
+                    game_engine->check_next(this, temp_moving, temp_direction, next_direction);
                     if(temp_moving==1)
                         break;
                 }

@@ -15,7 +15,7 @@ Ghost::~Ghost(){
 }
 
 void Ghost::draw(){
-    if(App::game_engine->eating>0){
+    if(game_engine->eating>0){
         draw_sprite(App::graphics->tex("ghost_eatme"));
     }else{
         draw_sprite(texture);
@@ -36,9 +36,9 @@ void Ghost::animate(){
 }
 
 void Ghost::clip_table(){
-    if(App::game_engine->eating>0){
-        if(App::game_engine->eating < Config::eating_time_critical){
-            clip[0] = (App::game_engine->eating/2)%2;
+    if(game_engine->eating>0){
+        if(game_engine->eating < Config::eating_time_critical){
+            clip[0] = (game_engine->eating/2)%2;
         }else{
             clip[0] = 0;
         }
@@ -92,34 +92,34 @@ void Ghost::ai_control(){
         if(sciezka==nullptr){
             if(ai_level==1){
                 //wyznacz nowy cel - losowy punkt na mapie
-                App::game_engine->random_field(target_x,target_y," .o");
+                game_engine->random_field(target_x,target_y," .o");
             }
             if(ai_level==3){
                 //wyznacz nowy cel - stare położenie losowego pacmana
                 int pl_count = 0; //liczba żywych pacmanów
-                for(unsigned int i=0; i<App::game_engine->players.size(); i++){
-                    if(App::game_engine->players[i]->subclass==P_PACMAN && App::game_engine->players[i]->respawn==0){
+                for(unsigned int i=0; i<game_engine->players.size(); i++){
+                    if(game_engine->players[i]->subclass==P_PACMAN && game_engine->players[i]->respawn==0){
                         pl_count++;
                     }
                 }
                 if(pl_count==0) //brak pacmanów
                     return;
                 int pacman_index = rand()%pl_count;
-                for(unsigned int i=0; i<App::game_engine->players.size(); i++){
-                    if(App::game_engine->players[i]->subclass==P_PACMAN && App::game_engine->players[i]->respawn==0){
+                for(unsigned int i=0; i<game_engine->players.size(); i++){
+                    if(game_engine->players[i]->subclass==P_PACMAN && game_engine->players[i]->respawn==0){
                         if(pacman_index>0){
                             pacman_index--;
                             continue;
                         }
-                        target_x = App::game_engine->players[i]->xmap;
-                        target_y = App::game_engine->players[i]->ymap;
+                        target_x = game_engine->players[i]->xmap;
+                        target_y = game_engine->players[i]->ymap;
                         break;
                     }
                 }
             }
             //szukanie drogi do celu
-            App::game_engine->pathfind->set_xy(xmap, ymap, target_x, target_y);
-            sciezka = App::game_engine->pathfind->find_path();
+            game_engine->pathfind->set_xy(xmap, ymap, target_x, target_y);
+            sciezka = game_engine->pathfind->find_path();
         }
     }
     if(ai_level==2 || ai_level==4 || ai_level==5){
@@ -130,11 +130,11 @@ void Ghost::ai_control(){
         }
         //odległość do najbliższego pacmana
         int min_d = -1, min_i = -1;
-        for(unsigned int i=0; i<App::game_engine->players.size(); i++){
-            if(App::game_engine->players[i]->subclass==P_PACMAN && App::game_engine->players[i]->respawn==0){
+        for(unsigned int i=0; i<game_engine->players.size(); i++){
+            if(game_engine->players[i]->subclass==P_PACMAN && game_engine->players[i]->respawn==0){
                 //odległość w metryce miejskiej
-                if(min_i==-1 || App::game_engine->distance_m(this,App::game_engine->players[i])<min_d){
-                    min_d = App::game_engine->distance_m(this,App::game_engine->players[i]);
+                if(min_i==-1 || game_engine->distance_m(this,game_engine->players[i])<min_d){
+                    min_d = game_engine->distance_m(this,game_engine->players[i]);
                     min_i = i;
                 }
             }
@@ -142,11 +142,11 @@ void Ghost::ai_control(){
         if(ai_level==2 && (min_d > 10 || min_i==-1)){ //gdy pacmany są w odległości większej niż LIMIT_D lub nie ma pacmanów
             //podążaj do najbliższej kropki
             min_d = -1, min_i = -1;
-            for(unsigned int i=0; i<App::game_engine->items.size(); i++){
-                if(App::game_engine->items[i]->subclass==I_SMALLDOT || App::game_engine->items[i]->subclass==I_LARGEDOT){
+            for(unsigned int i=0; i<game_engine->items.size(); i++){
+                if(game_engine->items[i]->subclass==I_SMALLDOT || game_engine->items[i]->subclass==I_LARGEDOT){
                     //odległość w metryce miejskiej
-                    if(min_d==-1 || App::game_engine->distance_m(this,App::game_engine->items[i])<min_d){
-                        min_d = App::game_engine->distance_m(this,App::game_engine->items[i]);
+                    if(min_d==-1 || game_engine->distance_m(this,game_engine->items[i])<min_d){
+                        min_d = game_engine->distance_m(this,game_engine->items[i]);
                         min_i = i;
                     }
                 }
@@ -156,24 +156,24 @@ void Ghost::ai_control(){
                 move_random();
                 return;
             }
-            target_x = App::game_engine->items[min_i]->xmap;
-            target_y = App::game_engine->items[min_i]->ymap;
+            target_x = game_engine->items[min_i]->xmap;
+            target_y = game_engine->items[min_i]->ymap;
         }else if(min_i==-1){ //brak żywych pacmanów
             return;
         }else{
             //szukanie drogi do najbliższego pacmana
-            target_x = App::game_engine->players[min_i]->xmap;
-            target_y = App::game_engine->players[min_i]->ymap;
+            target_x = game_engine->players[min_i]->xmap;
+            target_y = game_engine->players[min_i]->ymap;
         }
-        App::game_engine->pathfind->set_xy(xmap, ymap, target_x, target_y);
-        sciezka = App::game_engine->pathfind->find_path();
+        game_engine->pathfind->set_xy(xmap, ymap, target_x, target_y);
+        sciezka = game_engine->pathfind->find_path();
     }
     if(sciezka!=nullptr){
         if(sciezka->points.size()>1){
             //podążaj ścieżką
-            App::game_engine->follow_path(xmap, ymap, next_direction, sciezka);
+            game_engine->follow_path(xmap, ymap, next_direction, sciezka);
             if(ai_level==2 || ai_level==3 || ai_level==4 || ai_level==5){
-                if(App::game_engine->eating>0){ //w trybie zjadania duszków
+                if(game_engine->eating>0){ //w trybie zjadania duszków
                     //idź w innym kierunku
                     int forbidden_d = next_direction;
                     int r = rand()%3;
@@ -182,7 +182,7 @@ void Ghost::ai_control(){
                         next_direction = (forbidden_d+d+1)%4; //sprawdź inny kierunek
                         //sprawdź czy można tam iść
                         int temp_moving = 1, temp_direction = next_direction;
-                        App::game_engine->check_next(this, temp_moving, temp_direction, next_direction);
+                        game_engine->check_next(this, temp_moving, temp_direction, next_direction);
                         if(temp_moving==1)
                             break;
                     }
