@@ -1,5 +1,5 @@
 #include "pathfind.h"
-#include "../../log.h"
+#include "../../log/log.h"
 
 template<typename T>
 Pathfind<T>::Pathfind() {

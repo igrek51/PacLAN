@@ -1,6 +1,6 @@
 #include "game_engine.h"
 #include "../config.h"
-#include "../log.h"
+#include "../log/log.h"
 #include "../app.h"
 #include "../graphics/animations/death_animation.h"
 #include "../utils.h"
@@ -22,10 +22,6 @@ GameEngine::GameEngine(){
     pathfind_init();
     //wiersz poleceń
     cmd_on = false;
-    cmd_out = new string [Config::cmd_outputs];
-    for(int i=0; i<Config::cmd_outputs; i++){
-        cmd_out[i] = "";
-    }
     //inicjalizacja ustawień językowych
     language_refresh();
     //inicjalizacja menu
@@ -70,7 +66,6 @@ GameEngine::~GameEngine(){
     if(map!=nullptr)
         delete map;
     delete pathfind;
-    delete[] cmd_out;
 }
 
 void GameEngine::logic(volatile int &logic_cycles){

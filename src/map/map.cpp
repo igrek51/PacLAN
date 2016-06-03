@@ -1,6 +1,6 @@
 #include <fstream>
 #include "map.h"
-#include "../log.h"
+#include "../log/log.h"
 #include "../app.h"
 
 Map::Map(SDL_Texture *background, string gridfile){

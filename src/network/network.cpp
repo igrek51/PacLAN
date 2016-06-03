@@ -1,6 +1,6 @@
 #include "network.h"
 #include "../config.h"
-#include "../log.h"
+#include "../log/log.h"
 #include "../app.h"
 #include "../system.h"
 #include "../utils.h"

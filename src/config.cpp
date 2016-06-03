@@ -36,7 +36,10 @@ bool Config::show_fps = false;
 bool Config::show_grid = false;
 bool Config::show_paths = false;
 bool Config::show_names = true;
-int Config::cmd_outputs = 20;
+
+unsigned int Config::echoes_max = 20;
+LogLevel Config::file_log_level = LogLevel::DEBUG;
+LogLevel Config::echo_log_level = LogLevel::INFO;
 
 string Config::languages[] = {
     "Polski", "English"

@@ -1,6 +1,6 @@
 #include <sstream>
 #include "timer.h"
-#include "../log.h"
+#include "../log/log.h"
 #include "../config.h"
 #include "../system.h"
 

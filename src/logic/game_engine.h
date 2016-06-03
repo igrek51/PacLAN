@@ -1,4 +1,3 @@
-//TODO wyjebać wszystkie komentarze plików
 #ifndef GAME_ENGINE_H
 #define GAME_ENGINE_H
 
@@ -68,8 +67,6 @@ public:
     bool cmd_on;
     ///aktualnie wpisywane polecenie wiersza poleceń
     string cmd_in;
-    ///tablica wierszy konsoli
-    string *cmd_out;
 private:
     /**
      * wykonanie polecenia wiersza poleceń

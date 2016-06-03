@@ -1,5 +1,5 @@
 #include "language.h"
-#include "log.h"
+#include "log/log.h"
 
 Language::Language(string lang){
     if(lang=="Polski"){

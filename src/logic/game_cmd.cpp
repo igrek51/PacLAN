@@ -1,6 +1,6 @@
 #include "game_engine.h"
 #include "../config.h"
-#include "../log.h"
+#include "../log/log.h"
 #include "../app.h"
 #include "../utils.h"
 
@@ -362,10 +362,5 @@ char GameEngine::key_to_char(SDL_Keycode key){
 }
 
 void GameEngine::cmd_output(string out){
-    //przesunięcie starych outputów
-    for(int i=0; i<Config::cmd_outputs-1; i++){
-        cmd_out[i] = cmd_out[i+1];
-    }
-    cmd_out[Config::cmd_outputs-1] = out; //nowy output
     Log::info("CMD-OUT: " + out);
 }

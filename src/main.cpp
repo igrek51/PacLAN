@@ -2,11 +2,8 @@
 #include "config.h"
 #include "system.h"
 
-//TODO przeniesienie plików źródłowych do folderów: threads, network, graphics, players, animations, ...
-
 //TODO pakiet synchronizująco - weryfikujący
 //TODO dźwięki, muzyka z Pacmana
-//TODO dodanie tłumaczeń do wiersza poleceń
 
 //TODO C++ 11: pętle foreach, auto, enum class, smart_ptr (unique, shared) ...
 //TODO STL: przechodzenie kontenerów w pętli iteratorami, set, deque, list, ...

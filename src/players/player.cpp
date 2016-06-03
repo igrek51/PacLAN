@@ -1,6 +1,6 @@
 #include "player.h"
 #include "../config.h"
-#include "../log.h"
+#include "../log/log.h"
 #include "../app.h"
 #include "../utils.h"
 

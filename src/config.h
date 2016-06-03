@@ -2,6 +2,7 @@
 #define CONFIG_H
 
 #include <iostream>
+#include "log/log_level.h"
 
 using namespace std;
 
@@ -65,8 +66,14 @@ public:
     static bool show_paths;
     /// wyświetlanie nazw graczy (true - włączone)
     static bool show_names;
+
+    //  LOG, OUTPUT
+    /// poziom logów zapisywanych w pliku
+    static LogLevel file_log_level;
+    /// poziom logów wyświetlanych w konsoli
+    static LogLevel echo_log_level;
     /// maksymalna liczba wierszy wyjścia w konsoli wiersza poleceń
-    static int cmd_outputs;
+    static unsigned int echoes_max;
 
     //  JĘZYK
     ///tablica dostępnych języków

@@ -1,6 +1,6 @@
 #include <boost/thread.hpp>
 #include "continuous_thread.h"
-#include "../log.h"
+#include "../log/log.h"
 #include "../system.h"
 
 ContinuousThread::ContinuousThread(int wait_for_close) {

@@ -1,5 +1,5 @@
 #include "thread.h"
-#include "../log.h"
+#include "../log/log.h"
 #include "../system.h"
 
 Thread::Thread() {

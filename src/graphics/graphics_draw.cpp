@@ -1,6 +1,6 @@
 #include "graphics.h"
+#include "../log/log.h"
 #include "../config.h"
-#include "../log.h"
 #include "../app.h"
 #include "../utils.h"
 
@@ -211,14 +211,16 @@ void Graphics::draw_round(){
 }
 
 void Graphics::draw_console(){
-    draw_fill_rect(50, 0, screen_w-100, 40+Config::cmd_outputs*18, rgba(100,100,100,210));
+    draw_fill_rect(50, 0, screen_w-100, 40+Config::echoes_max*18, rgba(100,100,100,210));
     stringstream ss;
     ss<<"> "<<App::game_engine->cmd_in;
     if(App::game_engine->cycles/10%2==0){
         ss<<"_";
     }
-    draw_text(ss.str(), font1, rgba(0,255,0), 60,15+Config::cmd_outputs*18);
-    for(int i=0; i<Config::cmd_outputs; i++){
-        draw_text(App::game_engine->cmd_out[i], font1, rgba(0,200,0), 60, 10+i*18);
+    draw_text(ss.str(), font1, rgba(0,255,0), 60,15+Config::echoes_max*18);
+    int i=0;
+    for(auto it = Log::getEchoes()->begin(); it != Log::getEchoes()->end(); it++){
+        draw_text(*it, font1, rgba(0,200,0), 60, 10+i*18);
+        i++;
     }
 }

@@ -1,5 +1,5 @@
 #include "app.h"
-#include "log.h"
+#include "log/log.h"
 
 Graphics* App::graphics = nullptr;
 GameEngine* App::game_engine = nullptr;
@@ -20,7 +20,6 @@ App::App(){
     exit = false;
     logic_cycles = 1;
     srand((unsigned int) time(0));
-    Log::logClear();
     Log::info("Inicjalizacja aplikacji...");
 }
 
