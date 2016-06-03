@@ -1,19 +1,21 @@
 #include "thread.h"
 #include "../log/log.h"
 #include "../system.h"
+#include <boost/thread.hpp>
 
 Thread::Thread() {
     init = false;
     close_signal = false;
-    boost_thread = new boost::thread(boost::bind(&Thread::start, this));
+    boost_thread = reinterpret_cast<void*>(new boost::thread(boost::bind(&Thread::start, this)));
     Log::debug("Wątek utworzony.");
 }
 
 Thread::~Thread() {
     close_signal = true;
     if(boost_thread != nullptr) {
-        boost_thread->interrupt();
-        delete boost_thread;
+        boost::thread* boost_thread2 = reinterpret_cast<boost::thread*>(boost_thread);
+        boost_thread2->interrupt();
+        delete boost_thread2;
         boost_thread = nullptr;
         Log::debug("Wątek zniszczony.");
     }

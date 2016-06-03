@@ -1,12 +1,12 @@
 #include "network.h"
 #include "../config.h"
 #include "../log/log.h"
-#include "../app.h"
 #include "../system.h"
 #include "../utils.h"
 
-#include <arpa/inet.h>
 #include <netdb.h>
+#include <arpa/inet.h>
+#include <boost/asio.hpp>
 
 Network::Network(GameEngine* game_engine) : ContinuousThread(150) {
     this->game_engine = game_engine;

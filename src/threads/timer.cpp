@@ -9,7 +9,7 @@ Timer::Timer(int interval_ms, volatile int* cycles) : ContinuousThread(150) {
     this->cycles = cycles;
     next_time = currentMillis() + interval_ms;
     stringstream ss;
-    ss << "Timer cykli logicznych zainicjalizowany (" << interval_ms << " ms)";
+    ss << "Timer cykli logicznych zainicjalizowany z okresem " << interval_ms << " ms";
     Log::info(ss.str());
     init = true;
 }

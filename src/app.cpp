@@ -1,15 +1,10 @@
 #include "app.h"
 #include "log/log.h"
 
-Graphics* App::graphics = nullptr;
-GameEngine* App::game_engine = nullptr;
-Network* App::network = nullptr;
-Timer* App::timer = nullptr;
-Language* App::lang = nullptr;
 bool App::exit = false;
 volatile int App::logic_cycles = 1;
 
-//TODO coś innego niż singleton: listenery, dependency injection
+//TODO coś innego niż singleton: listenery
 
 App::App(){
     graphics = nullptr;

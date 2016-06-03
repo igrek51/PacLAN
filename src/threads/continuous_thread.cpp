@@ -16,8 +16,9 @@ ContinuousThread::~ContinuousThread() {
     }
     if (!closed) {
         Log::warn("Przekroczono czas oczekiwania - siłowe zamykanie wątku.");
-        boost_thread->interrupt();
-        delete boost_thread;
+        boost::thread* boost_thread2 = reinterpret_cast<boost::thread*>(boost_thread);
+        boost_thread2->interrupt();
+        delete boost_thread2;
         boost_thread = nullptr;
     }
     Log::debug("Wątek zapętlonej procedury zakończony.");

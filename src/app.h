@@ -19,15 +19,15 @@ public:
     ~App();
 
     /// wskaźnik na obiekt silnika gry
-    static GameEngine* game_engine;
+    GameEngine* game_engine;
     /// wskaźnik na obiekt silnika grafiki
-    static Graphics* graphics;
+    Graphics* graphics;
     /// wskaźnik na wątek modułu obsługi sieci
-    static Network* network;
+    Network* network;
     /// wskaźnik na wątek czasomierza
-    static Timer* timer;
+    Timer* timer;
     /// aktualne dane językowe
-    static Language* lang;
+    Language* lang;
     /// zmienna określająca, czy zakończyć aplikację (true - sygnał zakończenia)
     static bool exit;
     /// aktualna liczba cykli do wykonania (zwiększana przez timer, zmniejszana przez pętle logiczne silnika gry)

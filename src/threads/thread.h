@@ -1,8 +1,6 @@
 #ifndef THREAD_H
 #define THREAD_H
 
-#include <boost/thread.hpp>
-
 //TODO ograniczyć includy z boosta, rozdzielić zależności, dostęp do App inny niż przez singleton
 
 /**
@@ -24,8 +22,8 @@ protected:
     volatile bool init;
     /// czy polecono zamknięcie
     volatile bool close_signal;
-    /// wskaźnik do wątku
-    boost::thread* boost_thread;
+    /// wskaźnik do wątku (zrzutowany na void, żeby za każdym razem nie dołączać biblioteki boost, co znacznie wydłuża kompilację)
+    void* boost_thread;
 private:
     /// inicjalizacja uruchamiana w nowym wątku
     void start();
