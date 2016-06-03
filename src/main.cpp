@@ -17,7 +17,7 @@ int main(int argc, char **argv){
     app->graphics = new Graphics(); //inicjalizacja grafiki
     if(app->exit)
         return 0;
-    app->game_engine = new GameEngine(); //logika gry
+    app->game_engine = new GameEngine(app->graphics); //logika gry
     if(app->exit)
         return 0;
     app->graphics->setGameEngine(app->game_engine);

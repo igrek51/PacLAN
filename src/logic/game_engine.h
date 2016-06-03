@@ -25,13 +25,15 @@
 #include "../players/pacman.h"
 #include "../players/ghost.h"
 
+class Graphics;
+
 /**
  * \brief logika gry
  */
 class GameEngine{
 public:
     /// inicjalizacja silnika gry
-    GameEngine();
+    GameEngine(Graphics* graphics);
     /// zamknięcie silnika gry
     ~GameEngine();
     /**
@@ -47,6 +49,8 @@ public:
     ///liczba cykli od uruchomienia gry
     unsigned long long int cycles;
 private:
+
+    Graphics* graphics;
     /// stan wciśnięcia każdego z klawiszy
     const Uint8 *keystate;
     /// zdarzenie SDL
