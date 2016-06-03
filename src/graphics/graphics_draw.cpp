@@ -223,7 +223,7 @@ void Graphics::draw_round() {
         //obrazek gracza
         SDL_Texture* texture2;
         if (game_engine->eating > 0) {
-            texture2 = App::graphics->tex("ghost_eatme");
+            texture2 = tex("ghost_eatme");
         } else {
             texture2 = game_engine->ghosts[i]->texture;
         }

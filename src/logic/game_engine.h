@@ -16,9 +16,7 @@
 #define MODE_ZOMBIE 1
 #define MODE_MAX 1 //ostatnia wartość trybu gry
 
-class Player;
-class Pacman;
-class Ghost;
+class GameEngine;
 
 #include <vector>
 #include <sstream>
@@ -29,8 +27,6 @@ class Ghost;
 #include "../players/player.h"
 #include "../players/pacman.h"
 #include "../players/ghost.h"
-
-class Graphics;
 
 /**
  * \brief logika gry

@@ -12,13 +12,13 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
+
+class Graphics;
+
 #include "animations/animation.h"
 #include "../logic/game_engine.h"
 
 using namespace std;
-
-class Animation;
-class GameEngine;
 
 /**
  * \brief Klasa silnika grafiki

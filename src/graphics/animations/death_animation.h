@@ -16,7 +16,7 @@ public:
      * \param color kolor animacji
      * \param clip tablica określająca parametry do wycięcia animacji
      */
-    DeathAnimation(int x, int y, SDL_Texture *texture, SDL_Color color, int *clip);
+    DeathAnimation(int x, int y, SDL_Texture *texture, SDL_Color color, int *clip, Graphics* graphics);
     ~DeathAnimation();
 private:
     /// kolor animacji

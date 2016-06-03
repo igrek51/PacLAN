@@ -225,7 +225,7 @@ void GameEngine::network_packet_process(int from, string packet){
             }else{
                 to_copy = players[player_index]->texture;
             }
-            App::graphics->animations.push_back(new DeathAnimation(x,y,to_copy,players[player_index]->color,clip));
+            App::graphics->animations.push_back(new DeathAnimation(x,y,to_copy,players[player_index]->color,clip, App::graphics));
         }
     }else if(p[0]=="100"){ // KOMUNIKATY OD KLIENTA: prośba dodania nowego gracza od klienta i przyporządkowania do klienta: 100 [subclass] [color.r] [color.g] [color.b] [nazwa gracza]
         if(p.size()>=6){

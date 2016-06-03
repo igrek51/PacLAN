@@ -1,7 +1,7 @@
 #include "death_animation.h"
 #include "../../app.h"
 
-DeathAnimation::DeathAnimation(int x, int y, SDL_Texture *texture, SDL_Color color, int *clip) : Animation(x, y){
+DeathAnimation::DeathAnimation(int x, int y, SDL_Texture *texture, SDL_Color color, int *clip, Graphics* graphics) : Animation(x, y, graphics){
     this->texture = App::graphics->blend_texture(texture, Graphics::rgba(200,200,200));
     this->color = color;
     this->clip = clip;

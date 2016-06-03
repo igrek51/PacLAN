@@ -335,7 +335,7 @@ void GameEngine::kill_player(int index){
     }else{
         to_copy = players[index]->texture;
     }
-    App::graphics->animations.push_back(new DeathAnimation(round_to_int(players[index]->a_x),round_to_int(players[index]->a_y),to_copy,players[index]->color,clip));
+    App::graphics->animations.push_back(new DeathAnimation(round_to_int(players[index]->a_x),round_to_int(players[index]->a_y),to_copy,players[index]->color,clip, App::graphics));
     synchro<<"050 "<<index<<" "<<round_to_int(players[index]->a_x)<<" "<<round_to_int(players[index]->a_y)<<"\r";
     //zabicie gracza
     players[index]->respawn = Config::respawn_time;

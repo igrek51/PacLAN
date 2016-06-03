@@ -162,7 +162,7 @@ void Graphics::fullscreen_toggle() {
     viewport.x = (window_w - viewport.w) / 2;
     viewport.y = (window_h - viewport.h) / 2;
     SDL_RenderSetViewport(sdl_ren, &viewport);
-    SDL_RenderSetScale(App::graphics->sdl_ren, scale, scale);
+    SDL_RenderSetScale(sdl_ren, scale, scale);
     reload_textures();
 }
 

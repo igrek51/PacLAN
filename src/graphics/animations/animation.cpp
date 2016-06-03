@@ -1,14 +1,14 @@
 #include "animation.h"
-#include "../../app.h"
 
-Animation::Animation(int x, int y){
+Animation::Animation(int x, int y, Graphics* graphics){
     this->x = x;
     this->y = y;
+    this->graphics = graphics;
     texture = nullptr;
     clip = nullptr;
     ends = 1;
 }
 
 Animation::~Animation(){
-    App::graphics->destroy_texture(texture);
+    graphics->destroy_texture(texture);
 }
