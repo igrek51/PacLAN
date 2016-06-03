@@ -8,15 +8,15 @@
 
 void GameEngine::logic_game(){
     //wiadomości z sieci
-    if(App::network->client){ //wiadomości z serwera
-        while(App::network->connections.at(0)->isReady()){
-            string packet = App::network->connections.at(0)->popPacket();
+    if(network->client){ //wiadomości z serwera
+        while(network->connections.at(0)->isReady()){
+            string packet = network->connections.at(0)->popPacket();
             network_packets_split(0, packet);
         }
-    }else if(App::network->server){ //wiadomości od klientów (i wiadomości do samego serwera)
-        for(unsigned int client=0; client<App::network->connections.size(); client++){ //dla każdego klienta
-            while(App::network->connections.at(client)->isReady()){
-                string packet = App::network->connections.at(client)->popPacket();
+    }else if(network->server){ //wiadomości od klientów (i wiadomości do samego serwera)
+        for(unsigned int client=0; client<network->connections.size(); client++){ //dla każdego klienta
+            while(network->connections.at(client)->isReady()){
+                string packet = network->connections.at(client)->popPacket();
                 network_packets_split(client, packet);
             }
         }
@@ -29,7 +29,7 @@ void GameEngine::logic_game(){
     //odliczanie do następnej rundy
     if(round_next>0){
         round_next--;
-        if(App::network->server){
+        if(network->server){
             //przygotowanie na miejsca
             if(round_next==Config::next_round_time){
                 mode_init();
@@ -45,7 +45,7 @@ void GameEngine::logic_game(){
     //tryb zjadania duszków
     if(eating>0){
         eating--;
-        if(App::network->server){
+        if(network->server){
             if(eating==0){
                 synchro<<"015 "<<eating<<"\r";
             }
@@ -86,7 +86,7 @@ void GameEngine::logic_game(){
             players[i]->respawn--;
         }
         if(players[i]->can_move==0){
-            if(App::network->client){ //predykcja ruchu gracza zanim przyjdzie pakiet dla klienta
+            if(network->client){ //predykcja ruchu gracza zanim przyjdzie pakiet dla klienta
                 //zaakceptowanie lub odrzucenie wciśniętych kierunków i ruchów
                 if(Config::move_while_respawn || players[i]->respawn==0){
                     //players[i]->next_moving = players[i]->moving;
@@ -143,7 +143,7 @@ void GameEngine::logic_game(){
         }
     }
 
-    if(App::network->client){
+    if(network->client){
         if(mode==MODE_ZOMBIE){
             game_c1--;
         }
@@ -340,16 +340,16 @@ void GameEngine::logic_game(){
             }
         }
     }
-    if(App::network->server){
+    if(network->server){
         network_send_to_clients(synchro.str());
     }
 }
 
 void GameEngine::logic_menu(){
-    if(App::network->client){ //jeśli udało się połączyć
+    if(network->client){ //jeśli udało się połączyć
         //odczytaj komunikat o pomyślnym połączeniu
-        while(App::network->connections.at(0)->isReady()){
-            string packet = App::network->connections.at(0)->popPacket();
+        while(network->connections.at(0)->isReady()){
+            string packet = network->connections.at(0)->popPacket();
             network_packets_split(0, packet);
         }
     }
@@ -472,10 +472,10 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
     }else{ //GRA
         if(key==SDLK_ESCAPE){
             clear_all();
-            if(App::network->server){
-                App::network->addtask_close_server();
-            }else if(App::network->client){
-                App::network->addtask_close_client();
+            if(network->server){
+                network->addtask_close_server();
+            }else if(network->client){
+                network->addtask_close_client();
             }
             menu = 1;
             return;
@@ -511,9 +511,9 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
             add_player(P_GHOST, "", Graphics::rand_bcolor(), P_AI, 5);
         }
         if(key==SDLK_RETURN){
-            if(!App::network->client){
+            if(!network->client){
                 pause = !pause;
-                if(App::network->server){
+                if(network->server){
                     if(pause){
                         synchronize_players();
                         network_send_to_clients("010");
@@ -524,7 +524,7 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
                 }
             }
         }
-        if(App::network->client){
+        if(network->client){
             //wysłanie informacji do serwera o zmianie kierunku lub ruchu
             stringstream synchroc;
             if(key==SDLK_LEFT){

@@ -131,7 +131,7 @@ void GameEngine::insert_items(){
             }
         }
     }
-    if(App::network->server){
+    if(network->server){
         network_send_to_clients(synchro2.str());
     }
 }
@@ -207,7 +207,7 @@ Player* GameEngine::change_subclass(int index, int subclass){
     delete players[index];
     players[index] = nowy;
     update_players_lists();
-    if(App::network->server){
+    if(network->server){
         stringstream synchro2;
         synchro2<<"025 "<<index<<" "<<subclass<<"\r";
         network_send_to_clients(synchro2.str());
@@ -216,7 +216,7 @@ Player* GameEngine::change_subclass(int index, int subclass){
 }
 
 void GameEngine::synchronize_players(int to){
-    if(!App::network->server) return;
+    if(!network->server) return;
     stringstream synchro2;
     for(unsigned int i=0; i<players.size(); i++){
         synchro2<<"021 "<<i<<" "<<players[i]->xmap<<" "<<players[i]->ymap<<"\r"; //przemieszczenie bezwzględne
@@ -237,14 +237,14 @@ void GameEngine::menu_host(){
     clear_all();
     mode_init();
     pause = false;
-    App::network->addtask_open_server();
+    network->addtask_open_server();
     add_player(menu_subclass, menu_name, menu_color, P_KEYBOARD);
 }
 
 void GameEngine::menu_join(){
     clear_all();
     //próba połączenia - nie daje pewności powodzenia
-    App::network->addtask_connect_client(menu_ip);
+    network->addtask_connect_client(menu_ip);
 }
 
 Player* GameEngine::add_player(int subclass, string name, SDL_Color color, int controlby, int ai_level){
@@ -283,7 +283,7 @@ Player* GameEngine::add_player(int subclass, string name, SDL_Color color, int c
     update_players_lists();
     Log::info("Dodano gracza: "+name);
     //wysłanie informacji o dodaniu gracza innym klientom
-    if(App::network->server){
+    if(network->server){
         stringstream synchro2;
         synchro2<<"030 "<<subclass<<" "<<(int)color.r<<" "<<(int)color.g<<" "<<(int)color.b<<" "<<name<<"\r";
         synchro2<<"021 "<<players.size()-1<<" "<<xmap<<" "<<ymap<<"\r";//bezwzględne umieszczenie na mapie
@@ -299,7 +299,7 @@ void GameEngine::kick_player(int index){
     players.erase(players.begin()+index);
     update_players_lists();
     //wysłanie informacji o usunięciu gracza innym klientom
-    if(App::network->server){
+    if(network->server){
         stringstream synchro2;
         synchro2<<"031 "<<index<<"\r";
         network_send_to_clients(synchro2.str());
@@ -388,7 +388,7 @@ void GameEngine::clear_map(){
         delete items[i];
     items.clear();
     synchro2<<"042\r";
-    if(App::network->server){
+    if(network->server){
         network_send_to_clients(synchro2.str());
     }
 }
@@ -402,7 +402,7 @@ void GameEngine::clear_all(){
     update_players_lists();
     stringstream synchro2;
     synchro2<<"032\r";
-    if(App::network->server){
+    if(network->server){
         network_send_to_clients(synchro2.str());
     }
 }
@@ -438,7 +438,7 @@ void GameEngine::restart_map(){
         synchro2<<"023 "<<i<<" "<<players[i]->score<<"\r";
         synchro2<<"024 "<<i<<" "<<players[i]->respawn<<"\r";
     }
-    if(App::network->server){
+    if(network->server){
         network_send_to_clients(synchro2.str());
     }
 }
@@ -454,7 +454,7 @@ void GameEngine::mode_init(){
                 change_subclass(i,P_PACMAN);
             }
         }
-        if(App::network->server){
+        if(network->server){
             network_send_to_clients(synchro.str());
         }
     }

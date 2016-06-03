@@ -192,18 +192,18 @@ void GameEngine::exec_cmd(string cmd){
             mode_init();
         }
     }else if(cmds[0]=="myip"){
-        ss<<"Mój adres IP: "<< App::network->myIP();
+        ss<<"Mój adres IP: "<< network->myIP();
         Log::info(ss.str());
         ss_clear(ss);
-        ss<<"Moja nazwa: "<< App::network->myName();
+        ss<<"Moja nazwa: "<< network->myName();
         Log::info(ss.str());
     }else if(cmds[0]=="clients"){
-        if(App::network->server){
-            ss<<"Połączeni klienci ("<<App::network->connections.size()-1<<"):";
+        if(network->server){
+            ss<<"Połączeni klienci ("<<network->connections.size()-1<<"):";
             Log::info(ss.str());
-            for(unsigned int i=1; i<App::network->connections.size(); i++){
+            for(unsigned int i=1; i<network->connections.size(); i++){
                 ss_clear(ss);
-                ss<<"Klient "<<i<<".: "<< App::network->clientIP(i);
+                ss<<"Klient "<<i<<".: "<< network->clientIP(i);
                 Log::info(ss.str());
             }
         }else{
@@ -219,9 +219,9 @@ void GameEngine::exec_cmd(string cmd){
             }
             send_string += '\n';
             if(receiver_index==0){
-                App::network->addtask_send_to_server(string_to_char(send_string), send_string.length());
+                network->addtask_send_to_server(string_to_char(send_string), send_string.length());
             }else{
-                App::network->addtask_send_to_client(receiver_index, string_to_char(send_string), send_string.length());
+                network->addtask_send_to_client(receiver_index, string_to_char(send_string), send_string.length());
             }
         }
     }else if(cmds[0]=="control"){ //ustaw sterowanie graczem przez klienta: control [player_id] [client_id]
@@ -233,7 +233,7 @@ void GameEngine::exec_cmd(string cmd){
                 return;
             }
             int client_id = atoi(cmds[2].c_str());
-            if(client_id<0 || client_id>=(int)App::network->connections.size()){
+            if(client_id<0 || client_id>=(int)network->connections.size()){
                 ss<<"[!] Błąd: Nie znaleziono klienta nr: "<<client_id;
                 Log::info(ss.str());
                 return;
@@ -254,7 +254,7 @@ void GameEngine::exec_cmd(string cmd){
         system("gedit log.txt&");
     }else if(cmds[0]=="pause"){
         pause = !pause;
-        if(App::network->server){
+        if(network->server){
             if(pause){
                 synchronize_players();
                 network_send_to_clients("010");

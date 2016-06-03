@@ -10,22 +10,24 @@
 /**
  * \brief Klasa głównej aplikacji zawierająca jej najważniejsze moduły
  */
-class App{
+class App {
 public:
     /// utworzenie nowej instancji aplikacji
     App();
+
     /// zakończenie uruchomionej aplikacji
     ~App();
+
     /// wskaźnik na obiekt silnika gry
-    static GameEngine *game_engine;
+    static GameEngine* game_engine;
     /// wskaźnik na obiekt silnika grafiki
-    static Graphics *graphics;
+    static Graphics* graphics;
     /// wskaźnik na wątek modułu obsługi sieci
-    static Network *network;
+    static Network* network;
     /// wskaźnik na wątek czasomierza
-    static Timer *timer;
+    static Timer* timer;
     /// aktualne dane językowe
-    static Language *lang;
+    static Language* lang;
     /// zmienna określająca, czy zakończyć aplikację (true - sygnał zakończenia)
     static bool exit;
     /// aktualna liczba cykli do wykonania (zwiększana przez timer, zmniejszana przez pętle logiczne silnika gry)

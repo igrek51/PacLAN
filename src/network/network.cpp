@@ -9,7 +9,6 @@
 #include <netdb.h>
 
 Network::Network(GameEngine* game_engine) : ContinuousThread(150) {
-    App::network = this;
     this->game_engine = game_engine;
     server = false;
     client = false;
