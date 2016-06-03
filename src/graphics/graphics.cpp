@@ -47,6 +47,10 @@ Graphics::~Graphics() {
     SDL_Quit();
 }
 
+void Graphics::setGameEngine(GameEngine* engine){
+    this->engine = engine;
+}
+
 void Graphics::sdl_error(string e) {
     stringstream ss;
     ss << "Błąd SDL (SDL_Error: " << SDL_GetError() << "): " << e;

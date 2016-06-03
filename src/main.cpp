@@ -20,6 +20,7 @@ int main(int argc, char **argv){
     app->game_engine = new GameEngine(); //logika gry
     if(app->exit)
         return 0;
+    app->graphics->setGameEngine(app->game_engine);
     app->network = new Network(); //interfejs sieciowy
     if(app->exit)
         return 0;

@@ -14,8 +14,14 @@
 #define P_AI 1
 #define P_LAN 2
 
-#include "../graphics/graphics.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
+#include <string>
+
 #include "../map/pathfind/pathfind.h"
+
+using namespace std;
 
 /**
  * \brief Klasa gracza (pacmana lub duszka)

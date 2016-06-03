@@ -13,10 +13,12 @@
 #include <vector>
 #include <ctime>
 #include "animations/animation.h"
+#include "../logic/game_engine.h"
 
 using namespace std;
 
 class Animation;
+class GameEngine;
 
 /**
  * \brief Klasa silnika grafiki
@@ -27,11 +29,15 @@ public:
     Graphics();
     ///zamknięcie silnika grafiki
     ~Graphics();
+
+    void setGameEngine(GameEngine* engine);
 private:
     ///wskaźnik do okna SDL
     SDL_Window *sdl_win;
     ///wskaźnik do renderera grafiki
     SDL_Renderer *sdl_ren;
+
+    GameEngine* engine;
     /**
      * inicjalizacja SDL
      * @return true - jeśli wszystko przebiegło pomyślnie
