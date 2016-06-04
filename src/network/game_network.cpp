@@ -1,5 +1,4 @@
 #include "../logic/game_engine.h"
-#include "../app.h"
 #include "../graphics/animations/death_animation.h"
 #include "../utils.h"
 #include "../log/log.h"
@@ -265,10 +264,9 @@ void GameEngine::network_packet_process(int from, string packet){
                 }
                 //wysłanie informacji zamiaru ruchu pozostałym klientom
                 if(synchro2.str().length()==0) return;
-                packet += '\n';
                 for(unsigned int i=1; i<network->connections.size(); i++){
                     //if((int)i==from) continue;
-                    network->addtask_send_to_client(i, string_to_char(synchro2.str()), synchro2.str().length());
+                    network->addtask_send_to_client(i, string_to_char(synchro2.str()), (int) synchro2.str().length());
                 }
             }
         }
@@ -288,10 +286,9 @@ void GameEngine::network_packet_process(int from, string packet){
                 }
                 //wysłanie informacji zamiaru ruchu pozostałym klientom
                 if(synchro2.str().length()==0) return;
-                packet += '\n';
                 for(unsigned int i=1; i<network->connections.size(); i++){
                     //if((int)i==from) continue;
-                    network->addtask_send_to_client(i, string_to_char(synchro2.str()), synchro2.str().length());
+                    network->addtask_send_to_client(i, string_to_char(synchro2.str()), (int) synchro2.str().length());
                 }
             }
         }
@@ -345,11 +342,11 @@ void GameEngine::network_send_to_clients(string packet, int to){
         packet += '\n';
         if(to==-1){
             for(unsigned int i=1; i<network->connections.size(); i++){
-                network->addtask_send_to_client(i, string_to_char(packet), packet.length());
+                network->addtask_send_to_client(i, string_to_char(packet), (int) packet.length());
             }
         }else{
             if(to<=0 || to>=(int)network->connections.size()) return;
-            network->addtask_send_to_client(to, string_to_char(packet), packet.length());
+            network->addtask_send_to_client(to, string_to_char(packet), (int) packet.length());
         }
     }
 }
@@ -358,6 +355,6 @@ void GameEngine::network_send_to_server(string packet){
     if(packet.length()==0) return;
     if(network->client){
         packet += '\n';
-        network->addtask_send_to_server(string_to_char(packet), packet.length());
+        network->addtask_send_to_server(string_to_char(packet), (int) packet.length());
     }
 }

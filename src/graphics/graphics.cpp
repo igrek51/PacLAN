@@ -8,8 +8,8 @@
 //FIXME zjebany toggle trybu fullscreen, zależny od ekranu
 
 Graphics::Graphics() {
-    screen_w = Config::window_w;
-    screen_h = Config::window_h;
+    wnd_w = Config::window_w;
+    wnd_h = Config::window_h;
     fullscreen = false;
     if (!sdl_init())
         return;
@@ -121,7 +121,7 @@ void Graphics::draw() {
     if (Config::show_fps) {
         stringstream ss;
         ss << fps << " FPS";
-        draw_text(ss.str(), font1, rgba(0, 255, 0), 0, screen_h - 15, TEXT_LEFT);
+        draw_text(ss.str(), font1, rgba(0, 255, 0), 0, wnd_h - 15, TEXT_LEFT);
     }
     //wiersz poleceń i konsola
     if (game_engine->cmd_on) {
@@ -446,10 +446,10 @@ void Graphics::draw_text(string txt, TTF_Font* font, SDL_Color color, int x, int
 
 SDL_Color Graphics::rgba(int r, int g, int b, int a) {
     SDL_Color color;
-    color.r = r;
-    color.g = g;
-    color.b = b;
-    color.a = a;
+    color.r = (Uint8) r;
+    color.g = (Uint8) g;
+    color.b = (Uint8) b;
+    color.a = (Uint8) a;
     return color;
 }
 

@@ -1,7 +1,7 @@
-#include <boost/thread.hpp>
 #include "continuous_thread.h"
 #include "../log/log.h"
 #include "../utils.h"
+#include <boost/thread.hpp>
 
 ContinuousThread::ContinuousThread(int wait_for_close) {
     this->wait_for_close = wait_for_close;

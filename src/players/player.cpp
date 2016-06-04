@@ -42,8 +42,8 @@ Player::~Player(){
 
 void Player::move(){
     if(graphics->fps>0){
-        a_dx = ((double)((x - a_x)*1000))/(graphics->fps*Config::logic_timer_ms*can_move_n);
-        a_dy = ((double)((y - a_y)*1000))/(graphics->fps*Config::logic_timer_ms*can_move_n);
+        a_dx = (((x - a_x)*1000))/(graphics->fps*Config::logic_timer_ms*can_move_n);
+        a_dy = (((y - a_y)*1000))/(graphics->fps*Config::logic_timer_ms*can_move_n);
     }else{
         Log::warn("Player::move: fps = 0");
         a_x = x;

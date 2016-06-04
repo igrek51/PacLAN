@@ -138,7 +138,7 @@ bool Network::openServerSocket() {
     memset(&serverInfo, 0, sizeof(serverInfo));
     serverInfo.sin_family = AF_INET;
     serverInfo.sin_addr.s_addr = htonl(INADDR_ANY);
-    serverInfo.sin_port = htons(Config::port);
+    serverInfo.sin_port = htons((uint16_t) Config::port);
 
     if (bind(server_socket, (struct sockaddr*) &serverInfo, sizeof(serverInfo)) < 0) {
         error("błąd utworzenia serwera: bind");
@@ -189,7 +189,7 @@ bool Network::connectTo(string ip) {
         }
     }
     ip = inet_ntoa(clientInfo.sin_addr);
-    clientInfo.sin_port = htons(Config::port);
+    clientInfo.sin_port = htons((uint16_t) Config::port);
     Log::info("Łączenie do: " + ip + " ...");
     if (connect(client_socket, (struct sockaddr*) &clientInfo, sizeof(struct sockaddr)) < 0) {
         error("Błąd połączenia do hosta");
@@ -304,7 +304,7 @@ bool Network::sendData(int sindex, char* msg, int len) {
         return false;
     }
     char* msg2 = new char[len];
-    memcpy(msg2, msg, len);
+    memcpy(msg2, msg, (size_t) len);
 
     int max_send_size = Config::buffer_size;
     if (max_send_size > 0) {
@@ -317,7 +317,7 @@ bool Network::sendData(int sindex, char* msg, int len) {
         }
     }
     int attempts = 1;
-    ssize_t retval = send(connections[sindex]->socket, msg2, len, 0);
+    ssize_t retval = send(connections[sindex]->socket, msg2, (size_t) len, 0);
     while (retval < 0) {
         attempts++;
         if (attempts <=
@@ -326,7 +326,7 @@ bool Network::sendData(int sindex, char* msg, int len) {
             ss << "Ponowne wysyłanie (próba " << attempts << ".)...";
             Log::warn(ss.str());
             sleep_ms(attempts * Config::wait_if_failed);
-            retval = send(connections[sindex]->socket, msg2, len, 0);
+            retval = send(connections[sindex]->socket, msg2, (size_t) len, 0);
         } else {
             error("Nie udało się wysłać pakietu");
             delete[] msg2;
@@ -345,8 +345,8 @@ bool Network::sendData(int sindex, char* msg, int len) {
 
 bool Network::onReceive(int sindex) {
     if (sindex < 0 || sindex >= (int) connections.size()) return false;
-    memset(temp_buffer, 0, Config::buffer_size);
-    ssize_t retval = recv(connections[sindex]->socket, temp_buffer, Config::buffer_size, 0);
+    memset(temp_buffer, 0, (size_t) Config::buffer_size);
+    ssize_t retval = recv(connections[sindex]->socket, temp_buffer, (size_t) Config::buffer_size, 0);
     if (retval < 0) {
         error("Błąd odbierania pakietu");
         return false;

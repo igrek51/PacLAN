@@ -1,5 +1,4 @@
 #include "pathfind.h"
-#include "../../log/log.h"
 
 template<typename T>
 Pathfind<T>::Pathfind() {
@@ -30,7 +29,7 @@ Path<T>* Pathfind<T>::find_path() {
     deque<Node<T>*> c_list; //lista zamkniętych
     Node<T>* Q; //aktualne pole (o minimalnym F)
     Node<T>* sasiad;
-    int min_f_i; //indeks minium f na liście otwartych
+    unsigned long min_f_i; //indeks minium f na liście otwartych
     T s_x, s_y; //położenie sąsiada
     T nowe_g;
     //Dodajemy pole startowe (lub węzeł) do Listy Otwartych.

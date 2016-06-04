@@ -42,5 +42,5 @@ void NetworkConnection::bufferAdd(char c){
 }
 
 unsigned int NetworkConnection::bufferSize(){
-    return recv_buffer.size();
+    return (unsigned int) recv_buffer.size();
 }

@@ -1,5 +1,4 @@
 #include "death_animation.h"
-#include "../../app.h"
 
 DeathAnimation::DeathAnimation(int x, int y, SDL_Texture *texture, SDL_Color color, int *clip, Graphics* graphics) : Animation(x, y, graphics){
     this->texture = graphics->blend_texture(texture, Graphics::rgba(200,200,200));
@@ -14,7 +13,7 @@ DeathAnimation::~DeathAnimation(){
 
 void DeathAnimation::animate(){
     ends--;
-    SDL_SetTextureAlphaMod(texture,ends*255/60);
+    SDL_SetTextureAlphaMod(texture, (Uint8)(ends*255/60));
 }
 
 void DeathAnimation::draw(){

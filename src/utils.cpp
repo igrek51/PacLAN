@@ -23,7 +23,7 @@ char* string_to_char(string s) {
     return result;
 }
 
-string itos(int number){
+string itos(int number) {
     stringstream ss;
     ss << number;
     return ss.str();
@@ -53,10 +53,10 @@ int round_to_int(double d) {
 
 
 void sleep_ms(int ms) {
-    usleep(1000 * ms);
+    usleep((__useconds_t) (1000 * ms));
 }
 
-long long currentMillis(){
+long long currentMillis() {
     struct timeval tp;
     gettimeofday(&tp, NULL);
     long int ms = tp.tv_sec * 1000 + tp.tv_usec / 1000;

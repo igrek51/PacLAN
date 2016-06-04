@@ -1,6 +1,4 @@
 #include "game_engine.h"
-#include "../app.h"
-#include "../players/player.h"
 
 char GameEngine::next_grid(Player *player, int direction){
     int xmap_next = player->xmap;
@@ -17,11 +15,11 @@ char GameEngine::next_grid(Player *player, int direction){
 }
 
 int GameEngine::xmap_to_x(int xmap){
-    return map->grid_space*xmap + map->grid_x_pos + map->grid_space/2;
+    return (int)(map->grid_space*xmap + map->grid_x_pos + map->grid_space/2);
 }
 
 int GameEngine::ymap_to_y(int ymap){
-    return map->grid_space*ymap + map->grid_y_pos + map->grid_space/2;
+    return (int)(map->grid_space*ymap + map->grid_y_pos + map->grid_space/2);
 }
 
 void GameEngine::xymap_to_xy(Player *player){
@@ -62,10 +60,8 @@ bool GameEngine::is_collision(Player *player1, Player *player2){
 }
 
 bool GameEngine::is_collision(Player *player1, Item *item2){
-    if(player1->xmap==item2->xmap && player1->ymap==item2->ymap){ //gdy są na tym samym polu
-        return true;
-    }
-    return false;
+    //gdy są na tym samym polu
+    return player1->xmap == item2->xmap && player1->ymap == item2->ymap;
 }
 
 void GameEngine::pathfind_init(){

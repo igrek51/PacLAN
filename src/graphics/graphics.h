@@ -75,9 +75,9 @@ public:
     void draw();
 private:
     ///szerokość okna
-    int screen_w;
+    int wnd_w;
     ///wysokość okna
-    int screen_h;
+    int wnd_h;
     /// czy pełny ekran jest włączony
     bool fullscreen;
     ///narysowanie ekranu menu

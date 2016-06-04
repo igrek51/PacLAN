@@ -1,6 +1,6 @@
-pakiet synchronizuj¹co - weryfikuj¹cy
-tryb survival - pojawiania siê coraz wiêkszej liczby duszków - zjedzenie usuniêcie
-tryb time-trial - czyszczenie mapki z kropek na czas - rywalizacja pacmanów
-dŸwiêki, muzyka z Pacmana
-dodanie t³umaczeñ do wiersza poleceñ
+pakiet synchronizujÄ…co - weryfikujÄ…cy
+tryb survival - pojawiania siÄ™ coraz wiÄ™kszej liczby duszkÃ³w - zjedzenie usuniÄ™cie
+tryb time-trial - czyszczenie mapki z kropek na czas - rywalizacja pacmanÃ³w
+dÅºwiÄ™ki, muzyka z Pacmana
+dodanie tÅ‚umaczeÅ„ do wiersza poleceÅ„
 dodanie wyboru mapek i automatycznej zmiany (losowania)
