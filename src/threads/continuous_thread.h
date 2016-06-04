@@ -1,3 +1,7 @@
+/**
+ * \file continuous_thread.h
+ * \see continuous_thread.cpp
+ */
 #ifndef CONTINUOUS_THREAD_H
 #define CONTINUOUS_THREAD_H
 

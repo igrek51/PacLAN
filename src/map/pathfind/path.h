@@ -1,3 +1,7 @@
+/**
+ * \file path.h
+ * \see path.cpp
+ */
 #ifndef PATH_H
 #define PATH_H
 
@@ -6,7 +10,8 @@
 using namespace std;
 
 /**
- * \brief Ścieżka - zbiór kolejnych punktów prowadzących z jednego do drugiego miejsca na mapie
+ * @brief Ścieżka - zbiór kolejnych punktów prowadzących z jednego do drugiego miejsca na mapie
+ * @tparam T typ współrzędnych punktu
  */
 template<typename T>
 class Path {

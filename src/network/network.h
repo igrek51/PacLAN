@@ -1,3 +1,7 @@
+/**
+ * \file network.h
+ * \see network.cpp
+ */
 #ifndef NETWORK_H
 #define NETWORK_H
 

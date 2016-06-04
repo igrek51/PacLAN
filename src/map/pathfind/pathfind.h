@@ -1,3 +1,7 @@
+/**
+ * \file pathfind.h
+ * \see pathfind.cpp
+ */
 #ifndef PATHFIND_H
 #define PATHFIND_H
 
@@ -8,7 +12,8 @@
 using namespace std;
 
 /**
- * \brief Klasa przechowująca obecne parametry mapy i znajdująca drogę pomiędzy dwoma punktami
+ * @brief Klasa przechowująca obecne parametry mapy i znajdująca drogę pomiędzy dwoma punktami
+ * @tparam T typ współrzędnych punktu
  */
 template<typename T>
 class Pathfind {
@@ -74,6 +79,11 @@ private:
     T policz_h(Node<T>* item);
 };
 
+/**
+ * @tparam T typ liczby
+ * @param num liczba
+ * @return wartość bezwzględna z liczby
+ */
 template<typename T>
 T absolute(T num) {
     return num >= 0 ? num : -num;

@@ -12,7 +12,7 @@ Thread::Thread() {
 
 Thread::~Thread() {
     close_signal = true;
-    if(boost_thread != nullptr) {
+    if (boost_thread != nullptr) {
         boost::thread* boost_thread2 = reinterpret_cast<boost::thread*>(boost_thread);
         boost_thread2->interrupt();
         delete boost_thread2;
@@ -21,7 +21,7 @@ Thread::~Thread() {
     }
 }
 
-void Thread::start(){
+void Thread::start() {
     while (!init) sleep_ms(1);
     Log::debug("Wykonywanie głównej procedury wątku...");
     run();

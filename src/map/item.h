@@ -1,3 +1,7 @@
+/**
+ * \file item.h
+ * \see item.cpp
+ */
 #ifndef ITEM_H
 #define ITEM_H
 
@@ -19,6 +23,7 @@ public:
      * \param xmap współrzędna x w układzie mapy
      * \param ymap współrzędna y w układzie mapy
      * \param subclass liczba określająca rodzaj obiektu
+     * \param graphics silnik grafiki
      */
     Item(int xmap, int ymap, int subclass, GameEngine* game_engine, Graphics* graphics);
     ~Item();

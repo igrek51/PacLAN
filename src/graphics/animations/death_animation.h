@@ -1,3 +1,7 @@
+/**
+ * \file death_animation.h
+ * \see death_animation.cpp
+ */
 #ifndef DEATH_ANIMATION_H
 #define DEATH_ANIMATION_H
 
@@ -15,6 +19,7 @@ public:
      * \param texture tekstura będąca podstawą do animacji
      * \param color kolor animacji
      * \param clip tablica określająca parametry do wycięcia animacji
+     * \param graphics silnik grafiki
      */
     DeathAnimation(int x, int y, SDL_Texture *texture, SDL_Color color, int *clip, Graphics* graphics);
     ~DeathAnimation();

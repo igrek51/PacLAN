@@ -1,3 +1,7 @@
+/**
+ * \file network_connection.h
+ * \see network_connection.cpp
+ */
 #ifndef NETWORK_CONNECTION_H
 #define NETWORK_CONNECTION_H
 

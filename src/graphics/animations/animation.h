@@ -1,3 +1,7 @@
+/**
+ * \file animation.h
+ * \see animation.cpp
+ */
 #ifndef ANIMATION_H
 #define ANIMATION_H
 

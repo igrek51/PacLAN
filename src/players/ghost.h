@@ -1,3 +1,7 @@
+/**
+ * \file ghost.h
+ * \see ghost.cpp
+ */
 #ifndef GHOST_H
 #define GHOST_H
 
@@ -17,6 +21,8 @@ public:
      * \param color kolor gracza (do wygenerowania tekstury)
      * \param name nazwa gracza
      * \param controlby określa, co steruje graczem: P_KEYBOARD - klawiatura, P_AI - sztuczna inteligencja, P_LAN - komunikaty sieciowe z serwera
+     * \param game_engine silnik logiki gry
+     * \param graphics silnik grafiki
      */
     Ghost(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine, Graphics* graphics);
     /// usunięcie duszka

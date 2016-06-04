@@ -1,3 +1,7 @@
+/**
+ * \file config.h
+ * \see config.cpp
+ */
 #ifndef CONFIG_H
 #define CONFIG_H
 
@@ -70,7 +74,7 @@ public:
     static LogLevel file_log_level;
     /// poziom logów wyświetlanych w konsoli
     static LogLevel echo_log_level;
-    /// maksymalna liczba wierszy wyjścia w konsoli wiersza poleceń
+    /// maksymalna liczba wierszy wyjścia w konsoli
     static unsigned int echoes_max;
 
     //  POSTACIE

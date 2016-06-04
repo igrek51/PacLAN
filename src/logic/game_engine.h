@@ -1,3 +1,10 @@
+/**
+ * \file game_engine.h
+ * \see game_engine.cpp
+ * \see game_logic.cpp
+ * \see game_network.cpp
+ * \see game_cmd.cpp
+ */
 #ifndef GAME_ENGINE_H
 #define GAME_ENGINE_H
 

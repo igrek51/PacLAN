@@ -1,8 +1,13 @@
+/**
+ * \file node.h
+ * \see node.cpp
+ */
 #ifndef NODE_H
 #define NODE_H
 
 /**
- * \brief Węzeł w labiryncie w algorytmie znajdowania drogi
+ * @brief Węzeł w labiryncie w algorytmie znajdowania drogi
+ * @tparam T typ współrzędnych punktu
  */
 template<typename T>
 class Node {

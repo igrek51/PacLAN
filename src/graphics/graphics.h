@@ -1,3 +1,8 @@
+/**
+ * \file graphics.h
+ * \see graphics.cpp
+ * \see graphics_draw.cpp
+ */
 #ifndef GRAPHICS_H
 #define GRAPHICS_H
 

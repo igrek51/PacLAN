@@ -14,34 +14,36 @@ class App;
 #include "language.h"
 
 /**
- * \brief Główna aplikacja zawierająca najważniejsze moduły
+ * \brief Aplikacja zawierająca główne moduły
  */
 class App {
 private:
+    /// sygnał zakończenia aplikacji
     bool _exit;
 public:
     /// konstruktor
     App();
+
     /// destruktor
     ~App();
-    /// wskaźnik na silnik gry
+
+    /// silnik gry (logika)
     GameEngine* game_engine;
-    /// wskaźnik na silnik grafiki
+    /// silnik grafiki
     Graphics* graphics;
-    /// wskaźnik na wątek modułu obsługi sieci
+    /// wątek modułu obsługi sieci
     Network* network;
-    /// wskaźnik na wątek odmierzania czasu i kontroli prędkości gry
+    /// wątek odmierzania czasu i kontroli prędkości gry
     Timer* timer;
     /// aktualne dane językowe
     Language* lang;
-
     /// aktualna liczba cykli do wykonania (zwiększana przez timer, zmniejszana przez pętle logiczne silnika gry)
     volatile int logic_cycles;
 
-
+    // czy należy zamknąć aplikację
     bool exiting();
 
-    /// sygnał zakończenia aplikacji
+    /// zgłoszenie sygnału zakończenia aplikacji
     void exit();
 };
 

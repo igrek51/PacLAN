@@ -1,10 +1,12 @@
+/**
+ * \file thread.h
+ * \see thread.cpp
+ */
 #ifndef THREAD_H
 #define THREAD_H
 
-//TODO ograniczyć includy z boosta, rozdzielić zależności, dostęp do App inny niż przez singleton
-
 /**
- * \brief Klasa wątku
+ * \brief osobny Wątek
  */
 class Thread {
 public:

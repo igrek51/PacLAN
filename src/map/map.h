@@ -1,3 +1,7 @@
+/**
+ * \file map.h
+ * \see map.cpp
+ */
 #ifndef MAP_H
 #define MAP_H
 

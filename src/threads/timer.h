@@ -1,3 +1,7 @@
+/**
+ * \file timer.h
+ * \see timer.cpp
+ */
 #ifndef TIMER_H
 #define TIMER_H
 
