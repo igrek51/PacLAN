@@ -7,7 +7,6 @@ Map::Map(SDL_Texture *background, string gridfile){
     this->background = background;
     this->grid = nullptr;
     if(!load_grid(gridfile)){
-        App::exit = true;
         delete this;
     }
 }

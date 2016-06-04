@@ -1,9 +1,23 @@
 #include "language.h"
 #include "log/log.h"
 
-Language::Language(string lang){
-    this->lang = lang;
-    if(lang=="Polski"){
+const string Language::languages[] = {
+        "Polski", "English"
+};
+int Language::languages_n = 2;
+int Language::language_selected = 0;
+
+Language::Language(){
+    load_language(languages[language_selected]);
+}
+
+Language::Language(string lang_name){
+    load_language(lang_name);
+}
+
+void Language::load_language(string lang_name){
+    this->lang_name = lang_name;
+    if(lang_name=="Polski"){
         player_name = "Nazwa gracza: ";
         player_class = "Klasa gracza: ";
         player_class_pacman = "Pacman";
@@ -30,7 +44,7 @@ Language::Language(string lang){
         next_death = "Kolejna śmierć za: ";
         pacmans = "Pacmany";
         ghosts = "Duszki";
-    }else if(lang=="English"){
+    }else if(lang_name=="English"){
         player_name = "Player name: ";
         player_class = "Player class: ";
         player_class_pacman = "Pacman";

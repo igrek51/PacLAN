@@ -17,7 +17,7 @@ public:
 
     static void debug(string s);
 
-    static bool wasError();
+    static bool wasCriticalError();
 
     /**
      * wyświetlenie komunikatu o błędzie
@@ -32,7 +32,7 @@ private:
 
     static Log* getInstance();
 
-    int errors_count;
+    int criticalErrorsCount;
 
     list<string> echoes;
 

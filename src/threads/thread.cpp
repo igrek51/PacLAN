@@ -1,6 +1,6 @@
 #include "thread.h"
 #include "../log/log.h"
-#include "../system.h"
+#include "../utils.h"
 #include <boost/thread.hpp>
 
 Thread::Thread() {

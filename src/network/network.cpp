@@ -1,7 +1,6 @@
 #include "network.h"
 #include "../config.h"
 #include "../log/log.h"
-#include "../system.h"
 #include "../utils.h"
 
 #include <netdb.h>

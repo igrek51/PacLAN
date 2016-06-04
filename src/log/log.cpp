@@ -14,7 +14,7 @@
 Log* Log::instance = nullptr;
 
 Log::Log(){
-    errors_count = 0;
+    criticalErrorsCount = 0;
     clearLog();
 }
 
@@ -32,7 +32,6 @@ Log* Log::getInstance(){
 
 void Log::error(string s) {
     Log* inst = getInstance();
-    inst->errors_count++;
     string s2 ="[ERROR] " + s;
     inst->echo(s2, LogLevel::ERROR);
     inst->log(s2, LogLevel::ERROR);
@@ -56,12 +55,6 @@ void Log::debug(string s) {
     string s2 ="[debug] " + s;
     inst->echo(s2, LogLevel::DEBUG);
     inst->log(s2, LogLevel::DEBUG);
-}
-
-
-bool Log::wasError() {
-    Log* inst = getInstance();
-    return inst->errors_count > 0;
 }
 
 
@@ -99,7 +92,14 @@ void Log::clearLog() {
 
 void Log::criticalError(string s) {
     error(s);
+    Log* inst = getInstance();
+    inst->criticalErrorsCount++;
     SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Błąd", s.c_str(), NULL);
+}
+
+bool Log::wasCriticalError() {
+    Log* inst = getInstance();
+    return inst->criticalErrorsCount > 0;
 }
 
 list<string>* Log::getEchoes(){

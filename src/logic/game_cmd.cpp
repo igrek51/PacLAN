@@ -29,7 +29,7 @@ void GameEngine::exec_cmd(string cmd){
     Log::info(ss.str());
     ss_clear(ss);
     if(cmd=="exit"){
-        App::exit = true;
+        app->exit();
     }else if(cmds[0]=="add"){ //dodawanie nowego gracza: add [pacman,ghost] (ai [0-5])
         if(cmds.size()<2){
             Log::info("[!] Blad: brak klasy gracza (pacman lub ghost)");

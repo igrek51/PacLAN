@@ -3,15 +3,13 @@
 #include "graphics.h"
 #include "../config.h"
 #include "../log/log.h"
-#include "../app.h"
-#include "../system.h"
 #include "../utils.h"
 
 //FIXME zjebany toggle trybu fullscreen, zależny od ekranu
 
 Graphics::Graphics() {
-    screen_w = Config::screen_w;
-    screen_h = Config::screen_h;
+    screen_w = Config::window_w;
+    screen_h = Config::window_h;
     fullscreen = false;
     if (!sdl_init())
         return;
@@ -57,7 +55,6 @@ void Graphics::sdl_error(string e) {
     stringstream ss;
     ss << "Błąd SDL (SDL_Error: " << SDL_GetError() << "): " << e;
     Log::criticalError(ss.str());
-    App::exit = true;
     delete this;
 }
 
@@ -84,7 +81,7 @@ bool Graphics::sdl_init() {
     stringstream ss;
     ss << Config::app_name << " v" << Config::version;
     sdl_win = SDL_CreateWindow(ss.str().c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-                               Config::screen_w, Config::screen_h, SDL_WINDOW_SHOWN);
+                               Config::window_w, Config::window_h, SDL_WINDOW_SHOWN);
     if (sdl_win == nullptr) {
         sdl_error("SDL_CreateWindow");
         return false;
@@ -148,16 +145,16 @@ void Graphics::fullscreen_toggle() {
     SDL_GetWindowSize(sdl_win, &window_w, &window_h);
 
     if(!fullscreen){
-        window_w = Config::screen_w;
-        window_h = Config::screen_h;
+        window_w = Config::window_w;
+        window_h = Config::window_h;
     }
 
-    float scale = ((float) window_w) / Config::screen_w;
+    float scale = ((float) window_w) / Config::window_w;
     viewport.w = window_w;
-    viewport.h = window_w * Config::screen_h / Config::screen_w;
-    if (scale * Config::screen_h > window_h) {
-        scale = ((float) window_h) / Config::screen_h;
-        viewport.w = window_h * Config::screen_w / Config::screen_h;
+    viewport.h = window_w * Config::window_h / Config::window_w;
+    if (scale * Config::window_h > window_h) {
+        scale = ((float) window_h) / Config::window_h;
+        viewport.w = window_h * Config::window_w / Config::window_h;
         viewport.h = window_h;
     }
     //wyśrodkowanie okna

@@ -29,6 +29,7 @@ class GameEngine;
 #include "../players/ghost.h"
 #include "../network/network.h"
 #include "../language.h"
+#include "../app.h"
 
 /**
  * \brief logika gry
@@ -36,7 +37,7 @@ class GameEngine;
 class GameEngine{
 public:
     /// inicjalizacja silnika gry
-    GameEngine(Graphics* graphics);
+    GameEngine(App* app, Graphics* graphics);
     /// zamknięcie silnika gry
     ~GameEngine();
 
@@ -56,6 +57,7 @@ public:
     ///liczba cykli od uruchomienia gry
     unsigned long long int cycles;
 private:
+    App* app;
 
     Graphics* graphics;
 

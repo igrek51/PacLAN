@@ -3,8 +3,8 @@
 
 const string Config::log_filename = "log.txt";
 
-int Config::screen_w = 800;
-int Config::screen_h = 480;
+int Config::window_w = 800;
+int Config::window_h = 480;
 const char* Config::app_name = "PacLAN";
 string Config::version = VERSION;
 bool Config::fullscreen_start = false;
@@ -41,15 +41,9 @@ unsigned int Config::echoes_max = 20;
 LogLevel Config::file_log_level = LogLevel::DEBUG;
 LogLevel Config::echo_log_level = LogLevel::INFO;
 
-string Config::languages[] = {
-    "Polski", "English"
-};
-int Config::languages_n = 2;
-int Config::language_selected = 0;
-
 int Config::pacman_speed = 4;
 int Config::ghost_speed = 4;
-int Config::ghost_eatme_speed = 6;
+int Config::ghost_eatme_speed = 8;
 bool Config::move_while_respawn = true;
 
 int Config::ai_pacman_start_escape = 4;
@@ -80,4 +74,3 @@ int Config::port = 4000;
 int Config::max_attempts = 5;
 int Config::wait_if_failed = 100;
 int Config::buffer_size = 10240;
-

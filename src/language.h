@@ -1,3 +1,7 @@
+/**
+ * \file language.h
+ * \see language.cpp
+ */
 #ifndef LANGUAGE_H
 #define LANGUAGE_H
 
@@ -9,11 +13,29 @@ using namespace std;
  * \brief Ustawienia językowe - teksty interfejsu w różnych językach
  */
 class Language{
-private:
-    string lang;
 public:
-    Language(string lang);
+    /// konstruktor
+    Language();
+    /**
+     * @param lang_name wybrany język
+     */
+    Language(string lang_name);
+    //destruktor
     ~Language();
+    ///tablica dostępnych języków
+    static const string languages[];
+    ///liczba dostępnych języków
+    static int languages_n;
+    ///indeks domyślnego i aktualnie wybranego języka
+    static int language_selected;
+    ///nazwa aktualnie wybranego języka
+    string lang_name;
+    /**
+     * załadowanie ustawień językowych
+     * @param lang_name wybrany język
+     */
+    void load_language(string lang_name);
+
     //  MENU
     string player_name;
     string player_class;

@@ -1,5 +1,11 @@
+/**
+ * \file app.h
+ * \see app.cpp
+ */
 #ifndef APP_H
 #define APP_H
+
+class App;
 
 #include "logic/game_engine.h"
 #include "graphics/graphics.h"
@@ -8,30 +14,35 @@
 #include "language.h"
 
 /**
- * \brief Klasa głównej aplikacji zawierająca jej najważniejsze moduły
+ * \brief Główna aplikacja zawierająca najważniejsze moduły
  */
 class App {
+private:
+    bool _exit;
 public:
-    /// utworzenie nowej instancji aplikacji
+    /// konstruktor
     App();
-
-    /// zakończenie uruchomionej aplikacji
+    /// destruktor
     ~App();
-
-    /// wskaźnik na obiekt silnika gry
+    /// wskaźnik na silnik gry
     GameEngine* game_engine;
-    /// wskaźnik na obiekt silnika grafiki
+    /// wskaźnik na silnik grafiki
     Graphics* graphics;
     /// wskaźnik na wątek modułu obsługi sieci
     Network* network;
-    /// wskaźnik na wątek czasomierza
+    /// wskaźnik na wątek odmierzania czasu i kontroli prędkości gry
     Timer* timer;
     /// aktualne dane językowe
     Language* lang;
-    /// zmienna określająca, czy zakończyć aplikację (true - sygnał zakończenia)
-    static bool exit;
+
     /// aktualna liczba cykli do wykonania (zwiększana przez timer, zmniejszana przez pętle logiczne silnika gry)
-    static volatile int logic_cycles;
+    volatile int logic_cycles;
+
+
+    bool exiting();
+
+    /// sygnał zakończenia aplikacji
+    void exit();
 };
 
 #endif

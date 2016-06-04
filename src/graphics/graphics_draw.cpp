@@ -70,7 +70,7 @@ void Graphics::draw_menu() {
     }
     draw_text(ss.str(), font1, rgba(255, 255, 255), screen_w / 2, 260, TEXT_CENTER);
     ss_clear(ss);
-    ss << lang->language << Config::languages[Config::language_selected];
+    ss << lang->language << lang->lang_name;
     draw_text(ss.str(), font1, rgba(255, 255, 255), screen_w / 2, 290, TEXT_CENTER);
     draw_text(lang->exit, font1, rgba(255, 255, 255), screen_w / 2, 320, TEXT_CENTER);
     //kursor

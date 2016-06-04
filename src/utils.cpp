@@ -1,4 +1,6 @@
 #include "utils.h"
+#include <unistd.h>
+#include <sys/time.h>
 
 void ss_clear(stringstream& sstream) {
     sstream.str("");
@@ -47,4 +49,16 @@ int round_to_int(double d) {
     if (d - c >= 0.5)
         return c + 1;
     return c;
+}
+
+
+void sleep_ms(int ms) {
+    usleep(1000 * ms);
+}
+
+long long currentMillis(){
+    struct timeval tp;
+    gettimeofday(&tp, NULL);
+    long int ms = tp.tv_sec * 1000 + tp.tv_usec / 1000;
+    return ms;
 }

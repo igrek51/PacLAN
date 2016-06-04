@@ -397,7 +397,7 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
         }
         if(key==SDLK_ESCAPE){
             if(menu==MENU_EXIT){
-                App::exit = true;
+                app->exit();
             }else{
                 menu = MENU_EXIT;
             }
@@ -409,7 +409,7 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
             if(menu>MENU_MAX) menu = 1;
         }else if(key==SDLK_RETURN || key==SDLK_KP_ENTER){
             if(menu==MENU_EXIT){
-                App::exit = true;
+                app->exit();
             }else if(menu==MENU_HOST){
                 menu_host();
             }else if(menu==MENU_JOIN){
@@ -420,8 +420,8 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
                 menu_color = Graphics::rand_bcolor();
                 menu_refresh_color();
             }else if(menu==MENU_LANGUAGE){
-                Config::language_selected++;
-                if(Config::language_selected>=Config::languages_n) Config::language_selected = 0;
+                Language::language_selected++;
+                if(Language::language_selected>=Language::languages_n) Language::language_selected = 0;
                 language_refresh();
             }
         }else if(key==SDLK_LEFT){
@@ -442,8 +442,8 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
                 mode--;
                 if(mode<0) mode=MODE_MAX;
             }else if(menu==MENU_LANGUAGE){
-                Config::language_selected--;
-                if(Config::language_selected<0) Config::language_selected = Config::languages_n-1;
+                Language::language_selected--;
+                if(Language::language_selected<0) Language::language_selected = Language::languages_n-1;
                 language_refresh();
             }
         }else if(key==SDLK_RIGHT){
@@ -464,8 +464,8 @@ void GameEngine::keyboard_event(SDL_Keysym keysym){
                 mode++;
                 if(mode>MODE_MAX) mode=0;
             }else if(menu==MENU_LANGUAGE){
-                Config::language_selected++;
-                if(Config::language_selected>=Config::languages_n) Config::language_selected = 0;
+                Language::language_selected++;
+                if(Language::language_selected>=Language::languages_n) Language::language_selected = 0;
                 language_refresh();
             }
         }

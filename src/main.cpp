@@ -1,6 +1,7 @@
 #include "app.h"
 #include "config.h"
-#include "system.h"
+#include "utils.h"
+#include "log/log.h"
 
 //TODO pakiet synchronizująco - weryfikujący
 //TODO dźwięki, muzyka z Pacmana
@@ -16,20 +17,25 @@
 
 int main(int argc, char **argv){
     App *app = new App();
+
     app->graphics = new Graphics(); //inicjalizacja grafiki
-    if(app->exit)
-        return 0;
-    app->game_engine = new GameEngine(app->graphics); //logika gry
-    if(app->exit)
-        return 0;
+    if(Log::wasCriticalError())
+        return 1;
+
+    app->game_engine = new GameEngine(app, app->graphics); //logika gry
+    if(Log::wasCriticalError())
+        return 1;
     app->graphics->setGameEngine(app->game_engine);
+
     app->network = new Network(app->game_engine); //interfejs sieciowy
-    if(app->exit)
-        return 0;
+    if(Log::wasCriticalError())
+        return 1;
     app->game_engine->setNetwork(app->network);
+
     app->timer = new Timer(Config::logic_timer_ms,&app->logic_cycles); //timer utrzymujący stałą prędkość gry
-    while(!app->exit){
-        while(app->logic_cycles>0 && !App::exit){ //jeśli są do wykonania cykle (zaległe)
+
+    while(!app->exiting()){
+        while(app->logic_cycles>0 && !app->exiting()){ //jeśli są do wykonania cykle (zaległe)
             app->game_engine->logic(app->logic_cycles); //wykonuj obliczenia gry
         }
         app->graphics->draw(); //jeśli zostanie czasu - repaint grafiki

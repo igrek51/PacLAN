@@ -2,7 +2,7 @@
 #include "timer.h"
 #include "../log/log.h"
 #include "../config.h"
-#include "../system.h"
+#include "../utils.h"
 
 Timer::Timer(int interval_ms, volatile int* cycles) : ContinuousThread(150) {
     this->interval_ms = interval_ms; //konwersja ms na cykle

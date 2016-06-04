@@ -1,3 +1,8 @@
+/**
+ * \file utils.h
+ * Przydatne operacje na stringach i obsługa funkcji systemowych
+ * \see utils.cpp
+ */
 #ifndef UTILS_H
 #define UTILS_H
 
@@ -26,6 +31,11 @@ bool has_extension(string filename, string ext);
  */
 char* string_to_char(string s);
 
+/**
+ * zamienia liczbę na ciąg znaków
+ * @param number liczba całkowita
+ * @return tekstowa reprezentacja liczby
+ */
 string itos(int number);
 
 /**
@@ -40,5 +50,17 @@ string get_time();
  * @return zaokrąglona liczba całkowita
  */
 int round_to_int(double d);
+
+/**
+ * odczekuje w aktualnym wątku określoną liczbę milisekund
+ * @param ms liczba milisekund do odczekania
+ */
+void sleep_ms(int ms);
+
+/**
+ * zwraca aktualny timestamp w milisekundach
+ * @return aktualny timestamp w milisekundach
+ */
+long long currentMillis();
 
 #endif
