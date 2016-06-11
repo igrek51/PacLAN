@@ -4,26 +4,22 @@
 #include "../config.h"
 #include "../utils.h"
 
-//TODO network error, sdl error, critical error
 //TODO przekazywanie błędów wyjątkami
-
-//TODO błędy wyrzucać jako ERROR
-//TODO wyświetlać komunikaty z info użytkownikowi na CMD
-//TODO komunikaty inicjalizujące i o zamknięciu na poziomie DEBUG
+//TODO więcej komunikatów na poziomie DEBUG
 
 Log* Log::instance = nullptr;
 
-Log::Log(){
+Log::Log() {
     criticalErrorsCount = 0;
     clearLog();
 }
 
-Log::~Log(){
+Log::~Log() {
     echoes.clear();
 }
 
-Log* Log::getInstance(){
-    if(instance == nullptr){
+Log* Log::getInstance() {
+    if (instance == nullptr) {
         instance = new Log();
     }
     return instance;
@@ -32,14 +28,14 @@ Log* Log::getInstance(){
 
 void Log::error(string s) {
     Log* inst = getInstance();
-    string s2 ="[ERROR] " + s;
+    string s2 = "[ERROR] " + s;
     inst->echo(s2, LogLevel::ERROR);
     inst->log(s2, LogLevel::ERROR);
 }
 
 void Log::warn(string s) {
     Log* inst = getInstance();
-    string s2 ="[warn] " + s;
+    string s2 = "[warn] " + s;
     inst->echo(s2, LogLevel::WARN);
     inst->log(s2, LogLevel::WARN);
 }
@@ -52,7 +48,7 @@ void Log::info(string s) {
 
 void Log::debug(string s) {
     Log* inst = getInstance();
-    string s2 ="[debug] " + s;
+    string s2 = "[debug] " + s;
     inst->echo(s2, LogLevel::DEBUG);
     inst->log(s2, LogLevel::DEBUG);
 }
@@ -73,7 +69,7 @@ void Log::log(string s, LogLevel level) {
 void Log::echo(string s, LogLevel level) {
     if (level > Config::echo_log_level) return;
     echoes.push_back(s);
-    while(echoes.size() > Config::echoes_max){
+    while (echoes.size() > Config::echoes_max) {
         echoes.pop_front();
     }
     if (level == LogLevel::ERROR) {
@@ -102,7 +98,7 @@ bool Log::wasCriticalError() {
     return inst->criticalErrorsCount > 0;
 }
 
-list<string>* Log::getEchoes(){
+list<string>* Log::getEchoes() {
     Log* inst = getInstance();
     return &(inst->echoes);
 }

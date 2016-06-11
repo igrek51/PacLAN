@@ -12,16 +12,18 @@ using namespace std;
 /**
  * \brief Ustawienia językowe - teksty interfejsu w różnych językach
  */
-class Language{
+class Language {
 public:
-    /// konstruktor
     Language();
+
     /**
      * @param lang_name wybrany język
      */
     Language(string lang_name);
+
     //destruktor
     ~Language();
+
     ///tablica dostępnych języków
     static const string languages[];
     ///liczba dostępnych języków
@@ -30,6 +32,7 @@ public:
     static int language_selected;
     ///nazwa aktualnie wybranego języka
     string lang_name;
+
     /**
      * załadowanie ustawień językowych
      * @param lang_name wybrany język

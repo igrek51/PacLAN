@@ -27,7 +27,7 @@ public:
 
     /**
      * obliczenie długości ścieżki
-     * @return długość ścieżki w jednostkach mapy
+     * @return długość ścieżki
      */
     int length();
 };

@@ -3,6 +3,8 @@
 #include "../log/log.h"
 #include "../utils.h"
 
+//TODO przenieść do game_engine.cpp albo przenieść do nowej klasy + .h
+
 void GameEngine::exec_cmd(string cmd) {
     if (cmd.length() == 0) {
         cmd_in = cmd_last;

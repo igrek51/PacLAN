@@ -1,6 +1,6 @@
 #include "animation.h"
 
-Animation::Animation(int x, int y, Graphics* graphics){
+Animation::Animation(int x, int y, Graphics* graphics) {
     this->x = x;
     this->y = y;
     this->graphics = graphics;
@@ -9,6 +9,6 @@ Animation::Animation(int x, int y, Graphics* graphics){
     ends = 1;
 }
 
-Animation::~Animation(){
+Animation::~Animation() {
     graphics->destroy_texture(texture);
 }

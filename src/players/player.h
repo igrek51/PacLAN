@@ -22,7 +22,9 @@
 #include <string>
 
 class Player;
+
 class GameEngine;
+
 class Graphics;
 
 #include "../map/pathfind/pathfind.h"
@@ -44,7 +46,8 @@ public:
      * \param game_engine silnik logiki gry
      * \param graphics silnik grafiki
      */
-    Player(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine, Graphics* graphics);
+    Player(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine* game_engine,
+           Graphics* graphics);
 
     /// usunięcie gracza
     virtual ~Player();

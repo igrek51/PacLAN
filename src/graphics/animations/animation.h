@@ -47,6 +47,7 @@ public:
     virtual void draw() = 0;
 
 protected:
+    /// wskaźnik na silnik grafiki
     Graphics* graphics;
 };
 

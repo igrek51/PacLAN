@@ -16,7 +16,7 @@ class Item;
 /**
  * \brief Obiekt do zebrania na mapie
  */
-class Item{
+class Item {
 public:
     /**
      * Utworzenie nowego obiektu na mapie
@@ -26,22 +26,27 @@ public:
      * \param graphics silnik grafiki
      */
     Item(int xmap, int ymap, int subclass, GameEngine* game_engine, Graphics* graphics);
+
     ~Item();
+
     /// współrzędna x w układzie mapy
     int xmap;
     /// współrzędna y w układzie mapy
     int ymap;
     /// podklasa obiektu - liczba określająca rodzaj obiektu
     int subclass;
+
     /// rysowanie obiektu na ekranie
     void draw();
+
 private:
     /// współrzędna x w układzie ekranu
     int x;
     /// współrzędna y w układzie ekranu
     int y;
-
+    /// wskaźnik na logikę gry
     GameEngine* game_engine;
+    /// wskaźnik na silnik grafiki
     Graphics* graphics;
 };
 

@@ -20,11 +20,13 @@ public:
      * @param background tekstura tła mapy
      * @param gridfile plik określający rozmiar mapy oraz jej zawartość
      */
-    Map(SDL_Texture *background, string gridfile);
+    Map(SDL_Texture* background, string gridfile);
+
     /// usunięcie mapy
     ~Map();
+
     /// tekstura tła mapy
-    SDL_Texture *background;
+    SDL_Texture* background;
     ///ilość kolumn mapy
     int grid_w;
     ///ilość wierszy mapy
@@ -36,13 +38,14 @@ public:
     /// '-' - miejsce tylko dla duszków, respawn duszków
     /// . - mała kropka do zebrania
     /// o - kropka bonusowa
-    char **grid;
+    char** grid;
     /// położenie początku siatki wzduż osi x na ekranie
     int grid_x_pos;
     /// położenie początku siatki wzduż osi y na ekranie
     int grid_y_pos;
     /// odległość między kratkami mapy
     double grid_space;
+
     /**
      * zwraca zawartość kratki (z przekraczaniem rozmiarów mapy)
      * @param x położenie wzdłuż osi x na mapie
@@ -50,6 +53,7 @@ public:
      * @return zwraca zawartość pola mapy, jeśli położenie przekracza rozmiar mapy, zwraca '0'
      */
     char get_grid(int x, int y);
+
 private:
     /**
      * załadowanie mapy z pliku

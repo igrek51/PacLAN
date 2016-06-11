@@ -14,13 +14,13 @@ int Config::logic_cycles_critical = 60;
 int Config::fps_avg_frames = 10;
 
 string Config::bitmap_names[] = {
-    "gfx/pacman.png", "pacman",
-    "gfx/ghost.png", "ghost",
-    "gfx/ghost_eatme.png", "ghost_eatme",
-    "gfx/dot1.png", "dot1",
-    "gfx/dot2.png", "dot2",
-    "maps/1/background.png", "map1",
-    ""
+        "gfx/pacman.png", "pacman",
+        "gfx/ghost.png", "ghost",
+        "gfx/ghost_eatme.png", "ghost_eatme",
+        "gfx/dot1.png", "dot1",
+        "gfx/dot2.png", "dot2",
+        "maps/1/background.png", "map1",
+        ""
 };
 
 string Config::icon_name = "gfx/icon.png";

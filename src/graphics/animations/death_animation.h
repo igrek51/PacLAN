@@ -21,13 +21,18 @@ public:
      * \param clip tablica określająca parametry do wycięcia animacji
      * \param graphics silnik grafiki
      */
-    DeathAnimation(int x, int y, SDL_Texture *texture, SDL_Color color, int *clip, Graphics* graphics);
+    DeathAnimation(int x, int y, SDL_Texture* texture, SDL_Color color, int* clip,
+                   Graphics* graphics);
+
     ~DeathAnimation();
+
 private:
     /// kolor animacji
     SDL_Color color;
+
     /// wygenerowanie parametrów kolejnej klatki animacji
     void animate();
+
     /// narysowanie animacji na ekranie
     void draw();
 };

@@ -45,11 +45,11 @@ Graphics::~Graphics() {
     SDL_Quit();
 }
 
-void Graphics::setGameEngine(GameEngine* engine){
+void Graphics::setGameEngine(GameEngine* engine) {
     this->game_engine = engine;
 }
 
-Language* Graphics::getLanguage(){
+Language* Graphics::getLanguage() {
     return game_engine->getLanguage();
 }
 
@@ -146,7 +146,7 @@ void Graphics::fullscreen_toggle() {
     SDL_Rect viewport;
     SDL_GetWindowSize(sdl_win, &window_w, &window_h);
 
-    if(!fullscreen){
+    if (!fullscreen) {
         window_w = Config::window_w;
         window_h = Config::window_h;
     }

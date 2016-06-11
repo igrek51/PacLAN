@@ -55,7 +55,7 @@ Path<T>* Pathfind<T>::find_path() {
                 sciezka = new Path<T>();
                 while (Q != nullptr) {
                     //dopisanie na początek (odwrócenie listy)
-                    sciezka->points.push_front(new pair<T,T>(Q->x, Q->y));
+                    sciezka->points.push_front(new pair<T, T>(Q->x, Q->y));
                     Q = Q->parent;
                 }
             }

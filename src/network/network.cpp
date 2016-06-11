@@ -346,7 +346,8 @@ bool Network::sendData(int sindex, char* msg, int len) {
 bool Network::onReceive(int sindex) {
     if (sindex < 0 || sindex >= (int) connections.size()) return false;
     memset(temp_buffer, 0, (size_t) Config::buffer_size);
-    ssize_t retval = recv(connections[sindex]->socket, temp_buffer, (size_t) Config::buffer_size, 0);
+    ssize_t retval = recv(connections[sindex]->socket, temp_buffer, (size_t) Config::buffer_size,
+                          0);
     if (retval < 0) {
         error("Błąd odbierania pakietu");
         return false;

@@ -34,7 +34,9 @@ public:
      * \param task numer zadania do wykonania
      */
     NetworkTask(int task);
+
     ~NetworkTask();
+
     /// numer zadania do wykonania
     int task;
     /// możliwy do wykorzystania pierwszy całkowity parametr zadania
@@ -42,7 +44,7 @@ public:
     /// możliwy do wykorzystania drugi całkowity parametr zadania
     int param_i2;
     /// możliwa do wykorzystania przez zadanie tablica znaków
-    char *param_c;
+    char* param_c;
     /// możliwa do wykorzystania przez zadanie ciąg znaków klasy string
     string param_s;
 };

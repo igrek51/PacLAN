@@ -15,7 +15,7 @@ using namespace std;
 /**
  * \brief Ustawienia konfiguracyjne
  */
-class Config{
+class Config {
 public:
     //  OKNO
     /// szerokość okna aplikacji
@@ -89,7 +89,7 @@ public:
 
     //  SZTUCZNA INTELIGENCJA
     /// AI pacmana: odległość od duszka, przy której pacman zaczyna uciekać
-    static int ai_pacman_start_escape;    
+    static int ai_pacman_start_escape;
     /// AI pacmana: minimalna odległość od duszka, przy której pacman przestaje uciekać
     static int ai_pacman_stop_escape;
 

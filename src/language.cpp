@@ -7,17 +7,17 @@ const string Language::languages[] = {
 int Language::languages_n = 2;
 int Language::language_selected = 0;
 
-Language::Language(){
+Language::Language() {
     load_language(languages[language_selected]);
 }
 
-Language::Language(string lang_name){
+Language::Language(string lang_name) {
     load_language(lang_name);
 }
 
-void Language::load_language(string lang_name){
+void Language::load_language(string lang_name) {
     this->lang_name = lang_name;
-    if(lang_name=="Polski"){
+    if (lang_name == "Polski") {
         player_name = "Nazwa gracza: ";
         player_class = "Klasa gracza: ";
         player_class_pacman = "Pacman";
@@ -44,7 +44,7 @@ void Language::load_language(string lang_name){
         next_death = "Kolejna śmierć za: ";
         pacmans = "Pacmany";
         ghosts = "Duszki";
-    }else if(lang_name=="English"){
+    } else if (lang_name == "English") {
         player_name = "Player name: ";
         player_class = "Player class: ";
         player_class_pacman = "Pacman";
@@ -71,13 +71,13 @@ void Language::load_language(string lang_name){
         next_death = "Next death: ";
         pacmans = "Pacmans";
         ghosts = "Ghosts";
-    }else {
+    } else {
         Log::error("Brak języka: " + lang_name);
         return;
     }
     Log::debug("Wczytano ustawienia językowe: " + lang_name);
 }
 
-Language::~Language(){
+Language::~Language() {
 
 }

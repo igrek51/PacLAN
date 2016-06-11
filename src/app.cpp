@@ -1,7 +1,7 @@
 #include "app.h"
 #include "log/log.h"
 
-App::App(){
+App::App() {
     graphics = nullptr;
     game_engine = nullptr;
     network = nullptr;
@@ -13,26 +13,26 @@ App::App(){
     Log::info("Inicjalizacja aplikacji...");
 }
 
-App::~App(){
+App::~App() {
     Log::info("Zamykanie aplikacji...");
     _exit = true;
-    if(timer!=nullptr)
+    if (timer != nullptr)
         delete timer;
-    if(graphics!=nullptr)
+    if (graphics != nullptr)
         delete graphics;
-    if(game_engine!=nullptr)
+    if (game_engine != nullptr)
         delete game_engine;
-    if(network!=nullptr)
+    if (network != nullptr)
         delete network;
-    if(lang!=nullptr)
+    if (lang != nullptr)
         delete lang;
     Log::info("Aplikacja zamknięta.");
 }
 
-bool App::exiting(){
+bool App::exiting() {
     return _exit || Log::wasCriticalError();
 }
 
-void App::exit(){
+void App::exit() {
     _exit = true;
 }
