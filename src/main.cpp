@@ -1,3 +1,8 @@
+/**
+* \mainpage
+* PacLAN - gra PacMan umożliwiająca grę w sieci dla wielu graczy
+* \author Ireneusz Szulc
+*/
 #include "app.h"
 #include "config.h"
 #include "utils.h"
@@ -9,11 +14,9 @@
 //TODO C++ 11: pętle foreach, auto, enum class, smart_ptr (unique, shared) ...
 //TODO STL: przechodzenie kontenerów w pętli iteratorami, set, deque, list, ...
 
-//TODO komentarze doxygena - porządek: wyjebać lub uzupełnić
+//TODO komentarze doxygena - porządek, uzupełnić
 
-//TODO optimize imports w każdym pliku - skrócenie czasu kompilacji: ograniczenie boosta i sdla
 //TODO usunięcie niepotrzebnych includów bibliotek (sdl2_ttf, sdl2_image)
-//TODO usunięcie zbędnych deklaracji klas
 
 int main(int argc, char** argv) {
     App* app = new App();

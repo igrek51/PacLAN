@@ -4,7 +4,12 @@
   <component name="CidrRootsConfiguration">
     <sourceRoots />
     <libraryRoots />
-    <excludeRoots />
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/dist" />
+      <file path="$PROJECT_DIR$/doc" />
+      <file path="$PROJECT_DIR$/obj" />
+      <file path="$PROJECT_DIR$/prv" />
+    </excludeRoots>
   </component>
   <component name="CompilerConfiguration">
     <resourceExtensions />

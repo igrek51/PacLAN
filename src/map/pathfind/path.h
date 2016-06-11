@@ -29,7 +29,7 @@ public:
      * obliczenie długości ścieżki
      * @return długość ścieżki w jednostkach mapy
      */
-    T length();
+    int length();
 };
 
 #endif

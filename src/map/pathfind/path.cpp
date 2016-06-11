@@ -12,10 +12,10 @@ Path<T>::~Path() {
 }
 
 template<typename T>
-T Path<T>::length() {
+int Path<T>::length() {
     if (points.size() <= 1)
         return 0;
-    return points.size() - 1;
+    return (int) (points.size() - 1);
 }
 
 

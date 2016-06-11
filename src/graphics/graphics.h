@@ -46,7 +46,7 @@ private:
 
     GameEngine* game_engine;
 
-    Language* lang;
+    Language* getLanguage();
     /**
      * inicjalizacja SDL
      * @return true - jeśli wszystko przebiegło pomyślnie

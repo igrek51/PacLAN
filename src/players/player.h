@@ -19,8 +19,6 @@
 #define P_LAN 2
 
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_ttf.h>
-#include <SDL2/SDL_image.h>
 #include <string>
 
 class Player;

@@ -71,8 +71,11 @@ void Language::load_language(string lang_name){
         next_death = "Next death: ";
         pacmans = "Pacmans";
         ghosts = "Ghosts";
+    }else {
+        Log::error("Brak języka: " + lang_name);
+        return;
     }
-    Log::debug("Wczytano ustawienia językowe.");
+    Log::debug("Wczytano ustawienia językowe: " + lang_name);
 }
 
 Language::~Language(){
