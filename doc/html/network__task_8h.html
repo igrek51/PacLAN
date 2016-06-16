@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Dokumentacja pliku /mnt/d/Igrek/C++/PacLAN/src/network/network_task.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('network__task_8h.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Komponenty</a> &#124;
+<a href="#define-members">Definicje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku network_task.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div>
+<p><a href="network__task_8h_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Komponenty</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_task.html">NetworkTask</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sieciowe zadanie do wykonania należące do kolejki zadań  <a href="class_network_task.html#details">Więcej...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:a866b9f49155e85d7084f6e890b27ba24"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network__task_8h.html#a866b9f49155e85d7084f6e890b27ba24">TASK_OPEN_SERVER</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a866b9f49155e85d7084f6e890b27ba24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57e94b4dd080950e6b7b9602c977b2e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network__task_8h.html#a57e94b4dd080950e6b7b9602c977b2e4">TASK_CLOSE_SERVER</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a57e94b4dd080950e6b7b9602c977b2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a361c11d189818bbf9b0599028067de96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network__task_8h.html#a361c11d189818bbf9b0599028067de96">TASK_CONNECT</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a361c11d189818bbf9b0599028067de96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9091709c74c35a3bbf1022d5e2efb424"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network__task_8h.html#a9091709c74c35a3bbf1022d5e2efb424">TASK_CLOSE</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a9091709c74c35a3bbf1022d5e2efb424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eb10e17af160e292d61dcd7569c8435"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network__task_8h.html#a6eb10e17af160e292d61dcd7569c8435">TASK_KICK_CLIENT</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a6eb10e17af160e292d61dcd7569c8435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97f81e9de9ab53f0ba29ba24e016808"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network__task_8h.html#aa97f81e9de9ab53f0ba29ba24e016808">TASK_SEND_TO_SERVER</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:aa97f81e9de9ab53f0ba29ba24e016808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64add3eef2f97a00a2822e86a4f6b06a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network__task_8h.html#a64add3eef2f97a00a2822e86a4f6b06a">TASK_SEND_TO_CLIENT</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a64add3eef2f97a00a2822e86a4f6b06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa66a4b12efe5f9847b6bc78ea03d681"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network__task_8h.html#aaa66a4b12efe5f9847b6bc78ea03d681">TASK_RECEIVE</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:aaa66a4b12efe5f9847b6bc78ea03d681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><dl class="section see"><dt>Zobacz również</dt><dd><a class="el" href="network__task_8cpp.html">network_task.cpp</a> </dd></dl>
+
+<p>Definicja w pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja definicji</h2>
+<a class="anchor" id="a9091709c74c35a3bbf1022d5e2efb424"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_CLOSE&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00011">11</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a57e94b4dd080950e6b7b9602c977b2e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_CLOSE_SERVER&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00009">9</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a361c11d189818bbf9b0599028067de96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_CONNECT&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00010">10</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6eb10e17af160e292d61dcd7569c8435"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_KICK_CLIENT&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00012">12</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a866b9f49155e85d7084f6e890b27ba24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_OPEN_SERVER&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00008">8</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa66a4b12efe5f9847b6bc78ea03d681"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_RECEIVE&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00015">15</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64add3eef2f97a00a2822e86a4f6b06a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_SEND_TO_CLIENT&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00014">14</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa97f81e9de9ab53f0ba29ba24e016808"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TASK_SEND_TO_SERVER&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00013">13</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fc4c7f03e1a69a98c370fae55a743828.html">network</a></li><li class="navelem"><a class="el" href="network__task_8h.html">network_task.h</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:22 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

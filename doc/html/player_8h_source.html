@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/players/player.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('player_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">player.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="player_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef PLAYER_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define PLAYER_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//rodzaj postaci</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="player_8h.html#aa2123a167494eeb85d58501e8569d36e">    9</a></span>&#160;<span class="preprocessor">#define P_PACMAN 0</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="player_8h.html#ad3d846bd604d73a1333289a2fcc84e2e">   10</a></span>&#160;<span class="preprocessor">#define P_GHOST 1</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//kierunek ruchu</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="player_8h.html#a63e9bd7f209fb1cf6868ff2d9ffd3f7b">   12</a></span>&#160;<span class="preprocessor">#define P_RIGHT 0</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="player_8h.html#a2bcd916359186471a4db98bbaa9559c6">   13</a></span>&#160;<span class="preprocessor">#define P_UP 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="player_8h.html#aac3da2313b0621a1410853fab37dc00d">   14</a></span>&#160;<span class="preprocessor">#define P_LEFT 2</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="player_8h.html#a24405c8933a46e6783c65b17bb4644a7">   15</a></span>&#160;<span class="preprocessor">#define P_DOWN 3</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//sterowany za pomocą</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="player_8h.html#a7357ddfb1dffcad02a4381d62585b5d2">   17</a></span>&#160;<span class="preprocessor">#define P_KEYBOARD 0</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="player_8h.html#a69f6d080bba59a8f7e2d5f6641ce4f3b">   18</a></span>&#160;<span class="preprocessor">#define P_AI 1</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="player_8h.html#a6f6222f81cb5dbd670764aad8a103d11">   19</a></span>&#160;<span class="preprocessor">#define P_LAN 2</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span><a class="code" href="class_player.html">Player</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span><a class="code" href="class_game_engine.html">GameEngine</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="class_graphics.html">Graphics</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;../map/pathfind/pathfind.h&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_player.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_player.html">Player</a> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="class_player.html">Player</a>(<span class="keywordtype">int</span> xmap, <span class="keywordtype">int</span> ymap, SDL_Color color, <span class="keywordtype">string</span> name, <span class="keywordtype">int</span> controlby, <a class="code" href="class_game_engine.html">GameEngine</a>* game_engine,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;           <a class="code" href="class_graphics.html">Graphics</a>* graphics);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_player.html">Player</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">   56</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">name</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_player.html#a22cc61c85e095668129ccd217e8f896b">   58</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a22cc61c85e095668129ccd217e8f896b">subclass</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_player.html#ace6abae8d66534ad0a1fd6458f786a6e">   60</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#ace6abae8d66534ad0a1fd6458f786a6e">score</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_player.html#a4b46a6bf726a1eb0ea75c5f7f7398180">   62</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a4b46a6bf726a1eb0ea75c5f7f7398180">respawn</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">//  POŁOŻENIE</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_player.html#a7f0d6b709df66bfa850ada3a07a2d4d0">   67</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a7f0d6b709df66bfa850ada3a07a2d4d0">xmap</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_player.html#a35dfec8fc1af9839437d3bffe2cf6b9c">   69</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a35dfec8fc1af9839437d3bffe2cf6b9c">ymap</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">   71</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">   73</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">   75</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_player.html#a435829648afe07ab31e94e9647f0b686">   77</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">//  RUCH</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_player.html#ae048ecd496124e718a7a8fcb9aec997c">   82</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#ae048ecd496124e718a7a8fcb9aec997c">moving</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_player.html#a6d95202b5546ac375bdb75e3fb657d17">   84</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a6d95202b5546ac375bdb75e3fb657d17">direction</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_player.html#a2d8210e990c459626fd30caf285ade68">   86</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a2d8210e990c459626fd30caf285ade68">can_move</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_player.html#a381d3a0f59f378c406c6654698353514">   88</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a381d3a0f59f378c406c6654698353514">can_move_n</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_player.html#a965aec762f42c588940d569e550b0a43">   90</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a965aec762f42c588940d569e550b0a43">prev_direction</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_player.html#a797d0e0f3dbc6358aa120b8a5d665f8b">   92</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a797d0e0f3dbc6358aa120b8a5d665f8b">prev_moving</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> move();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> move_abs(<span class="keywordtype">int</span> absx, <span class="keywordtype">int</span> absy);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> move_smooth();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">void</span> move_random();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="class_player.html#a32715465b1fac0991974a407e1e2ea89">  112</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_player.html#a32715465b1fac0991974a407e1e2ea89">a_dx</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_player.html#ad18d6882d6891ed7e397e8de88e7beea">  114</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_player.html#ad18d6882d6891ed7e397e8de88e7beea">a_dy</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">//  ANIMACJA</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">  119</a></span>&#160;    SDL_Color <a class="code" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="class_player.html#a5c9c66aa484170863e185b1d4cddb75b">  121</a></span>&#160;    SDL_Texture* <a class="code" href="class_player.html#a5c9c66aa484170863e185b1d4cddb75b">texture</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="class_player.html#a7031df0f9865546b139191ceef980d99">  123</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a7031df0f9865546b139191ceef980d99">a_sprite</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_player.html#a79cff0711d5f03f5da789f2da5800a5d">  125</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a79cff0711d5f03f5da789f2da5800a5d">a_cycle</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">  127</a></span>&#160;    <span class="keywordtype">int</span>* <a class="code" href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">clip</a>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> draw_sprite_at(SDL_Texture* texture2, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span> draw_sprite(SDL_Texture* texture2);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordtype">void</span> draw_name();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> reload_texture() = 0;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> animate() = 0;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> draw() = 0;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> clip_table() = 0;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">//  STEROWANIE</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="class_player.html#a641efdab62bcea257201e4e039a86ba6">  162</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a641efdab62bcea257201e4e039a86ba6">controlby</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_player.html#a10fcc825ec93e6cd625210bb65e4dc2e">  164</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a10fcc825ec93e6cd625210bb65e4dc2e">ai_level</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="class_player.html#a8f4f21a147b048f0c4ddc5999e00eb9f">  166</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a8f4f21a147b048f0c4ddc5999e00eb9f">lan_id</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="class_player.html#a0c2fc90a7211d9c65a9b12158af959e1">  168</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#a0c2fc90a7211d9c65a9b12158af959e1">next_moving</a>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_player.html#aba42053aab711ab09d4f33d6afd1bf5f">  170</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#aba42053aab711ab09d4f33d6afd1bf5f">next_direction</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="class_player.html#a947df3a6e0107106cc0f9a97df758e06">  172</a></span>&#160;    <a class="code" href="class_path.html">Path&lt;int&gt;</a>* <a class="code" href="class_player.html#a947df3a6e0107106cc0f9a97df758e06">sciezka</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ai_control() = 0; <span class="comment">//sterowanie przez sztuczną inteligencję komputera</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="class_player.html#a7b92300769d36f6c8bc10721dc9c5d84">  178</a></span>&#160;    <a class="code" href="class_game_engine.html">GameEngine</a>* <a class="code" href="class_player.html#a7b92300769d36f6c8bc10721dc9c5d84">game_engine</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">  179</a></span>&#160;    <a class="code" href="class_graphics.html">Graphics</a>* <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;};</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_player_html_a6da29d6e3783c6028c92647bbde478f5"><div class="ttname"><a href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">Player::y</a></div><div class="ttdeci">int y</div><div class="ttdoc">wartość zadana położenia wzdłuż osi y na ekranie </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00073">player.h:73</a></div></div>
+<div class="ttc" id="class_player_html_a7031df0f9865546b139191ceef980d99"><div class="ttname"><a href="class_player.html#a7031df0f9865546b139191ceef980d99">Player::a_sprite</a></div><div class="ttdeci">int a_sprite</div><div class="ttdoc">numer obrazka w animacji </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00123">player.h:123</a></div></div>
+<div class="ttc" id="class_player_html_a6d95202b5546ac375bdb75e3fb657d17"><div class="ttname"><a href="class_player.html#a6d95202b5546ac375bdb75e3fb657d17">Player::direction</a></div><div class="ttdeci">int direction</div><div class="ttdoc">aktualny kierunek gracza: P_LEFT, P_RIGHT, P_UP lub P_DOWN </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00084">player.h:84</a></div></div>
+<div class="ttc" id="class_player_html_ad2ac07f900cc99b0248c36ef083f778f"><div class="ttname"><a href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">Player::color</a></div><div class="ttdeci">SDL_Color color</div><div class="ttdoc">kolor gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00119">player.h:119</a></div></div>
+<div class="ttc" id="class_player_html_abf2abc26699a213c9346fcc2cfddee11"><div class="ttname"><a href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">Player::graphics</a></div><div class="ttdeci">Graphics * graphics</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00179">player.h:179</a></div></div>
+<div class="ttc" id="class_player_html_ace6abae8d66534ad0a1fd6458f786a6e"><div class="ttname"><a href="class_player.html#ace6abae8d66534ad0a1fd6458f786a6e">Player::score</a></div><div class="ttdeci">int score</div><div class="ttdoc">liczba punktów gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00060">player.h:60</a></div></div>
+<div class="ttc" id="class_player_html_a0c2fc90a7211d9c65a9b12158af959e1"><div class="ttname"><a href="class_player.html#a0c2fc90a7211d9c65a9b12158af959e1">Player::next_moving</a></div><div class="ttdeci">int next_moving</div><div class="ttdoc">następny planowany stan ruchu gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00168">player.h:168</a></div></div>
+<div class="ttc" id="class_player_html_a4b46a6bf726a1eb0ea75c5f7f7398180"><div class="ttname"><a href="class_player.html#a4b46a6bf726a1eb0ea75c5f7f7398180">Player::respawn</a></div><div class="ttdeci">int respawn</div><div class="ttdoc">czas do odrodzenia się </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00062">player.h:62</a></div></div>
+<div class="ttc" id="class_player_html_ae048ecd496124e718a7a8fcb9aec997c"><div class="ttname"><a href="class_player.html#ae048ecd496124e718a7a8fcb9aec997c">Player::moving</a></div><div class="ttdeci">int moving</div><div class="ttdoc">aktualny ruch gracza: 0 - brak ruchu, 1 - ruch </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00082">player.h:82</a></div></div>
+<div class="ttc" id="class_player_html_a435829648afe07ab31e94e9647f0b686"><div class="ttname"><a href="class_player.html#a435829648afe07ab31e94e9647f0b686">Player::a_y</a></div><div class="ttdeci">double a_y</div><div class="ttdoc">aktualne położenie wzdłuż osi y na ekranie </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00077">player.h:77</a></div></div>
+<div class="ttc" id="class_player_html_a381d3a0f59f378c406c6654698353514"><div class="ttname"><a href="class_player.html#a381d3a0f59f378c406c6654698353514">Player::can_move_n</a></div><div class="ttdeci">int can_move_n</div><div class="ttdoc">preskaler licznika możliwości ruchu - definiuje szybkość gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00088">player.h:88</a></div></div>
+<div class="ttc" id="class_path_html"><div class="ttname"><a href="class_path.html">Path&lt; int &gt;</a></div></div>
+<div class="ttc" id="class_player_html_a5c9c66aa484170863e185b1d4cddb75b"><div class="ttname"><a href="class_player.html#a5c9c66aa484170863e185b1d4cddb75b">Player::texture</a></div><div class="ttdeci">SDL_Texture * texture</div><div class="ttdoc">tekstura gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00121">player.h:121</a></div></div>
+<div class="ttc" id="class_player_html_a8f4f21a147b048f0c4ddc5999e00eb9f"><div class="ttname"><a href="class_player.html#a8f4f21a147b048f0c4ddc5999e00eb9f">Player::lan_id</a></div><div class="ttdeci">int lan_id</div><div class="ttdoc">numer klienta, który obsługuje gracza: numer większy od 0 </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00166">player.h:166</a></div></div>
+<div class="ttc" id="class_player_html_a32715465b1fac0991974a407e1e2ea89"><div class="ttname"><a href="class_player.html#a32715465b1fac0991974a407e1e2ea89">Player::a_dx</a></div><div class="ttdeci">double a_dx</div><div class="ttdoc">przyrost położenia wzdłuż osi x w ciągu 1 klatki (w celu wykonywania płynnych ruchów) ...</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00112">player.h:112</a></div></div>
+<div class="ttc" id="class_graphics_html"><div class="ttname"><a href="class_graphics.html">Graphics</a></div><div class="ttdoc">Klasa silnika grafiki. </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00033">graphics.h:33</a></div></div>
+<div class="ttc" id="class_player_html_ad18d6882d6891ed7e397e8de88e7beea"><div class="ttname"><a href="class_player.html#ad18d6882d6891ed7e397e8de88e7beea">Player::a_dy</a></div><div class="ttdeci">double a_dy</div><div class="ttdoc">przyrost położenia wzdłuż osi y w ciągu 1 klatki (w celu wykonywania płynnych ruchów) ...</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00114">player.h:114</a></div></div>
+<div class="ttc" id="class_player_html_a7b92300769d36f6c8bc10721dc9c5d84"><div class="ttname"><a href="class_player.html#a7b92300769d36f6c8bc10721dc9c5d84">Player::game_engine</a></div><div class="ttdeci">GameEngine * game_engine</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00178">player.h:178</a></div></div>
+<div class="ttc" id="class_player_html_ad285b3cb25e4a46ca944b9a416c1b13f"><div class="ttname"><a href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">Player::x</a></div><div class="ttdeci">int x</div><div class="ttdoc">wartość zadana położenia wzdłuż osi x na ekranie </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00071">player.h:71</a></div></div>
+<div class="ttc" id="class_player_html_a7f0d6b709df66bfa850ada3a07a2d4d0"><div class="ttname"><a href="class_player.html#a7f0d6b709df66bfa850ada3a07a2d4d0">Player::xmap</a></div><div class="ttdeci">int xmap</div><div class="ttdoc">położenie gracza wzdłuż osi x na tablicy mapy </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00067">player.h:67</a></div></div>
+<div class="ttc" id="class_player_html_a947df3a6e0107106cc0f9a97df758e06"><div class="ttname"><a href="class_player.html#a947df3a6e0107106cc0f9a97df758e06">Player::sciezka</a></div><div class="ttdeci">Path&lt; int &gt; * sciezka</div><div class="ttdoc">wyznaczona scieżka podążania graczy sterowanych przez sztuczną inteligencję do określonych punktów ...</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00172">player.h:172</a></div></div>
+<div class="ttc" id="class_player_html_a2d8210e990c459626fd30caf285ade68"><div class="ttname"><a href="class_player.html#a2d8210e990c459626fd30caf285ade68">Player::can_move</a></div><div class="ttdeci">int can_move</div><div class="ttdoc">licznik pojawienia się możliwości ruchu (0 - możliwa zmiana kierunku) </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00086">player.h:86</a></div></div>
+<div class="ttc" id="class_player_html_abd2dea09a2d7d25d6d583d3fefa0e03d"><div class="ttname"><a href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">Player::clip</a></div><div class="ttdeci">int * clip</div><div class="ttdoc">tablica aktualnej części obrazka wyciętej z całej tekstury: element 0 - indeks ramki wzdłuż osi x...</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00127">player.h:127</a></div></div>
+<div class="ttc" id="class_player_html_a79cff0711d5f03f5da789f2da5800a5d"><div class="ttname"><a href="class_player.html#a79cff0711d5f03f5da789f2da5800a5d">Player::a_cycle</a></div><div class="ttdeci">int a_cycle</div><div class="ttdoc">licznik do preskalera zmiany animacji </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00125">player.h:125</a></div></div>
+<div class="ttc" id="class_game_engine_html"><div class="ttname"><a href="class_game_engine.html">GameEngine</a></div><div class="ttdoc">logika gry </div><div class="ttdef"><b>Definition:</b> <a href="game__engine_8h_source.html#l00044">game_engine.h:44</a></div></div>
+<div class="ttc" id="class_player_html_a10fcc825ec93e6cd625210bb65e4dc2e"><div class="ttname"><a href="class_player.html#a10fcc825ec93e6cd625210bb65e4dc2e">Player::ai_level</a></div><div class="ttdeci">int ai_level</div><div class="ttdoc">poziom sztucznej inteligencji: od 0 do 5 </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00164">player.h:164</a></div></div>
+<div class="ttc" id="class_player_html_a797d0e0f3dbc6358aa120b8a5d665f8b"><div class="ttname"><a href="class_player.html#a797d0e0f3dbc6358aa120b8a5d665f8b">Player::prev_moving</a></div><div class="ttdeci">int prev_moving</div><div class="ttdoc">poprzedni stan ruchu gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00092">player.h:92</a></div></div>
+<div class="ttc" id="class_player_html_a965aec762f42c588940d569e550b0a43"><div class="ttname"><a href="class_player.html#a965aec762f42c588940d569e550b0a43">Player::prev_direction</a></div><div class="ttdeci">int prev_direction</div><div class="ttdoc">poprzedni kierunek gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00090">player.h:90</a></div></div>
+<div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Klasa gracza (pacmana lub duszka) </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00037">player.h:37</a></div></div>
+<div class="ttc" id="class_player_html_a641efdab62bcea257201e4e039a86ba6"><div class="ttname"><a href="class_player.html#a641efdab62bcea257201e4e039a86ba6">Player::controlby</a></div><div class="ttdeci">int controlby</div><div class="ttdoc">określa, co steruje graczem: P_KEYBOARD - klawiatura, P_AI - sztuczna inteligencja, P_LAN - komunikaty sieciowe z serwera </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00162">player.h:162</a></div></div>
+<div class="ttc" id="class_player_html_a22cc61c85e095668129ccd217e8f896b"><div class="ttname"><a href="class_player.html#a22cc61c85e095668129ccd217e8f896b">Player::subclass</a></div><div class="ttdeci">int subclass</div><div class="ttdoc">podklasa gracza: P_PACMAN - pacman, P_GHOST - duszek </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00058">player.h:58</a></div></div>
+<div class="ttc" id="class_player_html_aba42053aab711ab09d4f33d6afd1bf5f"><div class="ttname"><a href="class_player.html#aba42053aab711ab09d4f33d6afd1bf5f">Player::next_direction</a></div><div class="ttdeci">int next_direction</div><div class="ttdoc">następny planowany kierunek gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00170">player.h:170</a></div></div>
+<div class="ttc" id="class_player_html_acf0355128a99ee20ad9931b760fb2de1"><div class="ttname"><a href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">Player::name</a></div><div class="ttdeci">string name</div><div class="ttdoc">nazwa gracza - podpis nad graczem </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00056">player.h:56</a></div></div>
+<div class="ttc" id="class_player_html_a1847a3ecbf10c4c3a97019dd0c89b618"><div class="ttname"><a href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">Player::a_x</a></div><div class="ttdeci">double a_x</div><div class="ttdoc">aktualne położenie wzdłuż osi x na ekranie </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00075">player.h:75</a></div></div>
+<div class="ttc" id="class_player_html_a35dfec8fc1af9839437d3bffe2cf6b9c"><div class="ttname"><a href="class_player.html#a35dfec8fc1af9839437d3bffe2cf6b9c">Player::ymap</a></div><div class="ttdeci">int ymap</div><div class="ttdoc">położenie gracza wzdłuż osi y na tablicy mapy </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00069">player.h:69</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3e72a3b57dc3879b770eea3465447b47.html">players</a></li><li class="navelem"><a class="el" href="player_8h.html">player.h</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/network/network.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('network_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">network.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="network_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="network_8h.html">network.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../config.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../log/log.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../utils.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;netdb.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;boost/asio.hpp&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_network.html#aafdb359102d60b61990d517bb68c0dee">   10</a></span>&#160;<a class="code" href="class_network.html#aafdb359102d60b61990d517bb68c0dee">Network::Network</a>(<a class="code" href="class_game_engine.html">GameEngine</a>* game_engine) : <a class="code" href="class_continuous_thread.html">ContinuousThread</a>(150) {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    this-&gt;game_engine = <a class="code" href="class_network.html#af0087ae89f35f82404bfc4019c15e682">game_engine</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_network.html#a0567e117fa5dea8a17f9382300e4de4d">temp_buffer</a> = <span class="keyword">new</span> <span class="keywordtype">char</span>[<a class="code" href="class_config.html#a47aa7ec62f27cba6905595894782629d">Config::buffer_size</a>];</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_network.html#a947704dc913459c038ad0f3e470ca397">select_timeout</a>.tv_sec = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_network.html#a947704dc913459c038ad0f3e470ca397">select_timeout</a>.tv_usec = 500;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_network.html#a94b7eb5383721ee6bb7861e41dd68591">max_socket</a> = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Wątek interfejsu sieci zainicjalizowany.&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_thread.html#abc3e397d210eb698ee18b91aa48e11d0">init</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_network.html#a7a4e19cdb4bf0c7ecf82baa643831492">   22</a></span>&#160;<a class="code" href="class_network.html#a7a4e19cdb4bf0c7ecf82baa643831492">Network::~Network</a>() {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//zamykanie socketów</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a> || <a class="code" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a>) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_network.html#a522cfe60c5479c3aee3436679f319f07">disconnect</a>(0);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> connection : <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">delete</span> connection;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    connections.clear();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">delete</span>[] <a class="code" href="class_network.html#a0567e117fa5dea8a17f9382300e4de4d">temp_buffer</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_network.html#a14c47adc6f009b0c8c8602e8f60de9c4">tasks</a>.clear();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Zamykanie wątku interfejsu sieci...&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_network.html#a91dcf8b0ed99c5ad8200286cb8a0fec9">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_network.html#a91dcf8b0ed99c5ad8200286cb8a0fec9">Network::runLoop</a>() {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//wykonanie zakolejkowanych zadań</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a14c47adc6f009b0c8c8602e8f60de9c4">tasks</a>.size() &gt; 0) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_network.html#a4b28fba4fedb30b8fca5aa5ebf19369a">task_exec</a>(<a class="code" href="class_network.html#a14c47adc6f009b0c8c8602e8f60de9c4">tasks</a>.at(0));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_network.html#a14c47adc6f009b0c8c8602e8f60de9c4">tasks</a>.at(0);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="class_network.html#a14c47adc6f009b0c8c8602e8f60de9c4">tasks</a>.erase(<a class="code" href="class_network.html#a14c47adc6f009b0c8c8602e8f60de9c4">tasks</a>.begin());</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//odbieranie i obsługa eventów</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.size() &gt; 0) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_network.html#a00aa94d980069082fbda901a50ffe713">updateSocketsSet</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">//czekaj na aktywność jednego z socketów</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span> activity = select(<a class="code" href="class_network.html#a94b7eb5383721ee6bb7861e41dd68591">max_socket</a> + 1, &amp;<a class="code" href="class_network.html#a25812b4bbc8edf318ad596f3698aa85c">read_sockets</a>, NULL, NULL, &amp;<a class="code" href="class_network.html#a947704dc913459c038ad0f3e470ca397">select_timeout</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> (activity &lt; 0) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;select criticalError&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">//przychodzące połączenie na serwerze</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a>) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordtype">int</span> server_socket = <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[0]-&gt;socket;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span> (FD_ISSET(server_socket, &amp;<a class="code" href="class_network.html#a25812b4bbc8edf318ad596f3698aa85c">read_sockets</a>)) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <a class="code" href="class_network.html#ac5e9180164f02976c11ed77d4589e09c">onAccept</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//operacja IO na pozostałych socketach</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.size(); i++) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a> &amp;&amp; i == 0) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">continue</span>; <span class="comment">//socket serwera tylko do nawiązywania nowych połączeń</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordtype">int</span> sd = <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[i]-&gt;socket;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span> (FD_ISSET(sd, &amp;<a class="code" href="class_network.html#a25812b4bbc8edf318ad596f3698aa85c">read_sockets</a>)) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <a class="code" href="class_network.html#a18e67c2db90213d33a4d55af0a309496">onReceive</a>(i); <span class="comment">//odebranie danych lub rozłączenie</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="utils_8cpp.html#a3fe4facef311953c212ced8f8a6cd59c">sleep_ms</a>(2); <span class="comment">//zmniejszenie zużycia procesora</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">   76</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">Network::error</a>(<span class="keywordtype">string</span> e) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    stringstream ss;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    ss &lt;&lt; <span class="stringliteral">&quot;Błąd sieci: &quot;</span> &lt;&lt; e;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="class_log.html#a1c5794ad20af844b2980c6a978f7d3a1">Log::error</a>(ss.str());</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_network.html#acfc111734668c7b27316160dfc6f54e6">   82</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_network.html#acfc111734668c7b27316160dfc6f54e6">Network::myIP</a>() {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">char</span>* hostname = <span class="keyword">new</span> <span class="keywordtype">char</span>[128];</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    gethostname(hostname, 128);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    hostent* hp = gethostbyname(hostname);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">delete</span>[] hostname;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    sockaddr_in source;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">if</span> (hp) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        memcpy(&amp;(source.sin_addr), hp-&gt;h_addr, hp-&gt;h_length);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> inet_ntoa(source.sin_addr);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_network.html#a5a4055a6ccafe3a12cd93fc2a06c034e">   95</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_network.html#a5a4055a6ccafe3a12cd93fc2a06c034e">Network::myName</a>() {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">char</span>* hostname = <span class="keyword">new</span> <span class="keywordtype">char</span>[128];</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    gethostname(hostname, 128);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">string</span> hname = hostname;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">delete</span>[] hostname;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> hname;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_network.html#a85a8f553c57ef562fbd84ca9d8c83de0">  103</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_network.html#a85a8f553c57ef562fbd84ca9d8c83de0">Network::clientIP</a>(<span class="keywordtype">int</span> sindex) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span> (sindex &lt; 0 || sindex &gt;= (<span class="keywordtype">int</span>) <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.size())</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    sockaddr_in client_info;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    socklen_t client_info_size = <span class="keyword">sizeof</span>(client_info);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    memset(&amp;client_info, 0, <span class="keyword">sizeof</span>(client_info));</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    getpeername(<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;socket, (sockaddr*) &amp;client_info, &amp;client_info_size);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> inet_ntoa(client_info.sin_addr);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="class_network.html#ac3d1c7693609c8f0323e9a946ddbe9f8">  113</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_network.html#ac3d1c7693609c8f0323e9a946ddbe9f8">Network::openServerSocket</a>() {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a>) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;Otwarte jest już połączenie z hostem, zamknij je.&quot;</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a>) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Restart serwera...&quot;</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="class_network.html#a522cfe60c5479c3aee3436679f319f07">disconnect</a>(0);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Otwieram serwer...&quot;</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">int</span> server_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (server_socket == 0) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;openning server socket failed&quot;</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">int</span> opt = 1;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">//wiele połączeń, wielokrotne użycie</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &amp;opt, <span class="keyword">sizeof</span>(opt)) &lt; 0) {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;failed setting server socket options&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    sockaddr_in serverInfo;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    memset(&amp;serverInfo, 0, <span class="keyword">sizeof</span>(serverInfo));</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    serverInfo.sin_family = AF_INET;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    serverInfo.sin_addr.s_addr = htonl(INADDR_ANY);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    serverInfo.sin_port = htons((uint16_t) <a class="code" href="class_config.html#a9b99e069f6e78fcb906d5effbb600e97">Config::port</a>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">if</span> (bind(server_socket, (<span class="keyword">struct</span> sockaddr*) &amp;serverInfo, <span class="keyword">sizeof</span>(serverInfo)) &lt; 0) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;błąd utworzenia serwera: bind&quot;</span>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">if</span> (listen(server_socket, <a class="code" href="class_config.html#aea3a1c3b6f1338320f9da9f638e544a7">Config::max_clients</a>) &lt; 0) {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;błąd utworzenia serwera: błąd nasłuchiwania&quot;</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.push_back(<span class="keyword">new</span> <a class="code" href="class_network_connection.html">NetworkConnection</a>(server_socket));</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Połączenie serwera otwarte.&quot;</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="class_network.html#aef9dc030f3a2d39d26e9939651fce9ab">  158</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_network.html#aef9dc030f3a2d39d26e9939651fce9ab">Network::connectTo</a>(<span class="keywordtype">string</span> ip) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a>) {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;Otwarty jest już serwer, zamknij połączenie serwera.&quot;</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a>) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Restart połączenia z serwerem...&quot;</span>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="class_network.html#a522cfe60c5479c3aee3436679f319f07">disconnect</a>(0);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Szukanie hosta: &quot;</span> + ip + <span class="stringliteral">&quot; ...&quot;</span>);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">int</span> client_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">if</span> (client_socket == 0) {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;creating client socket failed&quot;</span>);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    sockaddr_in clientInfo;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    memset(&amp;clientInfo, 0, <span class="keyword">sizeof</span>(clientInfo));</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    clientInfo.sin_family = AF_INET;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">if</span> (ip == <span class="stringliteral">&quot;0&quot;</span>) {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        clientInfo.sin_addr.s_addr = htonl(INADDR_ANY);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">if</span> (inet_addr(ip.c_str()) == INADDR_NONE) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            hostent* hostEntry = gethostbyname(ip.c_str());</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordflow">if</span> (hostEntry == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;Nie znaleziono hosta.&quot;</span>);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            memcpy(&amp;clientInfo.sin_addr, hostEntry-&gt;h_addr_list[0], hostEntry-&gt;h_length);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            clientInfo.sin_addr.s_addr = inet_addr(ip.c_str());</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    ip = inet_ntoa(clientInfo.sin_addr);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    clientInfo.sin_port = htons((uint16_t) <a class="code" href="class_config.html#a9b99e069f6e78fcb906d5effbb600e97">Config::port</a>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Łączenie do: &quot;</span> + ip + <span class="stringliteral">&quot; ...&quot;</span>);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">if</span> (connect(client_socket, (<span class="keyword">struct</span> sockaddr*) &amp;clientInfo, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> sockaddr)) &lt; 0) {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;Błąd połączenia do hosta&quot;</span>);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.push_back(<span class="keyword">new</span> <a class="code" href="class_network_connection.html">NetworkConnection</a>(client_socket));</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">int</span> sindex = (int) (<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.size()) - 1;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    stringstream ss2;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    ss2 &lt;&lt; <span class="stringliteral">&quot;Połączono z: &quot;</span> &lt;&lt; inet_ntoa(clientInfo.sin_addr);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(ss2.str());</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="class_network.html#ae6b5d318b79466b80e015ecf1dfee52a">onConnectedToServer</a>(sindex);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="class_network.html#ac42b45c2d4ac6628513bf07bc3bcea9b">  209</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_network.html#ac42b45c2d4ac6628513bf07bc3bcea9b">Network::onClose</a>(<span class="keywordtype">int</span> sindex) {</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    stringstream ss;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    ss &lt;&lt; <span class="stringliteral">&quot;Zamknięcie połączenia: socket index = &quot;</span> &lt;&lt; sindex;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(ss.str());</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a> &amp;&amp; sindex == 0) { <span class="comment">//zamknięto serwer</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <a class="code" href="class_network.html#af0087ae89f35f82404bfc4019c15e682">game_engine</a>-&gt;<a class="code" href="class_game_engine.html#af0917edee47da7c96865791032ff5b03">cmd_on</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="class_network.html#a522cfe60c5479c3aee3436679f319f07">disconnect</a>(sindex);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a>) { <span class="comment">//zamknięto klienta</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="utils_8cpp.html#a5056d98825d88f99f8df1490f7c228ab">ss_clear</a>(ss);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        ss &lt;&lt; <span class="stringliteral">&quot;201 &quot;</span> &lt;&lt; sindex;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.at(0)-&gt;addReceivedPacket(ss.str());</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="class_network.html#a522cfe60c5479c3aee3436679f319f07">  224</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_network.html#a522cfe60c5479c3aee3436679f319f07">Network::disconnect</a>(<span class="keywordtype">int</span> sindex) {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">if</span> (sindex &lt; 0 || sindex &gt;= (<span class="keywordtype">int</span>) <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.size()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a>) { <span class="comment">//zamknięcie klienta</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">if</span> (sindex == 0) {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <a class="code" href="class_network.html#a62751785ab1c60dc9b798c8e8b7e864c">destroyConnection</a>(sindex);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <a class="code" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Zamknięto połączenie z serwerem.&quot;</span>);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a>) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">if</span> (sindex == 0) { <span class="comment">//zamknięcie całego serwera</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="comment">//odłączenie klientów podłączonych do serwera</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordflow">while</span> (<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.size() &gt; 1) {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <a class="code" href="class_network.html#a62751785ab1c60dc9b798c8e8b7e864c">destroyConnection</a>(1);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <a class="code" href="class_network.html#a62751785ab1c60dc9b798c8e8b7e864c">destroyConnection</a>(sindex);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Zamknięto serwer.&quot;</span>);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        } <span class="keywordflow">else</span> { <span class="comment">//rozłączenie klienta od serwera</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <a class="code" href="class_network.html#a62751785ab1c60dc9b798c8e8b7e864c">destroyConnection</a>(sindex);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="class_network.html#a62751785ab1c60dc9b798c8e8b7e864c">  247</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_network.html#a62751785ab1c60dc9b798c8e8b7e864c">Network::destroyConnection</a>(<span class="keywordtype">int</span> sindex) {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordtype">string</span> ip;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">if</span> (sindex &gt;= 1) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        ip = <a class="code" href="class_network.html#a85a8f553c57ef562fbd84ca9d8c83de0">clientIP</a>(sindex);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">//zamykanie socketu</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="class_network.html#a34839dddd63ec499433d28942b81c5ca">closeSocket</a>(<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;socket)) {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;błąd zamykania socketu&quot;</span>);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex];</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.erase(<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.begin() + sindex);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">if</span> (sindex &gt;= 1) {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Klient rozłączony: &quot;</span> + ip);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="class_network.html#a34839dddd63ec499433d28942b81c5ca">  263</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_network.html#a34839dddd63ec499433d28942b81c5ca">Network::closeSocket</a>(<span class="keywordtype">int</span> socket) {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">if</span> (socket &gt;= 0) {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="comment">// first clear any errors, which can cause close to fail</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordtype">int</span> err = 1;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        socklen_t len = <span class="keyword">sizeof</span> err;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">if</span> (-1 == getsockopt(socket, SOL_SOCKET, SO_ERROR, (<span class="keywordtype">char</span>*) &amp;err, &amp;len))</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">if</span> (shutdown(socket, SHUT_RDWR) &lt; 0) <span class="comment">// secondly, terminate the &#39;reliable&#39; delivery</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">if</span> (close(socket) &lt; 0) <span class="comment">// finally call close()</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <a class="code" href="class_log.html#a7f04966a8a4e7061b9d6b50e33f52374">Log::debug</a>(<span class="stringliteral">&quot;Zamknięto socket.&quot;</span>);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="class_network.html#ac5e9180164f02976c11ed77d4589e09c">  278</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_network.html#ac5e9180164f02976c11ed77d4589e09c">Network::onAccept</a>() {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Serwer: Żądanie nawiązania połączenia&quot;</span>);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a>) {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        sockaddr_in clientInfo;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        socklen_t iAddrLen = <span class="keyword">sizeof</span>(clientInfo);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordtype">int</span> new_client = accept(<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[0]-&gt;socket, (<span class="keyword">struct</span> sockaddr*) &amp;clientInfo, &amp;iAddrLen);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">if</span> (new_client &lt; 0) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;Błąd przy nawiązywaniu połączenia&quot;</span>);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.push_back(<span class="keyword">new</span> <a class="code" href="class_network_connection.html">NetworkConnection</a>(new_client));</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        stringstream ss;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        ss &lt;&lt; <span class="stringliteral">&quot;Nawiązano połączenie z klientem: &quot;</span> &lt;&lt; inet_ntoa(clientInfo.sin_addr);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(ss.str());</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="class_network.html#ae8a74b63d0238a791c09f9cc49f110f9">  295</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_network.html#ae8a74b63d0238a791c09f9cc49f110f9">Network::sendData</a>(<span class="keywordtype">int</span> sindex, <span class="keywordtype">char</span>* msg, <span class="keywordtype">int</span> len) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">if</span> (sindex &lt; 0 || sindex &gt;= (<span class="keywordtype">int</span>) <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.size()) {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;Numer socketu spoza zakresu&quot;</span>);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">if</span> (len == 0)</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a> &amp;&amp; !<a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a>) {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;Niepołączony&quot;</span>);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">char</span>* msg2 = <span class="keyword">new</span> <span class="keywordtype">char</span>[len];</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    memcpy(msg2, msg, (<span class="keywordtype">size_t</span>) len);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordtype">int</span> max_send_size = <a class="code" href="class_config.html#a47aa7ec62f27cba6905595894782629d">Config::buffer_size</a>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">if</span> (max_send_size &gt; 0) {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">if</span> (len &gt; max_send_size) { <span class="comment">//podział na wiele pakietów</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            <span class="keywordtype">bool</span> wynik1 = <a class="code" href="class_network.html#ae8a74b63d0238a791c09f9cc49f110f9">sendData</a>(<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;socket, msg2, max_send_size);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="keywordtype">bool</span> wynik2 = <a class="code" href="class_network.html#ae8a74b63d0238a791c09f9cc49f110f9">sendData</a>(<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;socket, msg2 + max_send_size,</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                                   len - max_send_size);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="keyword">delete</span>[] msg2;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">return</span> wynik1 &amp; wynik2;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordtype">int</span> attempts = 1;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    ssize_t retval = send(<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;socket, msg2, (<span class="keywordtype">size_t</span>) len, 0);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">while</span> (retval &lt; 0) {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        attempts++;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">if</span> (attempts &lt;=</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <a class="code" href="class_config.html#ac9e5a3174565d13818c72f438f76188e">Config::max_attempts</a>) { <span class="comment">//ponowne wysyłanie dopóki nie przekroczy liczby prób</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            stringstream ss;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            ss &lt;&lt; <span class="stringliteral">&quot;Ponowne wysyłanie (próba &quot;</span> &lt;&lt; attempts &lt;&lt; <span class="stringliteral">&quot;.)...&quot;</span>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <a class="code" href="class_log.html#a74def209d6c1a17f4b283fc21f641a6e">Log::warn</a>(ss.str());</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <a class="code" href="utils_8cpp.html#a3fe4facef311953c212ced8f8a6cd59c">sleep_ms</a>(attempts * <a class="code" href="class_config.html#a9adaa2536ee05fb75285920ae5afe6e1">Config::wait_if_failed</a>);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            retval = send(<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;socket, msg2, (<span class="keywordtype">size_t</span>) len, 0);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;Nie udało się wysłać pakietu&quot;</span>);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keyword">delete</span>[] msg2;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">if</span> (retval &lt; len) {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <a class="code" href="class_log.html#a74def209d6c1a17f4b283fc21f641a6e">Log::warn</a>(<span class="stringliteral">&quot;Pakiet niewysłany w całości, wysyłam resztę...&quot;</span>);</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <a class="code" href="class_network.html#ae8a74b63d0238a791c09f9cc49f110f9">sendData</a>(<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;socket, msg2 + retval, len - (<span class="keywordtype">int</span>) retval);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keyword">delete</span>[] msg2;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keyword">delete</span>[] msg2;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
+<div class="line"><a name="l00346"></a><span class="lineno"><a class="line" href="class_network.html#a18e67c2db90213d33a4d55af0a309496">  346</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_network.html#a18e67c2db90213d33a4d55af0a309496">Network::onReceive</a>(<span class="keywordtype">int</span> sindex) {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">if</span> (sindex &lt; 0 || sindex &gt;= (<span class="keywordtype">int</span>) <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.size()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    memset(<a class="code" href="class_network.html#a0567e117fa5dea8a17f9382300e4de4d">temp_buffer</a>, 0, (<span class="keywordtype">size_t</span>) <a class="code" href="class_config.html#a47aa7ec62f27cba6905595894782629d">Config::buffer_size</a>);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    ssize_t retval = recv(<a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;socket, <a class="code" href="class_network.html#a0567e117fa5dea8a17f9382300e4de4d">temp_buffer</a>, (<span class="keywordtype">size_t</span>) Config::buffer_size,</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                          0);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">if</span> (retval &lt; 0) {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;Błąd odbierania pakietu&quot;</span>);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordflow">if</span> (retval == 0) {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <a class="code" href="class_network.html#ac42b45c2d4ac6628513bf07bc3bcea9b">onClose</a>(sindex);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;zamknięte połączenie&quot;</span>);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="comment">//dopisanie do odpowiedniego bufora odebranych danych</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; retval; i++) {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="comment">//jeśli wystąpił \n - przepisz zawartość do recv_packets i wyczyść bufor</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a0567e117fa5dea8a17f9382300e4de4d">temp_buffer</a>[i] == <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;bufferSize() &gt; 0) {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            <span class="keywordtype">string</span> packet = <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;bufferPop();</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;addReceivedPacket(packet);</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;bufferAdd(<a class="code" href="class_network.html#a0567e117fa5dea8a17f9382300e4de4d">temp_buffer</a>[i]);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno"><a class="line" href="class_network.html#ae6b5d318b79466b80e015ecf1dfee52a">  373</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_network.html#ae6b5d318b79466b80e015ecf1dfee52a">Network::onConnectedToServer</a>(<span class="keywordtype">int</span> sindex) {</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="comment">//TODO zamienić 004 na enum</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[sindex]-&gt;addReceivedPacket(<span class="stringliteral">&quot;004&quot;</span>);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;}</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div>
+<div class="line"><a name="l00378"></a><span class="lineno"><a class="line" href="class_network.html#a00aa94d980069082fbda901a50ffe713">  378</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_network.html#a00aa94d980069082fbda901a50ffe713">Network::updateSocketsSet</a>() {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <a class="code" href="class_network.html#a94b7eb5383721ee6bb7861e41dd68591">max_socket</a> = 0;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="comment">//wyczyszczenie zbioru monitorowanych socketów</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    FD_ZERO(&amp;<a class="code" href="class_network.html#a25812b4bbc8edf318ad596f3698aa85c">read_sockets</a>);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a>) {</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordtype">int</span> server_socket = <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[0]-&gt;socket;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        FD_SET(server_socket, &amp;<a class="code" href="class_network.html#a25812b4bbc8edf318ad596f3698aa85c">read_sockets</a>); <span class="comment">//monitorowanie socketu serwera</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <a class="code" href="class_network.html#a94b7eb5383721ee6bb7861e41dd68591">max_socket</a> = server_socket;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="comment">//monitorowanie socketów podłączonych klientów</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 1; i &lt; <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>.size(); i++) {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            <span class="keywordtype">int</span> client_socket = <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[i]-&gt;socket;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            <span class="keywordflow">if</span> (client_socket &lt;= 0) {</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                <a class="code" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a>(<span class="stringliteral">&quot;client_socket &lt;= 0&quot;</span>);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            }</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            FD_SET(client_socket, &amp;<a class="code" href="class_network.html#a25812b4bbc8edf318ad596f3698aa85c">read_sockets</a>);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <span class="comment">//maksymalny numer socketu</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            <span class="keywordflow">if</span> (client_socket &gt; <a class="code" href="class_network.html#a94b7eb5383721ee6bb7861e41dd68591">max_socket</a>)</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                <a class="code" href="class_network.html#a94b7eb5383721ee6bb7861e41dd68591">max_socket</a> = client_socket;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a>) {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keywordtype">int</span> client_socket = <a class="code" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a>[0]-&gt;socket;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        FD_SET(client_socket, &amp;<a class="code" href="class_network.html#a25812b4bbc8edf318ad596f3698aa85c">read_sockets</a>); <span class="comment">//monitorowanie socketu połączenia z serwerem</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <a class="code" href="class_network.html#a94b7eb5383721ee6bb7861e41dd68591">max_socket</a> = client_socket;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;}</div>
+<div class="ttc" id="class_log_html_ac94692be250aaf6bad006c4e4aa776c1"><div class="ttname"><a href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a></div><div class="ttdeci">static void info(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00043">log.cpp:43</a></div></div>
+<div class="ttc" id="class_network_html_a94b7eb5383721ee6bb7861e41dd68591"><div class="ttname"><a href="class_network.html#a94b7eb5383721ee6bb7861e41dd68591">Network::max_socket</a></div><div class="ttdeci">int max_socket</div><div class="ttdoc">maksymalny indeks socketu </div><div class="ttdef"><b>Definition:</b> <a href="network_8h_source.html#l00104">network.h:104</a></div></div>
+<div class="ttc" id="class_network_html_a34839dddd63ec499433d28942b81c5ca"><div class="ttname"><a href="class_network.html#a34839dddd63ec499433d28942b81c5ca">Network::closeSocket</a></div><div class="ttdeci">bool closeSocket(int socket)</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00263">network.cpp:263</a></div></div>
+<div class="ttc" id="class_network_html_a2dcc9c79606b11fb6949a61d89ffbbac"><div class="ttname"><a href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">Network::server</a></div><div class="ttdeci">bool server</div><div class="ttdoc">zmienna określająca, czy serwer jest otwarty (true - otwarty) </div><div class="ttdef"><b>Definition:</b> <a href="network_8h_source.html#l00058">network.h:58</a></div></div>
+<div class="ttc" id="class_network_html_a0567e117fa5dea8a17f9382300e4de4d"><div class="ttname"><a href="class_network.html#a0567e117fa5dea8a17f9382300e4de4d">Network::temp_buffer</a></div><div class="ttdeci">char * temp_buffer</div><div class="ttdoc">tymczasowy bufor aktualnej wiadomości </div><div class="ttdef"><b>Definition:</b> <a href="network_8h_source.html#l00098">network.h:98</a></div></div>
+<div class="ttc" id="class_network_html_a00aa94d980069082fbda901a50ffe713"><div class="ttname"><a href="class_network.html#a00aa94d980069082fbda901a50ffe713">Network::updateSocketsSet</a></div><div class="ttdeci">void updateSocketsSet()</div><div class="ttdoc">aktualizuje informacje o socketach (zbiór monitorowanych i aktywnych socketów) </div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00378">network.cpp:378</a></div></div>
+<div class="ttc" id="class_network_html_a18e67c2db90213d33a4d55af0a309496"><div class="ttname"><a href="class_network.html#a18e67c2db90213d33a4d55af0a309496">Network::onReceive</a></div><div class="ttdeci">bool onReceive(int sindex)</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00346">network.cpp:346</a></div></div>
+<div class="ttc" id="class_network_html_a85a8f553c57ef562fbd84ca9d8c83de0"><div class="ttname"><a href="class_network.html#a85a8f553c57ef562fbd84ca9d8c83de0">Network::clientIP</a></div><div class="ttdeci">string clientIP(int sindex)</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00103">network.cpp:103</a></div></div>
+<div class="ttc" id="class_network_html_ae8a74b63d0238a791c09f9cc49f110f9"><div class="ttname"><a href="class_network.html#ae8a74b63d0238a791c09f9cc49f110f9">Network::sendData</a></div><div class="ttdeci">bool sendData(int sindex, char *msg, int len)</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00295">network.cpp:295</a></div></div>
+<div class="ttc" id="class_network_html_ad78e189ea325cc8f0798436ea12b40a9"><div class="ttname"><a href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">Network::connections</a></div><div class="ttdeci">vector&lt; NetworkConnection * &gt; connections</div><div class="ttdoc">lista otwartych połączeń z innymi komputerami, indeks 0 - socket klienta lub serwera, większe od 0 - sockety klientów serwera </div><div class="ttdef"><b>Definition:</b> <a href="network_8h_source.html#l00062">network.h:62</a></div></div>
+<div class="ttc" id="class_network_html_a4b28fba4fedb30b8fca5aa5ebf19369a"><div class="ttname"><a href="class_network.html#a4b28fba4fedb30b8fca5aa5ebf19369a">Network::task_exec</a></div><div class="ttdeci">void task_exec(NetworkTask *task)</div><div class="ttdef"><b>Definition:</b> <a href="network__task_8cpp_source.html#l00018">network_task.cpp:18</a></div></div>
+<div class="ttc" id="class_game_engine_html_af0917edee47da7c96865791032ff5b03"><div class="ttname"><a href="class_game_engine.html#af0917edee47da7c96865791032ff5b03">GameEngine::cmd_on</a></div><div class="ttdeci">bool cmd_on</div><div class="ttdoc">zmienna określająca czy wiersz poleceń/konsola jest włączony (true - włączony) </div><div class="ttdef"><b>Definition:</b> <a href="game__engine_8h_source.html#l00096">game_engine.h:96</a></div></div>
+<div class="ttc" id="class_network_html_af0087ae89f35f82404bfc4019c15e682"><div class="ttname"><a href="class_network.html#af0087ae89f35f82404bfc4019c15e682">Network::game_engine</a></div><div class="ttdeci">GameEngine * game_engine</div><div class="ttdoc">wskaźnik na logikę gry </div><div class="ttdef"><b>Definition:</b> <a href="network_8h_source.html#l00106">network.h:106</a></div></div>
+<div class="ttc" id="class_log_html_a74def209d6c1a17f4b283fc21f641a6e"><div class="ttname"><a href="class_log.html#a74def209d6c1a17f4b283fc21f641a6e">Log::warn</a></div><div class="ttdeci">static void warn(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00036">log.cpp:36</a></div></div>
+<div class="ttc" id="class_network_html_a5a4055a6ccafe3a12cd93fc2a06c034e"><div class="ttname"><a href="class_network.html#a5a4055a6ccafe3a12cd93fc2a06c034e">Network::myName</a></div><div class="ttdeci">string myName()</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00095">network.cpp:95</a></div></div>
+<div class="ttc" id="class_network_html_ac5e9180164f02976c11ed77d4589e09c"><div class="ttname"><a href="class_network.html#ac5e9180164f02976c11ed77d4589e09c">Network::onAccept</a></div><div class="ttdeci">void onAccept()</div><div class="ttdoc">żądanie nawiązania połączenia - wiadomość od klienta. </div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00278">network.cpp:278</a></div></div>
+<div class="ttc" id="class_config_html_a9b99e069f6e78fcb906d5effbb600e97"><div class="ttname"><a href="class_config.html#a9b99e069f6e78fcb906d5effbb600e97">Config::port</a></div><div class="ttdeci">static int port</div><div class="ttdoc">numer portu przy połączeniu </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00140">config.h:140</a></div></div>
+<div class="ttc" id="class_network_html_a7a4e19cdb4bf0c7ecf82baa643831492"><div class="ttname"><a href="class_network.html#a7a4e19cdb4bf0c7ecf82baa643831492">Network::~Network</a></div><div class="ttdeci">~Network()</div><div class="ttdoc">zakończenie wątku sieci </div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00022">network.cpp:22</a></div></div>
+<div class="ttc" id="class_network_html_ac42b45c2d4ac6628513bf07bc3bcea9b"><div class="ttname"><a href="class_network.html#ac42b45c2d4ac6628513bf07bc3bcea9b">Network::onClose</a></div><div class="ttdeci">void onClose(int sindex)</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00209">network.cpp:209</a></div></div>
+<div class="ttc" id="class_config_html_aea3a1c3b6f1338320f9da9f638e544a7"><div class="ttname"><a href="class_config.html#aea3a1c3b6f1338320f9da9f638e544a7">Config::max_clients</a></div><div class="ttdeci">static int max_clients</div><div class="ttdoc">maksymalna liczba klientów </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00138">config.h:138</a></div></div>
+<div class="ttc" id="class_continuous_thread_html"><div class="ttname"><a href="class_continuous_thread.html">ContinuousThread</a></div><div class="ttdoc">Wątek z procedurą wykonywaną cyklicznie. </div><div class="ttdef"><b>Definition:</b> <a href="continuous__thread_8h_source.html#l00013">continuous_thread.h:13</a></div></div>
+<div class="ttc" id="class_log_html_a7f04966a8a4e7061b9d6b50e33f52374"><div class="ttname"><a href="class_log.html#a7f04966a8a4e7061b9d6b50e33f52374">Log::debug</a></div><div class="ttdeci">static void debug(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00049">log.cpp:49</a></div></div>
+<div class="ttc" id="class_log_html_a1c5794ad20af844b2980c6a978f7d3a1"><div class="ttname"><a href="class_log.html#a1c5794ad20af844b2980c6a978f7d3a1">Log::error</a></div><div class="ttdeci">static void error(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00029">log.cpp:29</a></div></div>
+<div class="ttc" id="class_network_html_ac3d1c7693609c8f0323e9a946ddbe9f8"><div class="ttname"><a href="class_network.html#ac3d1c7693609c8f0323e9a946ddbe9f8">Network::openServerSocket</a></div><div class="ttdeci">bool openServerSocket()</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00113">network.cpp:113</a></div></div>
+<div class="ttc" id="class_config_html_ac9e5a3174565d13818c72f438f76188e"><div class="ttname"><a href="class_config.html#ac9e5a3174565d13818c72f438f76188e">Config::max_attempts</a></div><div class="ttdeci">static int max_attempts</div><div class="ttdoc">maksymalna liczba powtórzeń w przypadku niewysłanego pakietu </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00142">config.h:142</a></div></div>
+<div class="ttc" id="network_8h_html"><div class="ttname"><a href="network_8h.html">network.h</a></div></div>
+<div class="ttc" id="class_network_html_acb5b0d45a2bee2dc51aeb39f91f131cd"><div class="ttname"><a href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">Network::client</a></div><div class="ttdeci">bool client</div><div class="ttdoc">zmienna określająca, czy połączenie klienta jest aktywne (true - aktywne) </div><div class="ttdef"><b>Definition:</b> <a href="network_8h_source.html#l00060">network.h:60</a></div></div>
+<div class="ttc" id="class_network_html_aadd5fd9e1e7a9a3e81467180e5c97075"><div class="ttname"><a href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">Network::error</a></div><div class="ttdeci">void error(string e)</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00076">network.cpp:76</a></div></div>
+<div class="ttc" id="class_network_html_a522cfe60c5479c3aee3436679f319f07"><div class="ttname"><a href="class_network.html#a522cfe60c5479c3aee3436679f319f07">Network::disconnect</a></div><div class="ttdeci">void disconnect(int sindex)</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00224">network.cpp:224</a></div></div>
+<div class="ttc" id="class_network_connection_html"><div class="ttname"><a href="class_network_connection.html">NetworkConnection</a></div><div class="ttdef"><b>Definition:</b> <a href="network__connection_8h_source.html#l00013">network_connection.h:13</a></div></div>
+<div class="ttc" id="class_thread_html_abc3e397d210eb698ee18b91aa48e11d0"><div class="ttname"><a href="class_thread.html#abc3e397d210eb698ee18b91aa48e11d0">Thread::init</a></div><div class="ttdeci">volatile bool init</div><div class="ttdoc">czy zakończono inicjalizację </div><div class="ttdef"><b>Definition:</b> <a href="thread_8h_source.html#l00024">thread.h:24</a></div></div>
+<div class="ttc" id="utils_8cpp_html_a5056d98825d88f99f8df1490f7c228ab"><div class="ttname"><a href="utils_8cpp.html#a5056d98825d88f99f8df1490f7c228ab">ss_clear</a></div><div class="ttdeci">void ss_clear(stringstream &amp;sstream)</div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00005">utils.cpp:5</a></div></div>
+<div class="ttc" id="class_config_html_a9adaa2536ee05fb75285920ae5afe6e1"><div class="ttname"><a href="class_config.html#a9adaa2536ee05fb75285920ae5afe6e1">Config::wait_if_failed</a></div><div class="ttdeci">static int wait_if_failed</div><div class="ttdoc">czas oczekiwania po niepowodzeniu wysłania pakietu (w ms) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00144">config.h:144</a></div></div>
+<div class="ttc" id="class_game_engine_html"><div class="ttname"><a href="class_game_engine.html">GameEngine</a></div><div class="ttdoc">logika gry </div><div class="ttdef"><b>Definition:</b> <a href="game__engine_8h_source.html#l00044">game_engine.h:44</a></div></div>
+<div class="ttc" id="class_network_html_acfc111734668c7b27316160dfc6f54e6"><div class="ttname"><a href="class_network.html#acfc111734668c7b27316160dfc6f54e6">Network::myIP</a></div><div class="ttdeci">string myIP()</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00082">network.cpp:82</a></div></div>
+<div class="ttc" id="class_network_html_ae6b5d318b79466b80e015ecf1dfee52a"><div class="ttname"><a href="class_network.html#ae6b5d318b79466b80e015ecf1dfee52a">Network::onConnectedToServer</a></div><div class="ttdeci">void onConnectedToServer(int sindex)</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00373">network.cpp:373</a></div></div>
+<div class="ttc" id="class_network_html_a91dcf8b0ed99c5ad8200286cb8a0fec9"><div class="ttname"><a href="class_network.html#a91dcf8b0ed99c5ad8200286cb8a0fec9">Network::runLoop</a></div><div class="ttdeci">void runLoop()</div><div class="ttdoc">główna funkcja powtarzana w pętli </div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00036">network.cpp:36</a></div></div>
+<div class="ttc" id="class_network_html_a14c47adc6f009b0c8c8602e8f60de9c4"><div class="ttname"><a href="class_network.html#a14c47adc6f009b0c8c8602e8f60de9c4">Network::tasks</a></div><div class="ttdeci">vector&lt; NetworkTask * &gt; tasks</div><div class="ttdoc">kolejka zadań do wykonania </div><div class="ttdef"><b>Definition:</b> <a href="network_8h_source.html#l00109">network.h:109</a></div></div>
+<div class="ttc" id="class_network_html_a947704dc913459c038ad0f3e470ca397"><div class="ttname"><a href="class_network.html#a947704dc913459c038ad0f3e470ca397">Network::select_timeout</a></div><div class="ttdeci">timeval select_timeout</div><div class="ttdoc">timeout oczekiwania na event z sieci </div><div class="ttdef"><b>Definition:</b> <a href="network_8h_source.html#l00100">network.h:100</a></div></div>
+<div class="ttc" id="class_network_html_aafdb359102d60b61990d517bb68c0dee"><div class="ttname"><a href="class_network.html#aafdb359102d60b61990d517bb68c0dee">Network::Network</a></div><div class="ttdeci">Network(GameEngine *game_engine)</div><div class="ttdoc">uruchomienie wątku sieci </div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00010">network.cpp:10</a></div></div>
+<div class="ttc" id="utils_8cpp_html_a3fe4facef311953c212ced8f8a6cd59c"><div class="ttname"><a href="utils_8cpp.html#a3fe4facef311953c212ced8f8a6cd59c">sleep_ms</a></div><div class="ttdeci">void sleep_ms(int ms)</div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00055">utils.cpp:55</a></div></div>
+<div class="ttc" id="class_config_html_a47aa7ec62f27cba6905595894782629d"><div class="ttname"><a href="class_config.html#a47aa7ec62f27cba6905595894782629d">Config::buffer_size</a></div><div class="ttdeci">static int buffer_size</div><div class="ttdoc">rozmiar bufora wejściowego przychodzących pakietów oraz bufora wyjściowego wysyłanych pakietów ...</div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00146">config.h:146</a></div></div>
+<div class="ttc" id="class_network_html_a25812b4bbc8edf318ad596f3698aa85c"><div class="ttname"><a href="class_network.html#a25812b4bbc8edf318ad596f3698aa85c">Network::read_sockets</a></div><div class="ttdeci">fd_set read_sockets</div><div class="ttdoc">zbiór socketów monitorowanych do odczytu </div><div class="ttdef"><b>Definition:</b> <a href="network_8h_source.html#l00102">network.h:102</a></div></div>
+<div class="ttc" id="class_network_html_a62751785ab1c60dc9b798c8e8b7e864c"><div class="ttname"><a href="class_network.html#a62751785ab1c60dc9b798c8e8b7e864c">Network::destroyConnection</a></div><div class="ttdeci">void destroyConnection(int sindex)</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00247">network.cpp:247</a></div></div>
+<div class="ttc" id="class_network_html_aef9dc030f3a2d39d26e9939651fce9ab"><div class="ttname"><a href="class_network.html#aef9dc030f3a2d39d26e9939651fce9ab">Network::connectTo</a></div><div class="ttdeci">bool connectTo(string ip)</div><div class="ttdef"><b>Definition:</b> <a href="network_8cpp_source.html#l00158">network.cpp:158</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fc4c7f03e1a69a98c370fae55a743828.html">network</a></li><li class="navelem"><a class="el" href="network_8cpp.html">network.cpp</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

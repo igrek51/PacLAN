@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Dokumentacja szablonu klasy Pathfind&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_pathfind.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_pathfind-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja szablonu klasy Pathfind&lt; T &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa przechowująca obecne parametry mapy i znajdująca drogę pomiędzy dwoma punktami.  
+ <a href="class_pathfind.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pathfind_8h_source.html">pathfind.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a3767ebcf67cfac649f7c5bc5cea2c153"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#a3767ebcf67cfac649f7c5bc5cea2c153">Pathfind</a> ()</td></tr>
+<tr class="memdesc:a3767ebcf67cfac649f7c5bc5cea2c153"><td class="mdescLeft">&#160;</td><td class="mdescRight">inicjalizacja algorytmu znajdowania drogi  <a href="#a3767ebcf67cfac649f7c5bc5cea2c153">Więcej...</a><br /></td></tr>
+<tr class="separator:a3767ebcf67cfac649f7c5bc5cea2c153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172d227440b31ddf9a44b683a9cfde36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#a172d227440b31ddf9a44b683a9cfde36">~Pathfind</a> ()</td></tr>
+<tr class="separator:a172d227440b31ddf9a44b683a9cfde36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d34ced20dbd9cfdde706c23d0249bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#a27d34ced20dbd9cfdde706c23d0249bb">set_xy</a> (T <a class="el" href="class_pathfind.html#ab4e0f6d41450acbec9c267b11e299b68">start_x</a>, T <a class="el" href="class_pathfind.html#a4b2d0cfda96a7e771e8aa29cbeca4237">start_y</a>, T <a class="el" href="class_pathfind.html#a1797ca636196b4eb3eb64432c754dcd9">end_x</a>, T <a class="el" href="class_pathfind.html#a2ddf660c4d4840ec160062db52728295">end_y</a>)</td></tr>
+<tr class="separator:a27d34ced20dbd9cfdde706c23d0249bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ab851498eb08ea0ae1104befc6a6d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_path.html">Path</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#ab5ab851498eb08ea0ae1104befc6a6d8">find_path</a> ()</td></tr>
+<tr class="separator:ab5ab851498eb08ea0ae1104befc6a6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:ab2de82d6fe51b6361835aa8598a14891"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#ab2de82d6fe51b6361835aa8598a14891">map</a></td></tr>
+<tr class="memdesc:ab2de82d6fe51b6361835aa8598a14891"><td class="mdescLeft">&#160;</td><td class="mdescRight">tablica mapy, zapis: map[wiersz][kolumna], map[y][x], 1 - można przejść, 0 - nie można  <a href="#ab2de82d6fe51b6361835aa8598a14891">Więcej...</a><br /></td></tr>
+<tr class="separator:ab2de82d6fe51b6361835aa8598a14891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53064a09b169c39ce66235379425e78c"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#a53064a09b169c39ce66235379425e78c">map_w</a></td></tr>
+<tr class="memdesc:a53064a09b169c39ce66235379425e78c"><td class="mdescLeft">&#160;</td><td class="mdescRight">liczba kolumn mapy  <a href="#a53064a09b169c39ce66235379425e78c">Więcej...</a><br /></td></tr>
+<tr class="separator:a53064a09b169c39ce66235379425e78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90459929f7327403244b5f280821a15c"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#a90459929f7327403244b5f280821a15c">map_h</a></td></tr>
+<tr class="memdesc:a90459929f7327403244b5f280821a15c"><td class="mdescLeft">&#160;</td><td class="mdescRight">liczba wierszy mapy  <a href="#a90459929f7327403244b5f280821a15c">Więcej...</a><br /></td></tr>
+<tr class="separator:a90459929f7327403244b5f280821a15c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:addb86a4d0b5af894d02ea1f9ac357be2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#addb86a4d0b5af894d02ea1f9ac357be2">find_in_list</a> (deque&lt; <a class="el" href="class_node.html">Node</a>&lt; T &gt; * &gt; list, T x, T y)</td></tr>
+<tr class="separator:addb86a4d0b5af894d02ea1f9ac357be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af17ffe497f3f73585a6ae92c8fac1d0e"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#af17ffe497f3f73585a6ae92c8fac1d0e">policz_g</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *item)</td></tr>
+<tr class="separator:af17ffe497f3f73585a6ae92c8fac1d0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce16cf3813fe892bfae1939cc459d83"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#afce16cf3813fe892bfae1939cc459d83">policz_h</a> (<a class="el" href="class_node.html">Node</a>&lt; T &gt; *item)</td></tr>
+<tr class="separator:afce16cf3813fe892bfae1939cc459d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:ab4e0f6d41450acbec9c267b11e299b68"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#ab4e0f6d41450acbec9c267b11e299b68">start_x</a></td></tr>
+<tr class="memdesc:ab4e0f6d41450acbec9c267b11e299b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">współrzędna x punktu startowego  <a href="#ab4e0f6d41450acbec9c267b11e299b68">Więcej...</a><br /></td></tr>
+<tr class="separator:ab4e0f6d41450acbec9c267b11e299b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b2d0cfda96a7e771e8aa29cbeca4237"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#a4b2d0cfda96a7e771e8aa29cbeca4237">start_y</a></td></tr>
+<tr class="memdesc:a4b2d0cfda96a7e771e8aa29cbeca4237"><td class="mdescLeft">&#160;</td><td class="mdescRight">współrzędna y punktu startowego  <a href="#a4b2d0cfda96a7e771e8aa29cbeca4237">Więcej...</a><br /></td></tr>
+<tr class="separator:a4b2d0cfda96a7e771e8aa29cbeca4237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1797ca636196b4eb3eb64432c754dcd9"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#a1797ca636196b4eb3eb64432c754dcd9">end_x</a></td></tr>
+<tr class="memdesc:a1797ca636196b4eb3eb64432c754dcd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">współrzędna x punktu końcowego  <a href="#a1797ca636196b4eb3eb64432c754dcd9">Więcej...</a><br /></td></tr>
+<tr class="separator:a1797ca636196b4eb3eb64432c754dcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ddf660c4d4840ec160062db52728295"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pathfind.html#a2ddf660c4d4840ec160062db52728295">end_y</a></td></tr>
+<tr class="memdesc:a2ddf660c4d4840ec160062db52728295"><td class="mdescLeft">&#160;</td><td class="mdescRight">współrzędna y punktu końcowego  <a href="#a2ddf660c4d4840ec160062db52728295">Więcej...</a><br /></td></tr>
+<tr class="separator:a2ddf660c4d4840ec160062db52728295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class Pathfind&lt; T &gt;</h3>
+
+<p>Klasa przechowująca obecne parametry mapy i znajdująca drogę pomiędzy dwoma punktami. </p>
+<dl class="tparams"><dt>Parametry Szablonu</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>typ współrzędnych punktu </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="pathfind_8h_source.html#l00019">19</a> pliku <a class="el" href="pathfind_8h_source.html">pathfind.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a3767ebcf67cfac649f7c5bc5cea2c153"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::<a class="el" href="class_pathfind.html">Pathfind</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>inicjalizacja algorytmu znajdowania drogi </p>
+
+<p>Definicja w linii <a class="el" href="pathfind_8cpp_source.html#l00004">4</a> pliku <a class="el" href="pathfind_8cpp_source.html">pathfind.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a172d227440b31ddf9a44b683a9cfde36"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::~<a class="el" href="class_pathfind.html">Pathfind</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="pathfind_8cpp_source.html#l00015">15</a> pliku <a class="el" href="pathfind_8cpp_source.html">pathfind.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="addb86a4d0b5af894d02ea1f9ac357be2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>&lt; T &gt; * <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::find_in_list </td>
+          <td>(</td>
+          <td class="paramtype">deque&lt; <a class="el" href="class_node.html">Node</a>&lt; T &gt; * &gt;&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>szuka węzła na liście </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>lista , która ma być przeszukana </td></tr>
+    <tr><td class="paramname">x</td><td>współrzędna x punktu </td></tr>
+    <tr><td class="paramname">y</td><td>współrzędna y punktu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na węzeł (jeśli znajdował się na liście) lub NULL (jeśli nie znaleziono takiego punktu) </dd></dl>
+
+<p>Definicja w linii <a class="el" href="pathfind_8cpp_source.html#l00138">138</a> pliku <a class="el" href="pathfind_8cpp_source.html">pathfind.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5ab851498eb08ea0ae1104befc6a6d8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_path.html">Path</a>&lt; T &gt; * <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::find_path </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>szuka drogi między startem a metą </p><dl class="section return"><dt>Zwraca</dt><dd>wskaźnik do wyznaczonej ścieżki lub NULL w przypadku, gdy nie można bylo znaleźć drogi </dd></dl>
+
+<p>Definicja w linii <a class="el" href="pathfind_8cpp_source.html#l00024">24</a> pliku <a class="el" href="pathfind_8cpp_source.html">pathfind.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af17ffe497f3f73585a6ae92c8fac1d0e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::policz_g </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>liczy drogę do punktu startowego (dokładnie) </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>wskaźnik na węzeł, dla którego ma być policzona droga </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>długość drogi do punktu startowego </dd></dl>
+
+<p>Definicja w linii <a class="el" href="pathfind_8cpp_source.html#l00147">147</a> pliku <a class="el" href="pathfind_8cpp_source.html">pathfind.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afce16cf3813fe892bfae1939cc459d83"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::policz_h </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>oszacowanie drogi do punktu końcowego poprzez funkcję heurystyczną </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>wskaźnik na węzeł, dla którego ma być policzona droga </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>przybliżona długość drogi do punktu końcowego </dd></dl>
+
+<p>Definicja w linii <a class="el" href="pathfind_8cpp_source.html#l00152">152</a> pliku <a class="el" href="pathfind_8cpp_source.html">pathfind.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a27d34ced20dbd9cfdde706c23d0249bb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::set_xy </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>start_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>start_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>end_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>end_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>ustawia punkt startowy i punkt docelowy </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start_x</td><td>punkt startowy - współrzędna x </td></tr>
+    <tr><td class="paramname">start_y</td><td>punkt startowy - współrzędna y </td></tr>
+    <tr><td class="paramname">end_x</td><td>punkt końcowy - współrzędna x </td></tr>
+    <tr><td class="paramname">end_y</td><td>punkt końcowy - współrzędna y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="pathfind_8cpp_source.html#l00159">159</a> pliku <a class="el" href="pathfind_8cpp_source.html">pathfind.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a1797ca636196b4eb3eb64432c754dcd9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::end_x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>współrzędna x punktu końcowego </p>
+
+<p>Definicja w linii <a class="el" href="pathfind_8h_source.html#l00054">54</a> pliku <a class="el" href="pathfind_8h_source.html">pathfind.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2ddf660c4d4840ec160062db52728295"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::end_y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>współrzędna y punktu końcowego </p>
+
+<p>Definicja w linii <a class="el" href="pathfind_8h_source.html#l00056">56</a> pliku <a class="el" href="pathfind_8h_source.html">pathfind.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2de82d6fe51b6361835aa8598a14891"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">char** <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::map</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>tablica mapy, zapis: map[wiersz][kolumna], map[y][x], 1 - można przejść, 0 - nie można </p>
+
+<p>Definicja w linii <a class="el" href="pathfind_8h_source.html#l00027">27</a> pliku <a class="el" href="pathfind_8h_source.html">pathfind.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a90459929f7327403244b5f280821a15c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::map_h</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>liczba wierszy mapy </p>
+
+<p>Definicja w linii <a class="el" href="pathfind_8h_source.html#l00031">31</a> pliku <a class="el" href="pathfind_8h_source.html">pathfind.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a53064a09b169c39ce66235379425e78c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::map_w</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>liczba kolumn mapy </p>
+
+<p>Definicja w linii <a class="el" href="pathfind_8h_source.html#l00029">29</a> pliku <a class="el" href="pathfind_8h_source.html">pathfind.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4e0f6d41450acbec9c267b11e299b68"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::start_x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>współrzędna x punktu startowego </p>
+
+<p>Definicja w linii <a class="el" href="pathfind_8h_source.html#l00050">50</a> pliku <a class="el" href="pathfind_8h_source.html">pathfind.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b2d0cfda96a7e771e8aa29cbeca4237"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="class_pathfind.html">Pathfind</a>&lt; T &gt;::start_y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>współrzędna y punktu startowego </p>
+
+<p>Definicja w linii <a class="el" href="pathfind_8h_source.html#l00052">52</a> pliku <a class="el" href="pathfind_8h_source.html">pathfind.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>/mnt/d/Igrek/C++/PacLAN/src/map/pathfind/<a class="el" href="pathfind_8h_source.html">pathfind.h</a></li>
+<li>/mnt/d/Igrek/C++/PacLAN/src/map/pathfind/<a class="el" href="pathfind_8cpp_source.html">pathfind.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_pathfind.html">Pathfind</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:22 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

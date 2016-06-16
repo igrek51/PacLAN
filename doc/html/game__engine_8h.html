@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Dokumentacja pliku /mnt/d/Igrek/C++/PacLAN/src/logic/game_engine.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('game__engine_8h.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Komponenty</a> &#124;
+<a href="#define-members">Definicje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku game_engine.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="graphics_8h_source.html">../graphics/graphics.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="map_8h_source.html">../map/map.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pathfind_8h_source.html">../map/pathfind/pathfind.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="item_8h_source.html">../map/item.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="player_8h_source.html">../players/player.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pacman_8h_source.html">../players/pacman.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ghost_8h_source.html">../players/ghost.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="network_8h_source.html">../network/network.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="language_8h_source.html">../language.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="app_8h_source.html">../app.h</a>&quot;</code><br />
+</div>
+<p><a href="game__engine_8h_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Komponenty</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html">GameEngine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">logika gry  <a href="class_game_engine.html#details">Więcej...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:af6601a5e29c46050b2e9da208aaf1eb1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#af6601a5e29c46050b2e9da208aaf1eb1">MENU_NAME</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:af6601a5e29c46050b2e9da208aaf1eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c297956ee71788d3acb099628d3308f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#a9c297956ee71788d3acb099628d3308f">MENU_SUBCLASS</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a9c297956ee71788d3acb099628d3308f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e3c296d29d1a0348990ee0f241d796"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#ac8e3c296d29d1a0348990ee0f241d796">MENU_COLOR</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:ac8e3c296d29d1a0348990ee0f241d796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c092ae50276c0891d83e0d205e745c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#a8c092ae50276c0891d83e0d205e745c3">MENU_HOST</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a8c092ae50276c0891d83e0d205e745c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda97c185f8dd998289841329e1fdeff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#adda97c185f8dd998289841329e1fdeff">MENU_JOIN</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:adda97c185f8dd998289841329e1fdeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace840ac29b50b3d2819f36214b0fa94d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#ace840ac29b50b3d2819f36214b0fa94d">MENU_LANGUAGE</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:ace840ac29b50b3d2819f36214b0fa94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8654f60f6fce7b72f2ca2a93a819475f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#a8654f60f6fce7b72f2ca2a93a819475f">MENU_EXIT</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a8654f60f6fce7b72f2ca2a93a819475f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69cc3a876e4218ba04991a00d9bec1ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#a69cc3a876e4218ba04991a00d9bec1ab">MENU_MAX</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a69cc3a876e4218ba04991a00d9bec1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5fd51bab38d7b28937c1032c37163c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#ab5fd51bab38d7b28937c1032c37163c2">MODE_CLASSIC</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ab5fd51bab38d7b28937c1032c37163c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f370a452bcdb1f6d788134c6526897d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#a3f370a452bcdb1f6d788134c6526897d">MODE_ZOMBIE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a3f370a452bcdb1f6d788134c6526897d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaddc0ed7cfd030ca5db0e3a41df875db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__engine_8h.html#aaddc0ed7cfd030ca5db0e3a41df875db">MODE_MAX</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:aaddc0ed7cfd030ca5db0e3a41df875db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><dl class="section see"><dt>Zobacz również</dt><dd><a class="el" href="game__engine_8cpp.html">game_engine.cpp</a> </dd>
+<dd>
+<a class="el" href="game__logic_8cpp.html">game_logic.cpp</a> </dd>
+<dd>
+<a class="el" href="game__network_8cpp.html">game_network.cpp</a> </dd>
+<dd>
+<a class="el" href="game__cmd_8cpp.html">game_cmd.cpp</a> </dd></dl>
+
+<p>Definicja w pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja definicji</h2>
+<a class="anchor" id="ac8e3c296d29d1a0348990ee0f241d796"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MENU_COLOR&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00014">14</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8654f60f6fce7b72f2ca2a93a819475f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MENU_EXIT&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00018">18</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c092ae50276c0891d83e0d205e745c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MENU_HOST&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00015">15</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adda97c185f8dd998289841329e1fdeff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MENU_JOIN&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00016">16</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ace840ac29b50b3d2819f36214b0fa94d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MENU_LANGUAGE&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00017">17</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a69cc3a876e4218ba04991a00d9bec1ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MENU_MAX&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00019">19</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af6601a5e29c46050b2e9da208aaf1eb1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MENU_NAME&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00012">12</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9c297956ee71788d3acb099628d3308f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MENU_SUBCLASS&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00013">13</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5fd51bab38d7b28937c1032c37163c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODE_CLASSIC&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00022">22</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaddc0ed7cfd030ca5db0e3a41df875db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODE_MAX&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00024">24</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3f370a452bcdb1f6d788134c6526897d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODE_ZOMBIE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="game__engine_8h_source.html#l00023">23</a> pliku <a class="el" href="game__engine_8h_source.html">game_engine.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3d2e4578fe4cc3b7fa6177047437af5b.html">logic</a></li><li class="navelem"><a class="el" href="game__engine_8h.html">game_engine.h</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:22 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

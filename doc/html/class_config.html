@@ -1,0 +1,1529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Dokumentacja klasy Config</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_config.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-attribs">Statyczne atrybuty publiczne</a> &#124;
+<a href="class_config-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Config</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Ustawienia konfiguracyjne.  
+ <a href="class_config.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="config_8h_source.html">config.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Statyczne atrybuty publiczne</h2></td></tr>
+<tr class="memitem:ab989ad7b9b48cb6e493c63e7846cbf55"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#ab989ad7b9b48cb6e493c63e7846cbf55">window_w</a> = 800</td></tr>
+<tr class="memdesc:ab989ad7b9b48cb6e493c63e7846cbf55"><td class="mdescLeft">&#160;</td><td class="mdescRight">szerokość okna aplikacji  <a href="#ab989ad7b9b48cb6e493c63e7846cbf55">Więcej...</a><br /></td></tr>
+<tr class="separator:ab989ad7b9b48cb6e493c63e7846cbf55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8b3922c0e8ac13b255b3a162ef7717"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a4e8b3922c0e8ac13b255b3a162ef7717">window_h</a> = 480</td></tr>
+<tr class="memdesc:a4e8b3922c0e8ac13b255b3a162ef7717"><td class="mdescLeft">&#160;</td><td class="mdescRight">wysokość okna aplikacji  <a href="#a4e8b3922c0e8ac13b255b3a162ef7717">Więcej...</a><br /></td></tr>
+<tr class="separator:a4e8b3922c0e8ac13b255b3a162ef7717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01aaa5df6462660f926740d37cade261"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a01aaa5df6462660f926740d37cade261">app_name</a> = &quot;PacLAN&quot;</td></tr>
+<tr class="memdesc:a01aaa5df6462660f926740d37cade261"><td class="mdescLeft">&#160;</td><td class="mdescRight">tytuł okna  <a href="#a01aaa5df6462660f926740d37cade261">Więcej...</a><br /></td></tr>
+<tr class="separator:a01aaa5df6462660f926740d37cade261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc410be9ed7863f94c8f2237ad5eeec5"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#afc410be9ed7863f94c8f2237ad5eeec5">version</a> = <a class="el" href="version_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a></td></tr>
+<tr class="memdesc:afc410be9ed7863f94c8f2237ad5eeec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">wersja aplikacji  <a href="#afc410be9ed7863f94c8f2237ad5eeec5">Więcej...</a><br /></td></tr>
+<tr class="separator:afc410be9ed7863f94c8f2237ad5eeec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c5af64f103b8c27826b28dff1a7e7c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#ab4c5af64f103b8c27826b28dff1a7e7c">fullscreen_start</a> = false</td></tr>
+<tr class="memdesc:ab4c5af64f103b8c27826b28dff1a7e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">uruchomienie trybu pełnoekranowego podczas startu (true - pełny ekran podczas startu)  <a href="#ab4c5af64f103b8c27826b28dff1a7e7c">Więcej...</a><br /></td></tr>
+<tr class="separator:ab4c5af64f103b8c27826b28dff1a7e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ff9de3d028f2bbc1fbf40295059647"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a40ff9de3d028f2bbc1fbf40295059647">logic_timer_ms</a> = 40</td></tr>
+<tr class="memdesc:a40ff9de3d028f2bbc1fbf40295059647"><td class="mdescLeft">&#160;</td><td class="mdescRight">okres timera cykli logicznych  <a href="#a40ff9de3d028f2bbc1fbf40295059647">Więcej...</a><br /></td></tr>
+<tr class="separator:a40ff9de3d028f2bbc1fbf40295059647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8ae3ce457b4f2831baae39e24129ea9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#ab8ae3ce457b4f2831baae39e24129ea9">logic_cycles_critical</a> = 60</td></tr>
+<tr class="memdesc:ab8ae3ce457b4f2831baae39e24129ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">krytyczna liczba niewykonanych cykli  <a href="#ab8ae3ce457b4f2831baae39e24129ea9">Więcej...</a><br /></td></tr>
+<tr class="separator:ab8ae3ce457b4f2831baae39e24129ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eb873a24f6392061188920394747000"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a6eb873a24f6392061188920394747000">fps_avg_frames</a> = 10</td></tr>
+<tr class="memdesc:a6eb873a24f6392061188920394747000"><td class="mdescLeft">&#160;</td><td class="mdescRight">liczba klatek do uśredniania FPS  <a href="#a6eb873a24f6392061188920394747000">Więcej...</a><br /></td></tr>
+<tr class="separator:a6eb873a24f6392061188920394747000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cf217b25f10326cd4886a30760c58db"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a4cf217b25f10326cd4886a30760c58db">bitmap_names</a> []</td></tr>
+<tr class="memdesc:a4cf217b25f10326cd4886a30760c58db"><td class="mdescLeft">&#160;</td><td class="mdescRight">tablica nazw plików obrazów oraz odpowiadającym im nazwom  <a href="#a4cf217b25f10326cd4886a30760c58db">Więcej...</a><br /></td></tr>
+<tr class="separator:a4cf217b25f10326cd4886a30760c58db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c6e16e926fa7d084ef533ed284dd9f"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a76c6e16e926fa7d084ef533ed284dd9f">icon_name</a> = &quot;gfx/icon.png&quot;</td></tr>
+<tr class="memdesc:a76c6e16e926fa7d084ef533ed284dd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">nazwa pliku ikony aplikacji  <a href="#a76c6e16e926fa7d084ef533ed284dd9f">Więcej...</a><br /></td></tr>
+<tr class="separator:a76c6e16e926fa7d084ef533ed284dd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1104decb10bc1867bd0df1f95ed9d90"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#ac1104decb10bc1867bd0df1f95ed9d90">fontfile1</a> = &quot;fonts/arialbd.ttf&quot;</td></tr>
+<tr class="memdesc:ac1104decb10bc1867bd0df1f95ed9d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">nazwa pliku czcionki nr 1  <a href="#ac1104decb10bc1867bd0df1f95ed9d90">Więcej...</a><br /></td></tr>
+<tr class="separator:ac1104decb10bc1867bd0df1f95ed9d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adada94bd164161f3d668984b9e52a2dd"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#adada94bd164161f3d668984b9e52a2dd">fontsize1</a> = 14</td></tr>
+<tr class="memdesc:adada94bd164161f3d668984b9e52a2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">rozmiar czcionki nr 1  <a href="#adada94bd164161f3d668984b9e52a2dd">Więcej...</a><br /></td></tr>
+<tr class="separator:adada94bd164161f3d668984b9e52a2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450541c5ec7c47b802a15ce5f6c5f212"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a450541c5ec7c47b802a15ce5f6c5f212">fontfile2</a> = &quot;fonts/prstartk.ttf&quot;</td></tr>
+<tr class="memdesc:a450541c5ec7c47b802a15ce5f6c5f212"><td class="mdescLeft">&#160;</td><td class="mdescRight">nazwa pliku czcionki nr 2  <a href="#a450541c5ec7c47b802a15ce5f6c5f212">Więcej...</a><br /></td></tr>
+<tr class="separator:a450541c5ec7c47b802a15ce5f6c5f212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add506f30486afebafb42a5be3008a39b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#add506f30486afebafb42a5be3008a39b">fontsize2</a> = 12</td></tr>
+<tr class="memdesc:add506f30486afebafb42a5be3008a39b"><td class="mdescLeft">&#160;</td><td class="mdescRight">rozmiar czcionki nr 2  <a href="#add506f30486afebafb42a5be3008a39b">Więcej...</a><br /></td></tr>
+<tr class="separator:add506f30486afebafb42a5be3008a39b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49b12336ace9ec45f7778b0fe703013"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#ab49b12336ace9ec45f7778b0fe703013">mapDefault</a> = &quot;maps/1/grid.txt&quot;</td></tr>
+<tr class="memdesc:ab49b12336ace9ec45f7778b0fe703013"><td class="mdescLeft">&#160;</td><td class="mdescRight">nazwa pliku definicji mapy  <a href="#ab49b12336ace9ec45f7778b0fe703013">Więcej...</a><br /></td></tr>
+<tr class="separator:ab49b12336ace9ec45f7778b0fe703013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf6a2beaa3b734a6a53e77c5263736c5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aaf6a2beaa3b734a6a53e77c5263736c5">show_fps</a> = false</td></tr>
+<tr class="memdesc:aaf6a2beaa3b734a6a53e77c5263736c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">wyświetlanie liczby klatek na sekundę (true - włączone)  <a href="#aaf6a2beaa3b734a6a53e77c5263736c5">Więcej...</a><br /></td></tr>
+<tr class="separator:aaf6a2beaa3b734a6a53e77c5263736c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee3629f52f884a00039d91129eebeda2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aee3629f52f884a00039d91129eebeda2">show_grid</a> = false</td></tr>
+<tr class="memdesc:aee3629f52f884a00039d91129eebeda2"><td class="mdescLeft">&#160;</td><td class="mdescRight">wyświetlanie siatki pól mapy (true - włączone)  <a href="#aee3629f52f884a00039d91129eebeda2">Więcej...</a><br /></td></tr>
+<tr class="separator:aee3629f52f884a00039d91129eebeda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d31cc9a604bf2280017235ad8238d95"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a1d31cc9a604bf2280017235ad8238d95">show_paths</a> = false</td></tr>
+<tr class="memdesc:a1d31cc9a604bf2280017235ad8238d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">wyświetlanie ścieżek do celów graczy (true - włączone)  <a href="#a1d31cc9a604bf2280017235ad8238d95">Więcej...</a><br /></td></tr>
+<tr class="separator:a1d31cc9a604bf2280017235ad8238d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f70fcec355f250c4dde97043ff3028"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#af2f70fcec355f250c4dde97043ff3028">show_names</a> = true</td></tr>
+<tr class="memdesc:af2f70fcec355f250c4dde97043ff3028"><td class="mdescLeft">&#160;</td><td class="mdescRight">wyświetlanie nazw graczy (true - włączone)  <a href="#af2f70fcec355f250c4dde97043ff3028">Więcej...</a><br /></td></tr>
+<tr class="separator:af2f70fcec355f250c4dde97043ff3028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977962c4c91d91c7b263429c88dc99d4"><td class="memItemLeft" align="right" valign="top">static const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a977962c4c91d91c7b263429c88dc99d4">log_filename</a> = &quot;log.txt&quot;</td></tr>
+<tr class="memdesc:a977962c4c91d91c7b263429c88dc99d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">nazwa pliku dziennika zdarzeń  <a href="#a977962c4c91d91c7b263429c88dc99d4">Więcej...</a><br /></td></tr>
+<tr class="separator:a977962c4c91d91c7b263429c88dc99d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78963b834bfd5f1ae7d042c2e9f505ed"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94">LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a78963b834bfd5f1ae7d042c2e9f505ed">file_log_level</a> = <a class="el" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94adc30ec20708ef7b0f641ef78b7880a15">LogLevel::DEBUG</a></td></tr>
+<tr class="memdesc:a78963b834bfd5f1ae7d042c2e9f505ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">poziom logów zapisywanych w pliku  <a href="#a78963b834bfd5f1ae7d042c2e9f505ed">Więcej...</a><br /></td></tr>
+<tr class="separator:a78963b834bfd5f1ae7d042c2e9f505ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad28f19c482dbcc0f5b92b4a1bde08146"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94">LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#ad28f19c482dbcc0f5b92b4a1bde08146">echo_log_level</a> = <a class="el" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a></td></tr>
+<tr class="memdesc:ad28f19c482dbcc0f5b92b4a1bde08146"><td class="mdescLeft">&#160;</td><td class="mdescRight">poziom logów wyświetlanych w konsoli  <a href="#ad28f19c482dbcc0f5b92b4a1bde08146">Więcej...</a><br /></td></tr>
+<tr class="separator:ad28f19c482dbcc0f5b92b4a1bde08146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93518c5bcbac93214691ca23584a8f52"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a93518c5bcbac93214691ca23584a8f52">echoes_max</a> = 20</td></tr>
+<tr class="memdesc:a93518c5bcbac93214691ca23584a8f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">maksymalna liczba wierszy wyjścia w konsoli  <a href="#a93518c5bcbac93214691ca23584a8f52">Więcej...</a><br /></td></tr>
+<tr class="separator:a93518c5bcbac93214691ca23584a8f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a118085a65b289914469a7569318ddbd0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a118085a65b289914469a7569318ddbd0">pacman_speed</a> = 4</td></tr>
+<tr class="memdesc:a118085a65b289914469a7569318ddbd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">domyślna szybkość pacmana (im mniesza wartość, tym większa szybkość)  <a href="#a118085a65b289914469a7569318ddbd0">Więcej...</a><br /></td></tr>
+<tr class="separator:a118085a65b289914469a7569318ddbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15ee07a5a4656d5eb5d7d673e080ad85"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a15ee07a5a4656d5eb5d7d673e080ad85">ghost_speed</a> = 4</td></tr>
+<tr class="memdesc:a15ee07a5a4656d5eb5d7d673e080ad85"><td class="mdescLeft">&#160;</td><td class="mdescRight">domyślna szybkość duszka (im mniesza wartość, tym większa szybkość)  <a href="#a15ee07a5a4656d5eb5d7d673e080ad85">Więcej...</a><br /></td></tr>
+<tr class="separator:a15ee07a5a4656d5eb5d7d673e080ad85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba4cda20b0faf5280ca187c214aa2180"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aba4cda20b0faf5280ca187c214aa2180">ghost_eatme_speed</a> = 8</td></tr>
+<tr class="memdesc:aba4cda20b0faf5280ca187c214aa2180"><td class="mdescLeft">&#160;</td><td class="mdescRight">domyślna szybkość duszka w trybie zjadania duszków (im mniesza wartość, tym większa szybkość)  <a href="#aba4cda20b0faf5280ca187c214aa2180">Więcej...</a><br /></td></tr>
+<tr class="separator:aba4cda20b0faf5280ca187c214aa2180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb3a0d91570e519b0ca22b5ef384999"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a7eb3a0d91570e519b0ca22b5ef384999">move_while_respawn</a> = true</td></tr>
+<tr class="memdesc:a7eb3a0d91570e519b0ca22b5ef384999"><td class="mdescLeft">&#160;</td><td class="mdescRight">możliwość ruchu w trakcie odradzania się (true - włączone)  <a href="#a7eb3a0d91570e519b0ca22b5ef384999">Więcej...</a><br /></td></tr>
+<tr class="separator:a7eb3a0d91570e519b0ca22b5ef384999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add4a56eb213eabe8fab63eb297f32538"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#add4a56eb213eabe8fab63eb297f32538">ai_pacman_start_escape</a> = 4</td></tr>
+<tr class="memdesc:add4a56eb213eabe8fab63eb297f32538"><td class="mdescLeft">&#160;</td><td class="mdescRight">AI pacmana: odległość od duszka, przy której pacman zaczyna uciekać  <a href="#add4a56eb213eabe8fab63eb297f32538">Więcej...</a><br /></td></tr>
+<tr class="separator:add4a56eb213eabe8fab63eb297f32538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce8190a661a1e7846ab1211753ea954"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a3ce8190a661a1e7846ab1211753ea954">ai_pacman_stop_escape</a> = 6</td></tr>
+<tr class="memdesc:a3ce8190a661a1e7846ab1211753ea954"><td class="mdescLeft">&#160;</td><td class="mdescRight">AI pacmana: minimalna odległość od duszka, przy której pacman przestaje uciekać  <a href="#a3ce8190a661a1e7846ab1211753ea954">Więcej...</a><br /></td></tr>
+<tr class="separator:a3ce8190a661a1e7846ab1211753ea954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe6cabf2ed56bec04f35bacbe892ae95"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#abe6cabf2ed56bec04f35bacbe892ae95">eating_time</a> = 80</td></tr>
+<tr class="memdesc:abe6cabf2ed56bec04f35bacbe892ae95"><td class="mdescLeft">&#160;</td><td class="mdescRight">czas trwania trybu zjadania duszków (w cyklach)  <a href="#abe6cabf2ed56bec04f35bacbe892ae95">Więcej...</a><br /></td></tr>
+<tr class="separator:abe6cabf2ed56bec04f35bacbe892ae95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b85c98f4387420dd31e4595324236e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a08b85c98f4387420dd31e4595324236e">eating_time_critical</a> = 25</td></tr>
+<tr class="memdesc:a08b85c98f4387420dd31e4595324236e"><td class="mdescLeft">&#160;</td><td class="mdescRight">czas trwania migania duszków oznamiającego, że kończy się tryb zjadania duszków  <a href="#a08b85c98f4387420dd31e4595324236e">Więcej...</a><br /></td></tr>
+<tr class="separator:a08b85c98f4387420dd31e4595324236e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a332e55d9f00de4555cae11d6d7cc56bb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a332e55d9f00de4555cae11d6d7cc56bb">respawn_time</a> = 120</td></tr>
+<tr class="memdesc:a332e55d9f00de4555cae11d6d7cc56bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">czas oczekiwania na ponowne odrodzenie (w cyklach)  <a href="#a332e55d9f00de4555cae11d6d7cc56bb">Więcej...</a><br /></td></tr>
+<tr class="separator:a332e55d9f00de4555cae11d6d7cc56bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa30a2d39d76e011ab126b1c444d64dac"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aa30a2d39d76e011ab126b1c444d64dac">next_round_time</a> = 75</td></tr>
+<tr class="memdesc:aa30a2d39d76e011ab126b1c444d64dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">czas oczekiwania do następnej rundy i zakończenia rundy (w cyklach)  <a href="#aa30a2d39d76e011ab126b1c444d64dac">Więcej...</a><br /></td></tr>
+<tr class="separator:aa30a2d39d76e011ab126b1c444d64dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3434eb9d8db5806281c3e1039b32d3e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aa3434eb9d8db5806281c3e1039b32d3e">points_kill_pacman</a> = 80</td></tr>
+<tr class="memdesc:aa3434eb9d8db5806281c3e1039b32d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">domyślna wartość punktów za zabicie pacmana  <a href="#aa3434eb9d8db5806281c3e1039b32d3e">Więcej...</a><br /></td></tr>
+<tr class="separator:aa3434eb9d8db5806281c3e1039b32d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6da7e9485ec281d37f35b9e5e27ce93"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aa6da7e9485ec281d37f35b9e5e27ce93">points_kill_ghost</a> = 15</td></tr>
+<tr class="memdesc:aa6da7e9485ec281d37f35b9e5e27ce93"><td class="mdescLeft">&#160;</td><td class="mdescRight">domyślna wartość punktów za zabicie duszka  <a href="#aa6da7e9485ec281d37f35b9e5e27ce93">Więcej...</a><br /></td></tr>
+<tr class="separator:aa6da7e9485ec281d37f35b9e5e27ce93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b3a57e6b8e7dd0c56c3bb9e85005ed"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a81b3a57e6b8e7dd0c56c3bb9e85005ed">zombie_death_time</a> = 20</td></tr>
+<tr class="memdesc:a81b3a57e6b8e7dd0c56c3bb9e85005ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: czas do kolejnej śmierci pacmana (w sekundach)  <a href="#a81b3a57e6b8e7dd0c56c3bb9e85005ed">Więcej...</a><br /></td></tr>
+<tr class="separator:a81b3a57e6b8e7dd0c56c3bb9e85005ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa163d3da3b46b1c096b4f1afd4fc9389"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aa163d3da3b46b1c096b4f1afd4fc9389">zombie_dots_threshold</a> = 25</td></tr>
+<tr class="memdesc:aa163d3da3b46b1c096b4f1afd4fc9389"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: minimalna liczba kropek na mapie, przy której zostają dodane nowe kropki  <a href="#aa163d3da3b46b1c096b4f1afd4fc9389">Więcej...</a><br /></td></tr>
+<tr class="separator:aa163d3da3b46b1c096b4f1afd4fc9389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a1096bc1d4428655c9d2392e7358a9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a78a1096bc1d4428655c9d2392e7358a9">zombie_dots_add</a> = 20</td></tr>
+<tr class="memdesc:a78a1096bc1d4428655c9d2392e7358a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: ilość dodawanych kropek  <a href="#a78a1096bc1d4428655c9d2392e7358a9">Więcej...</a><br /></td></tr>
+<tr class="separator:a78a1096bc1d4428655c9d2392e7358a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca227a152ceb4bd30a834636e4394a9"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a6ca227a152ceb4bd30a834636e4394a9">zombie_points_small</a> = 1</td></tr>
+<tr class="memdesc:a6ca227a152ceb4bd30a834636e4394a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: liczba punktów za zjedzenie małej kropki  <a href="#a6ca227a152ceb4bd30a834636e4394a9">Więcej...</a><br /></td></tr>
+<tr class="separator:a6ca227a152ceb4bd30a834636e4394a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab48b5b7c20c1474aaee73643906fcb7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aab48b5b7c20c1474aaee73643906fcb7">zombie_points_large</a> = 2</td></tr>
+<tr class="memdesc:aab48b5b7c20c1474aaee73643906fcb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: liczba punktów za zjedzenie dużej kropki  <a href="#aab48b5b7c20c1474aaee73643906fcb7">Więcej...</a><br /></td></tr>
+<tr class="separator:aab48b5b7c20c1474aaee73643906fcb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf6c02959a18b8d786315b96dcb5e9c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aebf6c02959a18b8d786315b96dcb5e9c">zombie_points_kill_pacman</a> = 50</td></tr>
+<tr class="memdesc:aebf6c02959a18b8d786315b96dcb5e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: liczba punktów za zabicie pacmana  <a href="#aebf6c02959a18b8d786315b96dcb5e9c">Więcej...</a><br /></td></tr>
+<tr class="separator:aebf6c02959a18b8d786315b96dcb5e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa81622fe4b1c65fd96c15a77d9672902"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aa81622fe4b1c65fd96c15a77d9672902">zombie_points_kill_ghost</a> = 15</td></tr>
+<tr class="memdesc:aa81622fe4b1c65fd96c15a77d9672902"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: liczba punktów za zabicie duszka  <a href="#aa81622fe4b1c65fd96c15a77d9672902">Więcej...</a><br /></td></tr>
+<tr class="separator:aa81622fe4b1c65fd96c15a77d9672902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09cce802e6cadf77398f1704dcaa2e16"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a09cce802e6cadf77398f1704dcaa2e16">zombie_eating_time</a> = 65</td></tr>
+<tr class="memdesc:a09cce802e6cadf77398f1704dcaa2e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: czas trwania trybu zjadania duszków  <a href="#a09cce802e6cadf77398f1704dcaa2e16">Więcej...</a><br /></td></tr>
+<tr class="separator:a09cce802e6cadf77398f1704dcaa2e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46818375a476c9a0598f2d4f976a0f7a"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a46818375a476c9a0598f2d4f976a0f7a">zombie_pacman_speed</a> = 3</td></tr>
+<tr class="memdesc:a46818375a476c9a0598f2d4f976a0f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: szybkość pacmana  <a href="#a46818375a476c9a0598f2d4f976a0f7a">Więcej...</a><br /></td></tr>
+<tr class="separator:a46818375a476c9a0598f2d4f976a0f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b7a6df83f7ff298b243451ef16331d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a20b7a6df83f7ff298b243451ef16331d">zombie_ghost_speed</a> = 4</td></tr>
+<tr class="memdesc:a20b7a6df83f7ff298b243451ef16331d"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: szybkość duszka  <a href="#a20b7a6df83f7ff298b243451ef16331d">Więcej...</a><br /></td></tr>
+<tr class="separator:a20b7a6df83f7ff298b243451ef16331d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f55d28d08db737b8e19d95047f476f4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a4f55d28d08db737b8e19d95047f476f4">zombie_ghost_eatme_speed</a> = 5</td></tr>
+<tr class="memdesc:a4f55d28d08db737b8e19d95047f476f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">w trybie zombie: szybkosć duszka w trybie zjadania duszków  <a href="#a4f55d28d08db737b8e19d95047f476f4">Więcej...</a><br /></td></tr>
+<tr class="separator:a4f55d28d08db737b8e19d95047f476f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3a1c3b6f1338320f9da9f638e544a7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#aea3a1c3b6f1338320f9da9f638e544a7">max_clients</a> = 32</td></tr>
+<tr class="memdesc:aea3a1c3b6f1338320f9da9f638e544a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">maksymalna liczba klientów  <a href="#aea3a1c3b6f1338320f9da9f638e544a7">Więcej...</a><br /></td></tr>
+<tr class="separator:aea3a1c3b6f1338320f9da9f638e544a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b99e069f6e78fcb906d5effbb600e97"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a9b99e069f6e78fcb906d5effbb600e97">port</a> = 4000</td></tr>
+<tr class="memdesc:a9b99e069f6e78fcb906d5effbb600e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">numer portu przy połączeniu  <a href="#a9b99e069f6e78fcb906d5effbb600e97">Więcej...</a><br /></td></tr>
+<tr class="separator:a9b99e069f6e78fcb906d5effbb600e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9e5a3174565d13818c72f438f76188e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#ac9e5a3174565d13818c72f438f76188e">max_attempts</a> = 5</td></tr>
+<tr class="memdesc:ac9e5a3174565d13818c72f438f76188e"><td class="mdescLeft">&#160;</td><td class="mdescRight">maksymalna liczba powtórzeń w przypadku niewysłanego pakietu  <a href="#ac9e5a3174565d13818c72f438f76188e">Więcej...</a><br /></td></tr>
+<tr class="separator:ac9e5a3174565d13818c72f438f76188e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9adaa2536ee05fb75285920ae5afe6e1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a9adaa2536ee05fb75285920ae5afe6e1">wait_if_failed</a> = 100</td></tr>
+<tr class="memdesc:a9adaa2536ee05fb75285920ae5afe6e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">czas oczekiwania po niepowodzeniu wysłania pakietu (w ms)  <a href="#a9adaa2536ee05fb75285920ae5afe6e1">Więcej...</a><br /></td></tr>
+<tr class="separator:a9adaa2536ee05fb75285920ae5afe6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47aa7ec62f27cba6905595894782629d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a47aa7ec62f27cba6905595894782629d">buffer_size</a> = 10240</td></tr>
+<tr class="memdesc:a47aa7ec62f27cba6905595894782629d"><td class="mdescLeft">&#160;</td><td class="mdescRight">rozmiar bufora wejściowego przychodzących pakietów oraz bufora wyjściowego wysyłanych pakietów  <a href="#a47aa7ec62f27cba6905595894782629d">Więcej...</a><br /></td></tr>
+<tr class="separator:a47aa7ec62f27cba6905595894782629d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Ustawienia konfiguracyjne. </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00018">18</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="add4a56eb213eabe8fab63eb297f32538"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::ai_pacman_start_escape = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>AI pacmana: odległość od duszka, przy której pacman zaczyna uciekać </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00092">92</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ce8190a661a1e7846ab1211753ea954"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::ai_pacman_stop_escape = 6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>AI pacmana: minimalna odległość od duszka, przy której pacman przestaje uciekać </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00094">94</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a01aaa5df6462660f926740d37cade261"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * Config::app_name = &quot;PacLAN&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>tytuł okna </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00026">26</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4cf217b25f10326cd4886a30760c58db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Config::bitmap_names</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Wartość początkowa:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        <span class="stringliteral">&quot;gfx/pacman.png&quot;</span>, <span class="stringliteral">&quot;pacman&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;gfx/ghost.png&quot;</span>, <span class="stringliteral">&quot;ghost&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;gfx/ghost_eatme.png&quot;</span>, <span class="stringliteral">&quot;ghost_eatme&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;gfx/dot1.png&quot;</span>, <span class="stringliteral">&quot;dot1&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;gfx/dot2.png&quot;</span>, <span class="stringliteral">&quot;dot2&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;maps/1/background.png&quot;</span>, <span class="stringliteral">&quot;map1&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>tablica nazw plików obrazów oraz odpowiadającym im nazwom </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00042">42</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a47aa7ec62f27cba6905595894782629d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::buffer_size = 10240</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>rozmiar bufora wejściowego przychodzących pakietów oraz bufora wyjściowego wysyłanych pakietów </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00146">146</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe6cabf2ed56bec04f35bacbe892ae95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::eating_time = 80</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>czas trwania trybu zjadania duszków (w cyklach) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00098">98</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a08b85c98f4387420dd31e4595324236e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::eating_time_critical = 25</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>czas trwania migania duszków oznamiającego, że kończy się tryb zjadania duszków </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00100">100</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad28f19c482dbcc0f5b92b4a1bde08146"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94">LogLevel</a> Config::echo_log_level = <a class="el" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>poziom logów wyświetlanych w konsoli </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00076">76</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a93518c5bcbac93214691ca23584a8f52"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Config::echoes_max = 20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>maksymalna liczba wierszy wyjścia w konsoli </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00078">78</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78963b834bfd5f1ae7d042c2e9f505ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94">LogLevel</a> Config::file_log_level = <a class="el" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94adc30ec20708ef7b0f641ef78b7880a15">LogLevel::DEBUG</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>poziom logów zapisywanych w pliku </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00074">74</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac1104decb10bc1867bd0df1f95ed9d90"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Config::fontfile1 = &quot;fonts/arialbd.ttf&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>nazwa pliku czcionki nr 1 </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00048">48</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a450541c5ec7c47b802a15ce5f6c5f212"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Config::fontfile2 = &quot;fonts/prstartk.ttf&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>nazwa pliku czcionki nr 2 </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00052">52</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adada94bd164161f3d668984b9e52a2dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::fontsize1 = 14</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>rozmiar czcionki nr 1 </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00050">50</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="add506f30486afebafb42a5be3008a39b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::fontsize2 = 12</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>rozmiar czcionki nr 2 </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00054">54</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6eb873a24f6392061188920394747000"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::fps_avg_frames = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>liczba klatek do uśredniania FPS </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00038">38</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab4c5af64f103b8c27826b28dff1a7e7c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Config::fullscreen_start = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>uruchomienie trybu pełnoekranowego podczas startu (true - pełny ekran podczas startu) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00030">30</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aba4cda20b0faf5280ca187c214aa2180"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::ghost_eatme_speed = 8</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>domyślna szybkość duszka w trybie zjadania duszków (im mniesza wartość, tym większa szybkość) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00086">86</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a15ee07a5a4656d5eb5d7d673e080ad85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::ghost_speed = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>domyślna szybkość duszka (im mniesza wartość, tym większa szybkość) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00084">84</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a76c6e16e926fa7d084ef533ed284dd9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Config::icon_name = &quot;gfx/icon.png&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>nazwa pliku ikony aplikacji </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00044">44</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a977962c4c91d91c7b263429c88dc99d4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string Config::log_filename = &quot;log.txt&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>nazwa pliku dziennika zdarzeń </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00072">72</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8ae3ce457b4f2831baae39e24129ea9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::logic_cycles_critical = 60</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>krytyczna liczba niewykonanych cykli </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00036">36</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a40ff9de3d028f2bbc1fbf40295059647"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::logic_timer_ms = 40</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>okres timera cykli logicznych </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00034">34</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab49b12336ace9ec45f7778b0fe703013"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Config::mapDefault = &quot;maps/1/grid.txt&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>nazwa pliku definicji mapy </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00058">58</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac9e5a3174565d13818c72f438f76188e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::max_attempts = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>maksymalna liczba powtórzeń w przypadku niewysłanego pakietu </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00142">142</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aea3a1c3b6f1338320f9da9f638e544a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::max_clients = 32</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>maksymalna liczba klientów </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00138">138</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7eb3a0d91570e519b0ca22b5ef384999"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Config::move_while_respawn = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>możliwość ruchu w trakcie odradzania się (true - włączone) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00088">88</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa30a2d39d76e011ab126b1c444d64dac"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::next_round_time = 75</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>czas oczekiwania do następnej rundy i zakończenia rundy (w cyklach) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00104">104</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a118085a65b289914469a7569318ddbd0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::pacman_speed = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>domyślna szybkość pacmana (im mniesza wartość, tym większa szybkość) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00082">82</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa6da7e9485ec281d37f35b9e5e27ce93"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::points_kill_ghost = 15</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>domyślna wartość punktów za zabicie duszka </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00110">110</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3434eb9d8db5806281c3e1039b32d3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::points_kill_pacman = 80</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>domyślna wartość punktów za zabicie pacmana </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00108">108</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b99e069f6e78fcb906d5effbb600e97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::port = 4000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>numer portu przy połączeniu </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00140">140</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a332e55d9f00de4555cae11d6d7cc56bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::respawn_time = 120</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>czas oczekiwania na ponowne odrodzenie (w cyklach) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00102">102</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaf6a2beaa3b734a6a53e77c5263736c5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Config::show_fps = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wyświetlanie liczby klatek na sekundę (true - włączone) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00062">62</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee3629f52f884a00039d91129eebeda2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Config::show_grid = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wyświetlanie siatki pól mapy (true - włączone) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00064">64</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af2f70fcec355f250c4dde97043ff3028"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Config::show_names = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wyświetlanie nazw graczy (true - włączone) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00068">68</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d31cc9a604bf2280017235ad8238d95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Config::show_paths = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wyświetlanie ścieżek do celów graczy (true - włączone) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00066">66</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afc410be9ed7863f94c8f2237ad5eeec5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Config::version = <a class="el" href="version_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wersja aplikacji </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00028">28</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9adaa2536ee05fb75285920ae5afe6e1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::wait_if_failed = 100</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>czas oczekiwania po niepowodzeniu wysłania pakietu (w ms) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00144">144</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e8b3922c0e8ac13b255b3a162ef7717"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::window_h = 480</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wysokość okna aplikacji </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00024">24</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab989ad7b9b48cb6e493c63e7846cbf55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::window_w = 800</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>szerokość okna aplikacji </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00022">22</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a81b3a57e6b8e7dd0c56c3bb9e85005ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_death_time = 20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: czas do kolejnej śmierci pacmana (w sekundach) </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00114">114</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78a1096bc1d4428655c9d2392e7358a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_dots_add = 20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: ilość dodawanych kropek </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00118">118</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa163d3da3b46b1c096b4f1afd4fc9389"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_dots_threshold = 25</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: minimalna liczba kropek na mapie, przy której zostają dodane nowe kropki </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00116">116</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09cce802e6cadf77398f1704dcaa2e16"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_eating_time = 65</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: czas trwania trybu zjadania duszków </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00128">128</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f55d28d08db737b8e19d95047f476f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_ghost_eatme_speed = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: szybkosć duszka w trybie zjadania duszków </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00134">134</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a20b7a6df83f7ff298b243451ef16331d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_ghost_speed = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: szybkość duszka </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00132">132</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a46818375a476c9a0598f2d4f976a0f7a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_pacman_speed = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: szybkość pacmana </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00130">130</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa81622fe4b1c65fd96c15a77d9672902"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_points_kill_ghost = 15</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: liczba punktów za zabicie duszka </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00126">126</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aebf6c02959a18b8d786315b96dcb5e9c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_points_kill_pacman = 50</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: liczba punktów za zabicie pacmana </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00124">124</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aab48b5b7c20c1474aaee73643906fcb7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_points_large = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: liczba punktów za zjedzenie dużej kropki </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00122">122</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ca227a152ceb4bd30a834636e4394a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Config::zombie_points_small = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w trybie zombie: liczba punktów za zjedzenie małej kropki </p>
+
+<p>Definicja w linii <a class="el" href="config_8h_source.html#l00120">120</a> pliku <a class="el" href="config_8h_source.html">config.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>/mnt/d/Igrek/C++/PacLAN/src/<a class="el" href="config_8h_source.html">config.h</a></li>
+<li>/mnt/d/Igrek/C++/PacLAN/src/<a class="el" href="config_8cpp_source.html">config.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_config.html">Config</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:22 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

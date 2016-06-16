@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/config.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('config_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">config.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="config_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="config_8h.html">config.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="version_8h.html">version.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">const</span> <span class="keywordtype">string</span> <a class="code" href="class_config.html#a977962c4c91d91c7b263429c88dc99d4">Config::log_filename</a> = <span class="stringliteral">&quot;log.txt&quot;</span>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#ab989ad7b9b48cb6e493c63e7846cbf55">Config::window_w</a> = 800;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a4e8b3922c0e8ac13b255b3a162ef7717">Config::window_h</a> = 480;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_config.html#a01aaa5df6462660f926740d37cade261">Config::app_name</a> = <span class="stringliteral">&quot;PacLAN&quot;</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_config.html#afc410be9ed7863f94c8f2237ad5eeec5">Config::version</a> = <a class="code" href="version_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_config.html#ab4c5af64f103b8c27826b28dff1a7e7c">Config::fullscreen_start</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a40ff9de3d028f2bbc1fbf40295059647">Config::logic_timer_ms</a> = 40;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#ab8ae3ce457b4f2831baae39e24129ea9">Config::logic_cycles_critical</a> = 60;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a6eb873a24f6392061188920394747000">Config::fps_avg_frames</a> = 10;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_config.html#a4cf217b25f10326cd4886a30760c58db">Config::bitmap_names</a>[] = {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="stringliteral">&quot;gfx/pacman.png&quot;</span>, <span class="stringliteral">&quot;pacman&quot;</span>,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="stringliteral">&quot;gfx/ghost.png&quot;</span>, <span class="stringliteral">&quot;ghost&quot;</span>,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="stringliteral">&quot;gfx/ghost_eatme.png&quot;</span>, <span class="stringliteral">&quot;ghost_eatme&quot;</span>,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="stringliteral">&quot;gfx/dot1.png&quot;</span>, <span class="stringliteral">&quot;dot1&quot;</span>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="stringliteral">&quot;gfx/dot2.png&quot;</span>, <span class="stringliteral">&quot;dot2&quot;</span>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="stringliteral">&quot;maps/1/background.png&quot;</span>, <span class="stringliteral">&quot;map1&quot;</span>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_config.html#a76c6e16e926fa7d084ef533ed284dd9f">Config::icon_name</a> = <span class="stringliteral">&quot;gfx/icon.png&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_config.html#ac1104decb10bc1867bd0df1f95ed9d90">Config::fontfile1</a> = <span class="stringliteral">&quot;fonts/arialbd.ttf&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#adada94bd164161f3d668984b9e52a2dd">Config::fontsize1</a> = 14;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_config.html#a450541c5ec7c47b802a15ce5f6c5f212">Config::fontfile2</a> = <span class="stringliteral">&quot;fonts/prstartk.ttf&quot;</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#add506f30486afebafb42a5be3008a39b">Config::fontsize2</a> = 12;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">string</span> <a class="code" href="class_config.html#ab49b12336ace9ec45f7778b0fe703013">Config::mapDefault</a> = <span class="stringliteral">&quot;maps/1/grid.txt&quot;</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_config.html#aaf6a2beaa3b734a6a53e77c5263736c5">Config::show_fps</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_config.html#aee3629f52f884a00039d91129eebeda2">Config::show_grid</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_config.html#a1d31cc9a604bf2280017235ad8238d95">Config::show_paths</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_config.html#af2f70fcec355f250c4dde97043ff3028">Config::show_names</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="class_config.html#a93518c5bcbac93214691ca23584a8f52">Config::echoes_max</a> = 20;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94">LogLevel</a> <a class="code" href="class_config.html#a78963b834bfd5f1ae7d042c2e9f505ed">Config::file_log_level</a> = <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94adc30ec20708ef7b0f641ef78b7880a15">LogLevel::DEBUG</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94">LogLevel</a> <a class="code" href="class_config.html#ad28f19c482dbcc0f5b92b4a1bde08146">Config::echo_log_level</a> = <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a118085a65b289914469a7569318ddbd0">Config::pacman_speed</a> = 4;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a15ee07a5a4656d5eb5d7d673e080ad85">Config::ghost_speed</a> = 4;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#aba4cda20b0faf5280ca187c214aa2180">Config::ghost_eatme_speed</a> = 8;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_config.html#a7eb3a0d91570e519b0ca22b5ef384999">Config::move_while_respawn</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#add4a56eb213eabe8fab63eb297f32538">Config::ai_pacman_start_escape</a> = 4;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a3ce8190a661a1e7846ab1211753ea954">Config::ai_pacman_stop_escape</a> = 6;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#abe6cabf2ed56bec04f35bacbe892ae95">Config::eating_time</a> = 80;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a08b85c98f4387420dd31e4595324236e">Config::eating_time_critical</a> = 25;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a332e55d9f00de4555cae11d6d7cc56bb">Config::respawn_time</a> = 120;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#aa30a2d39d76e011ab126b1c444d64dac">Config::next_round_time</a> = 75;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#aa3434eb9d8db5806281c3e1039b32d3e">Config::points_kill_pacman</a> = 80;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#aa6da7e9485ec281d37f35b9e5e27ce93">Config::points_kill_ghost</a> = 15;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a81b3a57e6b8e7dd0c56c3bb9e85005ed">Config::zombie_death_time</a> = 20;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#aa163d3da3b46b1c096b4f1afd4fc9389">Config::zombie_dots_threshold</a> = 25;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a78a1096bc1d4428655c9d2392e7358a9">Config::zombie_dots_add</a> = 20;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a6ca227a152ceb4bd30a834636e4394a9">Config::zombie_points_small</a> = 1;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#aab48b5b7c20c1474aaee73643906fcb7">Config::zombie_points_large</a> = 2;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#aebf6c02959a18b8d786315b96dcb5e9c">Config::zombie_points_kill_pacman</a> = 50;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#aa81622fe4b1c65fd96c15a77d9672902">Config::zombie_points_kill_ghost</a> = 15;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a09cce802e6cadf77398f1704dcaa2e16">Config::zombie_eating_time</a> = 65;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a46818375a476c9a0598f2d4f976a0f7a">Config::zombie_pacman_speed</a> = 3;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a20b7a6df83f7ff298b243451ef16331d">Config::zombie_ghost_speed</a> = 4;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a4f55d28d08db737b8e19d95047f476f4">Config::zombie_ghost_eatme_speed</a> = 5;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#aea3a1c3b6f1338320f9da9f638e544a7">Config::max_clients</a> = 32;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a9b99e069f6e78fcb906d5effbb600e97">Config::port</a> = 4000;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#ac9e5a3174565d13818c72f438f76188e">Config::max_attempts</a> = 5;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a9adaa2536ee05fb75285920ae5afe6e1">Config::wait_if_failed</a> = 100;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_config.html#a47aa7ec62f27cba6905595894782629d">Config::buffer_size</a> = 10240;</div>
+<div class="ttc" id="class_config_html_ab49b12336ace9ec45f7778b0fe703013"><div class="ttname"><a href="class_config.html#ab49b12336ace9ec45f7778b0fe703013">Config::mapDefault</a></div><div class="ttdeci">static string mapDefault</div><div class="ttdoc">nazwa pliku definicji mapy </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00058">config.h:58</a></div></div>
+<div class="ttc" id="class_config_html_aab48b5b7c20c1474aaee73643906fcb7"><div class="ttname"><a href="class_config.html#aab48b5b7c20c1474aaee73643906fcb7">Config::zombie_points_large</a></div><div class="ttdeci">static int zombie_points_large</div><div class="ttdoc">w trybie zombie: liczba punktów za zjedzenie dużej kropki </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00122">config.h:122</a></div></div>
+<div class="ttc" id="class_config_html_a1d31cc9a604bf2280017235ad8238d95"><div class="ttname"><a href="class_config.html#a1d31cc9a604bf2280017235ad8238d95">Config::show_paths</a></div><div class="ttdeci">static bool show_paths</div><div class="ttdoc">wyświetlanie ścieżek do celów graczy (true - włączone) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00066">config.h:66</a></div></div>
+<div class="ttc" id="class_config_html_ab4c5af64f103b8c27826b28dff1a7e7c"><div class="ttname"><a href="class_config.html#ab4c5af64f103b8c27826b28dff1a7e7c">Config::fullscreen_start</a></div><div class="ttdeci">static bool fullscreen_start</div><div class="ttdoc">uruchomienie trybu pełnoekranowego podczas startu (true - pełny ekran podczas startu) ...</div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00030">config.h:30</a></div></div>
+<div class="ttc" id="version_8h_html_a1c6d5de492ac61ad29aec7aa9a436bbf"><div class="ttname"><a href="version_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a></div><div class="ttdeci">#define VERSION</div><div class="ttdef"><b>Definition:</b> <a href="version_8h_source.html#l00005">version.h:5</a></div></div>
+<div class="ttc" id="class_config_html_a09cce802e6cadf77398f1704dcaa2e16"><div class="ttname"><a href="class_config.html#a09cce802e6cadf77398f1704dcaa2e16">Config::zombie_eating_time</a></div><div class="ttdeci">static int zombie_eating_time</div><div class="ttdoc">w trybie zombie: czas trwania trybu zjadania duszków </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00128">config.h:128</a></div></div>
+<div class="ttc" id="class_config_html_a4cf217b25f10326cd4886a30760c58db"><div class="ttname"><a href="class_config.html#a4cf217b25f10326cd4886a30760c58db">Config::bitmap_names</a></div><div class="ttdeci">static string bitmap_names[]</div><div class="ttdoc">tablica nazw plików obrazów oraz odpowiadającym im nazwom </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00042">config.h:42</a></div></div>
+<div class="ttc" id="class_config_html_af2f70fcec355f250c4dde97043ff3028"><div class="ttname"><a href="class_config.html#af2f70fcec355f250c4dde97043ff3028">Config::show_names</a></div><div class="ttdeci">static bool show_names</div><div class="ttdoc">wyświetlanie nazw graczy (true - włączone) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00068">config.h:68</a></div></div>
+<div class="ttc" id="class_config_html_aa6da7e9485ec281d37f35b9e5e27ce93"><div class="ttname"><a href="class_config.html#aa6da7e9485ec281d37f35b9e5e27ce93">Config::points_kill_ghost</a></div><div class="ttdeci">static int points_kill_ghost</div><div class="ttdoc">domyślna wartość punktów za zabicie duszka </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00110">config.h:110</a></div></div>
+<div class="ttc" id="class_config_html_aa3434eb9d8db5806281c3e1039b32d3e"><div class="ttname"><a href="class_config.html#aa3434eb9d8db5806281c3e1039b32d3e">Config::points_kill_pacman</a></div><div class="ttdeci">static int points_kill_pacman</div><div class="ttdoc">domyślna wartość punktów za zabicie pacmana </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00108">config.h:108</a></div></div>
+<div class="ttc" id="class_config_html_aee3629f52f884a00039d91129eebeda2"><div class="ttname"><a href="class_config.html#aee3629f52f884a00039d91129eebeda2">Config::show_grid</a></div><div class="ttdeci">static bool show_grid</div><div class="ttdoc">wyświetlanie siatki pól mapy (true - włączone) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00064">config.h:64</a></div></div>
+<div class="ttc" id="config_8h_html"><div class="ttname"><a href="config_8h.html">config.h</a></div></div>
+<div class="ttc" id="class_config_html_a15ee07a5a4656d5eb5d7d673e080ad85"><div class="ttname"><a href="class_config.html#a15ee07a5a4656d5eb5d7d673e080ad85">Config::ghost_speed</a></div><div class="ttdeci">static int ghost_speed</div><div class="ttdoc">domyślna szybkość duszka (im mniesza wartość, tym większa szybkość) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00084">config.h:84</a></div></div>
+<div class="ttc" id="class_config_html_a7eb3a0d91570e519b0ca22b5ef384999"><div class="ttname"><a href="class_config.html#a7eb3a0d91570e519b0ca22b5ef384999">Config::move_while_respawn</a></div><div class="ttdeci">static bool move_while_respawn</div><div class="ttdoc">możliwość ruchu w trakcie odradzania się (true - włączone) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00088">config.h:88</a></div></div>
+<div class="ttc" id="class_config_html_a46818375a476c9a0598f2d4f976a0f7a"><div class="ttname"><a href="class_config.html#a46818375a476c9a0598f2d4f976a0f7a">Config::zombie_pacman_speed</a></div><div class="ttdeci">static int zombie_pacman_speed</div><div class="ttdoc">w trybie zombie: szybkość pacmana </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00130">config.h:130</a></div></div>
+<div class="ttc" id="class_config_html_afc410be9ed7863f94c8f2237ad5eeec5"><div class="ttname"><a href="class_config.html#afc410be9ed7863f94c8f2237ad5eeec5">Config::version</a></div><div class="ttdeci">static string version</div><div class="ttdoc">wersja aplikacji </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00028">config.h:28</a></div></div>
+<div class="ttc" id="class_config_html_aebf6c02959a18b8d786315b96dcb5e9c"><div class="ttname"><a href="class_config.html#aebf6c02959a18b8d786315b96dcb5e9c">Config::zombie_points_kill_pacman</a></div><div class="ttdeci">static int zombie_points_kill_pacman</div><div class="ttdoc">w trybie zombie: liczba punktów za zabicie pacmana </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00124">config.h:124</a></div></div>
+<div class="ttc" id="class_config_html_a332e55d9f00de4555cae11d6d7cc56bb"><div class="ttname"><a href="class_config.html#a332e55d9f00de4555cae11d6d7cc56bb">Config::respawn_time</a></div><div class="ttdeci">static int respawn_time</div><div class="ttdoc">czas oczekiwania na ponowne odrodzenie (w cyklach) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00102">config.h:102</a></div></div>
+<div class="ttc" id="class_config_html_a9b99e069f6e78fcb906d5effbb600e97"><div class="ttname"><a href="class_config.html#a9b99e069f6e78fcb906d5effbb600e97">Config::port</a></div><div class="ttdeci">static int port</div><div class="ttdoc">numer portu przy połączeniu </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00140">config.h:140</a></div></div>
+<div class="ttc" id="class_config_html_a4f55d28d08db737b8e19d95047f476f4"><div class="ttname"><a href="class_config.html#a4f55d28d08db737b8e19d95047f476f4">Config::zombie_ghost_eatme_speed</a></div><div class="ttdeci">static int zombie_ghost_eatme_speed</div><div class="ttdoc">w trybie zombie: szybkosć duszka w trybie zjadania duszków </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00134">config.h:134</a></div></div>
+<div class="ttc" id="class_config_html_a78963b834bfd5f1ae7d042c2e9f505ed"><div class="ttname"><a href="class_config.html#a78963b834bfd5f1ae7d042c2e9f505ed">Config::file_log_level</a></div><div class="ttdeci">static LogLevel file_log_level</div><div class="ttdoc">poziom logów zapisywanych w pliku </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00074">config.h:74</a></div></div>
+<div class="ttc" id="class_config_html_aa81622fe4b1c65fd96c15a77d9672902"><div class="ttname"><a href="class_config.html#aa81622fe4b1c65fd96c15a77d9672902">Config::zombie_points_kill_ghost</a></div><div class="ttdeci">static int zombie_points_kill_ghost</div><div class="ttdoc">w trybie zombie: liczba punktów za zabicie duszka </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00126">config.h:126</a></div></div>
+<div class="ttc" id="class_config_html_aa30a2d39d76e011ab126b1c444d64dac"><div class="ttname"><a href="class_config.html#aa30a2d39d76e011ab126b1c444d64dac">Config::next_round_time</a></div><div class="ttdeci">static int next_round_time</div><div class="ttdoc">czas oczekiwania do następnej rundy i zakończenia rundy (w cyklach) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00104">config.h:104</a></div></div>
+<div class="ttc" id="class_config_html_aea3a1c3b6f1338320f9da9f638e544a7"><div class="ttname"><a href="class_config.html#aea3a1c3b6f1338320f9da9f638e544a7">Config::max_clients</a></div><div class="ttdeci">static int max_clients</div><div class="ttdoc">maksymalna liczba klientów </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00138">config.h:138</a></div></div>
+<div class="ttc" id="class_config_html_ad28f19c482dbcc0f5b92b4a1bde08146"><div class="ttname"><a href="class_config.html#ad28f19c482dbcc0f5b92b4a1bde08146">Config::echo_log_level</a></div><div class="ttdeci">static LogLevel echo_log_level</div><div class="ttdoc">poziom logów wyświetlanych w konsoli </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00076">config.h:76</a></div></div>
+<div class="ttc" id="class_config_html_aaf6a2beaa3b734a6a53e77c5263736c5"><div class="ttname"><a href="class_config.html#aaf6a2beaa3b734a6a53e77c5263736c5">Config::show_fps</a></div><div class="ttdeci">static bool show_fps</div><div class="ttdoc">wyświetlanie liczby klatek na sekundę (true - włączone) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00062">config.h:62</a></div></div>
+<div class="ttc" id="class_config_html_add4a56eb213eabe8fab63eb297f32538"><div class="ttname"><a href="class_config.html#add4a56eb213eabe8fab63eb297f32538">Config::ai_pacman_start_escape</a></div><div class="ttdeci">static int ai_pacman_start_escape</div><div class="ttdoc">AI pacmana: odległość od duszka, przy której pacman zaczyna uciekać </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00092">config.h:92</a></div></div>
+<div class="ttc" id="class_config_html_ac9e5a3174565d13818c72f438f76188e"><div class="ttname"><a href="class_config.html#ac9e5a3174565d13818c72f438f76188e">Config::max_attempts</a></div><div class="ttdeci">static int max_attempts</div><div class="ttdoc">maksymalna liczba powtórzeń w przypadku niewysłanego pakietu </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00142">config.h:142</a></div></div>
+<div class="ttc" id="class_config_html_a08b85c98f4387420dd31e4595324236e"><div class="ttname"><a href="class_config.html#a08b85c98f4387420dd31e4595324236e">Config::eating_time_critical</a></div><div class="ttdeci">static int eating_time_critical</div><div class="ttdoc">czas trwania migania duszków oznamiającego, że kończy się tryb zjadania duszków </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00100">config.h:100</a></div></div>
+<div class="ttc" id="class_config_html_a118085a65b289914469a7569318ddbd0"><div class="ttname"><a href="class_config.html#a118085a65b289914469a7569318ddbd0">Config::pacman_speed</a></div><div class="ttdeci">static int pacman_speed</div><div class="ttdoc">domyślna szybkość pacmana (im mniesza wartość, tym większa szybkość) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00082">config.h:82</a></div></div>
+<div class="ttc" id="class_config_html_a01aaa5df6462660f926740d37cade261"><div class="ttname"><a href="class_config.html#a01aaa5df6462660f926740d37cade261">Config::app_name</a></div><div class="ttdeci">static const char * app_name</div><div class="ttdoc">tytuł okna </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00026">config.h:26</a></div></div>
+<div class="ttc" id="class_config_html_a977962c4c91d91c7b263429c88dc99d4"><div class="ttname"><a href="class_config.html#a977962c4c91d91c7b263429c88dc99d4">Config::log_filename</a></div><div class="ttdeci">static const string log_filename</div><div class="ttdoc">nazwa pliku dziennika zdarzeń </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00072">config.h:72</a></div></div>
+<div class="ttc" id="class_config_html_add506f30486afebafb42a5be3008a39b"><div class="ttname"><a href="class_config.html#add506f30486afebafb42a5be3008a39b">Config::fontsize2</a></div><div class="ttdeci">static int fontsize2</div><div class="ttdoc">rozmiar czcionki nr 2 </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00054">config.h:54</a></div></div>
+<div class="ttc" id="class_config_html_a450541c5ec7c47b802a15ce5f6c5f212"><div class="ttname"><a href="class_config.html#a450541c5ec7c47b802a15ce5f6c5f212">Config::fontfile2</a></div><div class="ttdeci">static string fontfile2</div><div class="ttdoc">nazwa pliku czcionki nr 2 </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00052">config.h:52</a></div></div>
+<div class="ttc" id="version_8h_html"><div class="ttname"><a href="version_8h.html">version.h</a></div></div>
+<div class="ttc" id="class_config_html_ac1104decb10bc1867bd0df1f95ed9d90"><div class="ttname"><a href="class_config.html#ac1104decb10bc1867bd0df1f95ed9d90">Config::fontfile1</a></div><div class="ttdeci">static string fontfile1</div><div class="ttdoc">nazwa pliku czcionki nr 1 </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00048">config.h:48</a></div></div>
+<div class="ttc" id="log__level_8h_html_a9cf4d2a890c8688e0fe1bc38fa88de94"><div class="ttname"><a href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94">LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> <a href="log__level_8h_source.html#l00012">log_level.h:12</a></div></div>
+<div class="ttc" id="class_config_html_ab989ad7b9b48cb6e493c63e7846cbf55"><div class="ttname"><a href="class_config.html#ab989ad7b9b48cb6e493c63e7846cbf55">Config::window_w</a></div><div class="ttdeci">static int window_w</div><div class="ttdoc">szerokość okna aplikacji </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00022">config.h:22</a></div></div>
+<div class="ttc" id="class_config_html_a4e8b3922c0e8ac13b255b3a162ef7717"><div class="ttname"><a href="class_config.html#a4e8b3922c0e8ac13b255b3a162ef7717">Config::window_h</a></div><div class="ttdeci">static int window_h</div><div class="ttdoc">wysokość okna aplikacji </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00024">config.h:24</a></div></div>
+<div class="ttc" id="class_config_html_abe6cabf2ed56bec04f35bacbe892ae95"><div class="ttname"><a href="class_config.html#abe6cabf2ed56bec04f35bacbe892ae95">Config::eating_time</a></div><div class="ttdeci">static int eating_time</div><div class="ttdoc">czas trwania trybu zjadania duszków (w cyklach) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00098">config.h:98</a></div></div>
+<div class="ttc" id="class_config_html_adada94bd164161f3d668984b9e52a2dd"><div class="ttname"><a href="class_config.html#adada94bd164161f3d668984b9e52a2dd">Config::fontsize1</a></div><div class="ttdeci">static int fontsize1</div><div class="ttdoc">rozmiar czcionki nr 1 </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00050">config.h:50</a></div></div>
+<div class="ttc" id="class_config_html_a93518c5bcbac93214691ca23584a8f52"><div class="ttname"><a href="class_config.html#a93518c5bcbac93214691ca23584a8f52">Config::echoes_max</a></div><div class="ttdeci">static unsigned int echoes_max</div><div class="ttdoc">maksymalna liczba wierszy wyjścia w konsoli </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00078">config.h:78</a></div></div>
+<div class="ttc" id="class_config_html_a9adaa2536ee05fb75285920ae5afe6e1"><div class="ttname"><a href="class_config.html#a9adaa2536ee05fb75285920ae5afe6e1">Config::wait_if_failed</a></div><div class="ttdeci">static int wait_if_failed</div><div class="ttdoc">czas oczekiwania po niepowodzeniu wysłania pakietu (w ms) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00144">config.h:144</a></div></div>
+<div class="ttc" id="class_config_html_aa163d3da3b46b1c096b4f1afd4fc9389"><div class="ttname"><a href="class_config.html#aa163d3da3b46b1c096b4f1afd4fc9389">Config::zombie_dots_threshold</a></div><div class="ttdeci">static int zombie_dots_threshold</div><div class="ttdoc">w trybie zombie: minimalna liczba kropek na mapie, przy której zostają dodane nowe kropki ...</div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00116">config.h:116</a></div></div>
+<div class="ttc" id="class_config_html_a20b7a6df83f7ff298b243451ef16331d"><div class="ttname"><a href="class_config.html#a20b7a6df83f7ff298b243451ef16331d">Config::zombie_ghost_speed</a></div><div class="ttdeci">static int zombie_ghost_speed</div><div class="ttdoc">w trybie zombie: szybkość duszka </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00132">config.h:132</a></div></div>
+<div class="ttc" id="class_config_html_a3ce8190a661a1e7846ab1211753ea954"><div class="ttname"><a href="class_config.html#a3ce8190a661a1e7846ab1211753ea954">Config::ai_pacman_stop_escape</a></div><div class="ttdeci">static int ai_pacman_stop_escape</div><div class="ttdoc">AI pacmana: minimalna odległość od duszka, przy której pacman przestaje uciekać </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00094">config.h:94</a></div></div>
+<div class="ttc" id="class_config_html_a6eb873a24f6392061188920394747000"><div class="ttname"><a href="class_config.html#a6eb873a24f6392061188920394747000">Config::fps_avg_frames</a></div><div class="ttdeci">static int fps_avg_frames</div><div class="ttdoc">liczba klatek do uśredniania FPS </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00038">config.h:38</a></div></div>
+<div class="ttc" id="class_config_html_a76c6e16e926fa7d084ef533ed284dd9f"><div class="ttname"><a href="class_config.html#a76c6e16e926fa7d084ef533ed284dd9f">Config::icon_name</a></div><div class="ttdeci">static string icon_name</div><div class="ttdoc">nazwa pliku ikony aplikacji </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00044">config.h:44</a></div></div>
+<div class="ttc" id="class_config_html_a6ca227a152ceb4bd30a834636e4394a9"><div class="ttname"><a href="class_config.html#a6ca227a152ceb4bd30a834636e4394a9">Config::zombie_points_small</a></div><div class="ttdeci">static int zombie_points_small</div><div class="ttdoc">w trybie zombie: liczba punktów za zjedzenie małej kropki </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00120">config.h:120</a></div></div>
+<div class="ttc" id="class_config_html_aba4cda20b0faf5280ca187c214aa2180"><div class="ttname"><a href="class_config.html#aba4cda20b0faf5280ca187c214aa2180">Config::ghost_eatme_speed</a></div><div class="ttdeci">static int ghost_eatme_speed</div><div class="ttdoc">domyślna szybkość duszka w trybie zjadania duszków (im mniesza wartość, tym większa szybkość) ...</div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00086">config.h:86</a></div></div>
+<div class="ttc" id="log__level_8h_html_a9cf4d2a890c8688e0fe1bc38fa88de94a551b723eafd6a31d444fcb2f5920fbd3"><div class="ttname"><a href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a></div></div>
+<div class="ttc" id="class_config_html_a47aa7ec62f27cba6905595894782629d"><div class="ttname"><a href="class_config.html#a47aa7ec62f27cba6905595894782629d">Config::buffer_size</a></div><div class="ttdeci">static int buffer_size</div><div class="ttdoc">rozmiar bufora wejściowego przychodzących pakietów oraz bufora wyjściowego wysyłanych pakietów ...</div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00146">config.h:146</a></div></div>
+<div class="ttc" id="class_config_html_a81b3a57e6b8e7dd0c56c3bb9e85005ed"><div class="ttname"><a href="class_config.html#a81b3a57e6b8e7dd0c56c3bb9e85005ed">Config::zombie_death_time</a></div><div class="ttdeci">static int zombie_death_time</div><div class="ttdoc">w trybie zombie: czas do kolejnej śmierci pacmana (w sekundach) </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00114">config.h:114</a></div></div>
+<div class="ttc" id="class_config_html_ab8ae3ce457b4f2831baae39e24129ea9"><div class="ttname"><a href="class_config.html#ab8ae3ce457b4f2831baae39e24129ea9">Config::logic_cycles_critical</a></div><div class="ttdeci">static int logic_cycles_critical</div><div class="ttdoc">krytyczna liczba niewykonanych cykli </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00036">config.h:36</a></div></div>
+<div class="ttc" id="class_config_html_a78a1096bc1d4428655c9d2392e7358a9"><div class="ttname"><a href="class_config.html#a78a1096bc1d4428655c9d2392e7358a9">Config::zombie_dots_add</a></div><div class="ttdeci">static int zombie_dots_add</div><div class="ttdoc">w trybie zombie: ilość dodawanych kropek </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00118">config.h:118</a></div></div>
+<div class="ttc" id="class_config_html_a40ff9de3d028f2bbc1fbf40295059647"><div class="ttname"><a href="class_config.html#a40ff9de3d028f2bbc1fbf40295059647">Config::logic_timer_ms</a></div><div class="ttdeci">static int logic_timer_ms</div><div class="ttdoc">okres timera cykli logicznych </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00034">config.h:34</a></div></div>
+<div class="ttc" id="log__level_8h_html_a9cf4d2a890c8688e0fe1bc38fa88de94adc30ec20708ef7b0f641ef78b7880a15"><div class="ttname"><a href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94adc30ec20708ef7b0f641ef78b7880a15">LogLevel::DEBUG</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="config_8cpp.html">config.cpp</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

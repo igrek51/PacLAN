@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Dokumentacja klasy Thread</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_thread.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pro-methods">Metody chronione</a> &#124;
+<a href="#pro-attribs">Atrybuty chronione</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="class_thread-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Thread<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>osobny Wątek  
+ <a href="class_thread.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="thread_8h_source.html">thread.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla Thread</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_thread.png" usemap="#Thread_map" alt=""/>
+  <map id="Thread_map" name="Thread_map">
+<area href="class_continuous_thread.html" title="Wątek z procedurą wykonywaną cyklicznie. " alt="ContinuousThread" shape="rect" coords="62,56,177,80"/>
+<area href="class_network.html" title="Silnik obsługi komunikacji między wieloma komputerami. " alt="Network" shape="rect" coords="0,112,115,136"/>
+<area href="class_timer.html" title="Wątek odmierzania stałych odstępów czasu. " alt="Timer" shape="rect" coords="125,112,240,136"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a95c703fb8f2f27cb64f475a8c940864a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a95c703fb8f2f27cb64f475a8c940864a">Thread</a> ()</td></tr>
+<tr class="memdesc:a95c703fb8f2f27cb64f475a8c940864a"><td class="mdescLeft">&#160;</td><td class="mdescRight">uruchomienie nowego wątku  <a href="#a95c703fb8f2f27cb64f475a8c940864a">Więcej...</a><br /></td></tr>
+<tr class="separator:a95c703fb8f2f27cb64f475a8c940864a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d9edd3a1a776cbc27dedff949c9726"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a37d9edd3a1a776cbc27dedff949c9726">~Thread</a> ()</td></tr>
+<tr class="memdesc:a37d9edd3a1a776cbc27dedff949c9726"><td class="mdescLeft">&#160;</td><td class="mdescRight">zakończenie wątku  <a href="#a37d9edd3a1a776cbc27dedff949c9726">Więcej...</a><br /></td></tr>
+<tr class="separator:a37d9edd3a1a776cbc27dedff949c9726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Metody chronione</h2></td></tr>
+<tr class="memitem:aae90dfabab3e1776cf01a26e7ee3a620"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#aae90dfabab3e1776cf01a26e7ee3a620">run</a> ()=0</td></tr>
+<tr class="memdesc:aae90dfabab3e1776cf01a26e7ee3a620"><td class="mdescLeft">&#160;</td><td class="mdescRight">główna funkcja wykonywana w osobnym wątku  <a href="#aae90dfabab3e1776cf01a26e7ee3a620">Więcej...</a><br /></td></tr>
+<tr class="separator:aae90dfabab3e1776cf01a26e7ee3a620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Atrybuty chronione</h2></td></tr>
+<tr class="memitem:abc3e397d210eb698ee18b91aa48e11d0"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#abc3e397d210eb698ee18b91aa48e11d0">init</a></td></tr>
+<tr class="memdesc:abc3e397d210eb698ee18b91aa48e11d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">czy zakończono inicjalizację  <a href="#abc3e397d210eb698ee18b91aa48e11d0">Więcej...</a><br /></td></tr>
+<tr class="separator:abc3e397d210eb698ee18b91aa48e11d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c14b28726d76b944466ebdf43f6fead"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a1c14b28726d76b944466ebdf43f6fead">close_signal</a></td></tr>
+<tr class="memdesc:a1c14b28726d76b944466ebdf43f6fead"><td class="mdescLeft">&#160;</td><td class="mdescRight">czy polecono zamknięcie  <a href="#a1c14b28726d76b944466ebdf43f6fead">Więcej...</a><br /></td></tr>
+<tr class="separator:a1c14b28726d76b944466ebdf43f6fead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d78f5735ce6fa094f409b0524b7566"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#af9d78f5735ce6fa094f409b0524b7566">boost_thread</a></td></tr>
+<tr class="memdesc:af9d78f5735ce6fa094f409b0524b7566"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik do wątku (zrzutowany na void, żeby za każdym razem nie dołączać biblioteki boost, co znacznie wydłuża kompilację)  <a href="#af9d78f5735ce6fa094f409b0524b7566">Więcej...</a><br /></td></tr>
+<tr class="separator:af9d78f5735ce6fa094f409b0524b7566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:a1f53ee62bd30a7924186ef26150ce262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a1f53ee62bd30a7924186ef26150ce262">start</a> ()</td></tr>
+<tr class="memdesc:a1f53ee62bd30a7924186ef26150ce262"><td class="mdescLeft">&#160;</td><td class="mdescRight">inicjalizacja uruchamiana w nowym wątku  <a href="#a1f53ee62bd30a7924186ef26150ce262">Więcej...</a><br /></td></tr>
+<tr class="separator:a1f53ee62bd30a7924186ef26150ce262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>osobny Wątek </p>
+
+<p>Definicja w linii <a class="el" href="thread_8h_source.html#l00011">11</a> pliku <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a95c703fb8f2f27cb64f475a8c940864a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Thread::Thread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uruchomienie nowego wątku </p>
+
+<p>Definicja w linii <a class="el" href="thread_8cpp_source.html#l00006">6</a> pliku <a class="el" href="thread_8cpp_source.html">thread.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37d9edd3a1a776cbc27dedff949c9726"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Thread::~Thread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>zakończenie wątku </p>
+
+<p>Definicja w linii <a class="el" href="thread_8cpp_source.html#l00013">13</a> pliku <a class="el" href="thread_8cpp_source.html">thread.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="aae90dfabab3e1776cf01a26e7ee3a620"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Thread::run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>główna funkcja wykonywana w osobnym wątku </p>
+
+<p>Implementowany w <a class="el" href="class_continuous_thread.html#a4349c94e0f01414e972fdb0bc9ae64a7">ContinuousThread</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f53ee62bd30a7924186ef26150ce262"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Thread::start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>inicjalizacja uruchamiana w nowym wątku </p>
+
+<p>Definicja w linii <a class="el" href="thread_8cpp_source.html#l00024">24</a> pliku <a class="el" href="thread_8cpp_source.html">thread.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="af9d78f5735ce6fa094f409b0524b7566"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* Thread::boost_thread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wskaźnik do wątku (zrzutowany na void, żeby za każdym razem nie dołączać biblioteki boost, co znacznie wydłuża kompilację) </p>
+
+<p>Definicja w linii <a class="el" href="thread_8h_source.html#l00028">28</a> pliku <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1c14b28726d76b944466ebdf43f6fead"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool Thread::close_signal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>czy polecono zamknięcie </p>
+
+<p>Definicja w linii <a class="el" href="thread_8h_source.html#l00026">26</a> pliku <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abc3e397d210eb698ee18b91aa48e11d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool Thread::init</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>czy zakończono inicjalizację </p>
+
+<p>Definicja w linii <a class="el" href="thread_8h_source.html#l00024">24</a> pliku <a class="el" href="thread_8h_source.html">thread.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>/mnt/d/Igrek/C++/PacLAN/src/threads/<a class="el" href="thread_8h_source.html">thread.h</a></li>
+<li>/mnt/d/Igrek/C++/PacLAN/src/threads/<a class="el" href="thread_8cpp_source.html">thread.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_thread.html">Thread</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:22 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

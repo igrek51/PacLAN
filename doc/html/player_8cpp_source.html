@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/players/player.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('player_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">player.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="player_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="player_8h.html">player.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../config.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../log/log.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../app.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../utils.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_player.html#ad6ff4c22eec0bd905c43d1b8a3d1cec0">    7</a></span>&#160;<a class="code" href="class_player.html#ad6ff4c22eec0bd905c43d1b8a3d1cec0">Player::Player</a>(<span class="keywordtype">int</span> xmap, <span class="keywordtype">int</span> ymap, SDL_Color color, <span class="keywordtype">string</span> name, <span class="keywordtype">int</span> controlby,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;               <a class="code" href="class_game_engine.html">GameEngine</a>* game_engine, <a class="code" href="class_graphics.html">Graphics</a>* graphics) {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    this-&gt;xmap = <a class="code" href="class_player.html#a7f0d6b709df66bfa850ada3a07a2d4d0">xmap</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    this-&gt;ymap = <a class="code" href="class_player.html#a35dfec8fc1af9839437d3bffe2cf6b9c">ymap</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    this-&gt;color = <a class="code" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    this-&gt;name = <a class="code" href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">name</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    this-&gt;controlby = <a class="code" href="class_player.html#a641efdab62bcea257201e4e039a86ba6">controlby</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    this-&gt;game_engine = <a class="code" href="class_player.html#a7b92300769d36f6c8bc10721dc9c5d84">game_engine</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    this-&gt;graphics = <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_player.html#a5c9c66aa484170863e185b1d4cddb75b">texture</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    game_engine-&gt;<a class="code" href="class_game_engine.html#a32d9936005768d5855f5e0ae384a3c9e">xymap_to_xy</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_player.html#a809d5f70aac4198048e67e3b934deb35">move_abs</a>(<a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a>, <a class="code" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_player.html#a2d8210e990c459626fd30caf285ade68">can_move</a> = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_player.html#a6d95202b5546ac375bdb75e3fb657d17">direction</a> = <a class="code" href="player_8h.html#a63e9bd7f209fb1cf6868ff2d9ffd3f7b">P_RIGHT</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_player.html#aba42053aab711ab09d4f33d6afd1bf5f">next_direction</a> = <a class="code" href="class_player.html#a6d95202b5546ac375bdb75e3fb657d17">direction</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_player.html#a7031df0f9865546b139191ceef980d99">a_sprite</a> = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_player.html#a79cff0711d5f03f5da789f2da5800a5d">a_cycle</a> = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_player.html#ae048ecd496124e718a7a8fcb9aec997c">moving</a> = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_player.html#a0c2fc90a7211d9c65a9b12158af959e1">next_moving</a> = <a class="code" href="class_player.html#ae048ecd496124e718a7a8fcb9aec997c">moving</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_player.html#a965aec762f42c588940d569e550b0a43">prev_direction</a> = -1;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_player.html#a797d0e0f3dbc6358aa120b8a5d665f8b">prev_moving</a> = -1;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">clip</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[4];</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_player.html#a947df3a6e0107106cc0f9a97df758e06">sciezka</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_player.html#ace6abae8d66534ad0a1fd6458f786a6e">score</a> = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_player.html#a10fcc825ec93e6cd625210bb65e4dc2e">ai_level</a> = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_player.html#a4b46a6bf726a1eb0ea75c5f7f7398180">respawn</a> = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_player.html#a8f4f21a147b048f0c4ddc5999e00eb9f">lan_id</a> = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">   36</a></span>&#160;<a class="code" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">Player::~Player</a>() {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_player.html#a5c9c66aa484170863e185b1d4cddb75b">texture</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#af907aa76a605f2ea8d1cdfed2c345e33">destroy_texture</a>(<a class="code" href="class_player.html#a5c9c66aa484170863e185b1d4cddb75b">texture</a>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">delete</span>[] <a class="code" href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">clip</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_player.html#a947df3a6e0107106cc0f9a97df758e06">sciezka</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_player.html#a947df3a6e0107106cc0f9a97df758e06">sciezka</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_player.html#ae02ee46d8c20dd0697b975f935b09839">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_player.html#ae02ee46d8c20dd0697b975f935b09839">Player::move</a>() {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#a56576331250a83e07563c91ed1997318">fps</a> &gt; 0) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_player.html#a32715465b1fac0991974a407e1e2ea89">a_dx</a> = (((<a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a> - <a class="code" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a>) * 1000)) / (<a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#a56576331250a83e07563c91ed1997318">fps</a> * <a class="code" href="class_config.html#a40ff9de3d028f2bbc1fbf40295059647">Config::logic_timer_ms</a> * <a class="code" href="class_player.html#a381d3a0f59f378c406c6654698353514">can_move_n</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="class_player.html#ad18d6882d6891ed7e397e8de88e7beea">a_dy</a> = (((<a class="code" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a> - <a class="code" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a>) * 1000)) / (<a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#a56576331250a83e07563c91ed1997318">fps</a> * <a class="code" href="class_config.html#a40ff9de3d028f2bbc1fbf40295059647">Config::logic_timer_ms</a> * can_move_n);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="class_log.html#a74def209d6c1a17f4b283fc21f641a6e">Log::warn</a>(<span class="stringliteral">&quot;Player::move: fps = 0&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a> = <a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a> = <a class="code" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_player.html#a809d5f70aac4198048e67e3b934deb35">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_player.html#a809d5f70aac4198048e67e3b934deb35">Player::move_abs</a>(<span class="keywordtype">int</span> absx, <span class="keywordtype">int</span> absy) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a> = absx;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a> = absy;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a> = <a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a> = <a class="code" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_player.html#a32715465b1fac0991974a407e1e2ea89">a_dx</a> = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="class_player.html#ad18d6882d6891ed7e397e8de88e7beea">a_dy</a> = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_player.html#ab44c5b82889ba1229ae462c39e0f2d64">   64</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_player.html#ab44c5b82889ba1229ae462c39e0f2d64">Player::move_random</a>() {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_player.html#a0c2fc90a7211d9c65a9b12158af959e1">next_moving</a> = 1;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_player.html#aba42053aab711ab09d4f33d6afd1bf5f">next_direction</a> = rand() % 4;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_player.html#a17179dcbedf6039250f1bc6d5ad8b143">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_player.html#a17179dcbedf6039250f1bc6d5ad8b143">Player::move_smooth</a>() {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> ((a_x &lt; x &amp;&amp; a_x + a_dx &gt;= <a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a>) || (<a class="code" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a> &gt; <a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a> &amp;&amp; <a class="code" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a> + <a class="code" href="class_player.html#a32715465b1fac0991974a407e1e2ea89">a_dx</a> &lt;= <a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a>)) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a> = <a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="class_player.html#a32715465b1fac0991974a407e1e2ea89">a_dx</a> = 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a> += <a class="code" href="class_player.html#a32715465b1fac0991974a407e1e2ea89">a_dx</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> ((a_y &lt; y &amp;&amp; a_y + a_dy &gt;= <a class="code" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a>) || (<a class="code" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a> &gt; <a class="code" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a> &amp;&amp; <a class="code" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a> + <a class="code" href="class_player.html#ad18d6882d6891ed7e397e8de88e7beea">a_dy</a> &lt;= <a class="code" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a>)) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a> = <a class="code" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="class_player.html#ad18d6882d6891ed7e397e8de88e7beea">a_dy</a> = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a> += <a class="code" href="class_player.html#ad18d6882d6891ed7e397e8de88e7beea">a_dy</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_player.html#ab03165ccbd09953d5414afe7da28ac51">   84</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_player.html#ab03165ccbd09953d5414afe7da28ac51">Player::draw_sprite_at</a>(SDL_Texture* texture2, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_player.html#a9fa90e54078b75b70fce829480c3d87a">clip_table</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_player.html#a4b46a6bf726a1eb0ea75c5f7f7398180">respawn</a> &gt; 0) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        SDL_SetTextureAlphaMod(texture2, 80);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">//liczba do końca respawnu</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        stringstream ss;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        ss &lt;&lt; <a class="code" href="class_timer.html#ab95380883136a5b4e5a73d655e1355f4">Timer::cycles_to_s</a>(<a class="code" href="class_player.html#a4b46a6bf726a1eb0ea75c5f7f7398180">respawn</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#af772f7af3b11cee423bd250ecbdf7126">draw_text</a>(ss.str(), <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#a670a7bac44658645c9fefe5d7dc89699">font2</a>,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                            <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#a11ea687ae41bbec39dd20d09d4957223">rgba</a>(<a class="code" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>.r, <a class="code" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>.g, <a class="code" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>.b, 255), <a class="code" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a>, y - 6, 0);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        SDL_SetTextureAlphaMod(texture2, 255);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#a49cc556b1bf1f8dfda0ea89f6d8a73e1">draw_texture_clip_center</a>(texture2, x, y, <a class="code" href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">clip</a>[0], <a class="code" href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">clip</a>[1], <a class="code" href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">clip</a>[2], <a class="code" href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">clip</a>[3]);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="class_player.html#a3e7df9a13be888558d043a656908a559">   99</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_player.html#a3e7df9a13be888558d043a656908a559">Player::draw_sprite</a>(SDL_Texture* texture2) {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="class_player.html#ab03165ccbd09953d5414afe7da28ac51">draw_sprite_at</a>(texture2, <a class="code" href="utils_8cpp.html#a5fc09d2d9d5dd2fae7afc9bae990e6f2">round_to_int</a>(<a class="code" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a>), <a class="code" href="utils_8cpp.html#a5fc09d2d9d5dd2fae7afc9bae990e6f2">round_to_int</a>(<a class="code" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a>));</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_player.html#af91fe7a1b2804f4dffa39139c117880e">  103</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_player.html#af91fe7a1b2804f4dffa39139c117880e">Player::draw_name</a>() {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#af772f7af3b11cee423bd250ecbdf7126">draw_text</a>(<a class="code" href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">name</a>, <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#a414d6ae7b8b3bca4e75671e453dac100">font1</a>, <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>-&gt;<a class="code" href="class_graphics.html#a11ea687ae41bbec39dd20d09d4957223">rgba</a>(<a class="code" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>.r, <a class="code" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>.g, <a class="code" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>.b, 150),</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        <a class="code" href="utils_8cpp.html#a5fc09d2d9d5dd2fae7afc9bae990e6f2">round_to_int</a>(<a class="code" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a>), <a class="code" href="utils_8cpp.html#a5fc09d2d9d5dd2fae7afc9bae990e6f2">round_to_int</a>(<a class="code" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a> - 30), 0);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="ttc" id="class_player_html_a6da29d6e3783c6028c92647bbde478f5"><div class="ttname"><a href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">Player::y</a></div><div class="ttdeci">int y</div><div class="ttdoc">wartość zadana położenia wzdłuż osi y na ekranie </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00073">player.h:73</a></div></div>
+<div class="ttc" id="class_game_engine_html_a32d9936005768d5855f5e0ae384a3c9e"><div class="ttname"><a href="class_game_engine.html#a32d9936005768d5855f5e0ae384a3c9e">GameEngine::xymap_to_xy</a></div><div class="ttdeci">void xymap_to_xy(Player *player)</div><div class="ttdef"><b>Definition:</b> <a href="game__map_8cpp_source.html#l00025">game_map.cpp:25</a></div></div>
+<div class="ttc" id="class_player_html_a7031df0f9865546b139191ceef980d99"><div class="ttname"><a href="class_player.html#a7031df0f9865546b139191ceef980d99">Player::a_sprite</a></div><div class="ttdeci">int a_sprite</div><div class="ttdoc">numer obrazka w animacji </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00123">player.h:123</a></div></div>
+<div class="ttc" id="class_player_html_a809d5f70aac4198048e67e3b934deb35"><div class="ttname"><a href="class_player.html#a809d5f70aac4198048e67e3b934deb35">Player::move_abs</a></div><div class="ttdeci">void move_abs(int absx, int absy)</div><div class="ttdef"><b>Definition:</b> <a href="player_8cpp_source.html#l00055">player.cpp:55</a></div></div>
+<div class="ttc" id="class_player_html_a6d95202b5546ac375bdb75e3fb657d17"><div class="ttname"><a href="class_player.html#a6d95202b5546ac375bdb75e3fb657d17">Player::direction</a></div><div class="ttdeci">int direction</div><div class="ttdoc">aktualny kierunek gracza: P_LEFT, P_RIGHT, P_UP lub P_DOWN </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00084">player.h:84</a></div></div>
+<div class="ttc" id="class_player_html_a9fa90e54078b75b70fce829480c3d87a"><div class="ttname"><a href="class_player.html#a9fa90e54078b75b70fce829480c3d87a">Player::clip_table</a></div><div class="ttdeci">virtual void clip_table()=0</div><div class="ttdoc">aktualizacja tablicy określającej parametry wycięcia fragmentu klatki z tekstury </div></div>
+<div class="ttc" id="class_player_html_ad2ac07f900cc99b0248c36ef083f778f"><div class="ttname"><a href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">Player::color</a></div><div class="ttdeci">SDL_Color color</div><div class="ttdoc">kolor gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00119">player.h:119</a></div></div>
+<div class="ttc" id="class_player_html_abf2abc26699a213c9346fcc2cfddee11"><div class="ttname"><a href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">Player::graphics</a></div><div class="ttdeci">Graphics * graphics</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00179">player.h:179</a></div></div>
+<div class="ttc" id="class_player_html_ace6abae8d66534ad0a1fd6458f786a6e"><div class="ttname"><a href="class_player.html#ace6abae8d66534ad0a1fd6458f786a6e">Player::score</a></div><div class="ttdeci">int score</div><div class="ttdoc">liczba punktów gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00060">player.h:60</a></div></div>
+<div class="ttc" id="class_player_html_a0c2fc90a7211d9c65a9b12158af959e1"><div class="ttname"><a href="class_player.html#a0c2fc90a7211d9c65a9b12158af959e1">Player::next_moving</a></div><div class="ttdeci">int next_moving</div><div class="ttdoc">następny planowany stan ruchu gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00168">player.h:168</a></div></div>
+<div class="ttc" id="class_player_html_ae02ee46d8c20dd0697b975f935b09839"><div class="ttname"><a href="class_player.html#ae02ee46d8c20dd0697b975f935b09839">Player::move</a></div><div class="ttdeci">void move()</div><div class="ttdoc">wykonywanie ruchu względnego do punktu - oszacowanie przyrostów współrzędnychw każdej klatce ...</div><div class="ttdef"><b>Definition:</b> <a href="player_8cpp_source.html#l00044">player.cpp:44</a></div></div>
+<div class="ttc" id="class_player_html_ab03165ccbd09953d5414afe7da28ac51"><div class="ttname"><a href="class_player.html#ab03165ccbd09953d5414afe7da28ac51">Player::draw_sprite_at</a></div><div class="ttdeci">void draw_sprite_at(SDL_Texture *texture2, int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="player_8cpp_source.html#l00084">player.cpp:84</a></div></div>
+<div class="ttc" id="class_player_html_a4b46a6bf726a1eb0ea75c5f7f7398180"><div class="ttname"><a href="class_player.html#a4b46a6bf726a1eb0ea75c5f7f7398180">Player::respawn</a></div><div class="ttdeci">int respawn</div><div class="ttdoc">czas do odrodzenia się </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00062">player.h:62</a></div></div>
+<div class="ttc" id="class_player_html_ae048ecd496124e718a7a8fcb9aec997c"><div class="ttname"><a href="class_player.html#ae048ecd496124e718a7a8fcb9aec997c">Player::moving</a></div><div class="ttdeci">int moving</div><div class="ttdoc">aktualny ruch gracza: 0 - brak ruchu, 1 - ruch </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00082">player.h:82</a></div></div>
+<div class="ttc" id="class_player_html_a435829648afe07ab31e94e9647f0b686"><div class="ttname"><a href="class_player.html#a435829648afe07ab31e94e9647f0b686">Player::a_y</a></div><div class="ttdeci">double a_y</div><div class="ttdoc">aktualne położenie wzdłuż osi y na ekranie </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00077">player.h:77</a></div></div>
+<div class="ttc" id="class_timer_html_ab95380883136a5b4e5a73d655e1355f4"><div class="ttname"><a href="class_timer.html#ab95380883136a5b4e5a73d655e1355f4">Timer::cycles_to_s</a></div><div class="ttdeci">static int cycles_to_s(int c)</div><div class="ttdef"><b>Definition:</b> <a href="timer_8cpp_source.html#l00029">timer.cpp:29</a></div></div>
+<div class="ttc" id="class_graphics_html_af907aa76a605f2ea8d1cdfed2c345e33"><div class="ttname"><a href="class_graphics.html#af907aa76a605f2ea8d1cdfed2c345e33">Graphics::destroy_texture</a></div><div class="ttdeci">void destroy_texture(SDL_Texture *&amp;texture)</div><div class="ttdoc">zwolnienie pamięcie po teksturze </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8cpp_source.html#l00223">graphics.cpp:223</a></div></div>
+<div class="ttc" id="class_player_html_a381d3a0f59f378c406c6654698353514"><div class="ttname"><a href="class_player.html#a381d3a0f59f378c406c6654698353514">Player::can_move_n</a></div><div class="ttdeci">int can_move_n</div><div class="ttdoc">preskaler licznika możliwości ruchu - definiuje szybkość gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00088">player.h:88</a></div></div>
+<div class="ttc" id="class_graphics_html_a49cc556b1bf1f8dfda0ea89f6d8a73e1"><div class="ttname"><a href="class_graphics.html#a49cc556b1bf1f8dfda0ea89f6d8a73e1">Graphics::draw_texture_clip_center</a></div><div class="ttdeci">void draw_texture_clip_center(SDL_Texture *image, int x, int y, int clipx_i, int clipx_n, int clipy_i, int clipy_n)</div><div class="ttdef"><b>Definition:</b> <a href="graphics_8cpp_source.html#l00380">graphics.cpp:380</a></div></div>
+<div class="ttc" id="class_log_html_a74def209d6c1a17f4b283fc21f641a6e"><div class="ttname"><a href="class_log.html#a74def209d6c1a17f4b283fc21f641a6e">Log::warn</a></div><div class="ttdeci">static void warn(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00036">log.cpp:36</a></div></div>
+<div class="ttc" id="class_player_html_af91fe7a1b2804f4dffa39139c117880e"><div class="ttname"><a href="class_player.html#af91fe7a1b2804f4dffa39139c117880e">Player::draw_name</a></div><div class="ttdeci">void draw_name()</div><div class="ttdoc">narysowanie nad graczem jego nazwy </div><div class="ttdef"><b>Definition:</b> <a href="player_8cpp_source.html#l00103">player.cpp:103</a></div></div>
+<div class="ttc" id="class_player_html_a5c9c66aa484170863e185b1d4cddb75b"><div class="ttname"><a href="class_player.html#a5c9c66aa484170863e185b1d4cddb75b">Player::texture</a></div><div class="ttdeci">SDL_Texture * texture</div><div class="ttdoc">tekstura gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00121">player.h:121</a></div></div>
+<div class="ttc" id="player_8h_html"><div class="ttname"><a href="player_8h.html">player.h</a></div></div>
+<div class="ttc" id="class_player_html_a8f4f21a147b048f0c4ddc5999e00eb9f"><div class="ttname"><a href="class_player.html#a8f4f21a147b048f0c4ddc5999e00eb9f">Player::lan_id</a></div><div class="ttdeci">int lan_id</div><div class="ttdoc">numer klienta, który obsługuje gracza: numer większy od 0 </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00166">player.h:166</a></div></div>
+<div class="ttc" id="class_player_html_a32715465b1fac0991974a407e1e2ea89"><div class="ttname"><a href="class_player.html#a32715465b1fac0991974a407e1e2ea89">Player::a_dx</a></div><div class="ttdeci">double a_dx</div><div class="ttdoc">przyrost położenia wzdłuż osi x w ciągu 1 klatki (w celu wykonywania płynnych ruchów) ...</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00112">player.h:112</a></div></div>
+<div class="ttc" id="class_graphics_html"><div class="ttname"><a href="class_graphics.html">Graphics</a></div><div class="ttdoc">Klasa silnika grafiki. </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00033">graphics.h:33</a></div></div>
+<div class="ttc" id="class_player_html_ad18d6882d6891ed7e397e8de88e7beea"><div class="ttname"><a href="class_player.html#ad18d6882d6891ed7e397e8de88e7beea">Player::a_dy</a></div><div class="ttdeci">double a_dy</div><div class="ttdoc">przyrost położenia wzdłuż osi y w ciągu 1 klatki (w celu wykonywania płynnych ruchów) ...</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00114">player.h:114</a></div></div>
+<div class="ttc" id="class_player_html_a7b92300769d36f6c8bc10721dc9c5d84"><div class="ttname"><a href="class_player.html#a7b92300769d36f6c8bc10721dc9c5d84">Player::game_engine</a></div><div class="ttdeci">GameEngine * game_engine</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00178">player.h:178</a></div></div>
+<div class="ttc" id="class_player_html_ab44c5b82889ba1229ae462c39e0f2d64"><div class="ttname"><a href="class_player.html#ab44c5b82889ba1229ae462c39e0f2d64">Player::move_random</a></div><div class="ttdeci">void move_random()</div><div class="ttdoc">wykonanie ruchu w losowym kierunku przez gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8cpp_source.html#l00064">player.cpp:64</a></div></div>
+<div class="ttc" id="class_graphics_html_a670a7bac44658645c9fefe5d7dc89699"><div class="ttname"><a href="class_graphics.html#a670a7bac44658645c9fefe5d7dc89699">Graphics::font2</a></div><div class="ttdeci">TTF_Font * font2</div><div class="ttdoc">czcionka nr 2 </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00275">graphics.h:275</a></div></div>
+<div class="ttc" id="class_graphics_html_af772f7af3b11cee423bd250ecbdf7126"><div class="ttname"><a href="class_graphics.html#af772f7af3b11cee423bd250ecbdf7126">Graphics::draw_text</a></div><div class="ttdeci">void draw_text(string txt, TTF_Font *font, SDL_Color color, int x, int y, int align=TEXT_LEFT)</div><div class="ttdef"><b>Definition:</b> <a href="graphics_8cpp_source.html#l00416">graphics.cpp:416</a></div></div>
+<div class="ttc" id="class_player_html_ad285b3cb25e4a46ca944b9a416c1b13f"><div class="ttname"><a href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">Player::x</a></div><div class="ttdeci">int x</div><div class="ttdoc">wartość zadana położenia wzdłuż osi x na ekranie </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00071">player.h:71</a></div></div>
+<div class="ttc" id="class_player_html_a7f0d6b709df66bfa850ada3a07a2d4d0"><div class="ttname"><a href="class_player.html#a7f0d6b709df66bfa850ada3a07a2d4d0">Player::xmap</a></div><div class="ttdeci">int xmap</div><div class="ttdoc">położenie gracza wzdłuż osi x na tablicy mapy </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00067">player.h:67</a></div></div>
+<div class="ttc" id="class_graphics_html_a11ea687ae41bbec39dd20d09d4957223"><div class="ttname"><a href="class_graphics.html#a11ea687ae41bbec39dd20d09d4957223">Graphics::rgba</a></div><div class="ttdeci">static SDL_Color rgba(int r, int g, int b, int a=255)</div><div class="ttdef"><b>Definition:</b> <a href="graphics_8cpp_source.html#l00449">graphics.cpp:449</a></div></div>
+<div class="ttc" id="class_player_html_a947df3a6e0107106cc0f9a97df758e06"><div class="ttname"><a href="class_player.html#a947df3a6e0107106cc0f9a97df758e06">Player::sciezka</a></div><div class="ttdeci">Path&lt; int &gt; * sciezka</div><div class="ttdoc">wyznaczona scieżka podążania graczy sterowanych przez sztuczną inteligencję do określonych punktów ...</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00172">player.h:172</a></div></div>
+<div class="ttc" id="class_graphics_html_a414d6ae7b8b3bca4e75671e453dac100"><div class="ttname"><a href="class_graphics.html#a414d6ae7b8b3bca4e75671e453dac100">Graphics::font1</a></div><div class="ttdeci">TTF_Font * font1</div><div class="ttdoc">czcionka nr 1 </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00273">graphics.h:273</a></div></div>
+<div class="ttc" id="class_player_html_a2d8210e990c459626fd30caf285ade68"><div class="ttname"><a href="class_player.html#a2d8210e990c459626fd30caf285ade68">Player::can_move</a></div><div class="ttdeci">int can_move</div><div class="ttdoc">licznik pojawienia się możliwości ruchu (0 - możliwa zmiana kierunku) </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00086">player.h:86</a></div></div>
+<div class="ttc" id="class_player_html_abd2dea09a2d7d25d6d583d3fefa0e03d"><div class="ttname"><a href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">Player::clip</a></div><div class="ttdeci">int * clip</div><div class="ttdoc">tablica aktualnej części obrazka wyciętej z całej tekstury: element 0 - indeks ramki wzdłuż osi x...</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00127">player.h:127</a></div></div>
+<div class="ttc" id="class_player_html_a17179dcbedf6039250f1bc6d5ad8b143"><div class="ttname"><a href="class_player.html#a17179dcbedf6039250f1bc6d5ad8b143">Player::move_smooth</a></div><div class="ttdeci">void move_smooth()</div><div class="ttdoc">wykonanie płynnego ruchu do zadanej wartości (na podstawie wyznaczonych przyrostów) ...</div><div class="ttdef"><b>Definition:</b> <a href="player_8cpp_source.html#l00069">player.cpp:69</a></div></div>
+<div class="ttc" id="class_player_html_a79cff0711d5f03f5da789f2da5800a5d"><div class="ttname"><a href="class_player.html#a79cff0711d5f03f5da789f2da5800a5d">Player::a_cycle</a></div><div class="ttdeci">int a_cycle</div><div class="ttdoc">licznik do preskalera zmiany animacji </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00125">player.h:125</a></div></div>
+<div class="ttc" id="class_graphics_html_a56576331250a83e07563c91ed1997318"><div class="ttname"><a href="class_graphics.html#a56576331250a83e07563c91ed1997318">Graphics::fps</a></div><div class="ttdeci">double fps</div><div class="ttdoc">liczba klatek na sekundę </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00080">graphics.h:80</a></div></div>
+<div class="ttc" id="class_player_html_a749d2c00e1fe0f5c2746f7505a58c062"><div class="ttname"><a href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">Player::~Player</a></div><div class="ttdeci">virtual ~Player()</div><div class="ttdoc">usunięcie gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8cpp_source.html#l00036">player.cpp:36</a></div></div>
+<div class="ttc" id="class_player_html_ad6ff4c22eec0bd905c43d1b8a3d1cec0"><div class="ttname"><a href="class_player.html#ad6ff4c22eec0bd905c43d1b8a3d1cec0">Player::Player</a></div><div class="ttdeci">Player(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine *game_engine, Graphics *graphics)</div><div class="ttdef"><b>Definition:</b> <a href="player_8cpp_source.html#l00007">player.cpp:7</a></div></div>
+<div class="ttc" id="class_game_engine_html"><div class="ttname"><a href="class_game_engine.html">GameEngine</a></div><div class="ttdoc">logika gry </div><div class="ttdef"><b>Definition:</b> <a href="game__engine_8h_source.html#l00044">game_engine.h:44</a></div></div>
+<div class="ttc" id="class_player_html_a10fcc825ec93e6cd625210bb65e4dc2e"><div class="ttname"><a href="class_player.html#a10fcc825ec93e6cd625210bb65e4dc2e">Player::ai_level</a></div><div class="ttdeci">int ai_level</div><div class="ttdoc">poziom sztucznej inteligencji: od 0 do 5 </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00164">player.h:164</a></div></div>
+<div class="ttc" id="class_player_html_a797d0e0f3dbc6358aa120b8a5d665f8b"><div class="ttname"><a href="class_player.html#a797d0e0f3dbc6358aa120b8a5d665f8b">Player::prev_moving</a></div><div class="ttdeci">int prev_moving</div><div class="ttdoc">poprzedni stan ruchu gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00092">player.h:92</a></div></div>
+<div class="ttc" id="class_player_html_a965aec762f42c588940d569e550b0a43"><div class="ttname"><a href="class_player.html#a965aec762f42c588940d569e550b0a43">Player::prev_direction</a></div><div class="ttdeci">int prev_direction</div><div class="ttdoc">poprzedni kierunek gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00090">player.h:90</a></div></div>
+<div class="ttc" id="utils_8cpp_html_a5fc09d2d9d5dd2fae7afc9bae990e6f2"><div class="ttname"><a href="utils_8cpp.html#a5fc09d2d9d5dd2fae7afc9bae990e6f2">round_to_int</a></div><div class="ttdeci">int round_to_int(double d)</div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00047">utils.cpp:47</a></div></div>
+<div class="ttc" id="class_player_html_a641efdab62bcea257201e4e039a86ba6"><div class="ttname"><a href="class_player.html#a641efdab62bcea257201e4e039a86ba6">Player::controlby</a></div><div class="ttdeci">int controlby</div><div class="ttdoc">określa, co steruje graczem: P_KEYBOARD - klawiatura, P_AI - sztuczna inteligencja, P_LAN - komunikaty sieciowe z serwera </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00162">player.h:162</a></div></div>
+<div class="ttc" id="class_player_html_a3e7df9a13be888558d043a656908a559"><div class="ttname"><a href="class_player.html#a3e7df9a13be888558d043a656908a559">Player::draw_sprite</a></div><div class="ttdeci">void draw_sprite(SDL_Texture *texture2)</div><div class="ttdef"><b>Definition:</b> <a href="player_8cpp_source.html#l00099">player.cpp:99</a></div></div>
+<div class="ttc" id="class_player_html_aba42053aab711ab09d4f33d6afd1bf5f"><div class="ttname"><a href="class_player.html#aba42053aab711ab09d4f33d6afd1bf5f">Player::next_direction</a></div><div class="ttdeci">int next_direction</div><div class="ttdoc">następny planowany kierunek gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00170">player.h:170</a></div></div>
+<div class="ttc" id="class_player_html_acf0355128a99ee20ad9931b760fb2de1"><div class="ttname"><a href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">Player::name</a></div><div class="ttdeci">string name</div><div class="ttdoc">nazwa gracza - podpis nad graczem </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00056">player.h:56</a></div></div>
+<div class="ttc" id="player_8h_html_a63e9bd7f209fb1cf6868ff2d9ffd3f7b"><div class="ttname"><a href="player_8h.html#a63e9bd7f209fb1cf6868ff2d9ffd3f7b">P_RIGHT</a></div><div class="ttdeci">#define P_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00012">player.h:12</a></div></div>
+<div class="ttc" id="class_player_html_a1847a3ecbf10c4c3a97019dd0c89b618"><div class="ttname"><a href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">Player::a_x</a></div><div class="ttdeci">double a_x</div><div class="ttdoc">aktualne położenie wzdłuż osi x na ekranie </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00075">player.h:75</a></div></div>
+<div class="ttc" id="class_config_html_a40ff9de3d028f2bbc1fbf40295059647"><div class="ttname"><a href="class_config.html#a40ff9de3d028f2bbc1fbf40295059647">Config::logic_timer_ms</a></div><div class="ttdeci">static int logic_timer_ms</div><div class="ttdoc">okres timera cykli logicznych </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00034">config.h:34</a></div></div>
+<div class="ttc" id="class_player_html_a35dfec8fc1af9839437d3bffe2cf6b9c"><div class="ttname"><a href="class_player.html#a35dfec8fc1af9839437d3bffe2cf6b9c">Player::ymap</a></div><div class="ttdeci">int ymap</div><div class="ttdoc">położenie gracza wzdłuż osi y na tablicy mapy </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00069">player.h:69</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3e72a3b57dc3879b770eea3465447b47.html">players</a></li><li class="navelem"><a class="el" href="player_8cpp.html">player.cpp</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>
