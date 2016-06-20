@@ -11,12 +11,7 @@
 //TODO pakiet synchronizująco - weryfikujący
 //TODO dźwięki, muzyka z Pacmana
 
-//TODO C++ 11: pętle foreach, auto, enum class, smart_ptr (unique, shared) ...
-//TODO STL: przechodzenie kontenerów w pętli iteratorami, set, deque, list, ...
-
-//TODO komentarze doxygena - porządek, uzupełnić
-
-//TODO usunięcie niepotrzebnych includów bibliotek (sdl2_ttf, sdl2_image)
+//TODO smart_ptr (unique, shared) ...
 
 int main(int argc, char** argv) {
     App* app = new App();

@@ -5,7 +5,6 @@
 #include "../utils.h"
 
 //TODO przekazywanie błędów wyjątkami
-//TODO więcej komunikatów na poziomie DEBUG
 
 Log* Log::instance = nullptr;
 

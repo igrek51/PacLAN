@@ -5,8 +5,6 @@
 #include "../log/log.h"
 #include "../utils.h"
 
-//FIXME zjebany toggle trybu fullscreen, zależny od ekranu
-
 Graphics::Graphics() {
     wnd_w = Config::window_w;
     wnd_h = Config::window_h;

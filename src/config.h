@@ -10,7 +10,7 @@
 
 using namespace std;
 
-//TODO zrobić z tego singleton
+//TODO zamienić na singleton
 
 /**
  * \brief Ustawienia konfiguracyjne

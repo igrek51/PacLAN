@@ -14,10 +14,8 @@
 #define TASK_SEND_TO_CLIENT 7 //wyślij pakiet do jednego z klientów
 #define TASK_RECEIVE 8
 
-//TODO numery zadań w enumach
-
 //TODO kolejka komunikatów, eventów
-//TODO enum class
+//TODO zamienić na enum class
 
 #include <iostream>
 #include <vector>

@@ -3,8 +3,8 @@
 #include "../utils.h"
 #include "../log/log.h"
 
-//TODO utworzyć osobną klasę (z nagłówkiem .h)
-//TODO obserwator lub event dispatcher
+//TODO przetwarzanie pakietów w osobnej klasie, obserwator lub event dispatcher
+//TODO definicje numerów pakietów w enum class
 
 void GameEngine::network_packet_process(int from, string packet) {
     //cmd_output("Przetwarzam pakiet: "+packet);

@@ -23,8 +23,8 @@ Pathfind<T>::~Pathfind() {
 template<typename T>
 Path<T>* Pathfind<T>::find_path() {
     //  ALGORYTM A-STAR
+    //TODO przechodzenie po pętli iteratorami lub foreach
     //zmienne pomocnicze
-    //TODO przechodzenie iteratorami
     deque<Node<T>*> o_list; //lista otwartych
     deque<Node<T>*> c_list; //lista zamkniętych
     Node<T>* Q; //aktualne pole (o minimalnym F)

@@ -371,7 +371,7 @@ bool Network::onReceive(int sindex) {
 }
 
 void Network::onConnectedToServer(int sindex) {
-    //TODO zamienić 004 na enum
+    //TODO definicje numerów pakietów w enum class
     connections[sindex]->addReceivedPacket("004");
 }
 

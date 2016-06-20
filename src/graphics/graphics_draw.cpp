@@ -26,7 +26,7 @@ void Graphics::animate() {
 
 void Graphics::draw_menu() {
     //podpis
-    draw_text("Created by Igrek", font2, rgba(40, 40, 40), wnd_w, wnd_h - 15, TEXT_RIGHT);
+    draw_text("Created by Ireneusz Szulc", font2, rgba(40, 40, 40), wnd_w, wnd_h - 15, TEXT_RIGHT);
     stringstream ss;
     ss << "P a c L A N  v" << Config::version;
     draw_text(ss.str(), font2, rgba(255, 255, 0), wnd_w / 2, 45, TEXT_CENTER);
