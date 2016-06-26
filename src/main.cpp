@@ -8,11 +8,6 @@
 #include "utils.h"
 #include "log/log.h"
 
-//TODO pakiet synchronizująco - weryfikujący
-//TODO dźwięki, muzyka z Pacmana
-
-//TODO smart_ptr (unique, shared) ...
-
 int main(int argc, char** argv) {
     App* app = new App();
     //inicjalizacja grafiki
