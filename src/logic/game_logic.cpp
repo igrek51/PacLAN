@@ -312,7 +312,7 @@ void GameEngine::logic_game() {
     }
     //wzięcie obiektów
     for (unsigned int i = 0; i < players.size(); i++) { //dla gracza i
-        if ((players[i]->subclass == P_PACMAN || players[i]->subclass == P_GHOST) && players[i]->respawn == 0) { //jeśli jest pacmanem
+        if (players[i]->subclass == P_PACMAN && players[i]->respawn == 0) { //jeśli jest pacmanem
             for (unsigned int j = 0; j < items.size(); j++) { //dla obiektu j
                 if (is_collision(players[i], items[j])) {
                     int punkty;
@@ -325,7 +325,7 @@ void GameEngine::logic_game() {
                         players[i]->score += punkty;
                         sort_players();
                         synchro << "023 " << i << " " << players[i]->score << "\r";
-                    } else if (items[j]->subclass == I_LARGEDOT && players[i]->subclass == P_PACMAN) { //duża kropka
+                    } else if (items[j]->subclass == I_LARGEDOT) { //duża kropka
                         if (mode == MODE_ZOMBIE) {
                             punkty = Config::zombie_points_large;
                             eating = Config::zombie_eating_time;
