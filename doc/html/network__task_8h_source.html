@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/network/network_task.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('network__task_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">network_task.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="network__task_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef NETWORK_TASK_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define NETWORK_TASK_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="network__task_8h.html#a866b9f49155e85d7084f6e890b27ba24">    8</a></span>&#160;<span class="preprocessor">#define TASK_OPEN_SERVER 1</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="network__task_8h.html#a57e94b4dd080950e6b7b9602c977b2e4">    9</a></span>&#160;<span class="preprocessor">#define TASK_CLOSE_SERVER 2</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="network__task_8h.html#a361c11d189818bbf9b0599028067de96">   10</a></span>&#160;<span class="preprocessor">#define TASK_CONNECT 3 //połącz klienta do serwera</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="network__task_8h.html#a9091709c74c35a3bbf1022d5e2efb424">   11</a></span>&#160;<span class="preprocessor">#define TASK_CLOSE 4 //rozłącz klienta przez klienta</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="network__task_8h.html#a6eb10e17af160e292d61dcd7569c8435">   12</a></span>&#160;<span class="preprocessor">#define TASK_KICK_CLIENT 5 //rozłączenie klienta przez serwer</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="network__task_8h.html#aa97f81e9de9ab53f0ba29ba24e016808">   13</a></span>&#160;<span class="preprocessor">#define TASK_SEND_TO_SERVER 6 //wyślij pakiet do serwera</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="network__task_8h.html#a64add3eef2f97a00a2822e86a4f6b06a">   14</a></span>&#160;<span class="preprocessor">#define TASK_SEND_TO_CLIENT 7 //wyślij pakiet do jednego z klientów</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="network__task_8h.html#aaa66a4b12efe5f9847b6bc78ea03d681">   15</a></span>&#160;<span class="preprocessor">#define TASK_RECEIVE 8</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//TODO numery zadań w enumach</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//TODO kolejka komunikatów, eventów</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//TODO enum class</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_network_task.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_network_task.html">NetworkTask</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_network_task.html">NetworkTask</a>(<span class="keywordtype">int</span> task);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="class_network_task.html">NetworkTask</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_network_task.html#a7a21671eb17396e9f2deafe1d9a9504c">   41</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_network_task.html#a7a21671eb17396e9f2deafe1d9a9504c">task</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_network_task.html#a509d426ee6005aa403e006c59c08423e">   43</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_network_task.html#a509d426ee6005aa403e006c59c08423e">param_i</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_network_task.html#adb848d9ed3d08791390dcd3f508144f7">   45</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_network_task.html#adb848d9ed3d08791390dcd3f508144f7">param_i2</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_network_task.html#a20cbc947e7388bae1c5c7e81ba7c644e">   47</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="class_network_task.html#a20cbc947e7388bae1c5c7e81ba7c644e">param_c</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_network_task.html#a5e4c58fc29806d304d8c693d4e2239e6">   49</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="class_network_task.html#a5e4c58fc29806d304d8c693d4e2239e6">param_s</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_network_task_html_a20cbc947e7388bae1c5c7e81ba7c644e"><div class="ttname"><a href="class_network_task.html#a20cbc947e7388bae1c5c7e81ba7c644e">NetworkTask::param_c</a></div><div class="ttdeci">char * param_c</div><div class="ttdoc">możliwa do wykorzystania przez zadanie tablica znaków </div><div class="ttdef"><b>Definition:</b> <a href="network__task_8h_source.html#l00047">network_task.h:47</a></div></div>
+<div class="ttc" id="class_network_task_html"><div class="ttname"><a href="class_network_task.html">NetworkTask</a></div><div class="ttdoc">Sieciowe zadanie do wykonania należące do kolejki zadań </div><div class="ttdef"><b>Definition:</b> <a href="network__task_8h_source.html#l00030">network_task.h:30</a></div></div>
+<div class="ttc" id="class_network_task_html_a7a21671eb17396e9f2deafe1d9a9504c"><div class="ttname"><a href="class_network_task.html#a7a21671eb17396e9f2deafe1d9a9504c">NetworkTask::task</a></div><div class="ttdeci">int task</div><div class="ttdoc">numer zadania do wykonania </div><div class="ttdef"><b>Definition:</b> <a href="network__task_8h_source.html#l00041">network_task.h:41</a></div></div>
+<div class="ttc" id="class_network_task_html_adb848d9ed3d08791390dcd3f508144f7"><div class="ttname"><a href="class_network_task.html#adb848d9ed3d08791390dcd3f508144f7">NetworkTask::param_i2</a></div><div class="ttdeci">int param_i2</div><div class="ttdoc">możliwy do wykorzystania drugi całkowity parametr zadania </div><div class="ttdef"><b>Definition:</b> <a href="network__task_8h_source.html#l00045">network_task.h:45</a></div></div>
+<div class="ttc" id="class_network_task_html_a509d426ee6005aa403e006c59c08423e"><div class="ttname"><a href="class_network_task.html#a509d426ee6005aa403e006c59c08423e">NetworkTask::param_i</a></div><div class="ttdeci">int param_i</div><div class="ttdoc">możliwy do wykorzystania pierwszy całkowity parametr zadania </div><div class="ttdef"><b>Definition:</b> <a href="network__task_8h_source.html#l00043">network_task.h:43</a></div></div>
+<div class="ttc" id="class_network_task_html_a5e4c58fc29806d304d8c693d4e2239e6"><div class="ttname"><a href="class_network_task.html#a5e4c58fc29806d304d8c693d4e2239e6">NetworkTask::param_s</a></div><div class="ttdeci">string param_s</div><div class="ttdoc">możliwa do wykorzystania przez zadanie ciąg znaków klasy string </div><div class="ttdef"><b>Definition:</b> <a href="network__task_8h_source.html#l00049">network_task.h:49</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fc4c7f03e1a69a98c370fae55a743828.html">network</a></li><li class="navelem"><a class="el" href="network__task_8h.html">network_task.h</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

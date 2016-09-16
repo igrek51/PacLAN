@@ -1,0 +1,1827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Dokumentacja klasy Graphics</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_graphics.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-static-methods">Statyczne metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_graphics-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Graphics</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa silnika grafiki.  
+ <a href="class_graphics.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="graphics_8h_source.html">graphics.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:af2e8fe67fd31ec263c843a6e28b29d3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#af2e8fe67fd31ec263c843a6e28b29d3c">Graphics</a> ()</td></tr>
+<tr class="memdesc:af2e8fe67fd31ec263c843a6e28b29d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">inicjalizacja silnika grafiki  <a href="#af2e8fe67fd31ec263c843a6e28b29d3c">Więcej...</a><br /></td></tr>
+<tr class="separator:af2e8fe67fd31ec263c843a6e28b29d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7841c9a961ac9bca33bd30ddf8066cdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a7841c9a961ac9bca33bd30ddf8066cdb">~Graphics</a> ()</td></tr>
+<tr class="memdesc:a7841c9a961ac9bca33bd30ddf8066cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">zamknięcie silnika grafiki  <a href="#a7841c9a961ac9bca33bd30ddf8066cdb">Więcej...</a><br /></td></tr>
+<tr class="separator:a7841c9a961ac9bca33bd30ddf8066cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba5e523d99ddeb7bb5e66ef1d790132"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a3ba5e523d99ddeb7bb5e66ef1d790132">setGameEngine</a> (<a class="el" href="class_game_engine.html">GameEngine</a> *<a class="el" href="class_graphics.html#a843223151c44a795cf796edee3651807">game_engine</a>)</td></tr>
+<tr class="separator:a3ba5e523d99ddeb7bb5e66ef1d790132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ccf05e8582851423d86d6c25d73847f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a7ccf05e8582851423d86d6c25d73847f">fullscreen_toggle</a> ()</td></tr>
+<tr class="memdesc:a7ccf05e8582851423d86d6c25d73847f"><td class="mdescLeft">&#160;</td><td class="mdescRight">przełączenie w tryb pełnoekranowy lub wyjście z tego trybu  <a href="#a7ccf05e8582851423d86d6c25d73847f">Więcej...</a><br /></td></tr>
+<tr class="separator:a7ccf05e8582851423d86d6c25d73847f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e7c12771870690d603e9df6643542c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#ad0e7c12771870690d603e9df6643542c">draw</a> ()</td></tr>
+<tr class="memdesc:ad0e7c12771870690d603e9df6643542c"><td class="mdescLeft">&#160;</td><td class="mdescRight">odrysowanie całej klatki  <a href="#ad0e7c12771870690d603e9df6643542c">Więcej...</a><br /></td></tr>
+<tr class="separator:ad0e7c12771870690d603e9df6643542c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd03806f21a0235ea83b3b7562a1e87"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a2bd03806f21a0235ea83b3b7562a1e87">tex</a> (string name)</td></tr>
+<tr class="separator:a2bd03806f21a0235ea83b3b7562a1e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae837afa8ffed36c6e486e08bb94344ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#ae837afa8ffed36c6e486e08bb94344ec">reload_textures</a> ()</td></tr>
+<tr class="memdesc:ae837afa8ffed36c6e486e08bb94344ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">wczytanie wszystkich tekstur  <a href="#ae837afa8ffed36c6e486e08bb94344ec">Więcej...</a><br /></td></tr>
+<tr class="separator:ae837afa8ffed36c6e486e08bb94344ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af907aa76a605f2ea8d1cdfed2c345e33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#af907aa76a605f2ea8d1cdfed2c345e33">destroy_texture</a> (SDL_Texture *&amp;texture)</td></tr>
+<tr class="memdesc:af907aa76a605f2ea8d1cdfed2c345e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwolnienie pamięcie po teksturze  <a href="#af907aa76a605f2ea8d1cdfed2c345e33">Więcej...</a><br /></td></tr>
+<tr class="separator:af907aa76a605f2ea8d1cdfed2c345e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1acb12e76fcd7b1a885856ec558c983e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a1acb12e76fcd7b1a885856ec558c983e">draw_texture_center</a> (SDL_Texture *image, int x, int y)</td></tr>
+<tr class="separator:a1acb12e76fcd7b1a885856ec558c983e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cc556b1bf1f8dfda0ea89f6d8a73e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a49cc556b1bf1f8dfda0ea89f6d8a73e1">draw_texture_clip_center</a> (SDL_Texture *image, int x, int y, int clipx_i, int clipx_n, int clipy_i, int clipy_n)</td></tr>
+<tr class="separator:a49cc556b1bf1f8dfda0ea89f6d8a73e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae529130c94739dce5f0657124e4f237e"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#ae529130c94739dce5f0657124e4f237e">blend_texture</a> (SDL_Texture *texture, SDL_Color color_blend)</td></tr>
+<tr class="separator:ae529130c94739dce5f0657124e4f237e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44ce2d6a8cb6dd3f58579f69b2baa9e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a44ce2d6a8cb6dd3f58579f69b2baa9e7">draw_fill_rect</a> (int x, int y, int w, int h, SDL_Color color)</td></tr>
+<tr class="separator:a44ce2d6a8cb6dd3f58579f69b2baa9e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c755f8644fae1cb738b635d3c2d1b19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a8c755f8644fae1cb738b635d3c2d1b19">draw_line</a> (int x1, int y1, int x2, int y2, SDL_Color color)</td></tr>
+<tr class="separator:a8c755f8644fae1cb738b635d3c2d1b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af772f7af3b11cee423bd250ecbdf7126"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#af772f7af3b11cee423bd250ecbdf7126">draw_text</a> (string txt, TTF_Font *font, SDL_Color color, int x, int y, int align=<a class="el" href="graphics_8h.html#a8e3a2ae5c9b6904ecda648a5ce61264a">TEXT_LEFT</a>)</td></tr>
+<tr class="separator:af772f7af3b11cee423bd250ecbdf7126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:a11ea687ae41bbec39dd20d09d4957223"><td class="memItemLeft" align="right" valign="top">static SDL_Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a11ea687ae41bbec39dd20d09d4957223">rgba</a> (int r, int g, int b, int a=255)</td></tr>
+<tr class="separator:a11ea687ae41bbec39dd20d09d4957223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c755dbd4245538d5ed6d776b541bc73"><td class="memItemLeft" align="right" valign="top">static SDL_Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a0c755dbd4245538d5ed6d776b541bc73">rand_bcolor</a> ()</td></tr>
+<tr class="separator:a0c755dbd4245538d5ed6d776b541bc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:a56576331250a83e07563c91ed1997318"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a56576331250a83e07563c91ed1997318">fps</a></td></tr>
+<tr class="memdesc:a56576331250a83e07563c91ed1997318"><td class="mdescLeft">&#160;</td><td class="mdescRight">liczba klatek na sekundę  <a href="#a56576331250a83e07563c91ed1997318">Więcej...</a><br /></td></tr>
+<tr class="separator:a56576331250a83e07563c91ed1997318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a414d6ae7b8b3bca4e75671e453dac100"><td class="memItemLeft" align="right" valign="top">TTF_Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a414d6ae7b8b3bca4e75671e453dac100">font1</a></td></tr>
+<tr class="memdesc:a414d6ae7b8b3bca4e75671e453dac100"><td class="mdescLeft">&#160;</td><td class="mdescRight">czcionka nr 1  <a href="#a414d6ae7b8b3bca4e75671e453dac100">Więcej...</a><br /></td></tr>
+<tr class="separator:a414d6ae7b8b3bca4e75671e453dac100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a670a7bac44658645c9fefe5d7dc89699"><td class="memItemLeft" align="right" valign="top">TTF_Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a670a7bac44658645c9fefe5d7dc89699">font2</a></td></tr>
+<tr class="memdesc:a670a7bac44658645c9fefe5d7dc89699"><td class="mdescLeft">&#160;</td><td class="mdescRight">czcionka nr 2  <a href="#a670a7bac44658645c9fefe5d7dc89699">Więcej...</a><br /></td></tr>
+<tr class="separator:a670a7bac44658645c9fefe5d7dc89699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8290cacabcc492769bb6e94b1c15003a"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_animation.html">Animation</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a8290cacabcc492769bb6e94b1c15003a">animations</a></td></tr>
+<tr class="memdesc:a8290cacabcc492769bb6e94b1c15003a"><td class="mdescLeft">&#160;</td><td class="mdescRight">lista wskaźników aktywnych animacji  <a href="#a8290cacabcc492769bb6e94b1c15003a">Więcej...</a><br /></td></tr>
+<tr class="separator:a8290cacabcc492769bb6e94b1c15003a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:a6e32e597746e2f0cd67b35e0624a0994"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_language.html">Language</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a6e32e597746e2f0cd67b35e0624a0994">getLanguage</a> ()</td></tr>
+<tr class="separator:a6e32e597746e2f0cd67b35e0624a0994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe72c10277db5a3b18443fdcf56148ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#abe72c10277db5a3b18443fdcf56148ca">sdl_init</a> ()</td></tr>
+<tr class="separator:abe72c10277db5a3b18443fdcf56148ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69026ccf6fd415bceb11f8d357f2057b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a69026ccf6fd415bceb11f8d357f2057b">sdl_error</a> (string e)</td></tr>
+<tr class="separator:a69026ccf6fd415bceb11f8d357f2057b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc8601cf3f77aa8e7e8a13d38fbdede"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a3bc8601cf3f77aa8e7e8a13d38fbdede">calculate_fps</a> ()</td></tr>
+<tr class="memdesc:a3bc8601cf3f77aa8e7e8a13d38fbdede"><td class="mdescLeft">&#160;</td><td class="mdescRight">wyznaczenie wartości FPS  <a href="#a3bc8601cf3f77aa8e7e8a13d38fbdede">Więcej...</a><br /></td></tr>
+<tr class="separator:a3bc8601cf3f77aa8e7e8a13d38fbdede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5800bf5a6af8dd99e2a077baede50180"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a5800bf5a6af8dd99e2a077baede50180">draw_menu</a> ()</td></tr>
+<tr class="memdesc:a5800bf5a6af8dd99e2a077baede50180"><td class="mdescLeft">&#160;</td><td class="mdescRight">narysowanie ekranu menu  <a href="#a5800bf5a6af8dd99e2a077baede50180">Więcej...</a><br /></td></tr>
+<tr class="separator:a5800bf5a6af8dd99e2a077baede50180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cbe971a267df5990b6d51ebe2da479c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a6cbe971a267df5990b6d51ebe2da479c">draw_round</a> ()</td></tr>
+<tr class="memdesc:a6cbe971a267df5990b6d51ebe2da479c"><td class="mdescLeft">&#160;</td><td class="mdescRight">narysowanie ekranu rundy  <a href="#a6cbe971a267df5990b6d51ebe2da479c">Więcej...</a><br /></td></tr>
+<tr class="separator:a6cbe971a267df5990b6d51ebe2da479c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f1d417f1bc67d5c442c925821b19386"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a9f1d417f1bc67d5c442c925821b19386">draw_console</a> ()</td></tr>
+<tr class="memdesc:a9f1d417f1bc67d5c442c925821b19386"><td class="mdescLeft">&#160;</td><td class="mdescRight">narysowanie konsoli i wiersza poleceń na ekranie  <a href="#a9f1d417f1bc67d5c442c925821b19386">Więcej...</a><br /></td></tr>
+<tr class="separator:a9f1d417f1bc67d5c442c925821b19386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80335db678314bed7658fc517cfd6eb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a80335db678314bed7658fc517cfd6eb0">animate</a> ()</td></tr>
+<tr class="memdesc:a80335db678314bed7658fc517cfd6eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">wyznacz nowe parametry animacji  <a href="#a80335db678314bed7658fc517cfd6eb0">Więcej...</a><br /></td></tr>
+<tr class="separator:a80335db678314bed7658fc517cfd6eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001f0c6b338eebc348c7a74f803cab92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a001f0c6b338eebc348c7a74f803cab92">set_icon</a> (string filename)</td></tr>
+<tr class="separator:a001f0c6b338eebc348c7a74f803cab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7957a746966810628ce92637186e92e"><td class="memItemLeft" align="right" valign="top">SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#ac7957a746966810628ce92637186e92e">load_surface</a> (string filename)</td></tr>
+<tr class="separator:ac7957a746966810628ce92637186e92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7d1f6fa9436ec381a4a4271aab9d30"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a8a7d1f6fa9436ec381a4a4271aab9d30">load_texture</a> (string filename)</td></tr>
+<tr class="separator:a8a7d1f6fa9436ec381a4a4271aab9d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0adcb13518704130e70e72952c471faf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a0adcb13518704130e70e72952c471faf">add_texture</a> (SDL_Texture *texture, string name)</td></tr>
+<tr class="separator:a0adcb13518704130e70e72952c471faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09f4b628b789035917ddba678d32651f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a09f4b628b789035917ddba678d32651f">get_w</a> (SDL_Texture *image)</td></tr>
+<tr class="separator:a09f4b628b789035917ddba678d32651f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3753c68ed064d3f6ad84ea943112fab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#af3753c68ed064d3f6ad84ea943112fab">get_h</a> (SDL_Texture *image)</td></tr>
+<tr class="separator:af3753c68ed064d3f6ad84ea943112fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad512608f3a64a3baa5e1f12d9875dd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#aad512608f3a64a3baa5e1f12d9875dd2">get_wh</a> (SDL_Texture *image, int &amp;w, int &amp;h)</td></tr>
+<tr class="separator:aad512608f3a64a3baa5e1f12d9875dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a0e151c6b13335dc81ef01757d7f646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a2a0e151c6b13335dc81ef01757d7f646">draw_texture</a> (SDL_Texture *image, int x, int y)</td></tr>
+<tr class="separator:a2a0e151c6b13335dc81ef01757d7f646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b107ea9430cdb074fa046157121f97c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a8b107ea9430cdb074fa046157121f97c">draw_texture_clip</a> (SDL_Texture *image, int x, int y, int clipx_i, int clipx_n, int clipy_i, int clipy_n)</td></tr>
+<tr class="separator:a8b107ea9430cdb074fa046157121f97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6bad546f91d9cbcb38acbf1cccfd3eb"><td class="memItemLeft" align="right" valign="top">TTF_Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#ad6bad546f91d9cbcb38acbf1cccfd3eb">load_ttf_font</a> (string filename, int fontsize)</td></tr>
+<tr class="separator:ad6bad546f91d9cbcb38acbf1cccfd3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a750aaddcd874b442e3488a2959820fa0"><td class="memItemLeft" align="right" valign="top">SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a750aaddcd874b442e3488a2959820fa0">sdl_win</a></td></tr>
+<tr class="memdesc:a750aaddcd874b442e3488a2959820fa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik do okna SDL  <a href="#a750aaddcd874b442e3488a2959820fa0">Więcej...</a><br /></td></tr>
+<tr class="separator:a750aaddcd874b442e3488a2959820fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a674c57fab6982540b038251d04ccde"><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a4a674c57fab6982540b038251d04ccde">sdl_ren</a></td></tr>
+<tr class="memdesc:a4a674c57fab6982540b038251d04ccde"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik do renderera grafiki  <a href="#a4a674c57fab6982540b038251d04ccde">Więcej...</a><br /></td></tr>
+<tr class="separator:a4a674c57fab6982540b038251d04ccde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843223151c44a795cf796edee3651807"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_engine.html">GameEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a843223151c44a795cf796edee3651807">game_engine</a></td></tr>
+<tr class="memdesc:a843223151c44a795cf796edee3651807"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik na logikę gry  <a href="#a843223151c44a795cf796edee3651807">Więcej...</a><br /></td></tr>
+<tr class="separator:a843223151c44a795cf796edee3651807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a441c6511b9f8c27c16ed30c6d8d065fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a441c6511b9f8c27c16ed30c6d8d065fd">fps_frames</a></td></tr>
+<tr class="memdesc:a441c6511b9f8c27c16ed30c6d8d065fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">liczba przeliczonych klatek  <a href="#a441c6511b9f8c27c16ed30c6d8d065fd">Więcej...</a><br /></td></tr>
+<tr class="separator:a441c6511b9f8c27c16ed30c6d8d065fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8679f76cf61ddad896df0f42ed9ffdc0"><td class="memItemLeft" align="right" valign="top">long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a8679f76cf61ddad896df0f42ed9ffdc0">last_frame</a></td></tr>
+<tr class="memdesc:a8679f76cf61ddad896df0f42ed9ffdc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">czas wystąpienia ostatniej klatki  <a href="#a8679f76cf61ddad896df0f42ed9ffdc0">Więcej...</a><br /></td></tr>
+<tr class="separator:a8679f76cf61ddad896df0f42ed9ffdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c5a28b3e41c1381074fba4c50c9c701"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a8c5a28b3e41c1381074fba4c50c9c701">wnd_w</a></td></tr>
+<tr class="memdesc:a8c5a28b3e41c1381074fba4c50c9c701"><td class="mdescLeft">&#160;</td><td class="mdescRight">szerokość okna  <a href="#a8c5a28b3e41c1381074fba4c50c9c701">Więcej...</a><br /></td></tr>
+<tr class="separator:a8c5a28b3e41c1381074fba4c50c9c701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb125a704f806b6674d0d33e7ea70fbb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#abb125a704f806b6674d0d33e7ea70fbb">wnd_h</a></td></tr>
+<tr class="memdesc:abb125a704f806b6674d0d33e7ea70fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">wysokość okna  <a href="#abb125a704f806b6674d0d33e7ea70fbb">Więcej...</a><br /></td></tr>
+<tr class="separator:abb125a704f806b6674d0d33e7ea70fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbe2e503fa052c7e2ad0e800ff1b38bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#afbe2e503fa052c7e2ad0e800ff1b38bb">fullscreen</a></td></tr>
+<tr class="memdesc:afbe2e503fa052c7e2ad0e800ff1b38bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">czy pełny ekran jest włączony  <a href="#afbe2e503fa052c7e2ad0e800ff1b38bb">Więcej...</a><br /></td></tr>
+<tr class="separator:afbe2e503fa052c7e2ad0e800ff1b38bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab078443e69f74394186ad0cfd429551f"><td class="memItemLeft" align="right" valign="top">vector&lt; SDL_Texture * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#ab078443e69f74394186ad0cfd429551f">textures</a></td></tr>
+<tr class="memdesc:ab078443e69f74394186ad0cfd429551f"><td class="mdescLeft">&#160;</td><td class="mdescRight">lista tekstur  <a href="#ab078443e69f74394186ad0cfd429551f">Więcej...</a><br /></td></tr>
+<tr class="separator:ab078443e69f74394186ad0cfd429551f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6219f0f4c59e21854e1650dcc6664e29"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a6219f0f4c59e21854e1650dcc6664e29">textures_names</a></td></tr>
+<tr class="memdesc:a6219f0f4c59e21854e1650dcc6664e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">lista nazw tekstur  <a href="#a6219f0f4c59e21854e1650dcc6664e29">Więcej...</a><br /></td></tr>
+<tr class="separator:a6219f0f4c59e21854e1650dcc6664e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8307784fb8253bef20827a1b7f826a4a"><td class="memItemLeft" align="right" valign="top">SDL_Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphics.html#a8307784fb8253bef20827a1b7f826a4a">ccolor</a></td></tr>
+<tr class="memdesc:a8307784fb8253bef20827a1b7f826a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">aktualny kolor do rysowania w silniku grafiki  <a href="#a8307784fb8253bef20827a1b7f826a4a">Więcej...</a><br /></td></tr>
+<tr class="separator:a8307784fb8253bef20827a1b7f826a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa silnika grafiki. </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00033">33</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="af2e8fe67fd31ec263c843a6e28b29d3c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Graphics::Graphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>inicjalizacja silnika grafiki </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00010">10</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7841c9a961ac9bca33bd30ddf8066cdb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Graphics::~Graphics </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zamknięcie silnika grafiki </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00029">29</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a0adcb13518704130e70e72952c471faf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::add_texture </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>dodanie tekstury do listy tekstur </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>wskaźnik na teksturę </td></tr>
+    <tr><td class="paramname">name</td><td>nazwa nowej tekstury </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00213">213</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a80335db678314bed7658fc517cfd6eb0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::animate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wyznacz nowe parametry animacji </p>
+
+<p>Definicja w linii <a class="el" href="graphics__draw_8cpp_source.html#l00006">6</a> pliku <a class="el" href="graphics__draw_8cpp_source.html">graphics_draw.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae529130c94739dce5f0657124e4f237e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture * Graphics::blend_texture </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>color_blend</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>wygenerowanie nowej, kolorowej tekstury na podstawie innej tekstury </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>tekstura bazowa, do przekształceń </td></tr>
+    <tr><td class="paramname">color_blend</td><td>kolor nowej tekstury </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na nową teksturę </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00280">280</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3bc8601cf3f77aa8e7e8a13d38fbdede"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::calculate_fps </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wyznaczenie wartości FPS </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00063">63</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af907aa76a605f2ea8d1cdfed2c345e33"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::destroy_texture </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *&amp;&#160;</td>
+          <td class="paramname"><em>texture</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwolnienie pamięcie po teksturze </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00223">223</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad0e7c12771870690d603e9df6643542c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>odrysowanie całej klatki </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00111">111</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f1d417f1bc67d5c442c925821b19386"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw_console </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>narysowanie konsoli i wiersza poleceń na ekranie </p>
+
+<p>Definicja w linii <a class="el" href="graphics__draw_8cpp_source.html#l00236">236</a> pliku <a class="el" href="graphics__draw_8cpp_source.html">graphics_draw.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a44ce2d6a8cb6dd3f58579f69b2baa9e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw_fill_rect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>rysuje pełny prostokąt </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>położenie x na ekranie lewego wierzchołka </td></tr>
+    <tr><td class="paramname">y</td><td>położenie y na ekranie górnego wierzchołka </td></tr>
+    <tr><td class="paramname">w</td><td>szerokość prostokąta </td></tr>
+    <tr><td class="paramname">h</td><td>wysokość prostokąta </td></tr>
+    <tr><td class="paramname">color</td><td>kolor prostokąta </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00470">470</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c755f8644fae1cb738b635d3c2d1b19"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw_line </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>rysuje linie między dwoma punktami na ekranie </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>położenie x punktu 1 </td></tr>
+    <tr><td class="paramname">y1</td><td>położenie y punktu 1 </td></tr>
+    <tr><td class="paramname">x2</td><td>położenie x punktu 2 </td></tr>
+    <tr><td class="paramname">y2</td><td>położenie y punktu 2 </td></tr>
+    <tr><td class="paramname">color</td><td>kolor linii </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00480">480</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5800bf5a6af8dd99e2a077baede50180"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw_menu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>narysowanie ekranu menu </p>
+
+<p>Definicja w linii <a class="el" href="graphics__draw_8cpp_source.html#l00027">27</a> pliku <a class="el" href="graphics__draw_8cpp_source.html">graphics_draw.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6cbe971a267df5990b6d51ebe2da479c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw_round </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>narysowanie ekranu rundy </p>
+
+<p>Definicja w linii <a class="el" href="graphics__draw_8cpp_source.html#l00090">90</a> pliku <a class="el" href="graphics__draw_8cpp_source.html">graphics_draw.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af772f7af3b11cee423bd250ecbdf7126"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw_text </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>txt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>align</em> = <code><a class="el" href="graphics_8h.html#a8e3a2ae5c9b6904ecda648a5ce61264a">TEXT_LEFT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>rysuje tekst na ekranie i wyrównuje go </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">txt</td><td>tekst do wyświetlenia </td></tr>
+    <tr><td class="paramname">font</td><td>czcionka </td></tr>
+    <tr><td class="paramname">color</td><td>kolor tekstu </td></tr>
+    <tr><td class="paramname">x</td><td>położenie x punktu odniesienia </td></tr>
+    <tr><td class="paramname">y</td><td>położenie y punktu odniesienia </td></tr>
+    <tr><td class="paramname">align</td><td>TEXT_LEFT - wyrównanie do lewej, punkt odniesienia = lewy górny róg tekstu, TEXT_RIGHT - wyrównanie do prawej, punkt odniesienia = prawy górny róg tekstu, TEXT_CENTER - wyrównanie do środka, punkt odniesienia = środkowy górny punkt tekstu </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00416">416</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2a0e151c6b13335dc81ef01757d7f646"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw_texture </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>rysuj teksturę na ekranie </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>wskaźnik na teksturę </td></tr>
+    <tr><td class="paramname">x</td><td>współrzędna x obrazu na ekranie </td></tr>
+    <tr><td class="paramname">y</td><td>współrzędna y obrazu na ekranie </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00324">324</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1acb12e76fcd7b1a885856ec558c983e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw_texture_center </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>narysowanie obrazu wyśrodkowanego w poziomie i w pionie </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>wskaźnik na teksturę </td></tr>
+    <tr><td class="paramname">x</td><td>współrzędna x środka obrazu na ekranie </td></tr>
+    <tr><td class="paramname">y</td><td>współrzędna y środka obrazu na ekranie </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00343">343</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b107ea9430cdb074fa046157121f97c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw_texture_clip </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clipx_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clipx_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clipy_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clipy_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>narysowanie wyciętego fragmentu obrazu </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>wskaźnik na teksturę </td></tr>
+    <tr><td class="paramname">x</td><td>współrzędna x obrazu na ekranie </td></tr>
+    <tr><td class="paramname">y</td><td>współrzędna y obrazu na ekranie </td></tr>
+    <tr><td class="paramname">clipx_i</td><td>indeks klatki po osi x </td></tr>
+    <tr><td class="paramname">clipx_n</td><td>liczba klatek w osi x </td></tr>
+    <tr><td class="paramname">clipy_i</td><td>indeks klatki po osi y </td></tr>
+    <tr><td class="paramname">clipy_n</td><td>liczba klatek w osi y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00353">353</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a49cc556b1bf1f8dfda0ea89f6d8a73e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::draw_texture_clip_center </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clipx_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clipx_n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clipy_i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>clipy_n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>narysowanie wyciętego fragmentu obrazu i wyśrodkowanie w poziomie i w pionie </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>wskaźnik na teksturę </td></tr>
+    <tr><td class="paramname">x</td><td>współrzędna x środka obrazu na ekranie </td></tr>
+    <tr><td class="paramname">y</td><td>współrzędna y środka obrazu na ekranie </td></tr>
+    <tr><td class="paramname">clipx_i</td><td>indeks klatki po osi x </td></tr>
+    <tr><td class="paramname">clipx_n</td><td>liczba klatek w osi x </td></tr>
+    <tr><td class="paramname">clipy_i</td><td>indeks klatki po osi y </td></tr>
+    <tr><td class="paramname">clipy_n</td><td>liczba klatek w osi y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00380">380</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ccf05e8582851423d86d6c25d73847f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::fullscreen_toggle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>przełączenie w tryb pełnoekranowy lub wyjście z tego trybu </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00136">136</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af3753c68ed064d3f6ad84ea943112fab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graphics::get_h </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>zwraca wysokość obrazka </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>wskaźnik na teksturę </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wysokość obrazka </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00261">261</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09f4b628b789035917ddba678d32651f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graphics::get_w </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>zwraca szerokośc obrazka </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>wskaźnik na teksturę </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>szerokośc obrazka </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00253">253</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aad512608f3a64a3baa5e1f12d9875dd2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::get_wh </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>zwraca szerokość i wysokość obrazka </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>wskaźnik na teksturę </td></tr>
+    <tr><td class="paramname">w</td><td>zwrócona szerokośc obrazka </td></tr>
+    <tr><td class="paramname">h</td><td>zwrócona wysokość obrazka </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00244">244</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6e32e597746e2f0cd67b35e0624a0994"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_language.html">Language</a> * Graphics::getLanguage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na ustawienia językowe </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00052">52</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7957a746966810628ce92637186e92e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Surface * Graphics::load_surface </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>załadowanie powierzchni </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>nazwa pliku </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na obiekt powierzchni </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00180">180</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8a7d1f6fa9436ec381a4a4271aab9d30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture * Graphics::load_texture </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>załadowanie tekstury </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>nazwa pliku </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na obiekt tekstury </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00198">198</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6bad546f91d9cbcb38acbf1cccfd3eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TTF_Font * Graphics::load_ttf_font </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fontsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>wczytuje czcionkę z pliku </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>nazwa pliku </td></tr>
+    <tr><td class="paramname">fontsize</td><td>rozmiar czcionki </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na czcionkę </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00407">407</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c755dbd4245538d5ed6d776b541bc73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Color Graphics::rand_bcolor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>generuje losowy kolor dla gracza (omija ciemne kolory) </p><dl class="section return"><dt>Zwraca</dt><dd>struktura koloru </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00458">458</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae837afa8ffed36c6e486e08bb94344ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::reload_textures </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>wczytanie wszystkich tekstur </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00232">232</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a11ea687ae41bbec39dd20d09d4957223"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Color Graphics::rgba </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em> = <code>255</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>zwraca strukturę koloru RGB (lub RGB z kanałem przezroczystości) </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>wartość koloru czerwonego </td></tr>
+    <tr><td class="paramname">g</td><td>wartość koloru zielonego </td></tr>
+    <tr><td class="paramname">b</td><td>wartość koloru niebieskiego </td></tr>
+    <tr><td class="paramname">a</td><td>wartość kanału alpha (domyślnie - nieprzezroczyste) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>struktura koloru </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00449">449</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a69026ccf6fd415bceb11f8d357f2057b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::sdl_error </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>wyświetla komunikat o błędzie grafiki </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>komunikat </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00056">56</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abe72c10277db5a3b18443fdcf56148ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graphics::sdl_init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>inicjalizacja SDL </p><dl class="section return"><dt>Zwraca</dt><dd>true - jeśli wszystko przebiegło pomyślnie </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00074">74</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a001f0c6b338eebc348c7a74f803cab92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::set_icon </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ustaw ikonę okna </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>nazwa pliku z ikoną </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00269">269</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ba5e523d99ddeb7bb5e66ef1d790132"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphics::setGameEngine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_engine.html">GameEngine</a> *&#160;</td>
+          <td class="paramname"><em>game_engine</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00048">48</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2bd03806f21a0235ea83b3b7562a1e87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture * Graphics::tex </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>znajdź teksturę po nazwie </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>nazwa tekstury </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik na znalezioną teksturę lub NULL jeśli nie znaleziono </dd></dl>
+
+<p>Definicja w linii <a class="el" href="graphics_8cpp_source.html#l00170">170</a> pliku <a class="el" href="graphics_8cpp_source.html">graphics.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a8290cacabcc492769bb6e94b1c15003a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_animation.html">Animation</a>*&gt; Graphics::animations</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lista wskaźników aktywnych animacji </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00304">304</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8307784fb8253bef20827a1b7f826a4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Color Graphics::ccolor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>aktualny kolor do rysowania w silniku grafiki </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00299">299</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a414d6ae7b8b3bca4e75671e453dac100"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TTF_Font* Graphics::font1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>czcionka nr 1 </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00273">273</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a670a7bac44658645c9fefe5d7dc89699"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TTF_Font* Graphics::font2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>czcionka nr 2 </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00275">275</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a56576331250a83e07563c91ed1997318"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Graphics::fps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>liczba klatek na sekundę </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00080">80</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a441c6511b9f8c27c16ed30c6d8d065fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graphics::fps_frames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>liczba przeliczonych klatek </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00070">70</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afbe2e503fa052c7e2ad0e800ff1b38bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graphics::fullscreen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>czy pełny ekran jest włączony </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00094">94</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a843223151c44a795cf796edee3651807"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_engine.html">GameEngine</a>* Graphics::game_engine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wskaźnik na logikę gry </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00049">49</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8679f76cf61ddad896df0f42ed9ffdc0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long long Graphics::last_frame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>czas wystąpienia ostatniej klatki </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00072">72</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4a674c57fab6982540b038251d04ccde"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Renderer* Graphics::sdl_ren</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wskaźnik do renderera grafiki </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00047">47</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a750aaddcd874b442e3488a2959820fa0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Window* Graphics::sdl_win</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wskaźnik do okna SDL </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00045">45</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab078443e69f74394186ad0cfd429551f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;SDL_Texture*&gt; Graphics::textures</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>lista tekstur </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00131">131</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6219f0f4c59e21854e1650dcc6664e29"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;string&gt; Graphics::textures_names</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>lista nazw tekstur </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00133">133</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abb125a704f806b6674d0d33e7ea70fbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graphics::wnd_h</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wysokość okna </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00092">92</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c5a28b3e41c1381074fba4c50c9c701"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Graphics::wnd_w</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>szerokość okna </p>
+
+<p>Definicja w linii <a class="el" href="graphics_8h_source.html#l00090">90</a> pliku <a class="el" href="graphics_8h_source.html">graphics.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>/mnt/d/Igrek/C++/PacLAN/src/graphics/<a class="el" href="graphics_8h_source.html">graphics.h</a></li>
+<li>/mnt/d/Igrek/C++/PacLAN/src/graphics/<a class="el" href="graphics_8cpp_source.html">graphics.cpp</a></li>
+<li>/mnt/d/Igrek/C++/PacLAN/src/graphics/<a class="el" href="graphics__draw_8cpp_source.html">graphics_draw.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_graphics.html">Graphics</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:22 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

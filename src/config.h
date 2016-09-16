@@ -1,29 +1,27 @@
 /**
  * \file config.h
- * Moduł ustawień konfiguracyjnych
  * \see config.cpp
  */
 #ifndef CONFIG_H
 #define CONFIG_H
 
 #include <iostream>
+#include "log/log_level.h"
 
 using namespace std;
 
-/**
- * \brief Ustawienia konfiguracyjne (stałe lub modyfikowalne)
- */
-class Config{
-public:
-    //  DZIENNIK ZDARZEŃ
-    /// nazwa pliku dziennika zdarzeń
-    static const string log_filename;
+//TODO zamienić na singleton
 
+/**
+ * \brief Ustawienia konfiguracyjne
+ */
+class Config {
+public:
     //  OKNO
     /// szerokość okna aplikacji
-    static int screen_w;
+    static int window_w;
     /// wysokość okna aplikacji
-    static int screen_h;
+    static int window_h;
     /// tytuł okna
     static const char* app_name;
     /// wersja aplikacji
@@ -32,7 +30,7 @@ public:
     static bool fullscreen_start;
 
     //  SYNCHRONIZACJA
-    /// interwał timer cykli logicznych
+    /// okres timera cykli logicznych
     static int logic_timer_ms;
     /// krytyczna liczba niewykonanych cykli
     static int logic_cycles_critical;
@@ -55,6 +53,10 @@ public:
     /// rozmiar czcionki nr 2
     static int fontsize2;
 
+    //  MAPA
+    /// nazwa pliku definicji mapy
+    static string mapDefault;
+
     //  INFO
     /// wyświetlanie liczby klatek na sekundę (true - włączone)
     static bool show_fps;
@@ -64,37 +66,37 @@ public:
     static bool show_paths;
     /// wyświetlanie nazw graczy (true - włączone)
     static bool show_names;
-    /// maksymalna liczba wierszy wyjścia w konsoli wiersza poleceń
-    static int cmd_outputs;
 
-    //  JĘZYK
-    ///tablica dostępnych języków
-    static string languages[];
-    ///liczba dostępnych języków
-    static int languages_n;
-    ///indeks domyślnego i aktualnego języka
-    static int language_selected;
+    //  LOG, OUTPUT
+    /// nazwa pliku dziennika zdarzeń
+    static const string log_filename;
+    /// poziom logów zapisywanych w pliku
+    static LogLevel file_log_level;
+    /// poziom logów wyświetlanych w konsoli
+    static LogLevel echo_log_level;
+    /// maksymalna liczba wierszy wyjścia w konsoli
+    static unsigned int echoes_max;
 
     //  POSTACIE
     /// domyślna szybkość pacmana (im mniesza wartość, tym większa szybkość)
     static int pacman_speed;
     /// domyślna szybkość duszka (im mniesza wartość, tym większa szybkość)
     static int ghost_speed;
-    /// domyślna szybkość duszka w trybie zjadania duszków
+    /// domyślna szybkość duszka w trybie zjadania duszków (im mniesza wartość, tym większa szybkość)
     static int ghost_eatme_speed;
-    /// możliwość ruchu w trakcie odradzania (true - włączone)
+    /// możliwość ruchu w trakcie odradzania się (true - włączone)
     static bool move_while_respawn;
 
     //  SZTUCZNA INTELIGENCJA
-    /// w sztucznej inteligencji pacmana: odległość od duszka, przy której pacman zaczyna uciekać
-    static int ai_pacman_start_escape;    
-    /// w sztucznej inteligencji pacmana: minimalna odległość od duszka, przy której pacman przestaje uciekać
+    /// AI pacmana: odległość od duszka, przy której pacman zaczyna uciekać
+    static int ai_pacman_start_escape;
+    /// AI pacmana: minimalna odległość od duszka, przy której pacman przestaje uciekać
     static int ai_pacman_stop_escape;
 
     //  GRA
     /// czas trwania trybu zjadania duszków (w cyklach)
     static int eating_time;
-    /// czas trwania migania oznamiającego, że wkrótce skończy się tryb zjadania duszków
+    /// czas trwania migania duszków oznamiającego, że kończy się tryb zjadania duszków
     static int eating_time_critical;
     /// czas oczekiwania na ponowne odrodzenie (w cyklach)
     static int respawn_time;
@@ -132,8 +134,6 @@ public:
     static int zombie_ghost_eatme_speed;
 
     //  SIEĆ
-    /// czas oczekiwania na nadchodzące zadania z sieci (w ms)
-    static int network_refresh;
     /// maksymalna liczba klientów
     static int max_clients;
     /// numer portu przy połączeniu

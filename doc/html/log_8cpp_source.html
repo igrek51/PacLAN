@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/log/log.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('log_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">log.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="log_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="log_8h.html">log.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../config.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../utils.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//TODO przekazywanie błędów wyjątkami</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//TODO więcej komunikatów na poziomie DEBUG</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<a class="code" href="class_log.html">Log</a>* <a class="code" href="class_log.html#a0ccbba5341fbc543305f93d9763b6b35">Log::instance</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_log.html#af6071a60aa52b6c1b511f99b4bc1b8fe">   12</a></span>&#160;<a class="code" href="class_log.html#af6071a60aa52b6c1b511f99b4bc1b8fe">Log::Log</a>() {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_log.html#abcd09df728b129c4483b6f587d9c5170">criticalErrorsCount</a> = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_log.html#aec63f8f41a6cc576ee24dd9017a079dd">clearLog</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_log.html#a0fbfda88fbee5027c89f6eb121059360">   17</a></span>&#160;<a class="code" href="class_log.html#a0fbfda88fbee5027c89f6eb121059360">Log::~Log</a>() {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_log.html#abc0a511d1e4a30869df0086c53a6bc1a">echoes</a>.clear();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">   21</a></span>&#160;<a class="code" href="class_log.html">Log</a>* <a class="code" href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">Log::getInstance</a>() {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_log.html#a0ccbba5341fbc543305f93d9763b6b35">instance</a> == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_log.html#a0ccbba5341fbc543305f93d9763b6b35">instance</a> = <span class="keyword">new</span> <a class="code" href="class_log.html#af6071a60aa52b6c1b511f99b4bc1b8fe">Log</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_log.html#a0ccbba5341fbc543305f93d9763b6b35">instance</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_log.html#a1c5794ad20af844b2980c6a978f7d3a1">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_log.html#a1c5794ad20af844b2980c6a978f7d3a1">Log::error</a>(<span class="keywordtype">string</span> s) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_log.html">Log</a>* inst = <a class="code" href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">getInstance</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">string</span> s2 = <span class="stringliteral">&quot;[ERROR] &quot;</span> + s;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    inst-&gt;<a class="code" href="class_log.html#ac3835ae0d02e44a83fbbb8e65d9afe2c">echo</a>(s2, <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94abb1ca97ec761fc37101737ba0aa2e7c5">LogLevel::ERROR</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    inst-&gt;<a class="code" href="class_log.html#a1c507398eb82ed07c14b80e6ebce4497">log</a>(s2, <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94abb1ca97ec761fc37101737ba0aa2e7c5">LogLevel::ERROR</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_log.html#a74def209d6c1a17f4b283fc21f641a6e">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_log.html#a74def209d6c1a17f4b283fc21f641a6e">Log::warn</a>(<span class="keywordtype">string</span> s) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_log.html">Log</a>* inst = <a class="code" href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">getInstance</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">string</span> s2 = <span class="stringliteral">&quot;[warn] &quot;</span> + s;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    inst-&gt;<a class="code" href="class_log.html#ac3835ae0d02e44a83fbbb8e65d9afe2c">echo</a>(s2, <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94a32bd8a1db2275458673903bdb84cb277">LogLevel::WARN</a>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    inst-&gt;<a class="code" href="class_log.html#a1c507398eb82ed07c14b80e6ebce4497">log</a>(s2, <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94a32bd8a1db2275458673903bdb84cb277">LogLevel::WARN</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="keywordtype">string</span> s) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_log.html">Log</a>* inst = <a class="code" href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">getInstance</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    inst-&gt;<a class="code" href="class_log.html#ac3835ae0d02e44a83fbbb8e65d9afe2c">echo</a>(s, <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    inst-&gt;<a class="code" href="class_log.html#a1c507398eb82ed07c14b80e6ebce4497">log</a>(s, <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_log.html#a7f04966a8a4e7061b9d6b50e33f52374">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_log.html#a7f04966a8a4e7061b9d6b50e33f52374">Log::debug</a>(<span class="keywordtype">string</span> s) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_log.html">Log</a>* inst = <a class="code" href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">getInstance</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">string</span> s2 = <span class="stringliteral">&quot;[debug] &quot;</span> + s;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    inst-&gt;<a class="code" href="class_log.html#ac3835ae0d02e44a83fbbb8e65d9afe2c">echo</a>(s2, <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94adc30ec20708ef7b0f641ef78b7880a15">LogLevel::DEBUG</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    inst-&gt;<a class="code" href="class_log.html#a1c507398eb82ed07c14b80e6ebce4497">log</a>(s2, <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94adc30ec20708ef7b0f641ef78b7880a15">LogLevel::DEBUG</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_log.html#a1c507398eb82ed07c14b80e6ebce4497">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_log.html#a1c507398eb82ed07c14b80e6ebce4497">Log::log</a>(<span class="keywordtype">string</span> s, <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94">LogLevel</a> level) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span> (level &gt; <a class="code" href="class_config.html#a78963b834bfd5f1ae7d042c2e9f505ed">Config::file_log_level</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    fstream plik;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    plik.open(<a class="code" href="class_config.html#a977962c4c91d91c7b263429c88dc99d4">Config::log_filename</a>.c_str(), fstream::out | fstream::app);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (!plik.good()) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        plik.close();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    plik &lt;&lt; <a class="code" href="utils_8cpp.html#a22c5c43265878b92e2d22f14d7989645">get_time</a>() &lt;&lt; <span class="stringliteral">&quot; - &quot;</span> &lt;&lt; s &lt;&lt; endl;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    plik.close();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_log.html#ac3835ae0d02e44a83fbbb8e65d9afe2c">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_log.html#ac3835ae0d02e44a83fbbb8e65d9afe2c">Log::echo</a>(<span class="keywordtype">string</span> s, <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94">LogLevel</a> level) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (level &gt; <a class="code" href="class_config.html#ad28f19c482dbcc0f5b92b4a1bde08146">Config::echo_log_level</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="class_log.html#abc0a511d1e4a30869df0086c53a6bc1a">echoes</a>.push_back(s);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="class_log.html#abc0a511d1e4a30869df0086c53a6bc1a">echoes</a>.size() &gt; <a class="code" href="class_config.html#a93518c5bcbac93214691ca23584a8f52">Config::echoes_max</a>) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_log.html#abc0a511d1e4a30869df0086c53a6bc1a">echoes</a>.pop_front();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (level == <a class="code" href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94abb1ca97ec761fc37101737ba0aa2e7c5">LogLevel::ERROR</a>) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        cerr &lt;&lt; s &lt;&lt; endl;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        cout &lt;&lt; s &lt;&lt; endl;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_log.html#aec63f8f41a6cc576ee24dd9017a079dd">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_log.html#aec63f8f41a6cc576ee24dd9017a079dd">Log::clearLog</a>() {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    fstream plik;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    plik.open(<a class="code" href="class_config.html#a977962c4c91d91c7b263429c88dc99d4">Config::log_filename</a>.c_str(), fstream::out | fstream::trunc);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    plik.close();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_log.html#a0cee2a50c13d0c34066ff494ebc8fae3">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_log.html#a0cee2a50c13d0c34066ff494ebc8fae3">Log::criticalError</a>(<span class="keywordtype">string</span> s) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="class_log.html#a1c5794ad20af844b2980c6a978f7d3a1">error</a>(s);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="class_log.html">Log</a>* inst = <a class="code" href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">getInstance</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    inst-&gt;<a class="code" href="class_log.html#abcd09df728b129c4483b6f587d9c5170">criticalErrorsCount</a>++;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, <span class="stringliteral">&quot;Błąd&quot;</span>, s.c_str(), NULL);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_log.html#a7b7b33530388e02bd59a516a3d63b2d1">   96</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_log.html#a7b7b33530388e02bd59a516a3d63b2d1">Log::wasCriticalError</a>() {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="class_log.html">Log</a>* inst = <a class="code" href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">getInstance</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> inst-&gt;<a class="code" href="class_log.html#abcd09df728b129c4483b6f587d9c5170">criticalErrorsCount</a> &gt; 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_log.html#ab84a4a8958dfa279a899910df57ec540">  101</a></span>&#160;list&lt;string&gt;* <a class="code" href="class_log.html#ab84a4a8958dfa279a899910df57ec540">Log::getEchoes</a>() {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="class_log.html">Log</a>* inst = <a class="code" href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">getInstance</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> &amp;(inst-&gt;<a class="code" href="class_log.html#abc0a511d1e4a30869df0086c53a6bc1a">echoes</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
+<div class="ttc" id="class_log_html_aec63f8f41a6cc576ee24dd9017a079dd"><div class="ttname"><a href="class_log.html#aec63f8f41a6cc576ee24dd9017a079dd">Log::clearLog</a></div><div class="ttdeci">void clearLog()</div><div class="ttdoc">wyczyszczenie zawartości pliku dziennika </div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00083">log.cpp:83</a></div></div>
+<div class="ttc" id="class_log_html_a0ccbba5341fbc543305f93d9763b6b35"><div class="ttname"><a href="class_log.html#a0ccbba5341fbc543305f93d9763b6b35">Log::instance</a></div><div class="ttdeci">static Log * instance</div><div class="ttdoc">instancja singletonowej klasy </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00061">log.h:61</a></div></div>
+<div class="ttc" id="class_log_html_ac94692be250aaf6bad006c4e4aa776c1"><div class="ttname"><a href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a></div><div class="ttdeci">static void info(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00043">log.cpp:43</a></div></div>
+<div class="ttc" id="class_log_html_abc0a511d1e4a30869df0086c53a6bc1a"><div class="ttname"><a href="class_log.html#abc0a511d1e4a30869df0086c53a6bc1a">Log::echoes</a></div><div class="ttdeci">list&lt; string &gt; echoes</div><div class="ttdoc">lista ostatnich komunikatów wyświetlanych w konsoli </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00072">log.h:72</a></div></div>
+<div class="ttc" id="class_log_html_af6071a60aa52b6c1b511f99b4bc1b8fe"><div class="ttname"><a href="class_log.html#af6071a60aa52b6c1b511f99b4bc1b8fe">Log::Log</a></div><div class="ttdeci">Log()</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00012">log.cpp:12</a></div></div>
+<div class="ttc" id="class_log_html_a74def209d6c1a17f4b283fc21f641a6e"><div class="ttname"><a href="class_log.html#a74def209d6c1a17f4b283fc21f641a6e">Log::warn</a></div><div class="ttdeci">static void warn(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00036">log.cpp:36</a></div></div>
+<div class="ttc" id="class_config_html_a78963b834bfd5f1ae7d042c2e9f505ed"><div class="ttname"><a href="class_config.html#a78963b834bfd5f1ae7d042c2e9f505ed">Config::file_log_level</a></div><div class="ttdeci">static LogLevel file_log_level</div><div class="ttdoc">poziom logów zapisywanych w pliku </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00074">config.h:74</a></div></div>
+<div class="ttc" id="log__level_8h_html_a9cf4d2a890c8688e0fe1bc38fa88de94a32bd8a1db2275458673903bdb84cb277"><div class="ttname"><a href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94a32bd8a1db2275458673903bdb84cb277">LogLevel::WARN</a></div></div>
+<div class="ttc" id="class_log_html_abcd09df728b129c4483b6f587d9c5170"><div class="ttname"><a href="class_log.html#abcd09df728b129c4483b6f587d9c5170">Log::criticalErrorsCount</a></div><div class="ttdeci">int criticalErrorsCount</div><div class="ttdoc">liczba krytycznych błędów </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00069">log.h:69</a></div></div>
+<div class="ttc" id="class_config_html_ad28f19c482dbcc0f5b92b4a1bde08146"><div class="ttname"><a href="class_config.html#ad28f19c482dbcc0f5b92b4a1bde08146">Config::echo_log_level</a></div><div class="ttdeci">static LogLevel echo_log_level</div><div class="ttdoc">poziom logów wyświetlanych w konsoli </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00076">config.h:76</a></div></div>
+<div class="ttc" id="class_log_html_a7f04966a8a4e7061b9d6b50e33f52374"><div class="ttname"><a href="class_log.html#a7f04966a8a4e7061b9d6b50e33f52374">Log::debug</a></div><div class="ttdeci">static void debug(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00049">log.cpp:49</a></div></div>
+<div class="ttc" id="class_log_html_a1c5794ad20af844b2980c6a978f7d3a1"><div class="ttname"><a href="class_log.html#a1c5794ad20af844b2980c6a978f7d3a1">Log::error</a></div><div class="ttdeci">static void error(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00029">log.cpp:29</a></div></div>
+<div class="ttc" id="class_log_html_ab84a4a8958dfa279a899910df57ec540"><div class="ttname"><a href="class_log.html#ab84a4a8958dfa279a899910df57ec540">Log::getEchoes</a></div><div class="ttdeci">static list&lt; string &gt; * getEchoes()</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00101">log.cpp:101</a></div></div>
+<div class="ttc" id="class_log_html_ac3835ae0d02e44a83fbbb8e65d9afe2c"><div class="ttname"><a href="class_log.html#ac3835ae0d02e44a83fbbb8e65d9afe2c">Log::echo</a></div><div class="ttdeci">void echo(string s, LogLevel level)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00069">log.cpp:69</a></div></div>
+<div class="ttc" id="class_config_html_a977962c4c91d91c7b263429c88dc99d4"><div class="ttname"><a href="class_config.html#a977962c4c91d91c7b263429c88dc99d4">Config::log_filename</a></div><div class="ttdeci">static const string log_filename</div><div class="ttdoc">nazwa pliku dziennika zdarzeń </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00072">config.h:72</a></div></div>
+<div class="ttc" id="class_log_html_a987f3ff401eea783d0e80daaea1d7aca"><div class="ttname"><a href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">Log::getInstance</a></div><div class="ttdeci">static Log * getInstance()</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00021">log.cpp:21</a></div></div>
+<div class="ttc" id="log__level_8h_html_a9cf4d2a890c8688e0fe1bc38fa88de94abb1ca97ec761fc37101737ba0aa2e7c5"><div class="ttname"><a href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94abb1ca97ec761fc37101737ba0aa2e7c5">LogLevel::ERROR</a></div></div>
+<div class="ttc" id="log__level_8h_html_a9cf4d2a890c8688e0fe1bc38fa88de94"><div class="ttname"><a href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94">LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> <a href="log__level_8h_source.html#l00012">log_level.h:12</a></div></div>
+<div class="ttc" id="class_log_html_a0cee2a50c13d0c34066ff494ebc8fae3"><div class="ttname"><a href="class_log.html#a0cee2a50c13d0c34066ff494ebc8fae3">Log::criticalError</a></div><div class="ttdeci">static void criticalError(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00089">log.cpp:89</a></div></div>
+<div class="ttc" id="class_config_html_a93518c5bcbac93214691ca23584a8f52"><div class="ttname"><a href="class_config.html#a93518c5bcbac93214691ca23584a8f52">Config::echoes_max</a></div><div class="ttdeci">static unsigned int echoes_max</div><div class="ttdoc">maksymalna liczba wierszy wyjścia w konsoli </div><div class="ttdef"><b>Definition:</b> <a href="config_8h_source.html#l00078">config.h:78</a></div></div>
+<div class="ttc" id="class_log_html_a0fbfda88fbee5027c89f6eb121059360"><div class="ttname"><a href="class_log.html#a0fbfda88fbee5027c89f6eb121059360">Log::~Log</a></div><div class="ttdeci">~Log()</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00017">log.cpp:17</a></div></div>
+<div class="ttc" id="class_log_html_a1c507398eb82ed07c14b80e6ebce4497"><div class="ttname"><a href="class_log.html#a1c507398eb82ed07c14b80e6ebce4497">Log::log</a></div><div class="ttdeci">void log(string s, LogLevel level)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00057">log.cpp:57</a></div></div>
+<div class="ttc" id="class_log_html"><div class="ttname"><a href="class_log.html">Log</a></div><div class="ttdoc">Zgłaszanie komunikatów na różnych poziomach. </div><div class="ttdef"><b>Definition:</b> <a href="log_8h_source.html#l00017">log.h:17</a></div></div>
+<div class="ttc" id="log_8h_html"><div class="ttname"><a href="log_8h.html">log.h</a></div></div>
+<div class="ttc" id="log__level_8h_html_a9cf4d2a890c8688e0fe1bc38fa88de94a551b723eafd6a31d444fcb2f5920fbd3"><div class="ttname"><a href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94a551b723eafd6a31d444fcb2f5920fbd3">LogLevel::INFO</a></div></div>
+<div class="ttc" id="class_log_html_a7b7b33530388e02bd59a516a3d63b2d1"><div class="ttname"><a href="class_log.html#a7b7b33530388e02bd59a516a3d63b2d1">Log::wasCriticalError</a></div><div class="ttdeci">static bool wasCriticalError()</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00096">log.cpp:96</a></div></div>
+<div class="ttc" id="utils_8cpp_html_a22c5c43265878b92e2d22f14d7989645"><div class="ttname"><a href="utils_8cpp.html#a22c5c43265878b92e2d22f14d7989645">get_time</a></div><div class="ttdeci">string get_time()</div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00032">utils.cpp:32</a></div></div>
+<div class="ttc" id="log__level_8h_html_a9cf4d2a890c8688e0fe1bc38fa88de94adc30ec20708ef7b0f641ef78b7880a15"><div class="ttname"><a href="log__level_8h.html#a9cf4d2a890c8688e0fe1bc38fa88de94adc30ec20708ef7b0f641ef78b7880a15">LogLevel::DEBUG</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2241064965c8d9ca993f08b926076f7d.html">log</a></li><li class="navelem"><a class="el" href="log_8cpp.html">log.cpp</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

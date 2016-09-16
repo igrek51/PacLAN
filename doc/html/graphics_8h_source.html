@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/graphics/graphics.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('graphics_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">graphics.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="graphics_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef GRAPHICS_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define GRAPHICS_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//wyrównanie tekstu</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//TODO zamienić na enum class</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="graphics_8h.html#a8e3a2ae5c9b6904ecda648a5ce61264a">   11</a></span>&#160;<span class="preprocessor">#define TEXT_LEFT -1</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="graphics_8h.html#abf5f6d811bcbe1b2bc40dc521216908d">   12</a></span>&#160;<span class="preprocessor">#define TEXT_CENTER 0</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="graphics_8h.html#ae98cb4f6bdfdb510a2cb2e98913e1c76">   13</a></span>&#160;<span class="preprocessor">#define TEXT_RIGHT 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_ttf.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;SDL2/SDL_image.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="class_graphics.html">Graphics</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="animation_8h.html">animations/animation.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;../logic/game_engine.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;../language.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_graphics.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_graphics.html">Graphics</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_graphics.html">Graphics</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ~<a class="code" href="class_graphics.html">Graphics</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> setGameEngine(<a class="code" href="class_game_engine.html">GameEngine</a>* game_engine);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_graphics.html#a750aaddcd874b442e3488a2959820fa0">   45</a></span>&#160;    SDL_Window* <a class="code" href="class_graphics.html#a750aaddcd874b442e3488a2959820fa0">sdl_win</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_graphics.html#a4a674c57fab6982540b038251d04ccde">   47</a></span>&#160;    SDL_Renderer* <a class="code" href="class_graphics.html#a4a674c57fab6982540b038251d04ccde">sdl_ren</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_graphics.html#a843223151c44a795cf796edee3651807">   49</a></span>&#160;    <a class="code" href="class_game_engine.html">GameEngine</a>* <a class="code" href="class_graphics.html#a843223151c44a795cf796edee3651807">game_engine</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="class_language.html">Language</a>* getLanguage();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> sdl_init();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> sdl_error(<span class="keywordtype">string</span> e);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">//  FPS</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_graphics.html#a441c6511b9f8c27c16ed30c6d8d065fd">   70</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">int</span> <a class="code" href="class_graphics.html#a441c6511b9f8c27c16ed30c6d8d065fd">fps_frames</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_graphics.html#a8679f76cf61ddad896df0f42ed9ffdc0">   72</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code" href="class_graphics.html#a8679f76cf61ddad896df0f42ed9ffdc0">last_frame</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> calculate_fps();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">//  OKNO</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_graphics.html#a56576331250a83e07563c91ed1997318">   80</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_graphics.html#a56576331250a83e07563c91ed1997318">fps</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> fullscreen_toggle();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> draw();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_graphics.html#a8c5a28b3e41c1381074fba4c50c9c701">   90</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_graphics.html#a8c5a28b3e41c1381074fba4c50c9c701">wnd_w</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_graphics.html#abb125a704f806b6674d0d33e7ea70fbb">   92</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_graphics.html#abb125a704f806b6674d0d33e7ea70fbb">wnd_h</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_graphics.html#afbe2e503fa052c7e2ad0e800ff1b38bb">   94</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_graphics.html#afbe2e503fa052c7e2ad0e800ff1b38bb">fullscreen</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> draw_menu();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> draw_round();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> draw_console();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> animate();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> set_icon(<span class="keywordtype">string</span> filename);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">//  TEKSTURY - WCZYTYWANIE</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    SDL_Texture* tex(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> reload_textures();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> destroy_texture(SDL_Texture*&amp; texture);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="class_graphics.html#ab078443e69f74394186ad0cfd429551f">  131</a></span>&#160;    vector&lt;SDL_Texture*&gt; <a class="code" href="class_graphics.html#ab078443e69f74394186ad0cfd429551f">textures</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_graphics.html#a6219f0f4c59e21854e1650dcc6664e29">  133</a></span>&#160;    vector&lt;string&gt; <a class="code" href="class_graphics.html#a6219f0f4c59e21854e1650dcc6664e29">textures_names</a>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    SDL_Surface* load_surface(<span class="keywordtype">string</span> filename);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    SDL_Texture* load_texture(<span class="keywordtype">string</span> filename);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">void</span> add_texture(SDL_Texture* texture, <span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="comment">//  TEKSTURY - RYSOWANIE</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span> draw_texture_center(SDL_Texture* image, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">void</span> draw_texture_clip_center(SDL_Texture* image, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> clipx_i, <span class="keywordtype">int</span> clipx_n,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                                  <span class="keywordtype">int</span> clipy_i, <span class="keywordtype">int</span> clipy_n);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordtype">int</span> get_w(SDL_Texture* image);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">int</span> get_h(SDL_Texture* image);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">void</span> get_wh(SDL_Texture* image, <span class="keywordtype">int</span>&amp; w, <span class="keywordtype">int</span>&amp; h);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">void</span> draw_texture(SDL_Texture* image, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">void</span> draw_texture_clip(SDL_Texture* image, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> clipx_i, <span class="keywordtype">int</span> clipx_n, <span class="keywordtype">int</span> clipy_i,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                           <span class="keywordtype">int</span> clipy_n);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">//  TEKSTURY - BLENDING</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    SDL_Texture* blend_texture(SDL_Texture* texture, SDL_Color color_blend);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">//  KOLORY</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment"></span>    <span class="keyword">static</span> SDL_Color rgba(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> g, <span class="keywordtype">int</span> b, <span class="keywordtype">int</span> a = 255);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keyword">static</span> SDL_Color rand_bcolor();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="comment">//  KSZTAŁTY</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> draw_fill_rect(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h, SDL_Color color);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordtype">void</span> draw_line(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2, SDL_Color color);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="comment">//  TEKST, CZCIONKI</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="class_graphics.html#a414d6ae7b8b3bca4e75671e453dac100">  273</a></span>&#160;<span class="comment"></span>    TTF_Font* <a class="code" href="class_graphics.html#a414d6ae7b8b3bca4e75671e453dac100">font1</a>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="class_graphics.html#a670a7bac44658645c9fefe5d7dc89699">  275</a></span>&#160;    TTF_Font* <a class="code" href="class_graphics.html#a670a7bac44658645c9fefe5d7dc89699">font2</a>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">void</span> draw_text(<span class="keywordtype">string</span> txt, TTF_Font* font, SDL_Color color, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y,</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                   <span class="keywordtype">int</span> align = <a class="code" href="graphics_8h.html#a8e3a2ae5c9b6904ecda648a5ce61264a">TEXT_LEFT</a>);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    TTF_Font* load_ttf_font(<span class="keywordtype">string</span> filename, <span class="keywordtype">int</span> fontsize);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno"><a class="line" href="class_graphics.html#a8307784fb8253bef20827a1b7f826a4a">  299</a></span>&#160;    SDL_Color <a class="code" href="class_graphics.html#a8307784fb8253bef20827a1b7f826a4a">ccolor</a>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">//  ANIMACJE</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="class_graphics.html#a8290cacabcc492769bb6e94b1c15003a">  304</a></span>&#160;    vector&lt;Animation*&gt; <a class="code" href="class_graphics.html#a8290cacabcc492769bb6e94b1c15003a">animations</a>;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;};</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_graphics_html_a8290cacabcc492769bb6e94b1c15003a"><div class="ttname"><a href="class_graphics.html#a8290cacabcc492769bb6e94b1c15003a">Graphics::animations</a></div><div class="ttdeci">vector&lt; Animation * &gt; animations</div><div class="ttdoc">lista wskaźników aktywnych animacji </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00304">graphics.h:304</a></div></div>
+<div class="ttc" id="animation_8h_html"><div class="ttname"><a href="animation_8h.html">animation.h</a></div></div>
+<div class="ttc" id="class_graphics_html_afbe2e503fa052c7e2ad0e800ff1b38bb"><div class="ttname"><a href="class_graphics.html#afbe2e503fa052c7e2ad0e800ff1b38bb">Graphics::fullscreen</a></div><div class="ttdeci">bool fullscreen</div><div class="ttdoc">czy pełny ekran jest włączony </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00094">graphics.h:94</a></div></div>
+<div class="ttc" id="class_graphics_html_a750aaddcd874b442e3488a2959820fa0"><div class="ttname"><a href="class_graphics.html#a750aaddcd874b442e3488a2959820fa0">Graphics::sdl_win</a></div><div class="ttdeci">SDL_Window * sdl_win</div><div class="ttdoc">wskaźnik do okna SDL </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00045">graphics.h:45</a></div></div>
+<div class="ttc" id="class_graphics_html_a8307784fb8253bef20827a1b7f826a4a"><div class="ttname"><a href="class_graphics.html#a8307784fb8253bef20827a1b7f826a4a">Graphics::ccolor</a></div><div class="ttdeci">SDL_Color ccolor</div><div class="ttdoc">aktualny kolor do rysowania w silniku grafiki </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00299">graphics.h:299</a></div></div>
+<div class="ttc" id="class_graphics_html_a4a674c57fab6982540b038251d04ccde"><div class="ttname"><a href="class_graphics.html#a4a674c57fab6982540b038251d04ccde">Graphics::sdl_ren</a></div><div class="ttdeci">SDL_Renderer * sdl_ren</div><div class="ttdoc">wskaźnik do renderera grafiki </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00047">graphics.h:47</a></div></div>
+<div class="ttc" id="class_graphics_html"><div class="ttname"><a href="class_graphics.html">Graphics</a></div><div class="ttdoc">Klasa silnika grafiki. </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00033">graphics.h:33</a></div></div>
+<div class="ttc" id="class_graphics_html_a843223151c44a795cf796edee3651807"><div class="ttname"><a href="class_graphics.html#a843223151c44a795cf796edee3651807">Graphics::game_engine</a></div><div class="ttdeci">GameEngine * game_engine</div><div class="ttdoc">wskaźnik na logikę gry </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00049">graphics.h:49</a></div></div>
+<div class="ttc" id="class_graphics_html_a6219f0f4c59e21854e1650dcc6664e29"><div class="ttname"><a href="class_graphics.html#a6219f0f4c59e21854e1650dcc6664e29">Graphics::textures_names</a></div><div class="ttdeci">vector&lt; string &gt; textures_names</div><div class="ttdoc">lista nazw tekstur </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00133">graphics.h:133</a></div></div>
+<div class="ttc" id="class_graphics_html_a670a7bac44658645c9fefe5d7dc89699"><div class="ttname"><a href="class_graphics.html#a670a7bac44658645c9fefe5d7dc89699">Graphics::font2</a></div><div class="ttdeci">TTF_Font * font2</div><div class="ttdoc">czcionka nr 2 </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00275">graphics.h:275</a></div></div>
+<div class="ttc" id="class_graphics_html_a441c6511b9f8c27c16ed30c6d8d065fd"><div class="ttname"><a href="class_graphics.html#a441c6511b9f8c27c16ed30c6d8d065fd">Graphics::fps_frames</a></div><div class="ttdeci">int fps_frames</div><div class="ttdoc">liczba przeliczonych klatek </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00070">graphics.h:70</a></div></div>
+<div class="ttc" id="class_graphics_html_a414d6ae7b8b3bca4e75671e453dac100"><div class="ttname"><a href="class_graphics.html#a414d6ae7b8b3bca4e75671e453dac100">Graphics::font1</a></div><div class="ttdeci">TTF_Font * font1</div><div class="ttdoc">czcionka nr 1 </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00273">graphics.h:273</a></div></div>
+<div class="ttc" id="class_graphics_html_a8c5a28b3e41c1381074fba4c50c9c701"><div class="ttname"><a href="class_graphics.html#a8c5a28b3e41c1381074fba4c50c9c701">Graphics::wnd_w</a></div><div class="ttdeci">int wnd_w</div><div class="ttdoc">szerokość okna </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00090">graphics.h:90</a></div></div>
+<div class="ttc" id="class_language_html"><div class="ttname"><a href="class_language.html">Language</a></div><div class="ttdoc">Ustawienia językowe - teksty interfejsu w różnych językach. </div><div class="ttdef"><b>Definition:</b> <a href="language_8h_source.html#l00015">language.h:15</a></div></div>
+<div class="ttc" id="class_graphics_html_a8679f76cf61ddad896df0f42ed9ffdc0"><div class="ttname"><a href="class_graphics.html#a8679f76cf61ddad896df0f42ed9ffdc0">Graphics::last_frame</a></div><div class="ttdeci">long long last_frame</div><div class="ttdoc">czas wystąpienia ostatniej klatki </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00072">graphics.h:72</a></div></div>
+<div class="ttc" id="class_graphics_html_a56576331250a83e07563c91ed1997318"><div class="ttname"><a href="class_graphics.html#a56576331250a83e07563c91ed1997318">Graphics::fps</a></div><div class="ttdeci">double fps</div><div class="ttdoc">liczba klatek na sekundę </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00080">graphics.h:80</a></div></div>
+<div class="ttc" id="class_graphics_html_ab078443e69f74394186ad0cfd429551f"><div class="ttname"><a href="class_graphics.html#ab078443e69f74394186ad0cfd429551f">Graphics::textures</a></div><div class="ttdeci">vector&lt; SDL_Texture * &gt; textures</div><div class="ttdoc">lista tekstur </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00131">graphics.h:131</a></div></div>
+<div class="ttc" id="class_game_engine_html"><div class="ttname"><a href="class_game_engine.html">GameEngine</a></div><div class="ttdoc">logika gry </div><div class="ttdef"><b>Definition:</b> <a href="game__engine_8h_source.html#l00044">game_engine.h:44</a></div></div>
+<div class="ttc" id="graphics_8h_html_a8e3a2ae5c9b6904ecda648a5ce61264a"><div class="ttname"><a href="graphics_8h.html#a8e3a2ae5c9b6904ecda648a5ce61264a">TEXT_LEFT</a></div><div class="ttdeci">#define TEXT_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00011">graphics.h:11</a></div></div>
+<div class="ttc" id="class_graphics_html_abb125a704f806b6674d0d33e7ea70fbb"><div class="ttname"><a href="class_graphics.html#abb125a704f806b6674d0d33e7ea70fbb">Graphics::wnd_h</a></div><div class="ttdeci">int wnd_h</div><div class="ttdoc">wysokość okna </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00092">graphics.h:92</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_560415a5d2bc4999842279f4fc1debef.html">graphics</a></li><li class="navelem"><a class="el" href="graphics_8h.html">graphics.h</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

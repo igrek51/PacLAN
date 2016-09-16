@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/app.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('app_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">app.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="app_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="app_8h.html">app.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="log_8h.html">log/log.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_app.html#acb8cbf3e285b91d0170ffe87df5989c5">    4</a></span>&#160;<a class="code" href="class_app.html#acb8cbf3e285b91d0170ffe87df5989c5">App::App</a>() {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="class_app.html#a58697db52a07a645788b70cc5abde80b">graphics</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="class_app.html#afbb8a3ffd014b03724b975bd4df87919">game_engine</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_app.html#a9e2de8ea4c914dad9f436848974ca797">network</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_app.html#a2edc83e697d2b881206c62439da079e3">timer</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_app.html#a91e3feca2ce3e913c282fce8747e8d86">lang</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_app.html#abfdaef14cdcae3d4fc8b8755be0286e6">_exit</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_app.html#a8b36d3c74b9ea972daf22da51698f857">logic_cycles</a> = 1;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    srand((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>) time(0));</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Inicjalizacja aplikacji...&quot;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_app.html#a34f1f253b1cef5f4ecbac66eaf6964ec">   16</a></span>&#160;<a class="code" href="class_app.html#a34f1f253b1cef5f4ecbac66eaf6964ec">App::~App</a>() {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Zamykanie aplikacji...&quot;</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_app.html#abfdaef14cdcae3d4fc8b8755be0286e6">_exit</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_app.html#a2edc83e697d2b881206c62439da079e3">timer</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_app.html#a2edc83e697d2b881206c62439da079e3">timer</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_app.html#a58697db52a07a645788b70cc5abde80b">graphics</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_app.html#a58697db52a07a645788b70cc5abde80b">graphics</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_app.html#afbb8a3ffd014b03724b975bd4df87919">game_engine</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_app.html#afbb8a3ffd014b03724b975bd4df87919">game_engine</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_app.html#a9e2de8ea4c914dad9f436848974ca797">network</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_app.html#a9e2de8ea4c914dad9f436848974ca797">network</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_app.html#a91e3feca2ce3e913c282fce8747e8d86">lang</a> != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">delete</span> <a class="code" href="class_app.html#a91e3feca2ce3e913c282fce8747e8d86">lang</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a>(<span class="stringliteral">&quot;Aplikacja zamknięta.&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_app.html#aeadb947eb6d197c56195ed13162166ec">   32</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_app.html#aeadb947eb6d197c56195ed13162166ec">App::exiting</a>() {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_app.html#abfdaef14cdcae3d4fc8b8755be0286e6">_exit</a> || <a class="code" href="class_log.html#a7b7b33530388e02bd59a516a3d63b2d1">Log::wasCriticalError</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_app.html#a9414caa053cecdd2003a1a0e814fbfbf">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_app.html#a9414caa053cecdd2003a1a0e814fbfbf">App::exit</a>() {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_app.html#abfdaef14cdcae3d4fc8b8755be0286e6">_exit</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="ttc" id="class_log_html_ac94692be250aaf6bad006c4e4aa776c1"><div class="ttname"><a href="class_log.html#ac94692be250aaf6bad006c4e4aa776c1">Log::info</a></div><div class="ttdeci">static void info(string s)</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00043">log.cpp:43</a></div></div>
+<div class="ttc" id="class_app_html_abfdaef14cdcae3d4fc8b8755be0286e6"><div class="ttname"><a href="class_app.html#abfdaef14cdcae3d4fc8b8755be0286e6">App::_exit</a></div><div class="ttdeci">bool _exit</div><div class="ttdoc">sygnał zakończenia aplikacji </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00022">app.h:22</a></div></div>
+<div class="ttc" id="class_app_html_a9e2de8ea4c914dad9f436848974ca797"><div class="ttname"><a href="class_app.html#a9e2de8ea4c914dad9f436848974ca797">App::network</a></div><div class="ttdeci">Network * network</div><div class="ttdoc">wątek modułu obsługi sieci </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00035">app.h:35</a></div></div>
+<div class="ttc" id="class_app_html_afbb8a3ffd014b03724b975bd4df87919"><div class="ttname"><a href="class_app.html#afbb8a3ffd014b03724b975bd4df87919">App::game_engine</a></div><div class="ttdeci">GameEngine * game_engine</div><div class="ttdoc">silnik gry (logika) </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00031">app.h:31</a></div></div>
+<div class="ttc" id="class_app_html_a91e3feca2ce3e913c282fce8747e8d86"><div class="ttname"><a href="class_app.html#a91e3feca2ce3e913c282fce8747e8d86">App::lang</a></div><div class="ttdeci">Language * lang</div><div class="ttdoc">aktualne dane językowe </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00039">app.h:39</a></div></div>
+<div class="ttc" id="class_app_html_aeadb947eb6d197c56195ed13162166ec"><div class="ttname"><a href="class_app.html#aeadb947eb6d197c56195ed13162166ec">App::exiting</a></div><div class="ttdeci">bool exiting()</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00032">app.cpp:32</a></div></div>
+<div class="ttc" id="class_app_html_a2edc83e697d2b881206c62439da079e3"><div class="ttname"><a href="class_app.html#a2edc83e697d2b881206c62439da079e3">App::timer</a></div><div class="ttdeci">Timer * timer</div><div class="ttdoc">wątek odmierzania czasu i kontroli prędkości gry </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00037">app.h:37</a></div></div>
+<div class="ttc" id="class_app_html_a34f1f253b1cef5f4ecbac66eaf6964ec"><div class="ttname"><a href="class_app.html#a34f1f253b1cef5f4ecbac66eaf6964ec">App::~App</a></div><div class="ttdeci">~App()</div><div class="ttdoc">destruktor </div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00016">app.cpp:16</a></div></div>
+<div class="ttc" id="class_app_html_a8b36d3c74b9ea972daf22da51698f857"><div class="ttname"><a href="class_app.html#a8b36d3c74b9ea972daf22da51698f857">App::logic_cycles</a></div><div class="ttdeci">volatile int logic_cycles</div><div class="ttdoc">aktualna liczba cykli do wykonania (zwiększana przez timer, zmniejszana przez pętle logiczne silnika ...</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00041">app.h:41</a></div></div>
+<div class="ttc" id="class_app_html_a58697db52a07a645788b70cc5abde80b"><div class="ttname"><a href="class_app.html#a58697db52a07a645788b70cc5abde80b">App::graphics</a></div><div class="ttdeci">Graphics * graphics</div><div class="ttdoc">silnik grafiki </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00033">app.h:33</a></div></div>
+<div class="ttc" id="class_app_html_acb8cbf3e285b91d0170ffe87df5989c5"><div class="ttname"><a href="class_app.html#acb8cbf3e285b91d0170ffe87df5989c5">App::App</a></div><div class="ttdeci">App()</div><div class="ttdoc">konstruktor </div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00004">app.cpp:4</a></div></div>
+<div class="ttc" id="app_8h_html"><div class="ttname"><a href="app_8h.html">app.h</a></div></div>
+<div class="ttc" id="class_app_html_a9414caa053cecdd2003a1a0e814fbfbf"><div class="ttname"><a href="class_app.html#a9414caa053cecdd2003a1a0e814fbfbf">App::exit</a></div><div class="ttdeci">void exit()</div><div class="ttdoc">zgłoszenie sygnału zakończenia aplikacji </div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00036">app.cpp:36</a></div></div>
+<div class="ttc" id="log_8h_html"><div class="ttname"><a href="log_8h.html">log.h</a></div></div>
+<div class="ttc" id="class_log_html_a7b7b33530388e02bd59a516a3d63b2d1"><div class="ttname"><a href="class_log.html#a7b7b33530388e02bd59a516a3d63b2d1">Log::wasCriticalError</a></div><div class="ttdeci">static bool wasCriticalError()</div><div class="ttdef"><b>Definition:</b> <a href="log_8cpp_source.html#l00096">log.cpp:96</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="app_8cpp.html">app.cpp</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

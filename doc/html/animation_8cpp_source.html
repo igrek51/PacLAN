@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/graphics/animations/animation.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('animation_8cpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">animation.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="animation_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="animation_8h.html">animation.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_animation.html#a3026cf7fbb7f38cf9487cc246bec0573">    3</a></span>&#160;<a class="code" href="class_animation.html#a3026cf7fbb7f38cf9487cc246bec0573">Animation::Animation</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <a class="code" href="class_graphics.html">Graphics</a>* graphics) {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    this-&gt;x = <a class="code" href="class_animation.html#afd5c86707e8b565c868cbee56496dcd7">x</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    this-&gt;y = <a class="code" href="class_animation.html#a72467306123dccc6abee23b0fe86d046">y</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    this-&gt;graphics = <a class="code" href="class_animation.html#a3adbf494ed6d62183ed7ed4f8dd00b06">graphics</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_animation.html#a9f2dc152bad0860f26fb485082383b78">texture</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_animation.html#a0b36f84c98759cf1e6e7727300b82ef8">clip</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_animation.html#a9df38e6e2009cb61a55dc4f8f8b6cc8f">ends</a> = 1;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">   12</a></span>&#160;<a class="code" href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">Animation::~Animation</a>() {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_animation.html#a3adbf494ed6d62183ed7ed4f8dd00b06">graphics</a>-&gt;<a class="code" href="class_graphics.html#af907aa76a605f2ea8d1cdfed2c345e33">destroy_texture</a>(<a class="code" href="class_animation.html#a9f2dc152bad0860f26fb485082383b78">texture</a>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="ttc" id="class_animation_html_a3adbf494ed6d62183ed7ed4f8dd00b06"><div class="ttname"><a href="class_animation.html#a3adbf494ed6d62183ed7ed4f8dd00b06">Animation::graphics</a></div><div class="ttdeci">Graphics * graphics</div><div class="ttdoc">wskaźnik na silnik grafiki </div><div class="ttdef"><b>Definition:</b> <a href="animation_8h_source.html#l00051">animation.h:51</a></div></div>
+<div class="ttc" id="animation_8h_html"><div class="ttname"><a href="animation_8h.html">animation.h</a></div></div>
+<div class="ttc" id="class_graphics_html_af907aa76a605f2ea8d1cdfed2c345e33"><div class="ttname"><a href="class_graphics.html#af907aa76a605f2ea8d1cdfed2c345e33">Graphics::destroy_texture</a></div><div class="ttdeci">void destroy_texture(SDL_Texture *&amp;texture)</div><div class="ttdoc">zwolnienie pamięcie po teksturze </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8cpp_source.html#l00223">graphics.cpp:223</a></div></div>
+<div class="ttc" id="class_animation_html_a3026cf7fbb7f38cf9487cc246bec0573"><div class="ttname"><a href="class_animation.html#a3026cf7fbb7f38cf9487cc246bec0573">Animation::Animation</a></div><div class="ttdeci">Animation(int x, int y, Graphics *graphics)</div><div class="ttdef"><b>Definition:</b> <a href="animation_8cpp_source.html#l00003">animation.cpp:3</a></div></div>
+<div class="ttc" id="class_graphics_html"><div class="ttname"><a href="class_graphics.html">Graphics</a></div><div class="ttdoc">Klasa silnika grafiki. </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00033">graphics.h:33</a></div></div>
+<div class="ttc" id="class_animation_html_a9df38e6e2009cb61a55dc4f8f8b6cc8f"><div class="ttname"><a href="class_animation.html#a9df38e6e2009cb61a55dc4f8f8b6cc8f">Animation::ends</a></div><div class="ttdeci">int ends</div><div class="ttdoc">liczba klatek do zakończenia animacji </div><div class="ttdef"><b>Definition:</b> <a href="animation_8h_source.html#l00037">animation.h:37</a></div></div>
+<div class="ttc" id="class_animation_html_a72467306123dccc6abee23b0fe86d046"><div class="ttname"><a href="class_animation.html#a72467306123dccc6abee23b0fe86d046">Animation::y</a></div><div class="ttdeci">int y</div><div class="ttdoc">położenie animacji na ekranie wzdłuż osi y </div><div class="ttdef"><b>Definition:</b> <a href="animation_8h_source.html#l00035">animation.h:35</a></div></div>
+<div class="ttc" id="class_animation_html_a9f2dc152bad0860f26fb485082383b78"><div class="ttname"><a href="class_animation.html#a9f2dc152bad0860f26fb485082383b78">Animation::texture</a></div><div class="ttdeci">SDL_Texture * texture</div><div class="ttdoc">Podstawowa tekstura wyświetlana jako animacja. </div><div class="ttdef"><b>Definition:</b> <a href="animation_8h_source.html#l00029">animation.h:29</a></div></div>
+<div class="ttc" id="class_animation_html_a401b68793d4fbf48d481c030ee4b2a16"><div class="ttname"><a href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">Animation::~Animation</a></div><div class="ttdeci">virtual ~Animation()</div><div class="ttdef"><b>Definition:</b> <a href="animation_8cpp_source.html#l00012">animation.cpp:12</a></div></div>
+<div class="ttc" id="class_animation_html_a0b36f84c98759cf1e6e7727300b82ef8"><div class="ttname"><a href="class_animation.html#a0b36f84c98759cf1e6e7727300b82ef8">Animation::clip</a></div><div class="ttdeci">int * clip</div><div class="ttdoc">tablica 4 liczb całkowitych określająca parametry wycięcia fragmentu obrazka z tekstury ...</div><div class="ttdef"><b>Definition:</b> <a href="animation_8h_source.html#l00031">animation.h:31</a></div></div>
+<div class="ttc" id="class_animation_html_afd5c86707e8b565c868cbee56496dcd7"><div class="ttname"><a href="class_animation.html#afd5c86707e8b565c868cbee56496dcd7">Animation::x</a></div><div class="ttdeci">int x</div><div class="ttdoc">położenie animacji na ekranie wzdłuż osi x </div><div class="ttdef"><b>Definition:</b> <a href="animation_8h_source.html#l00033">animation.h:33</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_560415a5d2bc4999842279f4fc1debef.html">graphics</a></li><li class="navelem"><a class="el" href="dir_70a6abe9a55edc4c5dd4b2e6eebb5396.html">animations</a></li><li class="navelem"><a class="el" href="animation_8cpp.html">animation.cpp</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

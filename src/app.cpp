@@ -1,39 +1,38 @@
 #include "app.h"
-#include "log.h"
+#include "log/log.h"
 
-Graphics* App::graphics = NULL;
-GameEngine* App::game_engine = NULL;
-Network* App::network = NULL;
-Timer* App::timer = NULL;
-Language* App::lang = NULL;
-bool App::exit = false;
-volatile int App::logic_cycles = 1;
-
-App::App(){
-    graphics = NULL;
-    game_engine = NULL;
-    network = NULL;
-    timer = NULL;
-    lang = NULL;
-    exit = false;
+App::App() {
+    graphics = nullptr;
+    game_engine = nullptr;
+    network = nullptr;
+    timer = nullptr;
+    lang = nullptr;
+    _exit = false;
     logic_cycles = 1;
-    srand(time(0));
-    log_clear();
-    log("Hello World!");
+    srand((unsigned int) time(0));
+    Log::info("Inicjalizacja aplikacji...");
 }
 
-App::~App(){
-    log("Zamykanie aplikacji...");
-    exit = true;
-    if(timer!=NULL)
+App::~App() {
+    Log::info("Zamykanie aplikacji...");
+    _exit = true;
+    if (timer != nullptr)
         delete timer;
-    if(graphics!=NULL)
+    if (graphics != nullptr)
         delete graphics;
-    if(game_engine!=NULL)
+    if (game_engine != nullptr)
         delete game_engine;
-    if(network!=NULL)
+    if (network != nullptr)
         delete network;
-    if(lang!=NULL)
+    if (lang != nullptr)
         delete lang;
-    log("Goodbye World...");
+    Log::info("Aplikacja zamknięta.");
+}
+
+bool App::exiting() {
+    return _exit || Log::wasCriticalError();
+}
+
+void App::exit() {
+    _exit = true;
 }

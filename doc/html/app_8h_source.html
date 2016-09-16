@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/app.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('app_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">app.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="app_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef APP_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define APP_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="class_app.html">App</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game__engine_8h.html">logic/game_engine.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graphics_8h.html">graphics/graphics.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="network_8h.html">network/network.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="timer_8h.html">threads/timer.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="language_8h.html">language.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_app.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_app.html">App</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_app.html#abfdaef14cdcae3d4fc8b8755be0286e6">   22</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_app.html#abfdaef14cdcae3d4fc8b8755be0286e6">_exit</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_app.html#acb8cbf3e285b91d0170ffe87df5989c5">App</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_app.html#a34f1f253b1cef5f4ecbac66eaf6964ec">~App</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_app.html#afbb8a3ffd014b03724b975bd4df87919">   31</a></span>&#160;    <a class="code" href="class_game_engine.html">GameEngine</a>* <a class="code" href="class_app.html#afbb8a3ffd014b03724b975bd4df87919">game_engine</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_app.html#a58697db52a07a645788b70cc5abde80b">   33</a></span>&#160;    <a class="code" href="class_graphics.html">Graphics</a>* <a class="code" href="class_app.html#a58697db52a07a645788b70cc5abde80b">graphics</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_app.html#a9e2de8ea4c914dad9f436848974ca797">   35</a></span>&#160;    <a class="code" href="class_network.html">Network</a>* <a class="code" href="class_app.html#a9e2de8ea4c914dad9f436848974ca797">network</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_app.html#a2edc83e697d2b881206c62439da079e3">   37</a></span>&#160;    <a class="code" href="class_timer.html">Timer</a>* <a class="code" href="class_app.html#a2edc83e697d2b881206c62439da079e3">timer</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_app.html#a91e3feca2ce3e913c282fce8747e8d86">   39</a></span>&#160;    <a class="code" href="class_language.html">Language</a>* <a class="code" href="class_app.html#a91e3feca2ce3e913c282fce8747e8d86">lang</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_app.html#a8b36d3c74b9ea972daf22da51698f857">   41</a></span>&#160;    <span class="keyword">volatile</span> <span class="keywordtype">int</span> <a class="code" href="class_app.html#a8b36d3c74b9ea972daf22da51698f857">logic_cycles</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// czy należy zamknąć aplikację</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_app.html#aeadb947eb6d197c56195ed13162166ec">exiting</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_app.html#a9414caa053cecdd2003a1a0e814fbfbf">exit</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_timer_html"><div class="ttname"><a href="class_timer.html">Timer</a></div><div class="ttdoc">Wątek odmierzania stałych odstępów czasu. </div><div class="ttdef"><b>Definition:</b> <a href="timer_8h_source.html#l00014">timer.h:14</a></div></div>
+<div class="ttc" id="class_app_html_abfdaef14cdcae3d4fc8b8755be0286e6"><div class="ttname"><a href="class_app.html#abfdaef14cdcae3d4fc8b8755be0286e6">App::_exit</a></div><div class="ttdeci">bool _exit</div><div class="ttdoc">sygnał zakończenia aplikacji </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00022">app.h:22</a></div></div>
+<div class="ttc" id="class_app_html_a9e2de8ea4c914dad9f436848974ca797"><div class="ttname"><a href="class_app.html#a9e2de8ea4c914dad9f436848974ca797">App::network</a></div><div class="ttdeci">Network * network</div><div class="ttdoc">wątek modułu obsługi sieci </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00035">app.h:35</a></div></div>
+<div class="ttc" id="class_app_html_afbb8a3ffd014b03724b975bd4df87919"><div class="ttname"><a href="class_app.html#afbb8a3ffd014b03724b975bd4df87919">App::game_engine</a></div><div class="ttdeci">GameEngine * game_engine</div><div class="ttdoc">silnik gry (logika) </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00031">app.h:31</a></div></div>
+<div class="ttc" id="class_app_html_a91e3feca2ce3e913c282fce8747e8d86"><div class="ttname"><a href="class_app.html#a91e3feca2ce3e913c282fce8747e8d86">App::lang</a></div><div class="ttdeci">Language * lang</div><div class="ttdoc">aktualne dane językowe </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00039">app.h:39</a></div></div>
+<div class="ttc" id="timer_8h_html"><div class="ttname"><a href="timer_8h.html">timer.h</a></div></div>
+<div class="ttc" id="class_graphics_html"><div class="ttname"><a href="class_graphics.html">Graphics</a></div><div class="ttdoc">Klasa silnika grafiki. </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00033">graphics.h:33</a></div></div>
+<div class="ttc" id="class_app_html_aeadb947eb6d197c56195ed13162166ec"><div class="ttname"><a href="class_app.html#aeadb947eb6d197c56195ed13162166ec">App::exiting</a></div><div class="ttdeci">bool exiting()</div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00032">app.cpp:32</a></div></div>
+<div class="ttc" id="language_8h_html"><div class="ttname"><a href="language_8h.html">language.h</a></div></div>
+<div class="ttc" id="class_app_html_a2edc83e697d2b881206c62439da079e3"><div class="ttname"><a href="class_app.html#a2edc83e697d2b881206c62439da079e3">App::timer</a></div><div class="ttdeci">Timer * timer</div><div class="ttdoc">wątek odmierzania czasu i kontroli prędkości gry </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00037">app.h:37</a></div></div>
+<div class="ttc" id="network_8h_html"><div class="ttname"><a href="network_8h.html">network.h</a></div></div>
+<div class="ttc" id="class_language_html"><div class="ttname"><a href="class_language.html">Language</a></div><div class="ttdoc">Ustawienia językowe - teksty interfejsu w różnych językach. </div><div class="ttdef"><b>Definition:</b> <a href="language_8h_source.html#l00015">language.h:15</a></div></div>
+<div class="ttc" id="class_app_html"><div class="ttname"><a href="class_app.html">App</a></div><div class="ttdoc">Aplikacja zawierająca główne moduły. </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00019">app.h:19</a></div></div>
+<div class="ttc" id="class_app_html_a34f1f253b1cef5f4ecbac66eaf6964ec"><div class="ttname"><a href="class_app.html#a34f1f253b1cef5f4ecbac66eaf6964ec">App::~App</a></div><div class="ttdeci">~App()</div><div class="ttdoc">destruktor </div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00016">app.cpp:16</a></div></div>
+<div class="ttc" id="class_app_html_a8b36d3c74b9ea972daf22da51698f857"><div class="ttname"><a href="class_app.html#a8b36d3c74b9ea972daf22da51698f857">App::logic_cycles</a></div><div class="ttdeci">volatile int logic_cycles</div><div class="ttdoc">aktualna liczba cykli do wykonania (zwiększana przez timer, zmniejszana przez pętle logiczne silnika ...</div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00041">app.h:41</a></div></div>
+<div class="ttc" id="class_app_html_a58697db52a07a645788b70cc5abde80b"><div class="ttname"><a href="class_app.html#a58697db52a07a645788b70cc5abde80b">App::graphics</a></div><div class="ttdeci">Graphics * graphics</div><div class="ttdoc">silnik grafiki </div><div class="ttdef"><b>Definition:</b> <a href="app_8h_source.html#l00033">app.h:33</a></div></div>
+<div class="ttc" id="class_game_engine_html"><div class="ttname"><a href="class_game_engine.html">GameEngine</a></div><div class="ttdoc">logika gry </div><div class="ttdef"><b>Definition:</b> <a href="game__engine_8h_source.html#l00044">game_engine.h:44</a></div></div>
+<div class="ttc" id="class_app_html_acb8cbf3e285b91d0170ffe87df5989c5"><div class="ttname"><a href="class_app.html#acb8cbf3e285b91d0170ffe87df5989c5">App::App</a></div><div class="ttdeci">App()</div><div class="ttdoc">konstruktor </div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00004">app.cpp:4</a></div></div>
+<div class="ttc" id="class_app_html_a9414caa053cecdd2003a1a0e814fbfbf"><div class="ttname"><a href="class_app.html#a9414caa053cecdd2003a1a0e814fbfbf">App::exit</a></div><div class="ttdeci">void exit()</div><div class="ttdoc">zgłoszenie sygnału zakończenia aplikacji </div><div class="ttdef"><b>Definition:</b> <a href="app_8cpp_source.html#l00036">app.cpp:36</a></div></div>
+<div class="ttc" id="graphics_8h_html"><div class="ttname"><a href="graphics_8h.html">graphics.h</a></div></div>
+<div class="ttc" id="class_network_html"><div class="ttname"><a href="class_network.html">Network</a></div><div class="ttdoc">Silnik obsługi komunikacji między wieloma komputerami. </div><div class="ttdef"><b>Definition:</b> <a href="network_8h_source.html#l00024">network.h:24</a></div></div>
+<div class="ttc" id="game__engine_8h_html"><div class="ttname"><a href="game__engine_8h.html">game_engine.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="app_8h.html">app.h</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

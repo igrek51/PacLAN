@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Dokumentacja klasy Pacman</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_pacman.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_pacman-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Pacman</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa gracza będącego pacmanem.  
+ <a href="class_pacman.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pacman_8h_source.html">pacman.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla Pacman</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_pacman.png" usemap="#Pacman_map" alt=""/>
+  <map id="Pacman_map" name="Pacman_map">
+<area href="class_player.html" title="Klasa gracza (pacmana lub duszka) " alt="Player" shape="rect" coords="0,0,57,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a4daba40c7bd15674ab6ce5492f90da0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacman.html#a4daba40c7bd15674ab6ce5492f90da0a">Pacman</a> (int <a class="el" href="class_player.html#a7f0d6b709df66bfa850ada3a07a2d4d0">xmap</a>, int <a class="el" href="class_player.html#a35dfec8fc1af9839437d3bffe2cf6b9c">ymap</a>, SDL_Color <a class="el" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>, string <a class="el" href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">name</a>, int <a class="el" href="class_player.html#a641efdab62bcea257201e4e039a86ba6">controlby</a>, <a class="el" href="class_game_engine.html">GameEngine</a> *<a class="el" href="class_player.html#a7b92300769d36f6c8bc10721dc9c5d84">game_engine</a>, <a class="el" href="class_graphics.html">Graphics</a> *<a class="el" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>)</td></tr>
+<tr class="separator:a4daba40c7bd15674ab6ce5492f90da0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeb4fea54918576dbdf20a1f325410bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacman.html#aeeb4fea54918576dbdf20a1f325410bf">~Pacman</a> ()</td></tr>
+<tr class="memdesc:aeeb4fea54918576dbdf20a1f325410bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">usunięcie pacmana  <a href="#aeeb4fea54918576dbdf20a1f325410bf">Więcej...</a><br /></td></tr>
+<tr class="separator:aeeb4fea54918576dbdf20a1f325410bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd5769f9f21dde60737ed9a5a5cc32bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacman.html#abd5769f9f21dde60737ed9a5a5cc32bc">reload_texture</a> ()</td></tr>
+<tr class="memdesc:abd5769f9f21dde60737ed9a5a5cc32bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">wygenerowanie kolorowej tekstury gracza  <a href="#abd5769f9f21dde60737ed9a5a5cc32bc">Więcej...</a><br /></td></tr>
+<tr class="separator:abd5769f9f21dde60737ed9a5a5cc32bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed309f6ec8bccb77c5c5fabb8d20ee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacman.html#abed309f6ec8bccb77c5c5fabb8d20ee5">animate</a> ()</td></tr>
+<tr class="memdesc:abed309f6ec8bccb77c5c5fabb8d20ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">wygenerowanie parametrów kolejnej klatki gracza  <a href="#abed309f6ec8bccb77c5c5fabb8d20ee5">Więcej...</a><br /></td></tr>
+<tr class="separator:abed309f6ec8bccb77c5c5fabb8d20ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_player"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_player')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_player.html">Player</a></td></tr>
+<tr class="memitem:ad6ff4c22eec0bd905c43d1b8a3d1cec0 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad6ff4c22eec0bd905c43d1b8a3d1cec0">Player</a> (int <a class="el" href="class_player.html#a7f0d6b709df66bfa850ada3a07a2d4d0">xmap</a>, int <a class="el" href="class_player.html#a35dfec8fc1af9839437d3bffe2cf6b9c">ymap</a>, SDL_Color <a class="el" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>, string <a class="el" href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">name</a>, int <a class="el" href="class_player.html#a641efdab62bcea257201e4e039a86ba6">controlby</a>, <a class="el" href="class_game_engine.html">GameEngine</a> *<a class="el" href="class_player.html#a7b92300769d36f6c8bc10721dc9c5d84">game_engine</a>, <a class="el" href="class_graphics.html">Graphics</a> *<a class="el" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>)</td></tr>
+<tr class="separator:ad6ff4c22eec0bd905c43d1b8a3d1cec0 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749d2c00e1fe0f5c2746f7505a58c062 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a> ()</td></tr>
+<tr class="memdesc:a749d2c00e1fe0f5c2746f7505a58c062 inherit pub_methods_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">usunięcie gracza  <a href="#a749d2c00e1fe0f5c2746f7505a58c062">Więcej...</a><br /></td></tr>
+<tr class="separator:a749d2c00e1fe0f5c2746f7505a58c062 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae02ee46d8c20dd0697b975f935b09839 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae02ee46d8c20dd0697b975f935b09839">move</a> ()</td></tr>
+<tr class="memdesc:ae02ee46d8c20dd0697b975f935b09839 inherit pub_methods_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">wykonywanie ruchu względnego do punktu - oszacowanie przyrostów współrzędnychw każdej klatce  <a href="#ae02ee46d8c20dd0697b975f935b09839">Więcej...</a><br /></td></tr>
+<tr class="separator:ae02ee46d8c20dd0697b975f935b09839 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a809d5f70aac4198048e67e3b934deb35 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a809d5f70aac4198048e67e3b934deb35">move_abs</a> (int absx, int absy)</td></tr>
+<tr class="separator:a809d5f70aac4198048e67e3b934deb35 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17179dcbedf6039250f1bc6d5ad8b143 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a17179dcbedf6039250f1bc6d5ad8b143">move_smooth</a> ()</td></tr>
+<tr class="memdesc:a17179dcbedf6039250f1bc6d5ad8b143 inherit pub_methods_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">wykonanie płynnego ruchu do zadanej wartości (na podstawie wyznaczonych przyrostów)  <a href="#a17179dcbedf6039250f1bc6d5ad8b143">Więcej...</a><br /></td></tr>
+<tr class="separator:a17179dcbedf6039250f1bc6d5ad8b143 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab44c5b82889ba1229ae462c39e0f2d64 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ab44c5b82889ba1229ae462c39e0f2d64">move_random</a> ()</td></tr>
+<tr class="memdesc:ab44c5b82889ba1229ae462c39e0f2d64 inherit pub_methods_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">wykonanie ruchu w losowym kierunku przez gracza  <a href="#ab44c5b82889ba1229ae462c39e0f2d64">Więcej...</a><br /></td></tr>
+<tr class="separator:ab44c5b82889ba1229ae462c39e0f2d64 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab03165ccbd09953d5414afe7da28ac51 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ab03165ccbd09953d5414afe7da28ac51">draw_sprite_at</a> (SDL_Texture *texture2, int <a class="el" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a>, int <a class="el" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a>)</td></tr>
+<tr class="separator:ab03165ccbd09953d5414afe7da28ac51 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e7df9a13be888558d043a656908a559 inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3e7df9a13be888558d043a656908a559">draw_sprite</a> (SDL_Texture *texture2)</td></tr>
+<tr class="separator:a3e7df9a13be888558d043a656908a559 inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91fe7a1b2804f4dffa39139c117880e inherit pub_methods_class_player"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af91fe7a1b2804f4dffa39139c117880e">draw_name</a> ()</td></tr>
+<tr class="memdesc:af91fe7a1b2804f4dffa39139c117880e inherit pub_methods_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">narysowanie nad graczem jego nazwy  <a href="#af91fe7a1b2804f4dffa39139c117880e">Więcej...</a><br /></td></tr>
+<tr class="separator:af91fe7a1b2804f4dffa39139c117880e inherit pub_methods_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:ae87e44e12b623460feef93fe5347e2ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacman.html#ae87e44e12b623460feef93fe5347e2ea">draw</a> ()</td></tr>
+<tr class="memdesc:ae87e44e12b623460feef93fe5347e2ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">narysowanie gracza na ekranie  <a href="#ae87e44e12b623460feef93fe5347e2ea">Więcej...</a><br /></td></tr>
+<tr class="separator:ae87e44e12b623460feef93fe5347e2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bbf3d1ff30c63045b2369992c2173d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacman.html#a0bbf3d1ff30c63045b2369992c2173d6">clip_table</a> ()</td></tr>
+<tr class="memdesc:a0bbf3d1ff30c63045b2369992c2173d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">aktualizacja tablicy określającej parametry wycięcia fragmentu klatki z tekstury  <a href="#a0bbf3d1ff30c63045b2369992c2173d6">Więcej...</a><br /></td></tr>
+<tr class="separator:a0bbf3d1ff30c63045b2369992c2173d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a016a66518b47618415e4bec36ec1becb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacman.html#a016a66518b47618415e4bec36ec1becb">ai_control</a> ()</td></tr>
+<tr class="memdesc:a016a66518b47618415e4bec36ec1becb"><td class="mdescLeft">&#160;</td><td class="mdescRight">wykonanie ruchu gracza przez sztuczną inteligencję  <a href="#a016a66518b47618415e4bec36ec1becb">Więcej...</a><br /></td></tr>
+<tr class="separator:a016a66518b47618415e4bec36ec1becb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:ae4584eb2ab9bd75c91c65db119323057"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacman.html#ae4584eb2ab9bd75c91c65db119323057">esc_histereza</a></td></tr>
+<tr class="memdesc:ae4584eb2ab9bd75c91c65db119323057"><td class="mdescLeft">&#160;</td><td class="mdescRight">w sztucznej inteligencji: histereza przy uciekaniu od duszków (tryb uciekania włączony lub wyłączony)  <a href="#ae4584eb2ab9bd75c91c65db119323057">Więcej...</a><br /></td></tr>
+<tr class="separator:ae4584eb2ab9bd75c91c65db119323057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_player"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_player')"><img src="closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="class_player.html">Player</a></td></tr>
+<tr class="memitem:acf0355128a99ee20ad9931b760fb2de1 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">name</a></td></tr>
+<tr class="memdesc:acf0355128a99ee20ad9931b760fb2de1 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">nazwa gracza - podpis nad graczem  <a href="#acf0355128a99ee20ad9931b760fb2de1">Więcej...</a><br /></td></tr>
+<tr class="separator:acf0355128a99ee20ad9931b760fb2de1 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22cc61c85e095668129ccd217e8f896b inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a22cc61c85e095668129ccd217e8f896b">subclass</a></td></tr>
+<tr class="memdesc:a22cc61c85e095668129ccd217e8f896b inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">podklasa gracza: P_PACMAN - pacman, P_GHOST - duszek  <a href="#a22cc61c85e095668129ccd217e8f896b">Więcej...</a><br /></td></tr>
+<tr class="separator:a22cc61c85e095668129ccd217e8f896b inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace6abae8d66534ad0a1fd6458f786a6e inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ace6abae8d66534ad0a1fd6458f786a6e">score</a></td></tr>
+<tr class="memdesc:ace6abae8d66534ad0a1fd6458f786a6e inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">liczba punktów gracza  <a href="#ace6abae8d66534ad0a1fd6458f786a6e">Więcej...</a><br /></td></tr>
+<tr class="separator:ace6abae8d66534ad0a1fd6458f786a6e inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b46a6bf726a1eb0ea75c5f7f7398180 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4b46a6bf726a1eb0ea75c5f7f7398180">respawn</a></td></tr>
+<tr class="memdesc:a4b46a6bf726a1eb0ea75c5f7f7398180 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">czas do odrodzenia się  <a href="#a4b46a6bf726a1eb0ea75c5f7f7398180">Więcej...</a><br /></td></tr>
+<tr class="separator:a4b46a6bf726a1eb0ea75c5f7f7398180 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0d6b709df66bfa850ada3a07a2d4d0 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7f0d6b709df66bfa850ada3a07a2d4d0">xmap</a></td></tr>
+<tr class="memdesc:a7f0d6b709df66bfa850ada3a07a2d4d0 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">położenie gracza wzdłuż osi x na tablicy mapy  <a href="#a7f0d6b709df66bfa850ada3a07a2d4d0">Więcej...</a><br /></td></tr>
+<tr class="separator:a7f0d6b709df66bfa850ada3a07a2d4d0 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35dfec8fc1af9839437d3bffe2cf6b9c inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a35dfec8fc1af9839437d3bffe2cf6b9c">ymap</a></td></tr>
+<tr class="memdesc:a35dfec8fc1af9839437d3bffe2cf6b9c inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">położenie gracza wzdłuż osi y na tablicy mapy  <a href="#a35dfec8fc1af9839437d3bffe2cf6b9c">Więcej...</a><br /></td></tr>
+<tr class="separator:a35dfec8fc1af9839437d3bffe2cf6b9c inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad285b3cb25e4a46ca944b9a416c1b13f inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad285b3cb25e4a46ca944b9a416c1b13f">x</a></td></tr>
+<tr class="memdesc:ad285b3cb25e4a46ca944b9a416c1b13f inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">wartość zadana położenia wzdłuż osi x na ekranie  <a href="#ad285b3cb25e4a46ca944b9a416c1b13f">Więcej...</a><br /></td></tr>
+<tr class="separator:ad285b3cb25e4a46ca944b9a416c1b13f inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da29d6e3783c6028c92647bbde478f5 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a6da29d6e3783c6028c92647bbde478f5">y</a></td></tr>
+<tr class="memdesc:a6da29d6e3783c6028c92647bbde478f5 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">wartość zadana położenia wzdłuż osi y na ekranie  <a href="#a6da29d6e3783c6028c92647bbde478f5">Więcej...</a><br /></td></tr>
+<tr class="separator:a6da29d6e3783c6028c92647bbde478f5 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1847a3ecbf10c4c3a97019dd0c89b618 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a1847a3ecbf10c4c3a97019dd0c89b618">a_x</a></td></tr>
+<tr class="memdesc:a1847a3ecbf10c4c3a97019dd0c89b618 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">aktualne położenie wzdłuż osi x na ekranie  <a href="#a1847a3ecbf10c4c3a97019dd0c89b618">Więcej...</a><br /></td></tr>
+<tr class="separator:a1847a3ecbf10c4c3a97019dd0c89b618 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435829648afe07ab31e94e9647f0b686 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a435829648afe07ab31e94e9647f0b686">a_y</a></td></tr>
+<tr class="memdesc:a435829648afe07ab31e94e9647f0b686 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">aktualne położenie wzdłuż osi y na ekranie  <a href="#a435829648afe07ab31e94e9647f0b686">Więcej...</a><br /></td></tr>
+<tr class="separator:a435829648afe07ab31e94e9647f0b686 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae048ecd496124e718a7a8fcb9aec997c inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae048ecd496124e718a7a8fcb9aec997c">moving</a></td></tr>
+<tr class="memdesc:ae048ecd496124e718a7a8fcb9aec997c inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">aktualny ruch gracza: 0 - brak ruchu, 1 - ruch  <a href="#ae048ecd496124e718a7a8fcb9aec997c">Więcej...</a><br /></td></tr>
+<tr class="separator:ae048ecd496124e718a7a8fcb9aec997c inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d95202b5546ac375bdb75e3fb657d17 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a6d95202b5546ac375bdb75e3fb657d17">direction</a></td></tr>
+<tr class="memdesc:a6d95202b5546ac375bdb75e3fb657d17 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">aktualny kierunek gracza: P_LEFT, P_RIGHT, P_UP lub P_DOWN  <a href="#a6d95202b5546ac375bdb75e3fb657d17">Więcej...</a><br /></td></tr>
+<tr class="separator:a6d95202b5546ac375bdb75e3fb657d17 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8210e990c459626fd30caf285ade68 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a2d8210e990c459626fd30caf285ade68">can_move</a></td></tr>
+<tr class="memdesc:a2d8210e990c459626fd30caf285ade68 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">licznik pojawienia się możliwości ruchu (0 - możliwa zmiana kierunku)  <a href="#a2d8210e990c459626fd30caf285ade68">Więcej...</a><br /></td></tr>
+<tr class="separator:a2d8210e990c459626fd30caf285ade68 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381d3a0f59f378c406c6654698353514 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a381d3a0f59f378c406c6654698353514">can_move_n</a></td></tr>
+<tr class="memdesc:a381d3a0f59f378c406c6654698353514 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">preskaler licznika możliwości ruchu - definiuje szybkość gracza  <a href="#a381d3a0f59f378c406c6654698353514">Więcej...</a><br /></td></tr>
+<tr class="separator:a381d3a0f59f378c406c6654698353514 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965aec762f42c588940d569e550b0a43 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a965aec762f42c588940d569e550b0a43">prev_direction</a></td></tr>
+<tr class="memdesc:a965aec762f42c588940d569e550b0a43 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">poprzedni kierunek gracza  <a href="#a965aec762f42c588940d569e550b0a43">Więcej...</a><br /></td></tr>
+<tr class="separator:a965aec762f42c588940d569e550b0a43 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797d0e0f3dbc6358aa120b8a5d665f8b inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a797d0e0f3dbc6358aa120b8a5d665f8b">prev_moving</a></td></tr>
+<tr class="memdesc:a797d0e0f3dbc6358aa120b8a5d665f8b inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">poprzedni stan ruchu gracza  <a href="#a797d0e0f3dbc6358aa120b8a5d665f8b">Więcej...</a><br /></td></tr>
+<tr class="separator:a797d0e0f3dbc6358aa120b8a5d665f8b inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ac07f900cc99b0248c36ef083f778f inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">SDL_Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a></td></tr>
+<tr class="memdesc:ad2ac07f900cc99b0248c36ef083f778f inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">kolor gracza  <a href="#ad2ac07f900cc99b0248c36ef083f778f">Więcej...</a><br /></td></tr>
+<tr class="separator:ad2ac07f900cc99b0248c36ef083f778f inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c9c66aa484170863e185b1d4cddb75b inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5c9c66aa484170863e185b1d4cddb75b">texture</a></td></tr>
+<tr class="memdesc:a5c9c66aa484170863e185b1d4cddb75b inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">tekstura gracza  <a href="#a5c9c66aa484170863e185b1d4cddb75b">Więcej...</a><br /></td></tr>
+<tr class="separator:a5c9c66aa484170863e185b1d4cddb75b inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7031df0f9865546b139191ceef980d99 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7031df0f9865546b139191ceef980d99">a_sprite</a></td></tr>
+<tr class="memdesc:a7031df0f9865546b139191ceef980d99 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">numer obrazka w animacji  <a href="#a7031df0f9865546b139191ceef980d99">Więcej...</a><br /></td></tr>
+<tr class="separator:a7031df0f9865546b139191ceef980d99 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79cff0711d5f03f5da789f2da5800a5d inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a79cff0711d5f03f5da789f2da5800a5d">a_cycle</a></td></tr>
+<tr class="memdesc:a79cff0711d5f03f5da789f2da5800a5d inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">licznik do preskalera zmiany animacji  <a href="#a79cff0711d5f03f5da789f2da5800a5d">Więcej...</a><br /></td></tr>
+<tr class="separator:a79cff0711d5f03f5da789f2da5800a5d inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd2dea09a2d7d25d6d583d3fefa0e03d inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#abd2dea09a2d7d25d6d583d3fefa0e03d">clip</a></td></tr>
+<tr class="memdesc:abd2dea09a2d7d25d6d583d3fefa0e03d inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">tablica aktualnej części obrazka wyciętej z całej tekstury: element 0 - indeks ramki wzdłuż osi x, element 1 - liczba wszystkich ramek wzdłuż osi x, element 2 - indeks ramki wzdłuż osi y, element 3 - liczba wszystkich ramek wzdłuż osi y  <a href="#abd2dea09a2d7d25d6d583d3fefa0e03d">Więcej...</a><br /></td></tr>
+<tr class="separator:abd2dea09a2d7d25d6d583d3fefa0e03d inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a641efdab62bcea257201e4e039a86ba6 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a641efdab62bcea257201e4e039a86ba6">controlby</a></td></tr>
+<tr class="memdesc:a641efdab62bcea257201e4e039a86ba6 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">określa, co steruje graczem: P_KEYBOARD - klawiatura, P_AI - sztuczna inteligencja, P_LAN - komunikaty sieciowe z serwera  <a href="#a641efdab62bcea257201e4e039a86ba6">Więcej...</a><br /></td></tr>
+<tr class="separator:a641efdab62bcea257201e4e039a86ba6 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10fcc825ec93e6cd625210bb65e4dc2e inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a10fcc825ec93e6cd625210bb65e4dc2e">ai_level</a></td></tr>
+<tr class="memdesc:a10fcc825ec93e6cd625210bb65e4dc2e inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">poziom sztucznej inteligencji: od 0 do 5  <a href="#a10fcc825ec93e6cd625210bb65e4dc2e">Więcej...</a><br /></td></tr>
+<tr class="separator:a10fcc825ec93e6cd625210bb65e4dc2e inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4f21a147b048f0c4ddc5999e00eb9f inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a8f4f21a147b048f0c4ddc5999e00eb9f">lan_id</a></td></tr>
+<tr class="memdesc:a8f4f21a147b048f0c4ddc5999e00eb9f inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">numer klienta, który obsługuje gracza: numer większy od 0  <a href="#a8f4f21a147b048f0c4ddc5999e00eb9f">Więcej...</a><br /></td></tr>
+<tr class="separator:a8f4f21a147b048f0c4ddc5999e00eb9f inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2fc90a7211d9c65a9b12158af959e1 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a0c2fc90a7211d9c65a9b12158af959e1">next_moving</a></td></tr>
+<tr class="memdesc:a0c2fc90a7211d9c65a9b12158af959e1 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">następny planowany stan ruchu gracza  <a href="#a0c2fc90a7211d9c65a9b12158af959e1">Więcej...</a><br /></td></tr>
+<tr class="separator:a0c2fc90a7211d9c65a9b12158af959e1 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba42053aab711ab09d4f33d6afd1bf5f inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aba42053aab711ab09d4f33d6afd1bf5f">next_direction</a></td></tr>
+<tr class="memdesc:aba42053aab711ab09d4f33d6afd1bf5f inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">następny planowany kierunek gracza  <a href="#aba42053aab711ab09d4f33d6afd1bf5f">Więcej...</a><br /></td></tr>
+<tr class="separator:aba42053aab711ab09d4f33d6afd1bf5f inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a947df3a6e0107106cc0f9a97df758e06 inherit pub_attribs_class_player"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_path.html">Path</a>&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a947df3a6e0107106cc0f9a97df758e06">sciezka</a></td></tr>
+<tr class="memdesc:a947df3a6e0107106cc0f9a97df758e06 inherit pub_attribs_class_player"><td class="mdescLeft">&#160;</td><td class="mdescRight">wyznaczona scieżka podążania graczy sterowanych przez sztuczną inteligencję do określonych punktów  <a href="#a947df3a6e0107106cc0f9a97df758e06">Więcej...</a><br /></td></tr>
+<tr class="separator:a947df3a6e0107106cc0f9a97df758e06 inherit pub_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_player"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_player')"><img src="closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="class_player.html">Player</a></td></tr>
+<tr class="memitem:a7b92300769d36f6c8bc10721dc9c5d84 inherit pro_attribs_class_player"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_engine.html">GameEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7b92300769d36f6c8bc10721dc9c5d84">game_engine</a></td></tr>
+<tr class="separator:a7b92300769d36f6c8bc10721dc9c5d84 inherit pro_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf2abc26699a213c9346fcc2cfddee11 inherit pro_attribs_class_player"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_graphics.html">Graphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a></td></tr>
+<tr class="separator:abf2abc26699a213c9346fcc2cfddee11 inherit pro_attribs_class_player"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa gracza będącego pacmanem. </p>
+
+<p>Definicja w linii <a class="el" href="pacman_8h_source.html#l00015">15</a> pliku <a class="el" href="pacman_8h_source.html">pacman.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="a4daba40c7bd15674ab6ce5492f90da0a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pacman::Pacman </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xmap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ymap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Color&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>controlby</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_game_engine.html">GameEngine</a> *&#160;</td>
+          <td class="paramname"><em>game_engine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_graphics.html">Graphics</a> *&#160;</td>
+          <td class="paramname"><em>graphics</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Utworzenie nowego pacmana na mapie </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xmap</td><td>współrzędna x w układzie mapy </td></tr>
+    <tr><td class="paramname">ymap</td><td>współrzędna y w układzie mapy </td></tr>
+    <tr><td class="paramname">color</td><td>kolor gracza (do wygenerowania tekstury) </td></tr>
+    <tr><td class="paramname">name</td><td>nazwa gracza </td></tr>
+    <tr><td class="paramname">controlby</td><td>określa, co steruje graczem: P_KEYBOARD - klawiatura, P_AI - sztuczna inteligencja, P_LAN - komunikaty sieciowe z serwera </td></tr>
+    <tr><td class="paramname">game_engine</td><td>silnik logiki gry </td></tr>
+    <tr><td class="paramname">graphics</td><td>silnik grafiki </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="pacman_8cpp_source.html#l00005">5</a> pliku <a class="el" href="pacman_8cpp_source.html">pacman.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeeb4fea54918576dbdf20a1f325410bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pacman::~Pacman </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>usunięcie pacmana </p>
+
+<p>Definicja w linii <a class="el" href="pacman_8cpp_source.html#l00015">15</a> pliku <a class="el" href="pacman_8cpp_source.html">pacman.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a016a66518b47618415e4bec36ec1becb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacman::ai_control </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wykonanie ruchu gracza przez sztuczną inteligencję </p>
+
+<p>Implementuje <a class="el" href="class_player.html#a9c45780d3df2b2cae0a3edd9a0d7d613">Player</a>.</p>
+
+<p>Definicja w linii <a class="el" href="pacman_8cpp_source.html#l00052">52</a> pliku <a class="el" href="pacman_8cpp_source.html">pacman.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abed309f6ec8bccb77c5c5fabb8d20ee5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacman::animate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wygenerowanie parametrów kolejnej klatki gracza </p>
+
+<p>Implementuje <a class="el" href="class_player.html#a57c799f8383b8fbb2a844ddb0bbe1288">Player</a>.</p>
+
+<p>Definicja w linii <a class="el" href="pacman_8cpp_source.html#l00026">26</a> pliku <a class="el" href="pacman_8cpp_source.html">pacman.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0bbf3d1ff30c63045b2369992c2173d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacman::clip_table </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>aktualizacja tablicy określającej parametry wycięcia fragmentu klatki z tekstury </p>
+
+<p>Implementuje <a class="el" href="class_player.html#a9fa90e54078b75b70fce829480c3d87a">Player</a>.</p>
+
+<p>Definicja w linii <a class="el" href="pacman_8cpp_source.html#l00038">38</a> pliku <a class="el" href="pacman_8cpp_source.html">pacman.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae87e44e12b623460feef93fe5347e2ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacman::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>narysowanie gracza na ekranie </p>
+
+<p>Implementuje <a class="el" href="class_player.html#a9fc8f2731bb6b47c18e90414f53fc863">Player</a>.</p>
+
+<p>Definicja w linii <a class="el" href="pacman_8cpp_source.html#l00019">19</a> pliku <a class="el" href="pacman_8cpp_source.html">pacman.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abd5769f9f21dde60737ed9a5a5cc32bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pacman::reload_texture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wygenerowanie kolorowej tekstury gracza </p>
+
+<p>Implementuje <a class="el" href="class_player.html#a88ffd03b15cb95ec1e3f076dca4de662">Player</a>.</p>
+
+<p>Definicja w linii <a class="el" href="pacman_8cpp_source.html#l00046">46</a> pliku <a class="el" href="pacman_8cpp_source.html">pacman.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="ae4584eb2ab9bd75c91c65db119323057"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pacman::esc_histereza</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>w sztucznej inteligencji: histereza przy uciekaniu od duszków (tryb uciekania włączony lub wyłączony) </p>
+
+<p>Definicja w linii <a class="el" href="pacman_8h_source.html#l00050">50</a> pliku <a class="el" href="pacman_8h_source.html">pacman.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>/mnt/d/Igrek/C++/PacLAN/src/players/<a class="el" href="pacman_8h_source.html">pacman.h</a></li>
+<li>/mnt/d/Igrek/C++/PacLAN/src/players/<a class="el" href="pacman_8cpp_source.html">pacman.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_pacman.html">Pacman</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:22 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,40 +1,50 @@
 /**
  * \file app.h
- * Moduł głównej aplikacji
  * \see app.cpp
  */
 #ifndef APP_H
 #define APP_H
 
-#include "game_engine.h"
-#include "graphics.h"
-#include "network.h"
-#include "timer.h"
+class App;
+
+#include "logic/game_engine.h"
+#include "graphics/graphics.h"
+#include "network/network.h"
+#include "threads/timer.h"
 #include "language.h"
 
 /**
- * \brief Klasa głównej aplikacji zawierająca jej najważniejsze moduły
+ * \brief Aplikacja zawierająca główne moduły
  */
-class App{
+class App {
+private:
+    /// sygnał zakończenia aplikacji
+    bool _exit;
 public:
-    /// utworzenie nowej instancji aplikacji
+    /// konstruktor
     App();
-    /// zakończenie uruchomionej aplikacji
+
+    /// destruktor
     ~App();
-    /// wskaźnik na obiekt silnika gry
-    static GameEngine *game_engine;
-    /// wskaźnik na obiekt silnika grafiki
-    static Graphics *graphics;
-    /// wskaźnik na wątek modułu obsługi sieci
-    static Network *network;
-    /// wskaźnik na wątek czasomierza
-    static Timer *timer;
+
+    /// silnik gry (logika)
+    GameEngine* game_engine;
+    /// silnik grafiki
+    Graphics* graphics;
+    /// wątek modułu obsługi sieci
+    Network* network;
+    /// wątek odmierzania czasu i kontroli prędkości gry
+    Timer* timer;
     /// aktualne dane językowe
-    static Language *lang;
-    /// zmienna określająca, czy zakończyć aplikację (true - sygnał zakończenia)
-    static bool exit;
+    Language* lang;
     /// aktualna liczba cykli do wykonania (zwiększana przez timer, zmniejszana przez pętle logiczne silnika gry)
-    static volatile int logic_cycles;
+    volatile int logic_cycles;
+
+    // czy należy zamknąć aplikację
+    bool exiting();
+
+    /// zgłoszenie sygnału zakończenia aplikacji
+    void exit();
 };
 
 #endif

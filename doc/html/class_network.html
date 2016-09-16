@@ -1,0 +1,1181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Dokumentacja klasy Network</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_network.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="#pro-methods">Metody chronione</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="class_network-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Network</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Silnik obsługi komunikacji między wieloma komputerami.  
+ <a href="class_network.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="network_8h_source.html">network.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla Network</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_network.png" usemap="#Network_map" alt=""/>
+  <map id="Network_map" name="Network_map">
+<area href="class_continuous_thread.html" title="Wątek z procedurą wykonywaną cyklicznie. " alt="ContinuousThread" shape="rect" coords="0,56,115,80"/>
+<area href="class_thread.html" title="osobny Wątek " alt="Thread" shape="rect" coords="0,0,115,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:aafdb359102d60b61990d517bb68c0dee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#aafdb359102d60b61990d517bb68c0dee">Network</a> (<a class="el" href="class_game_engine.html">GameEngine</a> *<a class="el" href="class_network.html#af0087ae89f35f82404bfc4019c15e682">game_engine</a>)</td></tr>
+<tr class="memdesc:aafdb359102d60b61990d517bb68c0dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">uruchomienie wątku sieci  <a href="#aafdb359102d60b61990d517bb68c0dee">Więcej...</a><br /></td></tr>
+<tr class="separator:aafdb359102d60b61990d517bb68c0dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a4e19cdb4bf0c7ecf82baa643831492"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a7a4e19cdb4bf0c7ecf82baa643831492">~Network</a> ()</td></tr>
+<tr class="memdesc:a7a4e19cdb4bf0c7ecf82baa643831492"><td class="mdescLeft">&#160;</td><td class="mdescRight">zakończenie wątku sieci  <a href="#a7a4e19cdb4bf0c7ecf82baa643831492">Więcej...</a><br /></td></tr>
+<tr class="separator:a7a4e19cdb4bf0c7ecf82baa643831492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc111734668c7b27316160dfc6f54e6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#acfc111734668c7b27316160dfc6f54e6">myIP</a> ()</td></tr>
+<tr class="separator:acfc111734668c7b27316160dfc6f54e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4055a6ccafe3a12cd93fc2a06c034e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a5a4055a6ccafe3a12cd93fc2a06c034e">myName</a> ()</td></tr>
+<tr class="separator:a5a4055a6ccafe3a12cd93fc2a06c034e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a8f553c57ef562fbd84ca9d8c83de0"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a85a8f553c57ef562fbd84ca9d8c83de0">clientIP</a> (int sindex)</td></tr>
+<tr class="separator:a85a8f553c57ef562fbd84ca9d8c83de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29be6bc3161488bf74b47302f55e8b70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a29be6bc3161488bf74b47302f55e8b70">addtask_send_to_server</a> (char *msg, int len)</td></tr>
+<tr class="separator:a29be6bc3161488bf74b47302f55e8b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eeaa42a44c86a0f9b59bf776a9d2fdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a0eeaa42a44c86a0f9b59bf776a9d2fdb">addtask_send_to_client</a> (int client_nr, char *msg, int len)</td></tr>
+<tr class="separator:a0eeaa42a44c86a0f9b59bf776a9d2fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd275481a89de5d903a475fecc035fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#aacd275481a89de5d903a475fecc035fe">addtask_open_server</a> ()</td></tr>
+<tr class="memdesc:aacd275481a89de5d903a475fecc035fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">dodaje zadanie otworzenia połączenia serwera  <a href="#aacd275481a89de5d903a475fecc035fe">Więcej...</a><br /></td></tr>
+<tr class="separator:aacd275481a89de5d903a475fecc035fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab88a6960a230afa5045953bf77bbd78e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#ab88a6960a230afa5045953bf77bbd78e">addtask_connect_client</a> (string ip)</td></tr>
+<tr class="separator:ab88a6960a230afa5045953bf77bbd78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547966ef250acdecd7ac3ed8c93dfdc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a547966ef250acdecd7ac3ed8c93dfdc7">addtask_close_server</a> ()</td></tr>
+<tr class="memdesc:a547966ef250acdecd7ac3ed8c93dfdc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">dodaje zadanie zamknięcia serwera  <a href="#a547966ef250acdecd7ac3ed8c93dfdc7">Więcej...</a><br /></td></tr>
+<tr class="separator:a547966ef250acdecd7ac3ed8c93dfdc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84c3dae99be05487ecca8ae54c2f8e8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a84c3dae99be05487ecca8ae54c2f8e8b">addtask_close_client</a> ()</td></tr>
+<tr class="memdesc:a84c3dae99be05487ecca8ae54c2f8e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">dodaje zadanie zamknięcia połączenia z serwerem  <a href="#a84c3dae99be05487ecca8ae54c2f8e8b">Więcej...</a><br /></td></tr>
+<tr class="separator:a84c3dae99be05487ecca8ae54c2f8e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_continuous_thread"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_continuous_thread')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_continuous_thread.html">ContinuousThread</a></td></tr>
+<tr class="memitem:ab6de4123a0d00e60669f12fd48d17b97 inherit pub_methods_class_continuous_thread"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_continuous_thread.html#ab6de4123a0d00e60669f12fd48d17b97">ContinuousThread</a> (int <a class="el" href="class_continuous_thread.html#a2603d6eaab7410e01d1c84ad65f1bf97">wait_for_close</a>=0)</td></tr>
+<tr class="separator:ab6de4123a0d00e60669f12fd48d17b97 inherit pub_methods_class_continuous_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac611a3e365db1e32ad2a2684d81bddc inherit pub_methods_class_continuous_thread"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_continuous_thread.html#aac611a3e365db1e32ad2a2684d81bddc">~ContinuousThread</a> ()</td></tr>
+<tr class="separator:aac611a3e365db1e32ad2a2684d81bddc inherit pub_methods_class_continuous_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_thread"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_thread')"><img src="closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="class_thread.html">Thread</a></td></tr>
+<tr class="memitem:a95c703fb8f2f27cb64f475a8c940864a inherit pub_methods_class_thread"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a95c703fb8f2f27cb64f475a8c940864a">Thread</a> ()</td></tr>
+<tr class="memdesc:a95c703fb8f2f27cb64f475a8c940864a inherit pub_methods_class_thread"><td class="mdescLeft">&#160;</td><td class="mdescRight">uruchomienie nowego wątku  <a href="#a95c703fb8f2f27cb64f475a8c940864a">Więcej...</a><br /></td></tr>
+<tr class="separator:a95c703fb8f2f27cb64f475a8c940864a inherit pub_methods_class_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d9edd3a1a776cbc27dedff949c9726 inherit pub_methods_class_thread"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a37d9edd3a1a776cbc27dedff949c9726">~Thread</a> ()</td></tr>
+<tr class="memdesc:a37d9edd3a1a776cbc27dedff949c9726 inherit pub_methods_class_thread"><td class="mdescLeft">&#160;</td><td class="mdescRight">zakończenie wątku  <a href="#a37d9edd3a1a776cbc27dedff949c9726">Więcej...</a><br /></td></tr>
+<tr class="separator:a37d9edd3a1a776cbc27dedff949c9726 inherit pub_methods_class_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:a2dcc9c79606b11fb6949a61d89ffbbac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a2dcc9c79606b11fb6949a61d89ffbbac">server</a></td></tr>
+<tr class="memdesc:a2dcc9c79606b11fb6949a61d89ffbbac"><td class="mdescLeft">&#160;</td><td class="mdescRight">zmienna określająca, czy serwer jest otwarty (true - otwarty)  <a href="#a2dcc9c79606b11fb6949a61d89ffbbac">Więcej...</a><br /></td></tr>
+<tr class="separator:a2dcc9c79606b11fb6949a61d89ffbbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb5b0d45a2bee2dc51aeb39f91f131cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#acb5b0d45a2bee2dc51aeb39f91f131cd">client</a></td></tr>
+<tr class="memdesc:acb5b0d45a2bee2dc51aeb39f91f131cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">zmienna określająca, czy połączenie klienta jest aktywne (true - aktywne)  <a href="#acb5b0d45a2bee2dc51aeb39f91f131cd">Więcej...</a><br /></td></tr>
+<tr class="separator:acb5b0d45a2bee2dc51aeb39f91f131cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78e189ea325cc8f0798436ea12b40a9"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_network_connection.html">NetworkConnection</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#ad78e189ea325cc8f0798436ea12b40a9">connections</a></td></tr>
+<tr class="memdesc:ad78e189ea325cc8f0798436ea12b40a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">lista otwartych połączeń z innymi komputerami, indeks 0 - socket klienta lub serwera, większe od 0 - sockety klientów serwera  <a href="#ad78e189ea325cc8f0798436ea12b40a9">Więcej...</a><br /></td></tr>
+<tr class="separator:ad78e189ea325cc8f0798436ea12b40a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Metody chronione</h2></td></tr>
+<tr class="memitem:a91dcf8b0ed99c5ad8200286cb8a0fec9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a91dcf8b0ed99c5ad8200286cb8a0fec9">runLoop</a> ()</td></tr>
+<tr class="memdesc:a91dcf8b0ed99c5ad8200286cb8a0fec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">główna funkcja powtarzana w pętli  <a href="#a91dcf8b0ed99c5ad8200286cb8a0fec9">Więcej...</a><br /></td></tr>
+<tr class="separator:a91dcf8b0ed99c5ad8200286cb8a0fec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_continuous_thread"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_continuous_thread')"><img src="closed.png" alt="-"/>&#160;Metody chronione dziedziczone z <a class="el" href="class_continuous_thread.html">ContinuousThread</a></td></tr>
+<tr class="memitem:a4349c94e0f01414e972fdb0bc9ae64a7 inherit pro_methods_class_continuous_thread"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_continuous_thread.html#a4349c94e0f01414e972fdb0bc9ae64a7">run</a> ()</td></tr>
+<tr class="memdesc:a4349c94e0f01414e972fdb0bc9ae64a7 inherit pro_methods_class_continuous_thread"><td class="mdescLeft">&#160;</td><td class="mdescRight">główna funkcja wątku  <a href="#a4349c94e0f01414e972fdb0bc9ae64a7">Więcej...</a><br /></td></tr>
+<tr class="separator:a4349c94e0f01414e972fdb0bc9ae64a7 inherit pro_methods_class_continuous_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:a4b28fba4fedb30b8fca5aa5ebf19369a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a4b28fba4fedb30b8fca5aa5ebf19369a">task_exec</a> (<a class="el" href="class_network_task.html">NetworkTask</a> *task)</td></tr>
+<tr class="separator:a4b28fba4fedb30b8fca5aa5ebf19369a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd5fd9e1e7a9a3e81467180e5c97075"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#aadd5fd9e1e7a9a3e81467180e5c97075">error</a> (string e)</td></tr>
+<tr class="separator:aadd5fd9e1e7a9a3e81467180e5c97075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d1c7693609c8f0323e9a946ddbe9f8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#ac3d1c7693609c8f0323e9a946ddbe9f8">openServerSocket</a> ()</td></tr>
+<tr class="separator:ac3d1c7693609c8f0323e9a946ddbe9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef9dc030f3a2d39d26e9939651fce9ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#aef9dc030f3a2d39d26e9939651fce9ab">connectTo</a> (string ip)</td></tr>
+<tr class="separator:aef9dc030f3a2d39d26e9939651fce9ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62751785ab1c60dc9b798c8e8b7e864c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a62751785ab1c60dc9b798c8e8b7e864c">destroyConnection</a> (int sindex)</td></tr>
+<tr class="separator:a62751785ab1c60dc9b798c8e8b7e864c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522cfe60c5479c3aee3436679f319f07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a522cfe60c5479c3aee3436679f319f07">disconnect</a> (int sindex)</td></tr>
+<tr class="separator:a522cfe60c5479c3aee3436679f319f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42b45c2d4ac6628513bf07bc3bcea9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#ac42b45c2d4ac6628513bf07bc3bcea9b">onClose</a> (int sindex)</td></tr>
+<tr class="separator:ac42b45c2d4ac6628513bf07bc3bcea9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e9180164f02976c11ed77d4589e09c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#ac5e9180164f02976c11ed77d4589e09c">onAccept</a> ()</td></tr>
+<tr class="memdesc:ac5e9180164f02976c11ed77d4589e09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">żądanie nawiązania połączenia - wiadomość od klienta.  <a href="#ac5e9180164f02976c11ed77d4589e09c">Więcej...</a><br /></td></tr>
+<tr class="separator:ac5e9180164f02976c11ed77d4589e09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b5d318b79466b80e015ecf1dfee52a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#ae6b5d318b79466b80e015ecf1dfee52a">onConnectedToServer</a> (int sindex)</td></tr>
+<tr class="separator:ae6b5d318b79466b80e015ecf1dfee52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a74b63d0238a791c09f9cc49f110f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#ae8a74b63d0238a791c09f9cc49f110f9">sendData</a> (int sindex, char *msg, int len)</td></tr>
+<tr class="separator:ae8a74b63d0238a791c09f9cc49f110f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e67c2db90213d33a4d55af0a309496"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a18e67c2db90213d33a4d55af0a309496">onReceive</a> (int sindex)</td></tr>
+<tr class="separator:a18e67c2db90213d33a4d55af0a309496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34839dddd63ec499433d28942b81c5ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a34839dddd63ec499433d28942b81c5ca">closeSocket</a> (int socket)</td></tr>
+<tr class="separator:a34839dddd63ec499433d28942b81c5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00aa94d980069082fbda901a50ffe713"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a00aa94d980069082fbda901a50ffe713">updateSocketsSet</a> ()</td></tr>
+<tr class="memdesc:a00aa94d980069082fbda901a50ffe713"><td class="mdescLeft">&#160;</td><td class="mdescRight">aktualizuje informacje o socketach (zbiór monitorowanych i aktywnych socketów)  <a href="#a00aa94d980069082fbda901a50ffe713">Więcej...</a><br /></td></tr>
+<tr class="separator:a00aa94d980069082fbda901a50ffe713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a0567e117fa5dea8a17f9382300e4de4d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a0567e117fa5dea8a17f9382300e4de4d">temp_buffer</a></td></tr>
+<tr class="memdesc:a0567e117fa5dea8a17f9382300e4de4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">tymczasowy bufor aktualnej wiadomości  <a href="#a0567e117fa5dea8a17f9382300e4de4d">Więcej...</a><br /></td></tr>
+<tr class="separator:a0567e117fa5dea8a17f9382300e4de4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a947704dc913459c038ad0f3e470ca397"><td class="memItemLeft" align="right" valign="top">timeval&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a947704dc913459c038ad0f3e470ca397">select_timeout</a></td></tr>
+<tr class="memdesc:a947704dc913459c038ad0f3e470ca397"><td class="mdescLeft">&#160;</td><td class="mdescRight">timeout oczekiwania na event z sieci  <a href="#a947704dc913459c038ad0f3e470ca397">Więcej...</a><br /></td></tr>
+<tr class="separator:a947704dc913459c038ad0f3e470ca397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25812b4bbc8edf318ad596f3698aa85c"><td class="memItemLeft" align="right" valign="top">fd_set&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a25812b4bbc8edf318ad596f3698aa85c">read_sockets</a></td></tr>
+<tr class="memdesc:a25812b4bbc8edf318ad596f3698aa85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">zbiór socketów monitorowanych do odczytu  <a href="#a25812b4bbc8edf318ad596f3698aa85c">Więcej...</a><br /></td></tr>
+<tr class="separator:a25812b4bbc8edf318ad596f3698aa85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b7eb5383721ee6bb7861e41dd68591"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a94b7eb5383721ee6bb7861e41dd68591">max_socket</a></td></tr>
+<tr class="memdesc:a94b7eb5383721ee6bb7861e41dd68591"><td class="mdescLeft">&#160;</td><td class="mdescRight">maksymalny indeks socketu  <a href="#a94b7eb5383721ee6bb7861e41dd68591">Więcej...</a><br /></td></tr>
+<tr class="separator:a94b7eb5383721ee6bb7861e41dd68591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0087ae89f35f82404bfc4019c15e682"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_engine.html">GameEngine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#af0087ae89f35f82404bfc4019c15e682">game_engine</a></td></tr>
+<tr class="memdesc:af0087ae89f35f82404bfc4019c15e682"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik na logikę gry  <a href="#af0087ae89f35f82404bfc4019c15e682">Więcej...</a><br /></td></tr>
+<tr class="separator:af0087ae89f35f82404bfc4019c15e682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14c47adc6f009b0c8c8602e8f60de9c4"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_network_task.html">NetworkTask</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network.html#a14c47adc6f009b0c8c8602e8f60de9c4">tasks</a></td></tr>
+<tr class="memdesc:a14c47adc6f009b0c8c8602e8f60de9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">kolejka zadań do wykonania  <a href="#a14c47adc6f009b0c8c8602e8f60de9c4">Więcej...</a><br /></td></tr>
+<tr class="separator:a14c47adc6f009b0c8c8602e8f60de9c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_thread"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_thread')"><img src="closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="class_thread.html">Thread</a></td></tr>
+<tr class="memitem:abc3e397d210eb698ee18b91aa48e11d0 inherit pro_attribs_class_thread"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#abc3e397d210eb698ee18b91aa48e11d0">init</a></td></tr>
+<tr class="memdesc:abc3e397d210eb698ee18b91aa48e11d0 inherit pro_attribs_class_thread"><td class="mdescLeft">&#160;</td><td class="mdescRight">czy zakończono inicjalizację  <a href="#abc3e397d210eb698ee18b91aa48e11d0">Więcej...</a><br /></td></tr>
+<tr class="separator:abc3e397d210eb698ee18b91aa48e11d0 inherit pro_attribs_class_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c14b28726d76b944466ebdf43f6fead inherit pro_attribs_class_thread"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#a1c14b28726d76b944466ebdf43f6fead">close_signal</a></td></tr>
+<tr class="memdesc:a1c14b28726d76b944466ebdf43f6fead inherit pro_attribs_class_thread"><td class="mdescLeft">&#160;</td><td class="mdescRight">czy polecono zamknięcie  <a href="#a1c14b28726d76b944466ebdf43f6fead">Więcej...</a><br /></td></tr>
+<tr class="separator:a1c14b28726d76b944466ebdf43f6fead inherit pro_attribs_class_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d78f5735ce6fa094f409b0524b7566 inherit pro_attribs_class_thread"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thread.html#af9d78f5735ce6fa094f409b0524b7566">boost_thread</a></td></tr>
+<tr class="memdesc:af9d78f5735ce6fa094f409b0524b7566 inherit pro_attribs_class_thread"><td class="mdescLeft">&#160;</td><td class="mdescRight">wskaźnik do wątku (zrzutowany na void, żeby za każdym razem nie dołączać biblioteki boost, co znacznie wydłuża kompilację)  <a href="#af9d78f5735ce6fa094f409b0524b7566">Więcej...</a><br /></td></tr>
+<tr class="separator:af9d78f5735ce6fa094f409b0524b7566 inherit pro_attribs_class_thread"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Silnik obsługi komunikacji między wieloma komputerami. </p>
+
+<p>Definicja w linii <a class="el" href="network_8h_source.html#l00024">24</a> pliku <a class="el" href="network_8h_source.html">network.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="aafdb359102d60b61990d517bb68c0dee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Network::Network </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_engine.html">GameEngine</a> *&#160;</td>
+          <td class="paramname"><em>game_engine</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uruchomienie wątku sieci </p>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00010">10</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a4e19cdb4bf0c7ecf82baa643831492"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Network::~Network </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zakończenie wątku sieci </p>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00022">22</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a84c3dae99be05487ecca8ae54c2f8e8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::addtask_close_client </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dodaje zadanie zamknięcia połączenia z serwerem </p>
+
+<p>Definicja w linii <a class="el" href="network__task_8cpp_source.html#l00065">65</a> pliku <a class="el" href="network__task_8cpp_source.html">network_task.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a547966ef250acdecd7ac3ed8c93dfdc7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::addtask_close_server </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dodaje zadanie zamknięcia serwera </p>
+
+<p>Definicja w linii <a class="el" href="network__task_8cpp_source.html#l00054">54</a> pliku <a class="el" href="network__task_8cpp_source.html">network_task.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab88a6960a230afa5045953bf77bbd78e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::addtask_connect_client </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>dodaje zadania połączenia klienta do serwera </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>adres ip serwera </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="network__task_8cpp_source.html#l00059">59</a> pliku <a class="el" href="network__task_8cpp_source.html">network_task.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aacd275481a89de5d903a475fecc035fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::addtask_open_server </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dodaje zadanie otworzenia połączenia serwera </p>
+
+<p>Definicja w linii <a class="el" href="network__task_8cpp_source.html#l00049">49</a> pliku <a class="el" href="network__task_8cpp_source.html">network_task.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0eeaa42a44c86a0f9b59bf776a9d2fdb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::addtask_send_to_client </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>client_nr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>dodaje zadanie wysłania wiadomości do klienta </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">client_nr</td><td>numer klienta </td></tr>
+    <tr><td class="paramname">msg</td><td>tablica znaków do wysłania </td></tr>
+    <tr><td class="paramname">len</td><td>ilość przesyłanych znaków z tablicy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="network__task_8cpp_source.html#l00077">77</a> pliku <a class="el" href="network__task_8cpp_source.html">network_task.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a29be6bc3161488bf74b47302f55e8b70"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::addtask_send_to_server </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>dodaje zadanie wysłania wiadomości do serwera </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>tablica znaków do wysłania </td></tr>
+    <tr><td class="paramname">len</td><td>ilość przesyłanych znaków z tablicy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="network__task_8cpp_source.html#l00070">70</a> pliku <a class="el" href="network__task_8cpp_source.html">network_task.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a85a8f553c57ef562fbd84ca9d8c83de0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Network::clientIP </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sindex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>zwraca adres ip wybranego klienta podłączonego do hosta </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sindex</td><td>indeks klienta na liście socketów </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>adres ip klienta w postaci tekstu </dd></dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00103">103</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34839dddd63ec499433d28942b81c5ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Network::closeSocket </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>socket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>rozłączenie socketu </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>numer socketu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true - jeśli udało się rozłączyć </dd></dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00263">263</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aef9dc030f3a2d39d26e9939651fce9ab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Network::connectTo </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>ip</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>połączenie do serwera o danym ip </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>adres ip serwera </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true - jeśli udało się połączyć </dd></dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00158">158</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a62751785ab1c60dc9b798c8e8b7e864c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::destroyConnection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sindex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>usunięcie wskazanego połączenia razem z buforem danych </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sindex</td><td>numer połączenia </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00247">247</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a522cfe60c5479c3aee3436679f319f07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::disconnect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sindex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>rozłączenie połączenia </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sindex</td><td>numer połączenia </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00224">224</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aadd5fd9e1e7a9a3e81467180e5c97075"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::error </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>wyświetlenie szczegółowej informacji o błędzie </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>wiadomość do wyświetlenia </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00076">76</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acfc111734668c7b27316160dfc6f54e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Network::myIP </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>zwraca adres ip komputera jako tekst </p><dl class="section return"><dt>Zwraca</dt><dd>adres ip </dd></dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00082">82</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5a4055a6ccafe3a12cd93fc2a06c034e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Network::myName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>zwraca nazwę komputera w sieci </p><dl class="section return"><dt>Zwraca</dt><dd>nazwa komputera </dd></dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00095">95</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5e9180164f02976c11ed77d4589e09c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::onAccept </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>żądanie nawiązania połączenia - wiadomość od klienta. </p>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00278">278</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac42b45c2d4ac6628513bf07bc3bcea9b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::onClose </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sindex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>zamknięcie połączenia - wiadomość od serwera lub klienta </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sindex</td><td>numer połączenia </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00209">209</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6b5d318b79466b80e015ecf1dfee52a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::onConnectedToServer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sindex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00373">373</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a18e67c2db90213d33a4d55af0a309496"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Network::onReceive </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sindex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>odbierz pakiet od nadawcy </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sindex</td><td>numer połączenia nadawcy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true - jeśli wszystko przebiegło pomyślnie </dd></dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00346">346</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3d1c7693609c8f0323e9a946ddbe9f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Network::openServerSocket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>otworzenie połączenia serwera </p><dl class="section return"><dt>Zwraca</dt><dd>true - jeśli udało się połączyć </dd></dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00113">113</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a91dcf8b0ed99c5ad8200286cb8a0fec9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::runLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>główna funkcja powtarzana w pętli </p>
+
+<p>Implementuje <a class="el" href="class_continuous_thread.html#aaa2329fad27e813284c98eee68aa7821">ContinuousThread</a>.</p>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00036">36</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8a74b63d0238a791c09f9cc49f110f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Network::sendData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sindex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>wyślij pakiet do odbiorcy </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sindex</td><td>numer połączenia - odbiorcy pakietu </td></tr>
+    <tr><td class="paramname">msg</td><td>tablica znaków do wysłania </td></tr>
+    <tr><td class="paramname">len</td><td>ilość przesyłanych znaków z tablicy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>true - jeśli wszystko przebiegło pomyślnie </dd></dl>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00295">295</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b28fba4fedb30b8fca5aa5ebf19369a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::task_exec </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_network_task.html">NetworkTask</a> *&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>wykonanie zadania </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>wskaźnik na zadanie sieciowe </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="network__task_8cpp_source.html#l00018">18</a> pliku <a class="el" href="network__task_8cpp_source.html">network_task.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a00aa94d980069082fbda901a50ffe713"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Network::updateSocketsSet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>aktualizuje informacje o socketach (zbiór monitorowanych i aktywnych socketów) </p>
+
+<p>Definicja w linii <a class="el" href="network_8cpp_source.html#l00378">378</a> pliku <a class="el" href="network_8cpp_source.html">network.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="acb5b0d45a2bee2dc51aeb39f91f131cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Network::client</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zmienna określająca, czy połączenie klienta jest aktywne (true - aktywne) </p>
+
+<p>Definicja w linii <a class="el" href="network_8h_source.html#l00060">60</a> pliku <a class="el" href="network_8h_source.html">network.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad78e189ea325cc8f0798436ea12b40a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_network_connection.html">NetworkConnection</a>*&gt; Network::connections</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lista otwartych połączeń z innymi komputerami, indeks 0 - socket klienta lub serwera, większe od 0 - sockety klientów serwera </p>
+
+<p>Definicja w linii <a class="el" href="network_8h_source.html#l00062">62</a> pliku <a class="el" href="network_8h_source.html">network.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0087ae89f35f82404bfc4019c15e682"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_engine.html">GameEngine</a>* Network::game_engine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>wskaźnik na logikę gry </p>
+
+<p>Definicja w linii <a class="el" href="network_8h_source.html#l00106">106</a> pliku <a class="el" href="network_8h_source.html">network.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a94b7eb5383721ee6bb7861e41dd68591"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Network::max_socket</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>maksymalny indeks socketu </p>
+
+<p>Definicja w linii <a class="el" href="network_8h_source.html#l00104">104</a> pliku <a class="el" href="network_8h_source.html">network.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25812b4bbc8edf318ad596f3698aa85c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">fd_set Network::read_sockets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>zbiór socketów monitorowanych do odczytu </p>
+
+<p>Definicja w linii <a class="el" href="network_8h_source.html#l00102">102</a> pliku <a class="el" href="network_8h_source.html">network.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a947704dc913459c038ad0f3e470ca397"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">timeval Network::select_timeout</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>timeout oczekiwania na event z sieci </p>
+
+<p>Definicja w linii <a class="el" href="network_8h_source.html#l00100">100</a> pliku <a class="el" href="network_8h_source.html">network.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2dcc9c79606b11fb6949a61d89ffbbac"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Network::server</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zmienna określająca, czy serwer jest otwarty (true - otwarty) </p>
+
+<p>Definicja w linii <a class="el" href="network_8h_source.html#l00058">58</a> pliku <a class="el" href="network_8h_source.html">network.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a14c47adc6f009b0c8c8602e8f60de9c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_network_task.html">NetworkTask</a>*&gt; Network::tasks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>kolejka zadań do wykonania </p>
+
+<p>Definicja w linii <a class="el" href="network_8h_source.html#l00109">109</a> pliku <a class="el" href="network_8h_source.html">network.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0567e117fa5dea8a17f9382300e4de4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Network::temp_buffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>tymczasowy bufor aktualnej wiadomości </p>
+
+<p>Definicja w linii <a class="el" href="network_8h_source.html#l00098">98</a> pliku <a class="el" href="network_8h_source.html">network.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>/mnt/d/Igrek/C++/PacLAN/src/network/<a class="el" href="network_8h_source.html">network.h</a></li>
+<li>/mnt/d/Igrek/C++/PacLAN/src/network/<a class="el" href="network_8cpp_source.html">network.cpp</a></li>
+<li>/mnt/d/Igrek/C++/PacLAN/src/network/<a class="el" href="network__task_8cpp_source.html">network_task.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_network.html">Network</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:22 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

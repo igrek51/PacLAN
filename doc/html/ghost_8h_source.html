@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Plik źródłowy /mnt/d/Igrek/C++/PacLAN/src/players/ghost.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('ghost_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ghost.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ghost_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef GHOST_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define GHOST_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="class_ghost.html">Ghost</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="player_8h.html">player.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_ghost.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_ghost.html">Ghost</a> : <span class="keyword">public</span> <a class="code" href="class_player.html">Player</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_ghost.html#a4086f4c67a04e9da478f4525302aeedd">Ghost</a>(<span class="keywordtype">int</span> <a class="code" href="class_player.html#a7f0d6b709df66bfa850ada3a07a2d4d0">xmap</a>, <span class="keywordtype">int</span> <a class="code" href="class_player.html#a35dfec8fc1af9839437d3bffe2cf6b9c">ymap</a>, SDL_Color <a class="code" href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">color</a>, <span class="keywordtype">string</span> <a class="code" href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">name</a>, <span class="keywordtype">int</span> <a class="code" href="class_player.html#a641efdab62bcea257201e4e039a86ba6">controlby</a>, <a class="code" href="class_game_engine.html">GameEngine</a>* <a class="code" href="class_player.html#a7b92300769d36f6c8bc10721dc9c5d84">game_engine</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;          <a class="code" href="class_graphics.html">Graphics</a>* <a class="code" href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">graphics</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_ghost.html#a063ed19c1b6f5c07b9109020c6198319">~Ghost</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ghost.html#ae0ba6b1f5f635a823249e0e95878b693">reload_texture</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ghost.html#ad8a3bf493df986944db56a40db678450">animate</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ghost.html#a85a9a4b80438495924f4b85cfaeb8cea">draw</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ghost.html#a85e62b975110b4d4f979d5781067b031">clip_table</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_ghost.html#af8c29cb4f3aa0a469fbada8409435205">ai_control</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_ghost_html_a063ed19c1b6f5c07b9109020c6198319"><div class="ttname"><a href="class_ghost.html#a063ed19c1b6f5c07b9109020c6198319">Ghost::~Ghost</a></div><div class="ttdeci">~Ghost()</div><div class="ttdoc">usunięcie duszka </div><div class="ttdef"><b>Definition:</b> <a href="ghost_8cpp_source.html#l00014">ghost.cpp:14</a></div></div>
+<div class="ttc" id="class_player_html_ad2ac07f900cc99b0248c36ef083f778f"><div class="ttname"><a href="class_player.html#ad2ac07f900cc99b0248c36ef083f778f">Player::color</a></div><div class="ttdeci">SDL_Color color</div><div class="ttdoc">kolor gracza </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00119">player.h:119</a></div></div>
+<div class="ttc" id="class_ghost_html_af8c29cb4f3aa0a469fbada8409435205"><div class="ttname"><a href="class_ghost.html#af8c29cb4f3aa0a469fbada8409435205">Ghost::ai_control</a></div><div class="ttdeci">void ai_control()</div><div class="ttdoc">wykonanie ruchu gracza przez sztuczną inteligencję </div><div class="ttdef"><b>Definition:</b> <a href="ghost_8cpp_source.html#l00063">ghost.cpp:63</a></div></div>
+<div class="ttc" id="class_player_html_abf2abc26699a213c9346fcc2cfddee11"><div class="ttname"><a href="class_player.html#abf2abc26699a213c9346fcc2cfddee11">Player::graphics</a></div><div class="ttdeci">Graphics * graphics</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00179">player.h:179</a></div></div>
+<div class="ttc" id="class_ghost_html_ae0ba6b1f5f635a823249e0e95878b693"><div class="ttname"><a href="class_ghost.html#ae0ba6b1f5f635a823249e0e95878b693">Ghost::reload_texture</a></div><div class="ttdeci">void reload_texture()</div><div class="ttdoc">wygenerowanie kolorowej tekstury gracza </div><div class="ttdef"><b>Definition:</b> <a href="ghost_8cpp_source.html#l00057">ghost.cpp:57</a></div></div>
+<div class="ttc" id="player_8h_html"><div class="ttname"><a href="player_8h.html">player.h</a></div></div>
+<div class="ttc" id="class_graphics_html"><div class="ttname"><a href="class_graphics.html">Graphics</a></div><div class="ttdoc">Klasa silnika grafiki. </div><div class="ttdef"><b>Definition:</b> <a href="graphics_8h_source.html#l00033">graphics.h:33</a></div></div>
+<div class="ttc" id="class_player_html_a7b92300769d36f6c8bc10721dc9c5d84"><div class="ttname"><a href="class_player.html#a7b92300769d36f6c8bc10721dc9c5d84">Player::game_engine</a></div><div class="ttdeci">GameEngine * game_engine</div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00178">player.h:178</a></div></div>
+<div class="ttc" id="class_ghost_html_ad8a3bf493df986944db56a40db678450"><div class="ttname"><a href="class_ghost.html#ad8a3bf493df986944db56a40db678450">Ghost::animate</a></div><div class="ttdeci">void animate()</div><div class="ttdoc">wygenerowanie parametrów kolejnej klatki gracza </div><div class="ttdef"><b>Definition:</b> <a href="ghost_8cpp_source.html#l00029">ghost.cpp:29</a></div></div>
+<div class="ttc" id="class_player_html_a7f0d6b709df66bfa850ada3a07a2d4d0"><div class="ttname"><a href="class_player.html#a7f0d6b709df66bfa850ada3a07a2d4d0">Player::xmap</a></div><div class="ttdeci">int xmap</div><div class="ttdoc">położenie gracza wzdłuż osi x na tablicy mapy </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00067">player.h:67</a></div></div>
+<div class="ttc" id="class_ghost_html_a85e62b975110b4d4f979d5781067b031"><div class="ttname"><a href="class_ghost.html#a85e62b975110b4d4f979d5781067b031">Ghost::clip_table</a></div><div class="ttdeci">void clip_table()</div><div class="ttdoc">aktualizacja tablicy określającej parametry wycięcia fragmentu klatki z tekstury </div><div class="ttdef"><b>Definition:</b> <a href="ghost_8cpp_source.html#l00039">ghost.cpp:39</a></div></div>
+<div class="ttc" id="class_ghost_html"><div class="ttname"><a href="class_ghost.html">Ghost</a></div><div class="ttdoc">Klasa gracza będącego duszkiem. </div><div class="ttdef"><b>Definition:</b> <a href="ghost_8h_source.html#l00015">ghost.h:15</a></div></div>
+<div class="ttc" id="class_ghost_html_a4086f4c67a04e9da478f4525302aeedd"><div class="ttname"><a href="class_ghost.html#a4086f4c67a04e9da478f4525302aeedd">Ghost::Ghost</a></div><div class="ttdeci">Ghost(int xmap, int ymap, SDL_Color color, string name, int controlby, GameEngine *game_engine, Graphics *graphics)</div><div class="ttdef"><b>Definition:</b> <a href="ghost_8cpp_source.html#l00005">ghost.cpp:5</a></div></div>
+<div class="ttc" id="class_game_engine_html"><div class="ttname"><a href="class_game_engine.html">GameEngine</a></div><div class="ttdoc">logika gry </div><div class="ttdef"><b>Definition:</b> <a href="game__engine_8h_source.html#l00044">game_engine.h:44</a></div></div>
+<div class="ttc" id="class_ghost_html_a85a9a4b80438495924f4b85cfaeb8cea"><div class="ttname"><a href="class_ghost.html#a85a9a4b80438495924f4b85cfaeb8cea">Ghost::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdoc">narysowanie gracza na ekranie </div><div class="ttdef"><b>Definition:</b> <a href="ghost_8cpp_source.html#l00018">ghost.cpp:18</a></div></div>
+<div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Klasa gracza (pacmana lub duszka) </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00037">player.h:37</a></div></div>
+<div class="ttc" id="class_player_html_a641efdab62bcea257201e4e039a86ba6"><div class="ttname"><a href="class_player.html#a641efdab62bcea257201e4e039a86ba6">Player::controlby</a></div><div class="ttdeci">int controlby</div><div class="ttdoc">określa, co steruje graczem: P_KEYBOARD - klawiatura, P_AI - sztuczna inteligencja, P_LAN - komunikaty sieciowe z serwera </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00162">player.h:162</a></div></div>
+<div class="ttc" id="class_player_html_acf0355128a99ee20ad9931b760fb2de1"><div class="ttname"><a href="class_player.html#acf0355128a99ee20ad9931b760fb2de1">Player::name</a></div><div class="ttdeci">string name</div><div class="ttdoc">nazwa gracza - podpis nad graczem </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00056">player.h:56</a></div></div>
+<div class="ttc" id="class_player_html_a35dfec8fc1af9839437d3bffe2cf6b9c"><div class="ttname"><a href="class_player.html#a35dfec8fc1af9839437d3bffe2cf6b9c">Player::ymap</a></div><div class="ttdeci">int ymap</div><div class="ttdoc">położenie gracza wzdłuż osi y na tablicy mapy </div><div class="ttdef"><b>Definition:</b> <a href="player_8h_source.html#l00069">player.h:69</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3e72a3b57dc3879b770eea3465447b47.html">players</a></li><li class="navelem"><a class="el" href="ghost_8h.html">ghost.h</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:21 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>PacLAN: Dokumentacja klasy NetworkTask</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">PacLAN
+   &#160;<span id="projectnumber">1.22.52</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_network_task.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Wyliczenia</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Wartości wyliczeń</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definicje</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="class_network_task-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy NetworkTask</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Sieciowe zadanie do wykonania należące do kolejki zadań  
+ <a href="class_network_task.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="network__task_8h_source.html">network_task.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:ad7e7fa420a7057e68001fd7f93764cfe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_task.html#ad7e7fa420a7057e68001fd7f93764cfe">NetworkTask</a> (int <a class="el" href="class_network_task.html#a7a21671eb17396e9f2deafe1d9a9504c">task</a>)</td></tr>
+<tr class="separator:ad7e7fa420a7057e68001fd7f93764cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3d3e177d262a93232dae15ead64d188"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_task.html#ab3d3e177d262a93232dae15ead64d188">~NetworkTask</a> ()</td></tr>
+<tr class="separator:ab3d3e177d262a93232dae15ead64d188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:a7a21671eb17396e9f2deafe1d9a9504c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_task.html#a7a21671eb17396e9f2deafe1d9a9504c">task</a></td></tr>
+<tr class="memdesc:a7a21671eb17396e9f2deafe1d9a9504c"><td class="mdescLeft">&#160;</td><td class="mdescRight">numer zadania do wykonania  <a href="#a7a21671eb17396e9f2deafe1d9a9504c">Więcej...</a><br /></td></tr>
+<tr class="separator:a7a21671eb17396e9f2deafe1d9a9504c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a509d426ee6005aa403e006c59c08423e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_task.html#a509d426ee6005aa403e006c59c08423e">param_i</a></td></tr>
+<tr class="memdesc:a509d426ee6005aa403e006c59c08423e"><td class="mdescLeft">&#160;</td><td class="mdescRight">możliwy do wykorzystania pierwszy całkowity parametr zadania  <a href="#a509d426ee6005aa403e006c59c08423e">Więcej...</a><br /></td></tr>
+<tr class="separator:a509d426ee6005aa403e006c59c08423e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb848d9ed3d08791390dcd3f508144f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_task.html#adb848d9ed3d08791390dcd3f508144f7">param_i2</a></td></tr>
+<tr class="memdesc:adb848d9ed3d08791390dcd3f508144f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">możliwy do wykorzystania drugi całkowity parametr zadania  <a href="#adb848d9ed3d08791390dcd3f508144f7">Więcej...</a><br /></td></tr>
+<tr class="separator:adb848d9ed3d08791390dcd3f508144f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20cbc947e7388bae1c5c7e81ba7c644e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_task.html#a20cbc947e7388bae1c5c7e81ba7c644e">param_c</a></td></tr>
+<tr class="memdesc:a20cbc947e7388bae1c5c7e81ba7c644e"><td class="mdescLeft">&#160;</td><td class="mdescRight">możliwa do wykorzystania przez zadanie tablica znaków  <a href="#a20cbc947e7388bae1c5c7e81ba7c644e">Więcej...</a><br /></td></tr>
+<tr class="separator:a20cbc947e7388bae1c5c7e81ba7c644e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e4c58fc29806d304d8c693d4e2239e6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_network_task.html#a5e4c58fc29806d304d8c693d4e2239e6">param_s</a></td></tr>
+<tr class="memdesc:a5e4c58fc29806d304d8c693d4e2239e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">możliwa do wykorzystania przez zadanie ciąg znaków klasy string  <a href="#a5e4c58fc29806d304d8c693d4e2239e6">Więcej...</a><br /></td></tr>
+<tr class="separator:a5e4c58fc29806d304d8c693d4e2239e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Sieciowe zadanie do wykonania należące do kolejki zadań </p>
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00030">30</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" id="ad7e7fa420a7057e68001fd7f93764cfe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NetworkTask::NetworkTask </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Utworzenie nowego zadania sieciowego </p><dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>numer zadania do wykonania </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definicja w linii <a class="el" href="network__task_8cpp_source.html#l00004">4</a> pliku <a class="el" href="network__task_8cpp_source.html">network_task.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3d3e177d262a93232dae15ead64d188"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NetworkTask::~NetworkTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="network__task_8cpp_source.html#l00012">12</a> pliku <a class="el" href="network__task_8cpp_source.html">network_task.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a class="anchor" id="a20cbc947e7388bae1c5c7e81ba7c644e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* NetworkTask::param_c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>możliwa do wykorzystania przez zadanie tablica znaków </p>
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00047">47</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a509d426ee6005aa403e006c59c08423e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NetworkTask::param_i</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>możliwy do wykorzystania pierwszy całkowity parametr zadania </p>
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00043">43</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adb848d9ed3d08791390dcd3f508144f7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NetworkTask::param_i2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>możliwy do wykorzystania drugi całkowity parametr zadania </p>
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00045">45</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e4c58fc29806d304d8c693d4e2239e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string NetworkTask::param_s</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>możliwa do wykorzystania przez zadanie ciąg znaków klasy string </p>
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00049">49</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a21671eb17396e9f2deafe1d9a9504c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NetworkTask::task</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>numer zadania do wykonania </p>
+
+<p>Definicja w linii <a class="el" href="network__task_8h_source.html#l00041">41</a> pliku <a class="el" href="network__task_8h_source.html">network_task.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>/mnt/d/Igrek/C++/PacLAN/src/network/<a class="el" href="network__task_8h_source.html">network_task.h</a></li>
+<li>/mnt/d/Igrek/C++/PacLAN/src/network/<a class="el" href="network__task_8cpp_source.html">network_task.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_network_task.html">NetworkTask</a></li>
+    <li class="footer">Wygenerowano Cz, 16 cze 2016 11:39:22 dla PacLAN programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.7 </li>
+  </ul>
+</div>
+</body>
+</html>
